@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "/Users/sangxiang/Downloads/flutter_deer-master/build/url_launcher/intermediates/res/merged/debug/layout/notification_template_icon_group.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f9a9902b88996d5a1401656405dfe9d7/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/Downloads/flutter_deer-master/build/url_launcher/intermediates/res/merged/debug/layout/notification_action.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f9a9902b88996d5a1401656405dfe9d7/res/layout/notification_action.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/Downloads/flutter_deer-master/build/url_launcher/intermediates/res/merged/debug/layout/notification_template_part_time.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f9a9902b88996d5a1401656405dfe9d7/res/layout/notification_template_part_time.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/Downloads/flutter_deer-master/build/url_launcher/intermediates/res/merged/debug/layout/notification_template_part_chronometer.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f9a9902b88996d5a1401656405dfe9d7/res/layout/notification_template_part_chronometer.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/Downloads/flutter_deer-master/build/url_launcher/intermediates/res/merged/debug/layout/notification_action_tombstone.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f9a9902b88996d5a1401656405dfe9d7/res/layout/notification_action_tombstone.xml"
+    }
+]
