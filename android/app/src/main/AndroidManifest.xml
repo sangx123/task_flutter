@@ -11,7 +11,7 @@
     <application
         android:networkSecurityConfig="@xml/network_security_config"
         android:name=".MyApp"
-        android:label="Flutter Deer"
+        android:label="心享"
         android:icon="@mipmap/ic_launcher">
         <activity
             android:name=".MainActivity"

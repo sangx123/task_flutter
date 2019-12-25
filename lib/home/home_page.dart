@@ -129,7 +129,7 @@ class _HomeState extends State<Home> {
     bool isDark = ThemeUtils.isDark(context);
     return ChangeNotifierProvider<HomeProvider>(
       create: (_) => provider,
-      child: WillPopScope(
+      child: WillPopScope(//WillPopScope双击返回应用
         onWillPop: _isExit,
         child: Scaffold(
           bottomNavigationBar: Consumer<HomeProvider>(

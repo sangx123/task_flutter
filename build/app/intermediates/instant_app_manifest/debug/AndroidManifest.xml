@@ -38,7 +38,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Flutter Deer"
+        android:label="心享"
         android:networkSecurityConfig="@xml/network_security_config" >
         <activity
             android:name="com.weilu.deer.MainActivity"

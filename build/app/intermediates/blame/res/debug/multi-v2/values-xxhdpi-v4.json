@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/sangxiang/Downloads/flutter_deer-master/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+            "outputFile": "/Users/sangxiang/task_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
                     "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/979b21d975ef8e3dd989a1492da88d6f/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",

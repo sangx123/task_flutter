@@ -32,6 +32,7 @@ attr shouldScaleToFill
 attr squaredFinder
 attr statusBarBackground
 attr ttcIndex
+color ic_launcher_background
 color notification_action_color_filter
 color notification_icon_bg_color
 color notification_material_background_media_default_color
@@ -68,6 +69,8 @@ dimen subtitle_corner_radius
 dimen subtitle_outline_width
 dimen subtitle_shadow_offset
 dimen subtitle_shadow_radius
+drawable ic_launcher_background
+drawable ic_launcher_foreground
 drawable launch_background
 drawable notification_action_background
 drawable notification_bg
@@ -151,6 +154,8 @@ layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
 mipmap ic_launcher
+mipmap ic_launcher_foreground
+mipmap ic_launcher_round
 string status_bar_notification_info_overflow
 style LaunchTheme
 style TextAppearance_Compat_Notification
