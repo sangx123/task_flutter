@@ -430,18 +430,18 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_borderAlpha com.weilu.deer:borderAlpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_borderColor com.weilu.deer:borderColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_borderLength com.weilu.deer:borderLength}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_borderWidth com.weilu.deer:borderWidth}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_cornerRadius com.weilu.deer:cornerRadius}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_finderOffset com.weilu.deer:finderOffset}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_laserColor com.weilu.deer:laserColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_laserEnabled com.weilu.deer:laserEnabled}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_maskColor com.weilu.deer:maskColor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_roundedCorner com.weilu.deer:roundedCorner}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_shouldScaleToFill com.weilu.deer:shouldScaleToFill}</code></td><td></td></tr>
-     * <tr><td><code>{@link #BarcodeScannerView_squaredFinder com.weilu.deer:squaredFinder}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_borderAlpha com.fulin.xinxiang:borderAlpha}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_borderColor com.fulin.xinxiang:borderColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_borderLength com.fulin.xinxiang:borderLength}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_borderWidth com.fulin.xinxiang:borderWidth}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_cornerRadius com.fulin.xinxiang:cornerRadius}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_finderOffset com.fulin.xinxiang:finderOffset}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_laserColor com.fulin.xinxiang:laserColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_laserEnabled com.fulin.xinxiang:laserEnabled}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_maskColor com.fulin.xinxiang:maskColor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_roundedCorner com.fulin.xinxiang:roundedCorner}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_shouldScaleToFill com.fulin.xinxiang:shouldScaleToFill}</code></td><td></td></tr>
+     * <tr><td><code>{@link #BarcodeScannerView_squaredFinder com.fulin.xinxiang:squaredFinder}</code></td><td></td></tr>
      * </table>
      * @see #BarcodeScannerView_borderAlpha
      * @see #BarcodeScannerView_borderColor
@@ -462,27 +462,27 @@ public final class R {
       0x7f01001b, 0x7f01001c, 0x7f01001d, 0x7f01001e
     };
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#borderAlpha}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#borderAlpha}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.weilu.deer:borderAlpha
+     * @attr name com.fulin.xinxiang:borderAlpha
      */
     public static final int BarcodeScannerView_borderAlpha=0;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#borderColor}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#borderColor}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.weilu.deer:borderColor
+     * @attr name com.fulin.xinxiang:borderColor
      */
     public static final int BarcodeScannerView_borderColor=1;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#borderLength}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#borderLength}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -491,11 +491,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.weilu.deer:borderLength
+     * @attr name com.fulin.xinxiang:borderLength
      */
     public static final int BarcodeScannerView_borderLength=2;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#borderWidth}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#borderWidth}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -504,11 +504,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.weilu.deer:borderWidth
+     * @attr name com.fulin.xinxiang:borderWidth
      */
     public static final int BarcodeScannerView_borderWidth=3;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#cornerRadius}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#cornerRadius}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -517,11 +517,11 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.weilu.deer:cornerRadius
+     * @attr name com.fulin.xinxiang:cornerRadius
      */
     public static final int BarcodeScannerView_cornerRadius=4;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#finderOffset}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#finderOffset}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a dimension value, which is a floating point number appended with a
@@ -530,69 +530,69 @@ public final class R {
      * sp (scaled pixels based on preferred font size), in (inches), and
      * mm (millimeters).
      *
-     * @attr name com.weilu.deer:finderOffset
+     * @attr name com.fulin.xinxiang:finderOffset
      */
     public static final int BarcodeScannerView_finderOffset=5;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#laserColor}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#laserColor}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.weilu.deer:laserColor
+     * @attr name com.fulin.xinxiang:laserColor
      */
     public static final int BarcodeScannerView_laserColor=6;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#laserEnabled}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#laserEnabled}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.weilu.deer:laserEnabled
+     * @attr name com.fulin.xinxiang:laserEnabled
      */
     public static final int BarcodeScannerView_laserEnabled=7;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#maskColor}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#maskColor}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a color value, in the form of "<code>#<i>rgb</i></code>",
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.weilu.deer:maskColor
+     * @attr name com.fulin.xinxiang:maskColor
      */
     public static final int BarcodeScannerView_maskColor=8;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#roundedCorner}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#roundedCorner}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.weilu.deer:roundedCorner
+     * @attr name com.fulin.xinxiang:roundedCorner
      */
     public static final int BarcodeScannerView_roundedCorner=9;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#shouldScaleToFill}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#shouldScaleToFill}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.weilu.deer:shouldScaleToFill
+     * @attr name com.fulin.xinxiang:shouldScaleToFill
      */
     public static final int BarcodeScannerView_shouldScaleToFill=10;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#squaredFinder}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#squaredFinder}
      * attribute's value can be found in the {@link #BarcodeScannerView} array.
      *
      * <p>May be a boolean value, such as "<code>true</code>" or
      * "<code>false</code>".
      *
-     * @attr name com.weilu.deer:squaredFinder
+     * @attr name com.fulin.xinxiang:squaredFinder
      */
     public static final int BarcodeScannerView_squaredFinder=11;
     /**
@@ -604,7 +604,7 @@ public final class R {
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_color android:color}</code></td><td></td></tr>
      * <tr><td><code>{@link #ColorStateListItem_android_alpha android:alpha}</code></td><td></td></tr>
-     * <tr><td><code>{@link #ColorStateListItem_alpha com.weilu.deer:alpha}</code></td><td></td></tr>
+     * <tr><td><code>{@link #ColorStateListItem_alpha com.fulin.xinxiang:alpha}</code></td><td></td></tr>
      * </table>
      * @see #ColorStateListItem_android_color
      * @see #ColorStateListItem_android_alpha
@@ -634,12 +634,12 @@ public final class R {
      */
     public static final int ColorStateListItem_android_alpha=1;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#alpha}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#alpha}
      * attribute's value can be found in the {@link #ColorStateListItem} array.
      *
      * <p>May be a floating point value, such as "<code>1.2</code>".
      *
-     * @attr name com.weilu.deer:alpha
+     * @attr name com.fulin.xinxiang:alpha
      */
     public static final int ColorStateListItem_alpha=2;
     /**
@@ -649,8 +649,8 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_keylines com.weilu.deer:keylines}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.weilu.deer:statusBarBackground}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_keylines com.fulin.xinxiang:keylines}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_statusBarBackground com.fulin.xinxiang:statusBarBackground}</code></td><td></td></tr>
      * </table>
      * @see #CoordinatorLayout_keylines
      * @see #CoordinatorLayout_statusBarBackground
@@ -659,7 +659,7 @@ public final class R {
       0x7f010012, 0x7f01001f
     };
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#keylines}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#keylines}
      * attribute's value can be found in the {@link #CoordinatorLayout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -667,11 +667,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.weilu.deer:keylines
+     * @attr name com.fulin.xinxiang:keylines
      */
     public static final int CoordinatorLayout_keylines=0;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#statusBarBackground}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#statusBarBackground}
      * attribute's value can be found in the {@link #CoordinatorLayout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -682,7 +682,7 @@ public final class R {
      * "<code>#<i>argb</i></code>", "<code>#<i>rrggbb</i></code>", or
      * "<code>#<i>aarrggbb</i></code>".
      *
-     * @attr name com.weilu.deer:statusBarBackground
+     * @attr name com.fulin.xinxiang:statusBarBackground
      */
     public static final int CoordinatorLayout_statusBarBackground=1;
     /**
@@ -693,12 +693,12 @@ public final class R {
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
      * <tr><td><code>{@link #CoordinatorLayout_Layout_android_layout_gravity android:layout_gravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.weilu.deer:layout_anchor}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.weilu.deer:layout_anchorGravity}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.weilu.deer:layout_behavior}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.weilu.deer:layout_dodgeInsetEdges}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.weilu.deer:layout_insetEdge}</code></td><td></td></tr>
-     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.weilu.deer:layout_keyline}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchor com.fulin.xinxiang:layout_anchor}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_anchorGravity com.fulin.xinxiang:layout_anchorGravity}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_behavior com.fulin.xinxiang:layout_behavior}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_dodgeInsetEdges com.fulin.xinxiang:layout_dodgeInsetEdges}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_insetEdge com.fulin.xinxiang:layout_insetEdge}</code></td><td></td></tr>
+     * <tr><td><code>{@link #CoordinatorLayout_Layout_layout_keyline com.fulin.xinxiang:layout_keyline}</code></td><td></td></tr>
      * </table>
      * @see #CoordinatorLayout_Layout_android_layout_gravity
      * @see #CoordinatorLayout_Layout_layout_anchor
@@ -742,7 +742,7 @@ public final class R {
      */
     public static final int CoordinatorLayout_Layout_android_layout_gravity=0;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#layout_anchor}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#layout_anchor}
      * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -750,11 +750,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.weilu.deer:layout_anchor
+     * @attr name com.fulin.xinxiang:layout_anchor
      */
     public static final int CoordinatorLayout_Layout_layout_anchor=1;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#layout_anchorGravity}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#layout_anchorGravity}
      * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -779,21 +779,21 @@ public final class R {
      * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
-     * @attr name com.weilu.deer:layout_anchorGravity
+     * @attr name com.fulin.xinxiang:layout_anchorGravity
      */
     public static final int CoordinatorLayout_Layout_layout_anchorGravity=2;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#layout_behavior}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#layout_behavior}
      * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.weilu.deer:layout_behavior
+     * @attr name com.fulin.xinxiang:layout_behavior
      */
     public static final int CoordinatorLayout_Layout_layout_behavior=3;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#layout_dodgeInsetEdges}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#layout_dodgeInsetEdges}
      * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one or more (separated by '|') of the following constant values.</p>
@@ -812,11 +812,11 @@ public final class R {
      * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
-     * @attr name com.weilu.deer:layout_dodgeInsetEdges
+     * @attr name com.fulin.xinxiang:layout_dodgeInsetEdges
      */
     public static final int CoordinatorLayout_Layout_layout_dodgeInsetEdges=4;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#layout_insetEdge}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#layout_insetEdge}
      * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -834,16 +834,16 @@ public final class R {
      * <tr><td>top</td><td>30</td><td></td></tr>
      * </table>
      *
-     * @attr name com.weilu.deer:layout_insetEdge
+     * @attr name com.fulin.xinxiang:layout_insetEdge
      */
     public static final int CoordinatorLayout_Layout_layout_insetEdge=5;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#layout_keyline}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#layout_keyline}
      * attribute's value can be found in the {@link #CoordinatorLayout_Layout} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.weilu.deer:layout_keyline
+     * @attr name com.fulin.xinxiang:layout_keyline
      */
     public static final int CoordinatorLayout_Layout_layout_keyline=6;
     /**
@@ -853,12 +853,12 @@ public final class R {
      * <colgroup align="left" />
      * <colgroup align="left" />
      * <tr><th>Attribute</th><th>Description</th></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.weilu.deer:fontProviderAuthority}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.weilu.deer:fontProviderCerts}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.weilu.deer:fontProviderFetchStrategy}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.weilu.deer:fontProviderFetchTimeout}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.weilu.deer:fontProviderPackage}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.weilu.deer:fontProviderQuery}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderAuthority com.fulin.xinxiang:fontProviderAuthority}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderCerts com.fulin.xinxiang:fontProviderCerts}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchStrategy com.fulin.xinxiang:fontProviderFetchStrategy}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderFetchTimeout com.fulin.xinxiang:fontProviderFetchTimeout}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderPackage com.fulin.xinxiang:fontProviderPackage}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamily_fontProviderQuery com.fulin.xinxiang:fontProviderQuery}</code></td><td></td></tr>
      * </table>
      * @see #FontFamily_fontProviderAuthority
      * @see #FontFamily_fontProviderCerts
@@ -872,17 +872,17 @@ public final class R {
       0x7f01000d, 0x7f01000e
     };
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontProviderAuthority}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontProviderAuthority}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.weilu.deer:fontProviderAuthority
+     * @attr name com.fulin.xinxiang:fontProviderAuthority
      */
     public static final int FontFamily_fontProviderAuthority=0;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontProviderCerts}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontProviderCerts}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -890,11 +890,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.weilu.deer:fontProviderCerts
+     * @attr name com.fulin.xinxiang:fontProviderCerts
      */
     public static final int FontFamily_fontProviderCerts=1;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontProviderFetchStrategy}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontProviderFetchStrategy}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -907,11 +907,11 @@ public final class R {
      * <tr><td>blocking</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.weilu.deer:fontProviderFetchStrategy
+     * @attr name com.fulin.xinxiang:fontProviderFetchStrategy
      */
     public static final int FontFamily_fontProviderFetchStrategy=2;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontProviderFetchTimeout}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontProviderFetchTimeout}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
@@ -924,27 +924,27 @@ public final class R {
      * <tr><td>forever</td><td>ffffffff</td><td></td></tr>
      * </table>
      *
-     * @attr name com.weilu.deer:fontProviderFetchTimeout
+     * @attr name com.fulin.xinxiang:fontProviderFetchTimeout
      */
     public static final int FontFamily_fontProviderFetchTimeout=3;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontProviderPackage}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontProviderPackage}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.weilu.deer:fontProviderPackage
+     * @attr name com.fulin.xinxiang:fontProviderPackage
      */
     public static final int FontFamily_fontProviderPackage=4;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontProviderQuery}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontProviderQuery}
      * attribute's value can be found in the {@link #FontFamily} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.weilu.deer:fontProviderQuery
+     * @attr name com.fulin.xinxiang:fontProviderQuery
      */
     public static final int FontFamily_fontProviderQuery=5;
     /**
@@ -959,11 +959,11 @@ public final class R {
      * <tr><td><code>{@link #FontFamilyFont_android_fontStyle android:fontStyle}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_ttcIndex android:ttcIndex}</code></td><td></td></tr>
      * <tr><td><code>{@link #FontFamilyFont_android_fontVariationSettings android:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_font com.weilu.deer:font}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.weilu.deer:fontStyle}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.weilu.deer:fontVariationSettings}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.weilu.deer:fontWeight}</code></td><td></td></tr>
-     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.weilu.deer:ttcIndex}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_font com.fulin.xinxiang:font}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontStyle com.fulin.xinxiang:fontStyle}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontVariationSettings com.fulin.xinxiang:fontVariationSettings}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_fontWeight com.fulin.xinxiang:fontWeight}</code></td><td></td></tr>
+     * <tr><td><code>{@link #FontFamilyFont_ttcIndex com.fulin.xinxiang:ttcIndex}</code></td><td></td></tr>
      * </table>
      * @see #FontFamilyFont_android_font
      * @see #FontFamilyFont_android_fontWeight
@@ -1039,7 +1039,7 @@ public final class R {
      */
     public static final int FontFamilyFont_android_fontVariationSettings=4;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#font}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#font}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a reference to another resource, in the form
@@ -1047,11 +1047,11 @@ public final class R {
      * attribute in the form
      * "<code>?[<i>package</i>:]<i>type</i>/<i>name</i></code>".
      *
-     * @attr name com.weilu.deer:font
+     * @attr name com.fulin.xinxiang:font
      */
     public static final int FontFamilyFont_font=5;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontStyle}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontStyle}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>Must be one of the following constant values.</p>
@@ -1064,35 +1064,35 @@ public final class R {
      * <tr><td>normal</td><td>0</td><td></td></tr>
      * </table>
      *
-     * @attr name com.weilu.deer:fontStyle
+     * @attr name com.fulin.xinxiang:fontStyle
      */
     public static final int FontFamilyFont_fontStyle=6;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontVariationSettings}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontVariationSettings}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be a string value, using '\\;' to escape characters such as
      * '\\n' or '\\uxxxx' for a unicode character;
      *
-     * @attr name com.weilu.deer:fontVariationSettings
+     * @attr name com.fulin.xinxiang:fontVariationSettings
      */
     public static final int FontFamilyFont_fontVariationSettings=7;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#fontWeight}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#fontWeight}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.weilu.deer:fontWeight
+     * @attr name com.fulin.xinxiang:fontWeight
      */
     public static final int FontFamilyFont_fontWeight=8;
     /**
-     * <p>This symbol is the offset where the {@link com.weilu.deer.R.attr#ttcIndex}
+     * <p>This symbol is the offset where the {@link com.fulin.xinxiang.R.attr#ttcIndex}
      * attribute's value can be found in the {@link #FontFamilyFont} array.
      *
      * <p>May be an integer value, such as "<code>100</code>".
      *
-     * @attr name com.weilu.deer:ttcIndex
+     * @attr name com.fulin.xinxiang:ttcIndex
      */
     public static final int FontFamilyFont_ttcIndex=9;
     /**

@@ -1,12 +1,17 @@
 
+import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flustars/flustars.dart' as FlutterStars;
 import 'package:flutter_deer/common/common.dart';
+import 'package:flutter_deer/net/dio_utils.dart';
+import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/shop/models/user_entity.dart';
 import 'package:flutter_deer/store/store_router.dart';
+import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/util/utils.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
 import 'package:flutter_deer/widgets/my_button.dart';
@@ -57,9 +62,18 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
   
-  void _login(){
-    FlutterStars.SpUtil.putString(Constant.phone, _nameController.text);
-    NavigatorUtils.push(context, StoreRouter.auditPage);
+  Future<void> _login() async {
+    await DioUtils.instance.requestNetwork<UserEntity>(
+        Method.post, HttpApi.login,
+        onSuccess: (data){
+          FlutterStars.SpUtil.putString(Constant.phone, _nameController.text);
+          NavigatorUtils.push(context, StoreRouter.auditPage);
+        },
+        onError: (code,msg){
+            Toast.show(msg);
+        },
+        params: {"mobile": _nameController.text,"password":FlutterStars.EnDecodeUtil.encodeMd5(_passwordController.text)},
+    );
   }
   
   @override

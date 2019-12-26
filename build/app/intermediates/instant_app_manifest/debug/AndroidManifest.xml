@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.weilu.deer"
+    package="com.fulin.xinxiang"
     android:targetSandboxVersion="2"
     android:versionCode="9"
     android:versionName="1.0.8" >
@@ -73,7 +73,7 @@
         <!-- 兼容7.0 -->
         <provider
             android:name="com.weilu.deer.DeerPickerProvider"
-            android:authorities="com.weilu.deer.Merchant"
+            android:authorities="com.fulin.xinxiang.Merchant"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
@@ -89,7 +89,7 @@
 
         <provider
             android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
-            android:authorities="com.weilu.deer.flutter.image_provider"
+            android:authorities="com.fulin.xinxiang.flutter.image_provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data

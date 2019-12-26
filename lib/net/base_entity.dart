@@ -5,16 +5,19 @@ import '../entity_factory.dart';
 
 class BaseEntity<T>{
 
-  int code;
-  String message;
+  //int code;
+  String respCode;
+  String respMsg;
+  //String message;
   T data;
   List<T> listData = [];
 
-  BaseEntity(this.code, this.message, this.data);
+  BaseEntity(this.respCode, this.respMsg, this.data);
 
   BaseEntity.fromJson(Map<String, dynamic> json) {
-    code = json[Constant.code];
-    message = json[Constant.message];
+    //code = json[Constant.code];
+    respCode = json[Constant.respCode];
+    respMsg = json[Constant.respMsg];
     if (json.containsKey(Constant.data)){
       if (json[Constant.data] is List) {
         (json[Constant.data] as List).forEach((item){

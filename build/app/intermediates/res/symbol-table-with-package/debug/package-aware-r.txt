@@ -1,4 +1,4 @@
-com.weilu.deer
+com.fulin.xinxiang
 attr alpha
 attr borderAlpha
 attr borderColor

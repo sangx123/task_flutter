@@ -36,7 +36,8 @@ class DioUtils {
         // 不使用http状态码判断状态，使用AdapterInterceptor来处理（适用于标准REST风格）
         return true;
       },
-      baseUrl: "https://api.github.com/",
+      //baseUrl: "https://api.github.com/",
+      baseUrl: "http://39.105.172.56:8081/",
 //      contentType: ContentType('application', 'x-www-form-urlencoded', charset: 'utf-8'),
     );
     _dio = Dio(options);
@@ -53,7 +54,7 @@ class DioUtils {
     /// 统一添加身份验证请求头
     _dio.interceptors.add(AuthInterceptor());
     /// 刷新Token
-    _dio.interceptors.add(TokenInterceptor());
+    //_dio.interceptors.add(TokenInterceptor());
     /// 打印Log(生产模式去除)
     if (!Constant.inProduction){
       _dio.interceptors.add(LoggingInterceptor());
@@ -89,7 +90,7 @@ class DioUtils {
   Future requestNetwork<T>(Method method, String url, {
         Function(T t) onSuccess, 
         Function(List<T> list) onSuccessList, 
-        Function(int code, String msg) onError,
+        Function(String code, String msg) onError,
         dynamic params, Map<String, dynamic> queryParameters, 
         CancelToken cancelToken, Options options, bool isList : false
   }) async {
@@ -99,7 +100,7 @@ class DioUtils {
         queryParameters: queryParameters,
         options: options,
         cancelToken: cancelToken).then((BaseEntity<T> result){
-      if (result.code == 0){
+      if (result.respCode=="000"){
         if (isList){
           if (onSuccessList != null){
             onSuccessList(result.listData);
@@ -110,7 +111,7 @@ class DioUtils {
           }
         }
       }else{
-        _onError(result.code, result.message, onError);
+        _onError(result.respCode, result.respMsg, onError);
       }
     }, onError: (e, _){
       _cancelLogPrint(e, url);
@@ -123,7 +124,7 @@ class DioUtils {
   asyncRequestNetwork<T>(Method method, String url, {
     Function(T t) onSuccess, 
     Function(List<T> list) onSuccessList, 
-    Function(int code, String msg) onError,
+    Function(String code, String msg) onError,
     dynamic params, Map<String, dynamic> queryParameters, 
     CancelToken cancelToken, Options options, bool isList : false
   }){
@@ -131,7 +132,7 @@ class DioUtils {
     Observable.fromFuture(_request<T>(m, url, data: params, queryParameters: queryParameters, options: options, cancelToken: cancelToken))
         .asBroadcastStream()
         .listen((result){
-      if (result.code == 0){
+      if (result.respCode == "000"){
         if (isList){
           if (onSuccessList != null){
             onSuccessList(result.listData);
@@ -142,7 +143,7 @@ class DioUtils {
           }
         }
       }else{
-        _onError(result.code, result.message, onError);
+        _onError(result.respCode, result.respMsg, onError);
       }
     }, onError: (e){
       _cancelLogPrint(e, url);
@@ -157,10 +158,10 @@ class DioUtils {
     }
   }
 
-  _onError(int code, String msg, Function(int code, String mag) onError){
+  _onError(String code, String msg, Function(String code, String mag) onError){
     if (code == null){
-      code = ExceptionHandle.unknown_error;
-      msg = "未知异常";
+        code = ExceptionHandle.unknown_error.toString();
+        msg = "未知异常";
     }
     Log.e("接口请求异常： code: $code, mag: $msg");
     if (onError != null) {

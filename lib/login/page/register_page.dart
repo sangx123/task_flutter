@@ -2,14 +2,20 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_deer/common/common.dart';
+import 'package:flutter_deer/net/dio_utils.dart';
+import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/res/resources.dart';
+import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/shop/models/user_entity.dart';
+import 'package:flutter_deer/store/store_router.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/util/utils.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
 import 'package:flutter_deer/widgets/my_button.dart';
 import 'package:flutter_deer/widgets/text_field.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
-
+import 'package:flustars/flustars.dart' as FlutterStars;
 
 /// design/1注册登录/index.html#artboard11
 class RegisterPage extends StatefulWidget {
@@ -56,9 +62,20 @@ class _RegisterPageState extends State<RegisterPage> {
       });
     }
   }
-  
-  void _register(){
-    Toast.show("点击注册");
+
+  Future<void> _register() async {
+    await DioUtils.instance.requestNetwork<UserEntity>(
+      Method.post, HttpApi.register,
+      onSuccess: (data){
+        Toast.show("注册成功");
+        FlutterStars.SpUtil.putString(Constant.phone, _nameController.text);
+        //NavigatorUtils.push(context, StoreRouter.auditPage);
+      },
+      onError: (code,msg){
+        Toast.show(msg);
+      },
+      params: {"name":_nameController.text,"mobile": _nameController.text,"password":FlutterStars.EnDecodeUtil.encodeMd5(_passwordController.text)},
+    );
   }
 
   @override

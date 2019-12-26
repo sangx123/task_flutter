@@ -3,19 +3,19 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 
 class ExceptionHandle {
-  static const int success = 200;
-  static const int success_not_content = 204;
-  static const int unauthorized = 401;
-  static const int forbidden = 403;
-  static const int not_found = 404;
+  static const String success = "200";
+  static const String success_not_content = "204";
+  static const String unauthorized = "401";
+  static const String forbidden = "403";
+  static const String not_found = "404";
 
-  static const int net_error = 1000;
-  static const int parse_error = 1001;
-  static const int socket_error = 1002;
-  static const int http_error = 1003;
-  static const int timeout_error = 1004;
-  static const int cancel_error = 1005;
-  static const int unknown_error = 9999;
+  static const String net_error = "1000";
+  static const String parse_error = "1001";
+  static const String socket_error = "1002";
+  static const String http_error = "1003";
+  static const String timeout_error = "1004";
+  static const String cancel_error = "1005";
+  static const String unknown_error = "9999";
 
   static NetError handleException(dynamic error){
     print(error);
@@ -46,7 +46,7 @@ class ExceptionHandle {
 }
 
 class NetError{
-  int code;
+  String code;
   String msg;
 
   NetError(this.code, this.msg);

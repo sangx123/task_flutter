@@ -3,6 +3,8 @@ class UserEntity {
 	String name;
 	int id;
 	String blog;
+	String userToken;
+	String userId;
 
 	UserEntity({this.avatarUrl, this.name, this.id, this.blog});
 
