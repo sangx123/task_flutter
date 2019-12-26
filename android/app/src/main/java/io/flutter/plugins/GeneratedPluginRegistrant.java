@@ -4,6 +4,7 @@ import io.flutter.plugin.common.PluginRegistry;
 import com.apptreesoftware.barcodescan.BarcodeScanPlugin;
 import com.weilu.flutter.flutter_2d_amap.Flutter2dAmapPlugin;
 import io.flutter.plugins.imagepicker.ImagePickerPlugin;
+import cn.smssdk.flutter.MobsmsPlugin;
 import io.flutter.plugins.pathprovider.PathProviderPlugin;
 import io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin;
 import com.tekartik.sqflite.SqflitePlugin;
@@ -21,6 +22,7 @@ public final class GeneratedPluginRegistrant {
     BarcodeScanPlugin.registerWith(registry.registrarFor("com.apptreesoftware.barcodescan.BarcodeScanPlugin"));
     Flutter2dAmapPlugin.registerWith(registry.registrarFor("com.weilu.flutter.flutter_2d_amap.Flutter2dAmapPlugin"));
     ImagePickerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.imagepicker.ImagePickerPlugin"));
+    MobsmsPlugin.registerWith(registry.registrarFor("cn.smssdk.flutter.MobsmsPlugin"));
     PathProviderPlugin.registerWith(registry.registrarFor("io.flutter.plugins.pathprovider.PathProviderPlugin"));
     SharedPreferencesPlugin.registerWith(registry.registrarFor("io.flutter.plugins.sharedpreferences.SharedPreferencesPlugin"));
     SqflitePlugin.registerWith(registry.registrarFor("com.tekartik.sqflite.SqflitePlugin"));

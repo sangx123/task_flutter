@@ -16,7 +16,7 @@ import 'package:flutter_deer/widgets/my_button.dart';
 import 'package:flutter_deer/widgets/text_field.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:flustars/flustars.dart' as FlutterStars;
-
+import 'package:mobsms/mobsms.dart';
 /// design/1注册登录/index.html#artboard11
 class RegisterPage extends StatefulWidget {
   @override
@@ -50,7 +50,7 @@ class _RegisterPageState extends State<RegisterPage> {
     if (name.isEmpty || name.length < 11) {
       isClick = false;
     }
-    if (vCode.isEmpty || vCode.length < 6) {
+    if (vCode.isEmpty || vCode.length < 4) {
       isClick = false;
     }
     if (password.isEmpty || password.length < 6) {
@@ -61,6 +61,16 @@ class _RegisterPageState extends State<RegisterPage> {
         _isClick = isClick;
       });
     }
+  }
+  void _submit(){
+    Smssdk.commitCode(_nameController.text, "86", _vCodeController.text, (dynamic ret, Map err){
+      if(err!=null)
+      {
+        Toast.show("用户输入的验证码错误！");
+      }else{
+        _register();
+      }
+    });
   }
 
   Future<void> _register() async {
@@ -120,8 +130,14 @@ class _RegisterPageState extends State<RegisterPage> {
             keyboardType: TextInputType.number,
             getVCode: () async {
               if (_nameController.text.length == 11){
-                Toast.show("并没有真正发送哦，直接登录吧！");
+                //Toast.show("并没有真正发送哦，直接登录吧！");
                 /// 一般可以在这里发送真正的请求，请求成功返回true
+                Smssdk.getTextCode(_nameController.text, "86", "", (dynamic ret, Map err){
+                  if(err!=null)
+                  {
+                     Toast.show(err.toString());
+                  }
+                });
                 return true;
               }else{
                 Toast.show("请输入有效的手机号");
@@ -146,7 +162,7 @@ class _RegisterPageState extends State<RegisterPage> {
           Gaps.vGap15,
           MyButton(
             key: const Key('register'),
-            onPressed: _isClick ? _register : null,
+            onPressed: _isClick ? _submit : null,
             text: "注册",
           )
         ],

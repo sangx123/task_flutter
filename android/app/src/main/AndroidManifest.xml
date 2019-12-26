@@ -1,4 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.weilu.deer">
 
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
@@ -12,7 +13,9 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:name=".MyApp"
         android:label="心享"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        tools:replace="android:name"
+        >
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"

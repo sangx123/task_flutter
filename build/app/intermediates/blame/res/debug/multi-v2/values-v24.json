@@ -4,7 +4,7 @@
             "outputFile": "/Users/sangxiang/task_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v24/values-v24.xml",
             "map": [
                 {
-                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/values-v24/values-v24.xml",
+                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/values-v24/values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",

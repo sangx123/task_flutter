@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Tue Dec 24 17:49:57 CST 2019
+#Thu Dec 26 17:35:27 CST 2019
 2.path=flutter_assets/assets/images/statistic/statistic_bg.png
 14.set=ASSET
 107.baseType=DIRECTORY

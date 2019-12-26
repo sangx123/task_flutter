@@ -1,11 +1,7 @@
 [
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-hdpi-v4/notification_bg_normal.9.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xxxhdpi-v4_yd.png.flat",
-        "source": "/Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/packaged_res/debug/drawable-xxxhdpi-v4/yd.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_smssdk_avatar_page.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/layout/smssdk_avatar_page.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/xml_network_security_config.xml.flat",
@@ -16,120 +12,112 @@
         "source": "/Users/sangxiang/task_flutter/build/app/generated/res/pngs/debug/drawable-xxxhdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_country_group_scroll_down.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_country_group_scroll_down.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable/notification_tile_bg.xml"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
     },
     {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_btn_disenable.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_btn_disenable.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_authorize_dialog_checkbox_bg_selector.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/drawable/smssdk_authorize_dialog_checkbox_bg_selector.xml"
+    },
+    {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_conners_edittext_bg.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_conners_edittext_bg.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi_ic_launcher_background.png.flat",
         "source": "/Users/sangxiang/task_flutter/build/app/generated/res/pngs/debug/drawable-mdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout-v21/notification_action_tombstone.xml"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "/Users/sangxiang/task_flutter/build/app/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable/notification_bg_low.xml"
-    },
-    {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_back_arrow2.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_back_arrow2.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_notification_icon_background.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable/notification_icon_background.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable/notification_icon_background.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_btn_line_bg.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_btn_line_bg.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_media.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_template_media.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_template_media.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout-v16/notification_template_custom_big.xml"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_country_group_scroll_up.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_country_group_scroll_up.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_smssdk_personal_info.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/layout/smssdk_personal_info.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_corners_bg.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_corners_bg.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_notification_bg.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable/notification_bg.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable/notification_bg.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_btn_enable.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_btn_enable.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-xhdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_icon_group.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout/notification_template_icon_group.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_phone.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_phone.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-v21_notification_action_background.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-v21/notification_action_background.xml"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-v21/notification_action_background.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_media_action.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_media_action.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-xhdpi-v4/notification_bg_low_normal.9.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-ldpi_ic_launcher_background.png.flat",
@@ -140,24 +128,20 @@
         "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout-v21/notification_action.xml"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_dialog_btn_back.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_dialog_btn_back.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xxhdpi_ic_launcher_background.png.flat",
         "source": "/Users/sangxiang/task_flutter/build/app/generated/res/pngs/debug/drawable-xxhdpi/ic_launcher_background.png"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout-v21/notification_template_icon_group.xml"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_authorize_dot.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/drawable/smssdk_authorize_dot.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_back_arrow_bitmap.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_back_arrow_bitmap.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -165,15 +149,199 @@
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_action_tombstone.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout/notification_action_tombstone.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_media_custom.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_template_media_custom.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_template_media_custom.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_corners_bg_pre.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_corners_bg_pre.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/drawable/launch_background.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_cl_divider.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_cl_divider.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/xml_flutter_image_picker_file_paths.xml.flat",
+        "source": "/Users/sangxiang/task_flutter/build/image_picker/intermediates/packaged_res/debug/xml/flutter_image_picker_file_paths.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_custom.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_arrow_right.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_arrow_right.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_checkbox_bg_checked.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/drawable/smssdk_checkbox_bg_checked.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_ic_popup_dialog_close.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_ic_popup_dialog_close.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_normal.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xxxhdpi-v4_yd.png.flat",
+        "source": "/Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/packaged_res/debug/drawable-xxxhdpi-v4/yd.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_notification_tile_bg.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable/notification_tile_bg.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_checkbox_bg_uncheck.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/drawable/smssdk_checkbox_bg_uncheck.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_smssdk_popup_dialog.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/layout/smssdk_popup_dialog.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "/Users/sangxiang/task_flutter/build/app/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v21_notification_action_tombstone.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_notification_bg_low.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable/notification_bg_low.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_input_bg_special_normal.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_input_bg_special_normal.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_default_avatar.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_default_avatar.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_input_bg_normal.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_input_bg_normal.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_dialog_bg.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_dialog_bg.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v16_notification_template_custom_big.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout-v16/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_clear_search.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_clear_search.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_edittext_bg_selector.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_edittext_bg_selector.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_search_icon.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_search_icon.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_input_bg_special_focus.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_input_bg_special_focus.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_popup_dialog_bg.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_popup_dialog_bg.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_authorize_bottom_left_round_btn.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/drawable/smssdk_authorize_bottom_left_round_btn.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v21_notification_action.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v21_notification_template_icon_group.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_authorize_bottom_right_round_btn.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/drawable/smssdk_authorize_bottom_right_round_btn.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
@@ -181,11 +349,19 @@
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_action.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout/notification_action.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout/notification_action.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_normal.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-mdpi-v4/notification_bg_low_normal.9.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_input_bg_focus.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_input_bg_focus.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_dialog_back.9.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_dialog_back.9.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_corners_bg_nor.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_corners_bg_nor.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/xml_file_paths.xml.flat",
@@ -196,32 +372,32 @@
         "source": "/Users/sangxiang/task_flutter/build/app/generated/res/pngs/debug/drawable-hdpi/ic_launcher_background.png"
     },
     {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_smssdk_avatar_picker_page.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/layout/smssdk_avatar_picker_page.xml"
+    },
+    {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout-v21_notification_template_custom_big.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout-v21/notification_template_custom_big.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_normal.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-mdpi-v4/notification_bg_normal.9.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/raw_smssdk_pydb.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/raw/smssdk_pydb"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_media_cancel_action.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_media_cancel_action.xml"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_smssdk_titlebar.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/layout/smssdk_titlebar.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_lines_media.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_template_lines_media.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_template_lines_media.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_narrow_custom.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_template_big_media_narrow_custom.xml"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_authorize_dialog_bg.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/drawable/smssdk_authorize_dialog_bg.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_template_big_media.xml"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout/notification_template_part_time.xml"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_back_arrow.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_back_arrow.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher_round.png.flat",
@@ -232,47 +408,51 @@
         "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_template_big_media_narrow.xml"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_part_time.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout/notification_template_part_time.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_launch_background.xml.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/drawable/launch_background.xml"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_narrow.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/res/layout/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-xhdpi-v4_smssdk_cp_default_avatar.png.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable-xhdpi-v4/smssdk_cp_default_avatar.png"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_smssdk_avatar_picker_item.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/layout/smssdk_avatar_picker_item.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
     },
     {
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_smssdk_authorize_dialog.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/res/layout/smssdk_authorize_dialog.xml"
+    },
+    {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/drawable-mdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-mdpi_ic_launcher.png.flat",
         "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
-    },
-    {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/xml_flutter_image_picker_file_paths.xml.flat",
-        "source": "/Users/sangxiang/task_flutter/build/image_picker/intermediates/packaged_res/debug/xml/flutter_image_picker_file_paths.xml"
-    },
-    {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable-anydpi-v21_ic_launcher_background.xml.flat",
         "source": "/Users/sangxiang/task_flutter/build/app/generated/res/pngs/debug/drawable-anydpi-v21/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/sangxiang/task_flutter/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_big_media_custom.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e3a0f57a02bd5e478bbdc86883ac2fa2/res/layout/notification_template_big_media_custom.xml"
+        "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/drawable_smssdk_country_bg_selector.xml.flat",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/res/drawable/smssdk_country_bg_selector.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/app/intermediates/res/merged/debug/layout_notification_template_part_chronometer.xml.flat",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/65050c91426618fa9f4ca47ffd102421/res/layout/notification_template_part_chronometer.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/res/layout/notification_template_part_chronometer.xml"
     }
 ]

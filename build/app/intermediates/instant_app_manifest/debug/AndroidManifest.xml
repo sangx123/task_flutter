@@ -35,6 +35,7 @@
     -->
     <application
         android:name="com.weilu.deer.MyApp"
+        android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"

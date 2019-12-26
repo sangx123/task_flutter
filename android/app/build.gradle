@@ -17,7 +17,7 @@ def flutterVersionName = '1.0.8'
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
-
+apply plugin: 'com.mob.sdk'
 def keystorePropertiesFile = rootProject.file("app/key.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
@@ -28,7 +28,9 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
-
+    dependencies {
+        provided rootProject.findProject(":mobsms")
+    }
     defaultConfig {
         applicationId "com.fulin.xinxiang"
         minSdkVersion 16

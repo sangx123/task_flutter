@@ -22,6 +22,12 @@
 @import image_picker;
 #endif
 
+#if __has_include(<mobsms/MobsmsPlugin.h>)
+#import <mobsms/MobsmsPlugin.h>
+#else
+@import mobsms;
+#endif
+
 #if __has_include(<path_provider/FLTPathProviderPlugin.h>)
 #import <path_provider/FLTPathProviderPlugin.h>
 #else
@@ -58,6 +64,7 @@
   [BarcodeScanPlugin registerWithRegistrar:[registry registrarForPlugin:@"BarcodeScanPlugin"]];
   [Flutter2dAmapPlugin registerWithRegistrar:[registry registrarForPlugin:@"Flutter2dAmapPlugin"]];
   [FLTImagePickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTImagePickerPlugin"]];
+  [MobsmsPlugin registerWithRegistrar:[registry registrarForPlugin:@"MobsmsPlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
   [FLTSharedPreferencesPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTSharedPreferencesPlugin"]];
   [SqflitePlugin registerWithRegistrar:[registry registrarForPlugin:@"SqflitePlugin"]];
