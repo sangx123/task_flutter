@@ -1,0 +1,353 @@
+-- Merging decision tree log ---
+provider#com.weilu.deer.DeerPickerProvider
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:45:9-53:20
+	android:grantUriPermissions
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:49:13-47
+	android:authorities
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:47:13-60
+	android:exported
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:48:13-37
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:46:13-47
+manifest
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/377d0044ac58a5c56b333c9b74ac1e58/AndroidManifest.xml:2:1-10:12
+MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/release/AndroidManifest.xml:2:1-9:12
+MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:2:1-17:12
+MERGED from [:sqflite] /Users/sangxiang/task_flutter/build/sqflite/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:2:1-14:12
+MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:shared_preferences_web] /Users/sangxiang/task_flutter/build/shared_preferences_web/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:2:1-36:12
+MERGED from [:shared_preferences_macos] /Users/sangxiang/task_flutter/build/shared_preferences_macos/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:webview_flutter] /Users/sangxiang/task_flutter/build/webview_flutter/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:path_provider] /Users/sangxiang/task_flutter/build/path_provider/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:2:1-22:12
+MERGED from [:url_launcher_macos] /Users/sangxiang/task_flutter/build/url_launcher_macos/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [:url_launcher_web] /Users/sangxiang/task_flutter/build/url_launcher_web/intermediates/library_manifest/release/AndroidManifest.xml:2:1-7:12
+MERGED from [cn.smssdk:SMSSDK:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/AndroidManifest.xml:2:1-11:12
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/AndroidManifest.xml:2:1-16:12
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/29dfaecfdc3fa0c6e8d983010fe0c660/AndroidManifest.xml:17:1-22:12
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0a7600aa8a747e3b4fbc17c2f0b7d685/AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5f30f4923d4bdbaf61d208d0a8e98c90/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c1c2c1e0e4e97958cd6b26bc56380aa8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/223a143e1a3b3897cf7ddbc693348e19/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/25c2c3eff570b541380afa432d6222c8/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2b70ce3d83fc5c143830de1313aa308/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6d31551e4d017386e0402b03f8e0ea02/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/15c19e88c9f181191bb3a08687d579d4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a8636d4d8fb44c60c478da387318a5a0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/43aaa976b3de1dde19f791f4d0fa6a41/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/230143f09c413f8526444cfc9093c684/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ba9d92649ba0b1c8378019fca1641322/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/493f0eb534c0ecab6766f388e03e5b2c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e55a83c9ddc0ab359932e0c0ac0b1a7a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9fa44077348be206936aa548da8d798d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0808d67ebcba58def65dbf154f969dde/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ad89c70c7cc69713d795c0466bea2ef4/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d22cd8b5ba2383d79290a632366c3ef5/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6b94efb32cfbb3883b495b8df3a3d03f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7917436f0c884da6038b576dc798c2e1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/69dc617bdedc2ef114b3a61b9549a004/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/16c725d91fc9ef838f14a250c51e1236/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/53ae2c916a26c7fcf25c5a125d342f94/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d651e3f8c737d4a64527012d61a7d29f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/929160d1894d49ea9bd9e01f1d934394/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+	package
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:3:5-29
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:2:5-51
+	android:versionCode
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.REQUEST_INSTALL_PACKAGES
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:5:5-82
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:5:22-80
+uses-permission#android.permission.INTERNET
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:6:5-66
+MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:18:5-67
+MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:18:5-67
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:6:22-64
+application
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:12:5-55:19
+MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/release/AndroidManifest.xml:7:5-69
+MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/release/AndroidManifest.xml:7:5-69
+MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:13:5-15:19
+MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:13:5-15:19
+MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:7:5-12:19
+MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:7:5-12:19
+MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:30:5-34:19
+MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:30:5-34:19
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:10:5-20:19
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:10:5-20:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/AndroidManifest.xml:13:5-14:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/AndroidManifest.xml:13:5-14:19
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0a7600aa8a747e3b4fbc17c2f0b7d685/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0a7600aa8a747e3b4fbc17c2f0b7d685/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5f30f4923d4bdbaf61d208d0a8e98c90/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5f30f4923d4bdbaf61d208d0a8e98c90/AndroidManifest.xml:11:5-20
+MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d22cd8b5ba2383d79290a632366c3ef5/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d22cd8b5ba2383d79290a632366c3ef5/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:15:9-27
+	android:allowBackup
+		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/AndroidManifest.xml:13:18-44
+	android:icon
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:16:9-43
+	android:networkSecurityConfig
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:13:9-69
+	tools:replace
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:17:9-37
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:14:9-30
+		REJECTED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/release/AndroidManifest.xml:7:18-66
+activity#com.weilu.deer.MainActivity
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:19:9-38:20
+	android:screenOrientation
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:23:13-49
+	android:launchMode
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:21:13-43
+	android:hardwareAccelerated
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:25:13-47
+	android:windowSoftInputMode
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:26:13-55
+	android:configChanges
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:24:13-144
+	android:theme
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:22:13-47
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:20:13-41
+meta-data#io.flutter.app.android.SplashScreenUntilFirstFrame
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:31:13-33:40
+	android:value
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:33:17-37
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:32:17-82
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:34:13-37:29
+action#android.intent.action.MAIN
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:35:17-68
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:35:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:36:17-76
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:36:27-74
+meta-data#com.amap.api.v2.apikey
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:40:9-42:63
+	android:value
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:42:13-61
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:41:13-50
+uses-sdk
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/377d0044ac58a5c56b333c9b74ac1e58/AndroidManifest.xml:6:5-8:41
+MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/377d0044ac58a5c56b333c9b74ac1e58/AndroidManifest.xml:6:5-8:41
+MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:7:5-9:41
+MERGED from [:sqflite] /Users/sangxiang/task_flutter/build/sqflite/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:sqflite] /Users/sangxiang/task_flutter/build/sqflite/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_web] /Users/sangxiang/task_flutter/build/shared_preferences_web/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_web] /Users/sangxiang/task_flutter/build/shared_preferences_web/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_macos] /Users/sangxiang/task_flutter/build/shared_preferences_macos/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences_macos] /Users/sangxiang/task_flutter/build/shared_preferences_macos/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] /Users/sangxiang/task_flutter/build/webview_flutter/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:webview_flutter] /Users/sangxiang/task_flutter/build/webview_flutter/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/sangxiang/task_flutter/build/path_provider/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:path_provider] /Users/sangxiang/task_flutter/build/path_provider/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_macos] /Users/sangxiang/task_flutter/build/url_launcher_macos/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_macos] /Users/sangxiang/task_flutter/build/url_launcher_macos/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_web] /Users/sangxiang/task_flutter/build/url_launcher_web/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [:url_launcher_web] /Users/sangxiang/task_flutter/build/url_launcher_web/intermediates/library_manifest/release/AndroidManifest.xml:5:5-44
+MERGED from [cn.smssdk:SMSSDK:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:SMSSDK:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7d31d23af71a868daac4de261c55976e/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/AndroidManifest.xml:8:5-11:45
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/AndroidManifest.xml:8:5-11:45
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/29dfaecfdc3fa0c6e8d983010fe0c660/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/29dfaecfdc3fa0c6e8d983010fe0c660/AndroidManifest.xml:20:5-44
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0a7600aa8a747e3b4fbc17c2f0b7d685/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0a7600aa8a747e3b4fbc17c2f0b7d685/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5f30f4923d4bdbaf61d208d0a8e98c90/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5f30f4923d4bdbaf61d208d0a8e98c90/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c1c2c1e0e4e97958cd6b26bc56380aa8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c1c2c1e0e4e97958cd6b26bc56380aa8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/223a143e1a3b3897cf7ddbc693348e19/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/223a143e1a3b3897cf7ddbc693348e19/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/25c2c3eff570b541380afa432d6222c8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/25c2c3eff570b541380afa432d6222c8/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2b70ce3d83fc5c143830de1313aa308/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2b70ce3d83fc5c143830de1313aa308/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6d31551e4d017386e0402b03f8e0ea02/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6d31551e4d017386e0402b03f8e0ea02/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/15c19e88c9f181191bb3a08687d579d4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/15c19e88c9f181191bb3a08687d579d4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a8636d4d8fb44c60c478da387318a5a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a8636d4d8fb44c60c478da387318a5a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/43aaa976b3de1dde19f791f4d0fa6a41/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/43aaa976b3de1dde19f791f4d0fa6a41/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/230143f09c413f8526444cfc9093c684/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/230143f09c413f8526444cfc9093c684/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ba9d92649ba0b1c8378019fca1641322/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ba9d92649ba0b1c8378019fca1641322/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/493f0eb534c0ecab6766f388e03e5b2c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/493f0eb534c0ecab6766f388e03e5b2c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e55a83c9ddc0ab359932e0c0ac0b1a7a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e55a83c9ddc0ab359932e0c0ac0b1a7a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/12d3cae2d556c1fe45c6dbd434864b44/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/266b0880af978723113a2376569169ea/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9fa44077348be206936aa548da8d798d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9fa44077348be206936aa548da8d798d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0808d67ebcba58def65dbf154f969dde/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0808d67ebcba58def65dbf154f969dde/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ad89c70c7cc69713d795c0466bea2ef4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ad89c70c7cc69713d795c0466bea2ef4/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d22cd8b5ba2383d79290a632366c3ef5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d22cd8b5ba2383d79290a632366c3ef5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6b94efb32cfbb3883b495b8df3a3d03f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6b94efb32cfbb3883b495b8df3a3d03f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7917436f0c884da6038b576dc798c2e1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7917436f0c884da6038b576dc798c2e1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/69dc617bdedc2ef114b3a61b9549a004/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/69dc617bdedc2ef114b3a61b9549a004/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/16c725d91fc9ef838f14a250c51e1236/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/16c725d91fc9ef838f14a250c51e1236/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/53ae2c916a26c7fcf25c5a125d342f94/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/53ae2c916a26c7fcf25c5a125d342f94/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d651e3f8c737d4a64527012d61a7d29f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d651e3f8c737d4a64527012d61a7d29f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/929160d1894d49ea9bd9e01f1d934394/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/929160d1894d49ea9bd9e01f1d934394/AndroidManifest.xml:20:5-44
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+	tools:overrideLibrary
+		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8f404362b20b5cc73bf42eef396e390c/AndroidManifest.xml:11:9-42
+	android:targetSdkVersion
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:50:13-52:53
+	android:resource
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:52:17-51
+	android:name
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:51:17-67
+uses-permission#android.permission.CAMERA
+ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:11:5-65
+	android:name
+		ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:11:22-62
+activity#com.apptreesoftware.barcodescan.BarcodeScannerActivity
+ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:14:9-91
+	android:name
+		ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/release/AndroidManifest.xml:14:19-88
+activity#io.flutter.plugins.urllauncher.WebViewActivity
+ADDED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:8:9-11:74
+	android:exported
+		ADDED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:10:13-37
+	android:theme
+		ADDED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:11:13-71
+	android:name
+		ADDED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/release/AndroidManifest.xml:9:13-74
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:8:22-78
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:10:5-79
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:10:22-76
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:12:22-76
+uses-permission#android.permission.ACCESS_WIFI_STATE
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:14:5-76
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:14:22-73
+uses-permission#android.permission.CHANGE_WIFI_STATE
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:16:5-76
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:16:22-73
+uses-permission#android.permission.READ_PHONE_STATE
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:20:5-75
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:20:22-72
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:22:5-81
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:8:5-81
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:8:5-81
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:22:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:23:5-80
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:7:5-80
+MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:7:5-80
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:23:22-77
+uses-permission#android.permission.ACCESS_LOCATION_EXTRA_COMMANDS
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:25:5-89
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:25:22-86
+uses-permission#android.permission.BLUETOOTH
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:27:5-68
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:27:22-65
+uses-permission#android.permission.BLUETOOTH_ADMIN
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:28:5-74
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:28:22-71
+service#com.amap.api.location.APSService
+ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:33:9-68
+	android:name
+		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/release/AndroidManifest.xml:33:18-65
+provider#io.flutter.plugins.imagepicker.ImagePickerFileProvider
+ADDED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:11:9-19:20
+	android:grantUriPermissions
+		ADDED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:15:13-47
+	android:authorities
+		ADDED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:13:13-74
+	android:exported
+		ADDED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:14:13-37
+	android:name
+		ADDED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/release/AndroidManifest.xml:12:13-82

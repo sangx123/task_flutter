@@ -1,5 +1,5 @@
 -- Merging decision tree log ---
-provider#com.weilu.deer.DeerPickerProvider
+provider#com.fulin.xinxiang.DeerPickerProvider
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:45:9-53:20
 	android:authorities
 		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
@@ -57,7 +57,7 @@ INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifes
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 	package
-		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:3:5-29
+		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:3:5-33
 		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml
 	android:versionName
@@ -122,7 +122,7 @@ MERGED from [cn.smssdk:ShortMessageSDKGUI:3.3.6] /Users/sangxiang/.gradle/caches
 	android:name
 		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:14:9-30
 		REJECTED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/debug/AndroidManifest.xml:7:18-66
-activity#com.weilu.deer.MainActivity
+activity#com.fulin.xinxiang.MainActivity
 ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:19:9-38:20
 	android:screenOrientation
 		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:23:13-49

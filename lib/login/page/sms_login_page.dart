@@ -15,6 +15,7 @@ import 'package:flutter_deer/widgets/my_button.dart';
 import 'package:flutter_deer/widgets/text_field.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:flustars/flustars.dart' as FlutterStars;
+import 'package:mobsms/mobsms.dart';
 import '../login_router.dart';
 
 /// design/1注册登录/index.html#artboard4
@@ -45,7 +46,7 @@ class _SMSLoginPageState extends State<SMSLoginPage> {
     if (name.isEmpty || name.length < 11) {
       isClick = false;
     }
-    if (vCode.isEmpty || vCode.length < 6) {
+    if (vCode.isEmpty || vCode.length < 4) {
       isClick = false;
     }
     if (isClick != _isClick){
@@ -54,7 +55,16 @@ class _SMSLoginPageState extends State<SMSLoginPage> {
       });
     }
   }
-
+  void _submit(){
+    Smssdk.commitCode(_phoneController.text, "86", _vCodeController.text, (dynamic ret, Map err){
+      if(err!=null)
+      {
+        Toast.show("用户输入的验证码错误！");
+      }else{
+        _login();
+      }
+    });
+  }
   Future<void> _login() async {
     await DioUtils.instance.requestNetwork<UserEntity>(
       Method.post, HttpApi.login,
@@ -107,9 +117,21 @@ class _SMSLoginPageState extends State<SMSLoginPage> {
             maxLength: 6,
             keyboardType: TextInputType.number,
             hintText: "请输入验证码",
-            getVCode: (){
-              Toast.show('获取验证码');
-              return Future.value(true);
+            getVCode: () async {
+              if (_phoneController.text.length == 11){
+                //Toast.show("并没有真正发送哦，直接登录吧！");
+                /// 一般可以在这里发送真正的请求，请求成功返回true
+                Smssdk.getTextCode(_phoneController.text, "86", "", (dynamic ret, Map err){
+                  if(err!=null)
+                  {
+                    Toast.show(err.toString());
+                  }
+                });
+                return true;
+              }else{
+                Toast.show("请输入有效的手机号");
+                return false;
+              }
             },
           ),
           Gaps.vGap8,
@@ -132,7 +154,7 @@ class _SMSLoginPageState extends State<SMSLoginPage> {
           Gaps.vGap15,
           Gaps.vGap10,
           MyButton(
-            onPressed: _isClick ? _login : null,
+            onPressed: _isClick ? _submit : null,
             text: "登录",
           ),
           Container(

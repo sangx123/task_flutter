@@ -1,4 +1,4 @@
-#Thu Dec 26 17:35:25 CST 2019
+#Mon Dec 30 09:47:42 CST 2019
 base.0=/Users/sangxiang/task_flutter/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

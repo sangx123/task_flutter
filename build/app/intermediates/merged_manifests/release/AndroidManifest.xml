@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.fulin.xinxiang" android:versionName="1.0.8" android:versionCode="9">
+  <uses-sdk android:targetSdkVersion="28" android:minSdkVersion="16"/>
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" xmlns:android="http://schemas.android.com/apk/res/android"/>
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.CAMERA" xmlns:android="http://schemas.android.com/apk/res/android"/>
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" xmlns:android="http://schemas.android.com/apk/res/android"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" xmlns:android="http://schemas.android.com/apk/res/android"/>
+  <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+  <uses-permission android:name="android.permission.READ_PHONE_STATE" xmlns:android="http://schemas.android.com/apk/res/android"/>
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" xmlns:android="http://schemas.android.com/apk/res/android"/>
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+  <uses-permission android:name="android.permission.BLUETOOTH" xmlns:android="http://schemas.android.com/apk/res/android"/>
+  <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+  <application android:label="心享" android:name="com.weilu.deer.MyApp" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:allowBackup="true" xmlns:android="http://schemas.android.com/apk/res/android">
+    <activity android:screenOrientation="portrait" android:hardwareAccelerated="true" android:launchMode="singleTop" android:name="com.weilu.deer.MainActivity" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:theme="@style/LaunchTheme" android:windowSoftInputMode="adjustResize">
+      <meta-data android:name="io.flutter.app.android.SplashScreenUntilFirstFrame" android:value="true"/>
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER" xmlns:android="http://schemas.android.com/apk/res/android"/>
+      </intent-filter>
+    </activity>
+    <meta-data android:name="com.amap.api.v2.apikey" android:value="29017a09c0b0279853577be7df682513"/>
+    <provider android:name="com.weilu.deer.DeerPickerProvider" android:grantUriPermissions="true" android:exported="false" android:authorities="com.fulin.xinxiang.Merchant">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
+    </provider>
+    <activity android:name="com.apptreesoftware.barcodescan.BarcodeScannerActivity"/>
+    <activity android:name="io.flutter.plugins.urllauncher.WebViewActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:exported="false"/>
+    <service android:name="com.amap.api.location.APSService"/>
+    <provider android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider" android:grantUriPermissions="true" android:exported="false" android:authorities="com.fulin.xinxiang.flutter.image_provider">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/flutter_image_picker_file_paths"/>
+    </provider>
+    <provider android:name="com.mob.MobProvider" android:exported="false" android:authorities="com.fulin.xinxiang.com.mob.MobProvider" android:multiprocess="true"/>
+    <activity xmlns:tools="http://schemas.android.com/tools" android:windowSoftInputMode="stateHidden|adjustResize" android:name="com.mob.tools.MobUIShell" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar" tools:node="merge"/>
+  </application>
+  <uses-permission android:name="android.permission.READ_CONTACTS"/>
+</manifest>

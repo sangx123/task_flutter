@@ -14,8 +14,8 @@
   <uses-permission android:name="android.permission.BLUETOOTH"/>
   <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" xmlns:android="http://schemas.android.com/apk/res/android"/>
   <uses-permission android:name="android.permission.CAMERA"/>
-  <application android:debuggable="true" android:label="心享" android:name="com.weilu.deer.MyApp" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:allowBackup="true" xmlns:android="http://schemas.android.com/apk/res/android">
-    <activity android:screenOrientation="portrait" android:hardwareAccelerated="true" android:launchMode="singleTop" android:name="com.weilu.deer.MainActivity" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:theme="@style/LaunchTheme" android:windowSoftInputMode="adjustResize">
+  <application android:debuggable="true" android:label="心享" android:name="com.fulin.xinxiang.MyApp" android:networkSecurityConfig="@xml/network_security_config" android:appComponentFactory="androidx.core.app.CoreComponentFactory" android:icon="@mipmap/ic_launcher" android:allowBackup="true" xmlns:android="http://schemas.android.com/apk/res/android">
+    <activity android:screenOrientation="portrait" android:hardwareAccelerated="true" android:launchMode="singleTop" android:name="com.fulin.xinxiang.MainActivity" android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode" android:theme="@style/LaunchTheme" android:windowSoftInputMode="adjustResize">
       <meta-data android:name="io.flutter.app.android.SplashScreenUntilFirstFrame" android:value="true"/>
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
@@ -23,7 +23,7 @@
       </intent-filter>
     </activity>
     <meta-data android:name="com.amap.api.v2.apikey" android:value="29017a09c0b0279853577be7df682513"/>
-    <provider android:name="com.weilu.deer.DeerPickerProvider" android:grantUriPermissions="true" android:exported="false" android:authorities="com.fulin.xinxiang.Merchant">
+    <provider android:name="com.fulin.xinxiang.DeerPickerProvider" android:grantUriPermissions="true" android:exported="false" android:authorities="com.fulin.xinxiang.Merchant">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths"/>
     </provider>
     <activity android:name="io.flutter.plugins.urllauncher.WebViewActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:exported="false"/>

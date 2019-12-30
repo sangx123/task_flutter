@@ -34,7 +34,7 @@
          FlutterApplication and put your custom class here.
     -->
     <application
-        android:name="com.weilu.deer.MyApp"
+        android:name="com.fulin.xinxiang.MyApp"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
@@ -42,7 +42,7 @@
         android:label="心享"
         android:networkSecurityConfig="@xml/network_security_config" >
         <activity
-            android:name="com.weilu.deer.MainActivity"
+            android:name="com.fulin.xinxiang.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"
@@ -73,7 +73,7 @@
 
         <!-- 兼容7.0 -->
         <provider
-            android:name="com.weilu.deer.DeerPickerProvider"
+            android:name="com.fulin.xinxiang.DeerPickerProvider"
             android:authorities="com.fulin.xinxiang.Merchant"
             android:exported="false"
             android:grantUriPermissions="true" >

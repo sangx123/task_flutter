@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/shared_preferences/intermediates/res/merged/release/layout-v21/notification_action_tombstone.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b0875d089271fa2981a0dc8174a9df2a/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/shared_preferences/intermediates/res/merged/release/layout-v21/notification_template_custom_big.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b0875d089271fa2981a0dc8174a9df2a/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/shared_preferences/intermediates/res/merged/release/layout-v21/notification_template_icon_group.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b0875d089271fa2981a0dc8174a9df2a/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/Users/sangxiang/task_flutter/build/shared_preferences/intermediates/res/merged/release/layout-v21/notification_action.xml",
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b0875d089271fa2981a0dc8174a9df2a/res/layout-v21/notification_action.xml"
+    }
+]
