@@ -4,7 +4,7 @@
             "outputFile": "/Users/sangxiang/task_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-xxhdpi-v4/values-xxhdpi-v4.xml",
             "map": [
                 {
-                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5f30f4923d4bdbaf61d208d0a8e98c90/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
+                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/80c5f7befc02eee345b3807511bb9083/res/values-xxhdpi-v4/values-xxhdpi-v4.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

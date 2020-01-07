@@ -60,7 +60,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
                         )
                     ),
                     padding: const EdgeInsets.symmetric(horizontal: 48.0),
-                  )
+                  ),
                 ],
               ),
               isBack ? IconButton(

@@ -65,6 +65,10 @@ dependencies:
       url: https://github.com/simplezhli/flutter_barcode_reader.git
   #短信接口
   mobsms: ^1.1.0
+
+  #rich text
+  zefyr:
+    path: zefyr
 dev_dependencies:
   # Widget测试
   flutter_test:

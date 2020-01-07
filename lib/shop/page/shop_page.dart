@@ -9,6 +9,8 @@ import 'package:flutter_deer/shop/models/user_entity.dart';
 import 'package:flutter_deer/shop/presenter/shop_presenter.dart';
 import 'package:flutter_deer/shop/provider/user_provider.dart';
 import 'package:flutter_deer/shop/shop_router.dart';
+import 'package:flutter_deer/task/page/test_forcus.dart';
+import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/image_utils.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
@@ -187,7 +189,8 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                           )
                         ],
                       ),
-                      onTap: () => NavigatorUtils.push(context, ShopRouter.shopSettingPage),
+                      //onTap: () => NavigatorUtils.push(context, ShopRouter.shopSettingPage),
+                      onTap: () => NavigatorUtils.push(context, TaskRouter.myCustomForm),
                     );
                   },
                 ),
