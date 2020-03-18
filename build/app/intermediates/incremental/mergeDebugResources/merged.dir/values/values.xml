@@ -281,6 +281,9 @@
     <color name="ripple_material_light">#1f000000</color>
     <color name="secondary_text_default_material_dark">#b3ffffff</color>
     <color name="secondary_text_default_material_light">#8a000000</color>
+    <color name="smssdk_464646">#464646</color>
+    <color name="smssdk_686868">#686868</color>
+    <color name="smssdk_999999">#999999</color>
     <color name="smssdk_bg_gray">#EFEFF3</color>
     <color name="smssdk_black">#ff000000</color>
     <color name="smssdk_common_black">#202122</color>
@@ -289,6 +292,7 @@
     <color name="smssdk_common_text_gray">#555555</color>
     <color name="smssdk_common_transparent">#FFFFFFFF</color>
     <color name="smssdk_common_white">#FFFFFF</color>
+    <color name="smssdk_f6f6f6">#f6f6f6</color>
     <color name="smssdk_gray">#ff898989</color>
     <color name="smssdk_gray_press">#fff2f2f2</color>
     <color name="smssdk_line_light_gray">#ffe0e0e6</color>
@@ -358,6 +362,7 @@
     <item name="llTitle" type="id"/>
     <item name="ll_back" type="id"/>
     <item name="ll_phone2" type="id"/>
+    <item name="ll_scroll" type="id"/>
     <item name="ll_voice" type="id"/>
     <item name="rl_country" type="id"/>
     <item name="rl_lv_item_bg" type="id"/>
@@ -388,6 +393,10 @@
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <integer name="viewfinder_border_length">60</integer>
     <integer name="viewfinder_border_width">4</integer>
+    <string name="mobcommon_authorize_dialog_accept">同意</string>
+    <string name="mobcommon_authorize_dialog_content">为了给您提供Mobservice相关产品服务，请您详细查看我们的隐私政策，详见&lt;a href="http://www.mob.com/about/policy">http://www.mob.com/about/policy&lt;/a>。如您同意我们的隐私政策，请点击“接受”，如您不同意我们的隐私政策，请点击“拒绝”。</string>
+    <string name="mobcommon_authorize_dialog_reject">拒绝</string>
+    <string name="mobcommon_authorize_dialog_title">服务授权</string>
     <string name="smssdk_add_contact">添加好友</string>
     <string name="smssdk_authorize_dialog_accept">同意</string>
     <string name="smssdk_authorize_dialog_ask">是否同意获得以下权限</string>
@@ -396,6 +405,8 @@
     <string name="smssdk_authorize_dialog_reject">拒绝</string>
     <string name="smssdk_authorize_dialog_title">服务授权</string>
     <string name="smssdk_authorize_dialog_usage">用于添加通讯录好友等操作。</string>
+    <string name="smssdk_authorize_recheck_dialog_content">为了给您提供Mobservice相关产品服务，请您详细查看我们的隐私政策，详见&lt;a href="http://www.mob.com/about/policy">http://www.mob.com/about/policy&lt;/a>。如您同意我们的隐私政策，请点击“接受”，如您不同意我们的隐私政策，请点击“拒绝”。</string>
+    <string name="smssdk_authorize_recheck_dialog_title">服务授权</string>
     <string name="smssdk_back">返回 </string>
     <string name="smssdk_bind_profile">绑定资料</string>
     <string name="smssdk_cancel">取消</string>
@@ -481,6 +492,7 @@
     <string name="smssdk_error_desc_609">Request header错误：Sign为空</string>
     <string name="smssdk_error_desc_610">Request header错误：UserAgent为空</string>
     <string name="smssdk_error_desc_611">AppSecret为空</string>
+    <string name="smssdk_error_desc_612">未授权MobTech隐私协议</string>
     <string name="smssdk_error_desc_server_busy">服务器繁忙</string>
     <string name="smssdk_error_detail_206">模板不存在/未审核/非SDK模板</string>
     <string name="smssdk_error_detail_400">客户端请求不能被识别。</string>
@@ -555,6 +567,7 @@
     <string name="smssdk_error_detail_609">Request header错误：Sign为空</string>
     <string name="smssdk_error_detail_610">Request header错误：UserAgent为空</string>
     <string name="smssdk_error_detail_611">AppSecret为空</string>
+    <string name="smssdk_error_detail_612">未授权MobTech隐私协议</string>
     <string name="smssdk_get_phone_verifycode_today_frequentlly">很抱歉，该手机号申请验证码次数过多，请明天重试！</string>
     <string name="smssdk_get_verifycode_frequentlly">发送验证码太频繁，请稍后再发！</string>
     <string name="smssdk_i_know">我知道了</string>
@@ -581,8 +594,9 @@
     <string name="smssdk_receive_msg"><Data>接收短信大约需要&lt;font color=#209526>%s&lt;/font>秒</Data></string>
     <string name="smssdk_regist">使用手机号码注册</string>
     <string name="smssdk_resend_identify_code">重新获取验证码</string>
-    <string name="smssdk_search">搜索</string>
+    <string name="smssdk_search">请输入中文|字母|数字</string>
     <string name="smssdk_search_contact">通讯录</string>
+    <string name="smssdk_selected">已选择</string>
     <string name="smssdk_send_invitation">发送邀请</string>
     <string name="smssdk_send_mobile_detail">短信验证码已发送，请填写验证码</string>
     <string name="smssdk_send_sounds">点击发送语音验证</string>
@@ -659,6 +673,29 @@
         <item name="statusBarBackground">#000000</item>
     </style>
     <style name="aaaa" parent="android:Theme.Translucent.NoTitleBar">
+	</style>
+    <style name="mobcommon_DialogStyle" parent="@android:style/Theme.Dialog">
+		<!-- 边框 -->
+		<item name="android:windowFrame">@null</item>
+		<!-- 是否浮现在activity之上 -->
+		<item name="android:windowIsFloating">true</item>
+		<!-- 半透明 -->
+		<item name="android:windowIsTranslucent">false</item>
+		<!-- 无标题 -->
+		<item name="android:windowNoTitle">true</item>
+		<!-- 自己想要的背景 -->
+		<item name="android:background">@android:color/transparent</item>
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<!-- 模糊 -->
+		<item name="android:backgroundDimEnabled">true</item>
+	</style>
+    <style name="mobcommon_TranslucentTheme">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:colorBackgroundCacheHint">@null</item>
+		<item name="android:windowIsTranslucent">true</item>
+		<item name="android:windowAnimationStyle">@android:style/Animation</item>
+		<item name="android:windowNoTitle">true</item>
+		<item name="android:windowContentOverlay">@null</item>
 	</style>
     <style name="smssdk_DialogStyle" parent="@android:style/Theme.Dialog">
 		<!-- 边框 -->

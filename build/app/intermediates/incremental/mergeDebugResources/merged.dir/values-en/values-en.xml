@@ -270,6 +270,8 @@
 		<item>Zambia,260,92,64502|64501|64503</item>
 		<item>Zimbabwe,263,95,64801|64803|64804</item>
     </string-array>
+    <string name="mobcommon_authorize_dialog_accept">Accept</string>
+    <string name="mobcommon_authorize_dialog_reject">Reject</string>
     <string name="smssdk_add_contact">Add</string>
     <string name="smssdk_authorize_dialog_accept">Agree</string>
     <string name="smssdk_authorize_dialog_ask">Allow the following permissions:</string>
@@ -278,6 +280,8 @@
     <string name="smssdk_authorize_dialog_reject">Disagree</string>
     <string name="smssdk_authorize_dialog_title">Terms of Use</string>
     <string name="smssdk_authorize_dialog_usage">to add contact friends.</string>
+    <string name="smssdk_authorize_recheck_dialog_content">In order to provide you with Mobservice, please check our service policy. For details, please click &lt;a href="http://www.mob.com/about/policy">http://www.mob.com/about/policy&lt;/a>. If you agree with our service policy, please click "accept", if you do not agree with our service policy, please click "reject"</string>
+    <string name="smssdk_authorize_recheck_dialog_title">Terms of Use</string>
     <string name="smssdk_back">Back </string>
     <string name="smssdk_bind_profile">Bind</string>
     <string name="smssdk_cancel">Cancel</string>
@@ -363,6 +367,7 @@
     <string name="smssdk_error_desc_609">Request header invalid：Sign is empty</string>
     <string name="smssdk_error_desc_610">Request header invalid：UserAgent is empty</string>
     <string name="smssdk_error_desc_611">AppSecret is empty</string>
+    <string name="smssdk_error_desc_612">MobTech service policy not granted</string>
     <string name="smssdk_error_desc_server_busy">Server is busy</string>
     <string name="smssdk_error_detail_206">Template does not exist/not certificated/not SDK template</string>
     <string name="smssdk_error_detail_400">The request could not be identified</string>
@@ -437,6 +442,7 @@
     <string name="smssdk_error_detail_609">Request header invalid：Sign is empty</string>
     <string name="smssdk_error_detail_610">Request header invalid：UserAgent is empty</string>
     <string name="smssdk_error_detail_611">AppSecret is empty</string>
+    <string name="smssdk_error_detail_612">MobTech service policy not granted</string>
     <string name="smssdk_get_phone_verifycode_today_frequentlly">I am sorry, the phone number for verification code number too much, please try again tomorrow!</string>
     <string name="smssdk_get_verifycode_frequentlly">Send verification code too frequently, please try later!</string>
     <string name="smssdk_i_know">I know</string>
@@ -463,8 +469,9 @@
     <string name="smssdk_receive_msg"><Data>Receive SMS takes about &lt;font color=#209526>%s&lt;/font> seconds</Data></string>
     <string name="smssdk_regist">Register with phone number</string>
     <string name="smssdk_resend_identify_code">Resend verification code</string>
-    <string name="smssdk_search">Search</string>
+    <string name="smssdk_search">Please input Chinese|letter|number</string>
     <string name="smssdk_search_contact">Contact</string>
+    <string name="smssdk_selected">selected</string>
     <string name="smssdk_send_invitation">Send invitation</string>
     <string name="smssdk_send_mobile_detail">Verification code sent, please input</string>
     <string name="smssdk_send_sounds">Send voice code</string>

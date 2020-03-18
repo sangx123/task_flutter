@@ -1,18 +1,18 @@
 [
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4655c15793aab33afc8007770b793e87/res/layout-v21/notification_template_icon_group.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/layout-v21/notification_template_icon_group.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4655c15793aab33afc8007770b793e87/res/layout-v21/notification_action_tombstone.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/layout-v21/notification_action_tombstone.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4655c15793aab33afc8007770b793e87/res/layout-v21/notification_template_custom_big.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/layout-v21/notification_action.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4655c15793aab33afc8007770b793e87/res/layout-v21/notification_action.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/layout-v21/notification_action.xml"
     }
 ]

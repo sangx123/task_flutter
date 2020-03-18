@@ -2,8 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_deer/rich_text/full_page.dart';
-import 'package:flutter_deer/rich_text/images.dart';
+import 'package:flutter_deer/util/zefyr_images.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
 import 'package:zefyr/zefyr.dart';
 

@@ -12,6 +12,10 @@ import 'package:oktoast/oktoast.dart';
 import 'package:flutter_deer/home/splash_page.dart';
 import 'package:provider/provider.dart';
 
+import 'task/page/ListBodyDemo.dart';
+import 'task/page/ScrollToIndexDemoPage2.dart';
+import 'task/page/task_publish.dart';
+
 void main() {
 //  debugProfileBuildsEnabled = true;
 //  debugPaintLayerBordersEnabled = true;
@@ -51,7 +55,8 @@ class MyApp extends StatelessWidget {
               //checkerboardRasterCacheImages: true,
               theme: provider.getTheme(),
               darkTheme: provider.getTheme(isDarkMode: true),
-              home: home ?? SplashPage(),
+              //home: home ?? SplashPage(),
+              home: getHomePage(),
               onGenerateRoute: Application.router.generator,
               localizationsDelegates: const [
                 GlobalMaterialLocalizations.delegate,
@@ -71,5 +76,10 @@ class MyApp extends StatelessWidget {
       radius: 20.0,
       position: ToastPosition.bottom
     );
+  }
+
+  Widget getHomePage(){
+    return PublishTaskPage();
+    //return ScrollToIndexDemoPage2();
   }
 }

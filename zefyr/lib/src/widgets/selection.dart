@@ -99,6 +99,7 @@ class _ZefyrSelectionOverlayState extends State<ZefyrSelectionOverlay>
   @override
   void bringIntoView(ui.TextPosition position) {
     // TODO: implement bringIntoView
+    //获取srollable对象
   }
 
   @override

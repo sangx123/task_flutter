@@ -51,9 +51,11 @@ class _RawZefyrLineState extends State<RawZefyrLine> {
 
     Widget content;
     if (widget.node.hasEmbed) {
+      print("content = Embed");
       content = buildEmbed(context, scope);
     } else {
       assert(widget.style != null);
+      print("content = ZefyrRichText");
       content = ZefyrRichText(
         node: widget.node,
         text: buildText(context),
@@ -61,6 +63,7 @@ class _RawZefyrLineState extends State<RawZefyrLine> {
     }
 
     if (scope.isEditable) {
+      print("content = EditableBox");
       content = EditableBox(
         child: content,
         node: widget.node,
@@ -81,29 +84,43 @@ class _RawZefyrLineState extends State<RawZefyrLine> {
   }
 
   void ensureVisible(BuildContext context, ZefyrScope scope) {
-    if (scope.selection.isCollapsed &&
-        widget.node.containsOffset(scope.selection.extentOffset)) {
+    print("ensureVisible");
+    if (scope.selection.isCollapsed
+        &&widget.node.containsOffset(scope.selection.extentOffset)
+    ) {
+      //获取view的大小和位置
       WidgetsBinding.instance.addPostFrameCallback((_) {
-        bringIntoView(context);
+        print("addPostFrameCallback");
+        Future.delayed(const Duration(milliseconds: 50),(){
+          bringIntoView(context);
+        });
       });
     }
   }
-
+  //此处的意义就是滚动到制定位置
   void bringIntoView(BuildContext context) {
+
+    //获取srollable对象
     ScrollableState scrollable = Scrollable.of(context);
     final object = context.findRenderObject();
     assert(object.attached);
     final RenderAbstractViewport viewport = RenderAbstractViewport.of(object);
     assert(viewport != null);
-
+    print("1111");
+    print("scrollable.position=="+scrollable.position.toString());
     final double offset = scrollable.position.pixels;
+    print("offset="+offset.toString());
     double target = viewport.getOffsetToReveal(object, 0.0).offset;
+    print("target1="+target.toString());
     if (target - offset < 0.0) {
+      print("bringIntoView1=="+target.toString());
       scrollable.position.jumpTo(target);
       return;
     }
     target = viewport.getOffsetToReveal(object, 1.0).offset;
+    print("target2="+target.toString());
     if (target - offset > 0.0) {
+      print("bringIntoView2=="+target.toString());
       scrollable.position.jumpTo(target);
     }
   }

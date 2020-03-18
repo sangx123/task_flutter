@@ -135,6 +135,7 @@ class _ZefyrEditableTextState extends State<ZefyrEditableText>
 
   @override
   Widget build(BuildContext context) {
+    print("editable_build");
     _focusAttachment.reparent();
     super.build(context); // See AutomaticKeepAliveState.
 

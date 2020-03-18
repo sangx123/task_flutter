@@ -1,1 +1,3 @@
-build/
+./idea
+build
+.dart_tool

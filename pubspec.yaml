@@ -69,6 +69,7 @@ dependencies:
   #rich text
   zefyr:
     path: zefyr
+  #zefyr: ^0.8.0
 dev_dependencies:
   # Widget测试
   flutter_test:

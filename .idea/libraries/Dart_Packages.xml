@@ -376,6 +376,7 @@
         <entry key="notus">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/notus-0.1.5/lib" />
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/notus-0.1.4/lib" />
             </list>
           </value>
@@ -439,6 +440,7 @@
         <entry key="plugin_platform_interface">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-1.0.2/lib" />
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-1.0.1/lib" />
             </list>
           </value>
@@ -474,6 +476,7 @@
         <entry key="quill_delta">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/quill_delta-1.0.1/lib" />
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/quill_delta-1.0.0/lib" />
             </list>
           </value>
@@ -691,6 +694,7 @@
         <entry key="url_launcher">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher-5.4.2/lib" />
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher-5.4.1/lib" />
             </list>
           </value>
@@ -698,6 +702,7 @@
         <entry key="url_launcher_macos">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_macos-0.0.1+4/lib" />
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_macos-0.0.1+2/lib" />
             </list>
           </value>
@@ -705,6 +710,7 @@
         <entry key="url_launcher_platform_interface">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_platform_interface-1.0.6/lib" />
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_platform_interface-1.0.5/lib" />
             </list>
           </value>
@@ -712,6 +718,7 @@
         <entry key="url_launcher_web">
           <value>
             <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_web-0.1.1+1/lib" />
               <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_web-0.1.0+2/lib" />
             </list>
           </value>
@@ -830,6 +837,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/node_io-1.0.1+2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/node_preamble-1.4.8/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/notus-0.1.4/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/notus-0.1.5/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/oktoast-2.3.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/package_config-1.1.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/package_resolver-1.0.10/lib" />
@@ -839,11 +847,13 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/petitparser-2.4.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/platform-2.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-1.0.1/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/plugin_platform_interface-1.0.2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/pool-1.4.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/process-3.0.12/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/provider-3.2.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/pub_semver-1.4.2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/quill_delta-1.0.0/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/quill_delta-1.0.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/quiver-2.0.5/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/quiver_hashcode-2.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/rational-0.3.7/lib" />
@@ -874,9 +884,13 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/transformer_page_view-0.1.6/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/typed_data-1.1.6/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher-5.4.1/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher-5.4.2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_macos-0.0.1+2/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_macos-0.0.1+4/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_platform_interface-1.0.5/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_platform_interface-1.0.6/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_web-0.1.0+2/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/url_launcher_web-0.1.1+1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/uuid-2.0.4/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/vector_math-2.0.8/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.flutter-io.cn/vm_service-2.2.0/lib" />

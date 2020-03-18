@@ -272,6 +272,8 @@
 		<item>中国台湾,886,173,46602|46668|46603|46688|46699|46601|46689|46656|46697|46610|46609|46606|46607|46605|46693|46692</item>
 		<item>中国香港,852,168,45413|45412|45401|45404|45403|45414|45400|45411|45409|45406|45405|45416|45408|45419|45429|45407</item>
 	</string-array>
+    <string name="mobcommon_authorize_dialog_accept">同意</string>
+    <string name="mobcommon_authorize_dialog_reject">拒绝</string>
     <string name="smssdk_add_contact">添加好友</string>
     <string name="smssdk_authorize_dialog_accept">同意</string>
     <string name="smssdk_authorize_dialog_ask">是否同意获得以下权限</string>
@@ -280,6 +282,8 @@
     <string name="smssdk_authorize_dialog_reject">拒绝</string>
     <string name="smssdk_authorize_dialog_title">服务授权</string>
     <string name="smssdk_authorize_dialog_usage">用于添加通讯录好友等操作。</string>
+    <string name="smssdk_authorize_recheck_dialog_content">为了给您提供Mobservice相关产品服务，请您详细查看我们的隐私政策，详见&lt;a href="http://www.mob.com/about/policy">http://www.mob.com/about/policy&lt;/a>。如您同意我们的隐私政策，请点击“接受”，如您不同意我们的隐私政策，请点击“拒绝”。</string>
+    <string name="smssdk_authorize_recheck_dialog_title">服务授权</string>
     <string name="smssdk_back">返回 </string>
     <string name="smssdk_bind_profile">绑定资料</string>
     <string name="smssdk_cancel">取消</string>
@@ -365,6 +369,7 @@
     <string name="smssdk_error_desc_609">Request header错误：Sign为空</string>
     <string name="smssdk_error_desc_610">Request header错误：UserAgent为空</string>
     <string name="smssdk_error_desc_611">AppSecret为空</string>
+    <string name="smssdk_error_desc_612">未授权MobTech隐私协议</string>
     <string name="smssdk_error_desc_server_busy">服务器繁忙</string>
     <string name="smssdk_error_detail_206">模板不存在/未审核/非SDK模板</string>
     <string name="smssdk_error_detail_400">客户端请求不能被识别。</string>
@@ -439,6 +444,7 @@
     <string name="smssdk_error_detail_609">Request header错误：Sign为空</string>
     <string name="smssdk_error_detail_610">Request header错误：UserAgent为空</string>
     <string name="smssdk_error_detail_611">AppSecret为空</string>
+    <string name="smssdk_error_detail_612">未授权MobTech隐私协议</string>
     <string name="smssdk_get_phone_verifycode_today_frequentlly">很抱歉，该手机号申请验证码次数过多，请明天重试！</string>
     <string name="smssdk_get_verifycode_frequentlly">发送验证码太频繁，请稍后再发！</string>
     <string name="smssdk_i_know">我知道了</string>
@@ -465,8 +471,9 @@
     <string name="smssdk_receive_msg"><Data>接收短信大约需要&lt;font color=#209526>%s&lt;/font>秒</Data></string>
     <string name="smssdk_regist">使用手机号码注册</string>
     <string name="smssdk_resend_identify_code">重新获取验证码</string>
-    <string name="smssdk_search">搜索</string>
+    <string name="smssdk_search">请输入中文|字母|数字</string>
     <string name="smssdk_search_contact">通讯录</string>
+    <string name="smssdk_selected">已选择</string>
     <string name="smssdk_send_invitation">发送邀请</string>
     <string name="smssdk_send_mobile_detail">短信验证码已发送，请填写验证码</string>
     <string name="smssdk_send_sounds">点击发送语音验证</string>
