@@ -8,6 +8,7 @@ import 'package:flutter_deer/routers/application.dart';
 import 'package:flutter_deer/routers/routers.dart';
 import 'package:flutter_deer/util/log_utils.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+
 import 'package:oktoast/oktoast.dart';
 import 'package:flutter_deer/home/splash_page.dart';
 import 'package:provider/provider.dart';
@@ -43,6 +44,7 @@ class MyApp extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
     return OKToast(
       child: ChangeNotifierProvider<ThemeProvider>(
         create: (_) => ThemeProvider(),
@@ -79,7 +81,8 @@ class MyApp extends StatelessWidget {
   }
 
   Widget getHomePage(){
-    return PublishTaskPage();
+    //return PublishTaskPage();
     //return ScrollToIndexDemoPage2();
+    return SplashPage();
   }
 }

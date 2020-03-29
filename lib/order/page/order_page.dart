@@ -64,7 +64,7 @@ class _OrderPageState extends State<OrderPage> with AutomaticKeepAliveClientMixi
       child: Scaffold(
         body: Stack(
           children: <Widget>[
-            /// 像素对齐问题的临时解决方法
+            // 像素对齐问题的临时解决方法
             SafeArea(
               child: SizedBox(
                 height: 105,

@@ -4,8 +4,10 @@ import 'package:flutter_deer/goods/page/goods_page.dart';
 import 'package:flutter_deer/home/provider/home_provider.dart';
 import 'package:flutter_deer/order/page/order_page.dart';
 import 'package:flutter_deer/res/resources.dart';
+import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/shop/page/shop_page.dart';
 import 'package:flutter_deer/statistics/page/statistics_page.dart';
+import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
@@ -20,7 +22,7 @@ class _HomeState extends State<Home> {
 
   var _pageList;
   
-  var _appBarTitles = ['订单', '商品', '统计', '店铺'];
+  var _appBarTitles = ['订单', '商品', "发布",'统计', '店铺'];
   final _pageController = PageController();
 
   HomeProvider provider = HomeProvider();
@@ -38,6 +40,7 @@ class _HomeState extends State<Home> {
     _pageList = [
       OrderPage(),
       GoodsPage(),
+      Text(""),
       StatisticsPage(),
       ShopPage(),
     ];
@@ -59,11 +62,15 @@ class _HomeState extends State<Home> {
           const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.app_main,),
         ],
         [
+          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.unselected_item_color,),
+          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.app_main,),
+        ],
+        [
           const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.unselected_item_color,),
           const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.app_main,),
         ]
       ];
-      _list = List.generate(4, (i){
+      _list = List.generate(5, (i){
         return BottomNavigationBarItem(
             icon: _tabImages[i][0],
             activeIcon: _tabImages[i][1],
@@ -93,12 +100,16 @@ class _HomeState extends State<Home> {
           const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.dark_app_main,),
         ],
         [
+          const LoadAssetImage("home/icon_statistics", width: 25.0),
+          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.dark_app_main,),
+        ],
+        [
           const LoadAssetImage("home/icon_shop", width: 25.0),
           const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.dark_app_main,),
         ]
       ];
 
-      _listDark = List.generate(4, (i){
+      _listDark = List.generate(5, (i){
         return BottomNavigationBarItem(
             icon: _tabImagesDark[i][0],
             activeIcon: _tabImagesDark[i][1],
@@ -145,7 +156,10 @@ class _HomeState extends State<Home> {
                 unselectedFontSize: Dimens.font_sp10,
                 selectedItemColor: Theme.of(context).primaryColor,
                 unselectedItemColor: isDark ? Colours.dark_unselected_item_color : Colours.unselected_item_color,
-                onTap: (index) => _pageController.jumpToPage(index),
+                onTap: (index) =>{
+                   if(index!=2)
+                  _pageController.jumpToPage(index)
+                },
               );
             },
           ),
@@ -155,7 +169,32 @@ class _HomeState extends State<Home> {
             onPageChanged: _onPageChanged,
             children: _pageList,
             physics: NeverScrollableScrollPhysics(), // 禁止滑动
-          )
+          ),
+          floatingActionButton: Container(
+            margin: EdgeInsets.only(top: 8),
+            width: 55,
+            height: 55,
+            padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(55),
+                color: Color.fromRGBO(246, 246, 246, 1.0)
+            ),
+
+            child: FloatingActionButton(
+
+              elevation: 0,
+              focusElevation: 0,
+
+              onPressed: (){
+                NavigatorUtils.push(context, TaskRouter.taskPublishPage);
+              },
+              child: Icon(Icons.add,size: 25,color: Colors.white,),
+              //backgroundColor: Color.fromRGBO(253, 219, 69, 1.0),
+                backgroundColor: Color.fromRGBO(70, 136, 250, 1.0),
+            ),
+
+          ),
+          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         ),
       ),
     );

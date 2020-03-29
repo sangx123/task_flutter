@@ -190,7 +190,7 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                         ],
                       ),
                       //onTap: () => NavigatorUtils.push(context, ShopRouter.shopSettingPage),
-                      onTap: () => NavigatorUtils.push(context, TaskRouter.myCustomForm),
+                      onTap: () => NavigatorUtils.push(context, TaskRouter.taskPublishPage),
                     );
                   },
                 ),

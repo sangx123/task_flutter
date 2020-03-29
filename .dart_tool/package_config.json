@@ -164,6 +164,12 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "flutter_screenutil",
+      "rootUri": "file:///Users/sangxiang/.pub-cache/hosted/pub.flutter-io.cn/flutter_screenutil-1.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.6"
+    },
+    {
       "name": "flutter_slidable",
       "rootUri": "file:///Users/sangxiang/.pub-cache/hosted/pub.flutter-io.cn/flutter_slidable-0.5.4",
       "packageUri": "lib/",
@@ -680,7 +686,7 @@
       "languageVersion": "2.5"
     }
   ],
-  "generated": "2020-03-17T03:13:35.448889Z",
+  "generated": "2020-03-29T08:07:32.480514Z",
   "generator": "pub",
   "generatorVersion": "2.7.0-dev.2.1.flutter-413867d678"
 }

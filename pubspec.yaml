@@ -63,9 +63,12 @@ dependencies:
   barcode_scan:
     git:
       url: https://github.com/simplezhli/flutter_barcode_reader.git
+
   #短信接口
   mobsms: ^1.1.0
 
+  # 添加依赖 新增屏幕适配
+  flutter_screenutil: ^1.0.2
   #rich text
   zefyr:
     path: zefyr

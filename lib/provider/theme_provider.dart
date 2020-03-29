@@ -40,6 +40,8 @@ class ThemeProvider extends ChangeNotifier {
     }
 
     return ThemeData(
+        highlightColor: Color.fromRGBO(0, 0, 0, 0),
+        splashColor: Color.fromRGBO(0, 0, 0, 0),
       errorColor: isDarkMode ? Colours.dark_red : Colours.red,
       brightness: isDarkMode ? Brightness.dark : Brightness.light,
       primaryColor: isDarkMode ? Colours.dark_app_main : Colours.app_main,

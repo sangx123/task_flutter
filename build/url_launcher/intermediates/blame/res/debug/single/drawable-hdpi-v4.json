@@ -1,22 +1,22 @@
 [
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_pressed.9.png",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable-hdpi-v4/notification_bg_low_pressed.9.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal.9.png",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/drawable-hdpi-v4/notification_bg_normal.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable-hdpi-v4/notification_bg_normal.9.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notify_panel_notification_icon_bg.png",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_normal_pressed.9.png",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable-hdpi-v4/notification_bg_low_normal.9.png",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4d2ebb5eef77d32934a7769f0d6aaeea/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable-hdpi-v4/notification_bg_low_normal.9.png"
     }
 ]

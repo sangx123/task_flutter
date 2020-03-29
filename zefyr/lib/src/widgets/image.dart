@@ -55,7 +55,6 @@ class _ZefyrImageState extends State<ZefyrImage> {
     EmbedAttribute attribute = widget.node.style.get(NotusAttribute.embed);
     return attribute.value['source'] as String;
   }
-
   @override
   Widget build(BuildContext context) {
     final image = widget.delegate.buildImage(context, imageSource);
@@ -218,6 +217,7 @@ class RenderEditableImage extends RenderBox
     if (child != null) {
       // Make constraints use 16:9 aspect ratio.
       final width = constraints.maxWidth - kHorizontalPadding * 2;
+
       final childConstraints = constraints.copyWith(
         minWidth: 0.0,
         maxWidth: width,

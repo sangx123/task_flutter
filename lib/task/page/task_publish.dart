@@ -51,7 +51,7 @@ class _PublishTaskState extends State<PublishTaskPage> {
     return Scaffold(
       resizeToAvoidBottomPadding: true,
       appBar: const MyAppBar(
-        centerTitle: "账户流水",
+        centerTitle: "发布任务",
       ),
       body: ZefyrScaffold(
         child: ZefyrTheme(
