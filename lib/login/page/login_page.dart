@@ -41,6 +41,7 @@ class _LoginPageState extends State<LoginPage> {
     _nameController.addListener(_verify);
     _passwordController.addListener(_verify);
     _nameController.text = FlutterStars.SpUtil.getString(Constant.phone);
+    _passwordController.text=FlutterStars.SpUtil.getString(Constant.password);
   }
 
   void _verify(){
@@ -67,6 +68,8 @@ class _LoginPageState extends State<LoginPage> {
         Method.post, HttpApi.login,
         onSuccess: (data){
           FlutterStars.SpUtil.putString(Constant.phone, _nameController.text);
+          FlutterStars.SpUtil.putString(Constant.password, _passwordController.text);
+          FlutterStars.SpUtil.putBool(Constant.isLogin, true);
           NavigatorUtils.push(context, StoreRouter.auditPage);
         },
         onError: (code,msg){

@@ -13,9 +13,14 @@ class Constant {
   static const String respCode = 'respCode';
   static const String respMsg = 'respMsg';
 
-  
+  //是否已显示引导页
   static const String keyGuide = 'keyGuide';
+  //用户是否已登录
+  static const String isLogin = 'isLogin';
+  //保存手机号
   static const String phone = 'phone';
+  //保存密码
+  static const String password = 'password';
   static const String accessToken = 'accessToken';
   static const String refreshToken = 'refreshToken';
 

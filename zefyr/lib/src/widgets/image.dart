@@ -9,6 +9,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:meta/meta.dart';
 import 'package:notus/notus.dart';
+import 'package:zefyr/src/zefyrUtil.dart';
 
 import 'editable_box.dart';
 
@@ -216,8 +217,8 @@ class RenderEditableImage extends RenderBox
     assert(constraints.hasBoundedWidth);
     if (child != null) {
       // Make constraints use 16:9 aspect ratio.
-      final width = constraints.maxWidth - kHorizontalPadding * 2;
-
+      //final width = constraints.maxWidth - kHorizontalPadding * 2;
+      final width=ZefyrUtil.maxWidth- kHorizontalPadding * 2;
       final childConstraints = constraints.copyWith(
         minWidth: 0.0,
         maxWidth: width,

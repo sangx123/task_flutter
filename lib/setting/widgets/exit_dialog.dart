@@ -1,5 +1,7 @@
 
+import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/login/login_router.dart';
 import 'package:flutter_deer/res/styles.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
@@ -28,6 +30,9 @@ class _ExitDialog extends State<ExitDialog>{
       ),
       onPressed: (){
         NavigatorUtils.push(context, LoginRouter.loginPage, clearStack: true);
+        //移除登陆状态
+        SpUtil.remove(Constant.isLogin);
+        //手机号暂时不移除
       },
     );
   }

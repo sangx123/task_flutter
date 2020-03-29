@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+import '../zefyrUtil.dart';
 import 'controller.dart';
 import 'editable_text.dart';
 import 'image.dart';
@@ -178,6 +179,7 @@ class _ZefyrEditorState extends State<ZefyrEditor> {
 
   @override
   Widget build(BuildContext context) {
+
     Widget editable = ZefyrEditableText(
       controller: _scope.controller,
       focusNode: _scope.focusNode,
@@ -188,7 +190,7 @@ class _ZefyrEditorState extends State<ZefyrEditor> {
       padding: widget.padding,
       physics: widget.physics,
     );
-
+    ZefyrUtil.maxWidth=MediaQuery.of(context).size.width;
     return ZefyrTheme(
       data: _themeData,
       child: ZefyrScopeAccess(

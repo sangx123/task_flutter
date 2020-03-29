@@ -39,6 +39,7 @@ class ZefyrScaffoldState extends State<ZefyrScaffold> {
   Widget build(BuildContext context) {
     final toolbar =
         (_toolbarBuilder == null) ? Container() : _toolbarBuilder(context);
+    
     return _ZefyrScaffoldAccess(
       scaffold: this,
       child: Column(

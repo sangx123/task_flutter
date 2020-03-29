@@ -6,6 +6,7 @@ import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/login/login_router.dart';
 import 'package:flutter_deer/provider/theme_provider.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/routers/routers.dart';
 import 'package:flutter_deer/util/image_utils.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
 import 'package:provider/provider.dart';
@@ -57,8 +58,10 @@ class _SplashPageState extends State<SplashPage> {
       if (SpUtil.getBool(Constant.keyGuide, defValue: true)) {
         SpUtil.putBool(Constant.keyGuide, false);
         _initGuide();
-      } else {
+      } else if(!SpUtil.getBool(Constant.isLogin,defValue: false)) {
         _goLogin();
+      }else {
+        _goMain();
       }
     });
   }
@@ -95,5 +98,9 @@ class _SplashPageState extends State<SplashPage> {
         },
       )
     );
+  }
+
+  _goMain() {
+    NavigatorUtils.push(context, Routes.home,  replace: true);
   }
 }
