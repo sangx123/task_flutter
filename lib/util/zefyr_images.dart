@@ -4,6 +4,7 @@
 
 import 'dart:io';
 
+import 'package:flustars/flustars.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zefyr/zefyr.dart';
@@ -29,12 +30,12 @@ class CustomImageDelegate implements ZefyrImageDelegate<ImageSource> {
     // We use custom "asset" scheme to distinguish asset images from other files.
     if (key.startsWith('asset://')) {
       final asset = AssetImage(key.replaceFirst('asset://', ''));
-      return Image(image: asset);
+      return Image(image: asset,fit: BoxFit.fitWidth,width: ScreenUtil.getScreenW(context)-16*2 ,);
     } else {
       // Otherwise assume this is a file stored locally on user's device.
       final file = File.fromUri(Uri.parse(key));
       final image = FileImage(file);
-      return Image(image: image);
+      return Image(image: image,fit: BoxFit.fitWidth,width: ScreenUtil.getScreenW(context)-16*2 ,);
     }
   }
 }

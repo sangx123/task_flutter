@@ -56,7 +56,6 @@ class _PublishTaskState extends State<PublishTaskPage> {
       body: ZefyrScaffold(
         child: ZefyrTheme(
           data: theme,
-
           child: ZefyrEditor(
             controller: _controller,
             focusNode: _focusNode,

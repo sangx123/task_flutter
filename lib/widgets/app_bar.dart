@@ -44,37 +44,49 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
         color: _backgroundColor,
         child: SafeArea(
           child: Stack(
-            alignment: Alignment.centerLeft,
+            //将子控件以右中心对齐
+
+            //alignment: Alignment.centerLeft,
             children: <Widget>[
-              Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: <Widget>[
-                  Container(
-                    alignment: centerTitle.isEmpty ? Alignment.centerLeft : Alignment.center,
-                    width: double.infinity,
-                    child: Text(
-                        title.isEmpty ? centerTitle : title,
-                        style: TextStyle(
-                          fontSize: Dimens.font_sp18,
-                          color: _overlayStyle == SystemUiOverlayStyle.light ?  Colours.dark_text : Colours.text,
-                        )
+              Align(
+                child: Column(
+                  //将子控件放在主轴的中间位置
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    Container(
+                      alignment: centerTitle.isEmpty ? Alignment.centerLeft : Alignment.center,
+                      width: double.infinity,
+                      child: Text(
+                          title.isEmpty ? centerTitle : title,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold ,
+                            fontSize: Dimens.font_sp18,
+                            color: _overlayStyle == SystemUiOverlayStyle.light ?  Colours.dark_text : Colours.text,
+                          )
+                      ),
+                      padding: const EdgeInsets.symmetric(horizontal: 48.0),
                     ),
-                    padding: const EdgeInsets.symmetric(horizontal: 48.0),
-                  ),
-                ],
-              ),
-              isBack ? IconButton(
-                onPressed: (){
-                  FocusScope.of(context).unfocus();
-                  Navigator.maybePop(context);
-                },
-                tooltip: 'Back',
-                padding: const EdgeInsets.all(12.0),
-                icon: Image.asset(
-                  backImg,
-                  color: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
+                  ],
                 ),
-              ) : Gaps.empty,
+                alignment: AlignmentDirectional.centerStart,
+              ),
+              Align(
+                child: isBack ? IconButton(
+
+                  onPressed: (){
+                    FocusScope.of(context).unfocus();
+                    Navigator.maybePop(context);
+                  },
+                  tooltip: 'Back',
+                  padding: const EdgeInsets.all(12.0),
+                  icon: Icon(Icons.arrow_back),
+//                Image.asset(
+//                  backImg,
+//                  color: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
+//                ),
+                ) : Gaps.empty,
+                alignment: AlignmentDirectional.centerStart,
+              ),
               Positioned(
                 right: 0.0,
                 child: Theme(
@@ -93,7 +105,19 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
                   ),
                 ),
               ),
-            ],
+              Positioned(
+                bottom: 0.0,
+                left: 0,
+                right: 0,
+                child: Container(width: double.infinity, height: 1.0, color: Color(0xFFF3F3F3),),
+//                child: Container(
+//                  color: Colors.blue,
+//                  width:  double.infinity,
+//                  child: Text("第一个组件"),
+//                ),
+                //child:  Container(height: 0.6, width: double.infinity, margin: const EdgeInsets.only(left: 16.0), child: Gaps.line),
+                )
+          ],
           ),
         ),
       ),

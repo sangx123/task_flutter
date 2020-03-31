@@ -23,7 +23,7 @@ class ZefyrEditor extends StatefulWidget {
     @required this.focusNode,
     this.autofocus = true,
     this.mode = ZefyrMode.edit,
-    this.padding = const EdgeInsets.symmetric(horizontal: 16.0),
+    this.padding = const EdgeInsets.symmetric(horizontal: 16.0,vertical: 16.0),
     this.toolbarDelegate,
     this.imageDelegate,
     this.selectionControls,

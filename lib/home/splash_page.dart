@@ -61,7 +61,7 @@ class _SplashPageState extends State<SplashPage> {
       } else if(!SpUtil.getBool(Constant.isLogin,defValue: false)) {
         _goLogin();
       }else {
-        _goMain();
+        _goHome();
       }
     });
   }
@@ -100,7 +100,7 @@ class _SplashPageState extends State<SplashPage> {
     );
   }
 
-  _goMain() {
+  _goHome() {
     NavigatorUtils.push(context, Routes.home,  replace: true);
   }
 }
