@@ -81,6 +81,7 @@ class _AccountPageState extends State<AccountPage> {
             title: "提现",
             onTap: () => NavigatorUtils.push(context, AccountRouter.withdrawalPage),
           ),
+
           ClickItem(
             title: "提现记录",
             onTap: () => NavigatorUtils.push(context, AccountRouter.withdrawalRecordListPage),
