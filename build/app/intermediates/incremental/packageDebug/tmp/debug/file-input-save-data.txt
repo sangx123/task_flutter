@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Thu Sep 10 15:00:42 CST 2020
+#Thu Sep 10 15:09:28 CST 2020
 2.path=flutter_assets/assets/images/shop/dark_dpsz.png
 14.set=ASSET
 107.baseType=DIRECTORY
