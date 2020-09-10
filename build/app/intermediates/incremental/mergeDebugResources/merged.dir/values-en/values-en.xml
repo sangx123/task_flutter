@@ -30,6 +30,7 @@
 		<item>Bosnia and Herzegovina,387,129,21890|21805|21803</item>
 		<item>Botswana,267,99,65202|65201|65204</item>
 		<item>Brazil,55,28,72416|72405|72439|72406|72403|72415|72437|72404|72434|72423|72402|72432|72410|72433|72400|72411|72430|72431|72407</item>
+		<item>British Virgin Islands,1340,202,348570|348170</item>
 		<item>Brunei,673,154,52811|52802</item>
 		<item>Bulgaria,359,114,28401|28405|28403</item>
 		<item>Burkina Faso,226,61,61301|61302|61303</item>
@@ -247,6 +248,7 @@
 		<item>United Arab Emirates,971,184,42402|42403</item>
 		<item>United Kingdom,44,18,23427|23428|23407|23409|23420|23400|23401|23423|23500|23424|23402|23403|23425|23426|23416|23417|23418|23419|23430|23431|23476|23410|23433|23455|23411|23478|23434|23458|23414|23415|23450|23451</item>
 		<item>United States,1,2,311090|310080|311050|311370|310160|31150|311010|310680|310120|310560|311650|310880|310760|31190|310320|310630|310710|310090|310290|316993|310170|310050|31060|311580|310690|311020|311340|310570|311660|310450|310011|310770|316995|310012|316994|311730|310004|311610|310840|310005|310600|31100|311190|310180|31050|310060|316883|311150|310380|311030|310260|311230|310020|310340|311991|311430|316885|310660|310100|316884|310540|310023|310980|311740|310410|31016|310610|310016|31130|31011|31611|310190|311040|316011|310150|310790|310990|310870|310420|310300|310740|311710</item>
+		<item>United States Virgin Islands,1284,201,311470</item>
 		<item>Uruguay,598,151,74803|74802|74801|74800|74810|74807</item>
 		<item>Uzbekistan,998,196,43401|43402|43407|43403|43404|43405|43406</item>
 	</string-array>
@@ -254,8 +256,6 @@
 		<item>Vanuatu,678,158,54101|54105</item>
 		<item>Venezuela,58,31,73406|73404|73401</item>
 		<item>Vietnam,84,41,45204|45205|45202|45201|45207</item>
-		<item>Virgin Islands, British,1340,202,348570|348170</item>
-		<item>Virgin Islands, US,1284,201,311470</item>
 	</string-array>
     <string-array name="smssdk_country_group_w">
 	    
@@ -270,8 +270,6 @@
 		<item>Zambia,260,92,64502|64501|64503</item>
 		<item>Zimbabwe,263,95,64801|64803|64804</item>
     </string-array>
-    <string name="mobcommon_authorize_dialog_accept">Accept</string>
-    <string name="mobcommon_authorize_dialog_reject">Reject</string>
     <string name="smssdk_add_contact">Add</string>
     <string name="smssdk_authorize_dialog_accept">Agree</string>
     <string name="smssdk_authorize_dialog_ask">Allow the following permissions:</string>
@@ -280,8 +278,8 @@
     <string name="smssdk_authorize_dialog_reject">Disagree</string>
     <string name="smssdk_authorize_dialog_title">Terms of Use</string>
     <string name="smssdk_authorize_dialog_usage">to add contact friends.</string>
-    <string name="smssdk_authorize_recheck_dialog_content">In order to provide you with Mobservice, please check our service policy. For details, please click &lt;a href="http://www.mob.com/about/policy">http://www.mob.com/about/policy&lt;/a>. If you agree with our service policy, please click "accept", if you do not agree with our service policy, please click "reject"</string>
-    <string name="smssdk_authorize_recheck_dialog_title">Terms of Use</string>
+    <string name="smssdk_authorize_msg_ctt">MobTech SMSSDK will，collect your mobile address book in order to assist you with completing matching address book friends. Refusing will render the functions of matching address book friends useless, but any other normal functions can still work . Continue?</string>
+    <string name="smssdk_authorize_msg_sms">MobTech will，collect your mobile phone number in order to assist you with completing registration and to protect your account security. Refusing will render the normal functions useless. Continue?</string>
     <string name="smssdk_back">Back </string>
     <string name="smssdk_bind_profile">Bind</string>
     <string name="smssdk_cancel">Cancel</string>
@@ -368,6 +366,9 @@
     <string name="smssdk_error_desc_610">Request header invalid：UserAgent is empty</string>
     <string name="smssdk_error_desc_611">AppSecret is empty</string>
     <string name="smssdk_error_desc_612">MobTech service policy not granted</string>
+    <string name="smssdk_error_desc_613">Feature not available</string>
+    <string name="smssdk_error_desc_614">Feature not available as user reject Terms of Use</string>
+    <string name="smssdk_error_desc_615">Network error, please retry later</string>
     <string name="smssdk_error_desc_server_busy">Server is busy</string>
     <string name="smssdk_error_detail_206">Template does not exist/not certificated/not SDK template</string>
     <string name="smssdk_error_detail_400">The request could not be identified</string>
@@ -443,6 +444,9 @@
     <string name="smssdk_error_detail_610">Request header invalid：UserAgent is empty</string>
     <string name="smssdk_error_detail_611">AppSecret is empty</string>
     <string name="smssdk_error_detail_612">MobTech service policy not granted</string>
+    <string name="smssdk_error_detail_613">Feature not available</string>
+    <string name="smssdk_error_detail_614">Feature not available as user reject Terms of Use</string>
+    <string name="smssdk_error_detail_615">Network error, please retry later</string>
     <string name="smssdk_get_phone_verifycode_today_frequentlly">I am sorry, the phone number for verification code number too much, please try again tomorrow!</string>
     <string name="smssdk_get_verifycode_frequentlly">Send verification code too frequently, please try later!</string>
     <string name="smssdk_i_know">I know</string>

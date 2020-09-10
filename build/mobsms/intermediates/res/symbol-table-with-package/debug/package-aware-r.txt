@@ -99,9 +99,6 @@ dimen smssdk_authorize_text_size_l
 dimen smssdk_authorize_text_size_m
 dimen smssdk_authorize_text_size_s
 dimen smssdk_titlebar_height
-drawable mobcommon_authorize_bottom_left_round_btn
-drawable mobcommon_authorize_bottom_right_round_btn
-drawable mobcommon_authorize_dialog_bg
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -209,10 +206,6 @@ id ll_phone_container
 id ll_profile
 id ll_scroll
 id ll_voice
-id mobcommon_authorize_dialog_accept_tv
-id mobcommon_authorize_dialog_content_tv
-id mobcommon_authorize_dialog_reject_tv
-id mobcommon_authorize_dialog_title_tv
 id none
 id normal
 id notification_background
@@ -224,11 +217,10 @@ id right_side
 id rl_country
 id rl_lv_item_bg
 id smssdk_authorize_dialog_accept_tv
-id smssdk_authorize_dialog_do_not_ask_cb
 id smssdk_authorize_dialog_logo_iv
+id smssdk_authorize_dialog_msg
 id smssdk_authorize_dialog_reject_tv
 id smssdk_authorize_dialog_title_tv
-id smssdk_authorize_dialog_usage_tv
 id start
 id tag_transition_group
 id tag_unhandled_key_event_manager
@@ -263,7 +255,6 @@ id tv_unreceive_identify
 id tv_voice
 id vw_divider2
 integer status_bar_notification_info_maxnum
-layout mob_authorize_dialog
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -278,10 +269,7 @@ layout smssdk_personal_info
 layout smssdk_popup_dialog
 layout smssdk_titlebar
 raw smssdk_pydb
-string mobcommon_authorize_dialog_accept
-string mobcommon_authorize_dialog_content
-string mobcommon_authorize_dialog_reject
-string mobcommon_authorize_dialog_title
+string app_name
 string smssdk_add_contact
 string smssdk_authorize_dialog_accept
 string smssdk_authorize_dialog_ask
@@ -290,8 +278,8 @@ string smssdk_authorize_dialog_permission
 string smssdk_authorize_dialog_reject
 string smssdk_authorize_dialog_title
 string smssdk_authorize_dialog_usage
-string smssdk_authorize_recheck_dialog_content
-string smssdk_authorize_recheck_dialog_title
+string smssdk_authorize_msg_ctt
+string smssdk_authorize_msg_sms
 string smssdk_back
 string smssdk_bind_profile
 string smssdk_cancel
@@ -378,6 +366,9 @@ string smssdk_error_desc_609
 string smssdk_error_desc_610
 string smssdk_error_desc_611
 string smssdk_error_desc_612
+string smssdk_error_desc_613
+string smssdk_error_desc_614
+string smssdk_error_desc_615
 string smssdk_error_desc_server_busy
 string smssdk_error_detail_206
 string smssdk_error_detail_400
@@ -453,6 +444,9 @@ string smssdk_error_detail_609
 string smssdk_error_detail_610
 string smssdk_error_detail_611
 string smssdk_error_detail_612
+string smssdk_error_detail_613
+string smssdk_error_detail_614
+string smssdk_error_detail_615
 string smssdk_get_phone_verifycode_today_frequentlly
 string smssdk_get_verifycode_frequentlly
 string smssdk_i_know
@@ -513,8 +507,6 @@ style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Support_CoordinatorLayout
 style aaaa
-style mobcommon_DialogStyle
-style mobcommon_TranslucentTheme
 style smssdk_DialogStyle
 styleable ColorStateListItem alpha android_alpha android_color
 styleable CoordinatorLayout keylines statusBarBackground

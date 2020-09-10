@@ -1,18 +1,18 @@
 [
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable/notification_icon_background.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable/notification_icon_background.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7ad63c5d36607d5a69bfd8da08de4700/res/drawable/notification_icon_background.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable/notification_bg.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable/notification_bg.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7ad63c5d36607d5a69bfd8da08de4700/res/drawable/notification_bg.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable/notification_bg_low.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable/notification_bg_low.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7ad63c5d36607d5a69bfd8da08de4700/res/drawable/notification_bg_low.xml"
     },
     {
         "merged": "/Users/sangxiang/task_flutter/build/url_launcher/intermediates/res/merged/debug/drawable/notification_tile_bg.xml",
-        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4af91ffddf757ffa37a2f7d4fc78c8f2/res/drawable/notification_tile_bg.xml"
+        "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7ad63c5d36607d5a69bfd8da08de4700/res/drawable/notification_tile_bg.xml"
     }
 ]

@@ -15,7 +15,8 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
     this.actionName: "",
     this.backImg: "assets/images/ic_back_black.png",
     this.onPressed,
-    this.isBack: true
+    this.isBack: true,
+    this.hasLine:true
   }): super(key: key);
 
   final Color backgroundColor;
@@ -25,7 +26,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
   final String actionName;
   final VoidCallback onPressed;
   final bool isBack;
-
+  final bool hasLine;
   @override
   Widget build(BuildContext context) {
     Color _backgroundColor;
@@ -109,7 +110,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
                 bottom: 0.0,
                 left: 0,
                 right: 0,
-                child: Container(width: double.infinity, height: 1.0, color: Color(0xFFF3F3F3),),
+                child: hasLine? Container(width: double.infinity, height: 1.0, color: Color(0xFFF3F3F3),):Container()
 //                child: Container(
 //                  color: Colors.blue,
 //                  width:  double.infinity,

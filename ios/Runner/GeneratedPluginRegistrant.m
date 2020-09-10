@@ -10,6 +10,12 @@
 @import barcode_scan;
 #endif
 
+#if __has_include(<connectivity/FLTConnectivityPlugin.h>)
+#import <connectivity/FLTConnectivityPlugin.h>
+#else
+@import connectivity;
+#endif
+
 #if __has_include(<flutter_2d_amap/Flutter2dAmapPlugin.h>)
 #import <flutter_2d_amap/Flutter2dAmapPlugin.h>
 #else
@@ -62,6 +68,7 @@
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [BarcodeScanPlugin registerWithRegistrar:[registry registrarForPlugin:@"BarcodeScanPlugin"]];
+  [FLTConnectivityPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTConnectivityPlugin"]];
   [Flutter2dAmapPlugin registerWithRegistrar:[registry registrarForPlugin:@"Flutter2dAmapPlugin"]];
   [FLTImagePickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTImagePickerPlugin"]];
   [MobsmsPlugin registerWithRegistrar:[registry registrarForPlugin:@"MobsmsPlugin"]];

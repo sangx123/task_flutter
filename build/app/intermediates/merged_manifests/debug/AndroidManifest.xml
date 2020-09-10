@@ -34,6 +34,22 @@
     <activity android:name="com.apptreesoftware.barcodescan.BarcodeScannerActivity"/>
     <provider android:name="com.mob.MobProvider" android:exported="false" android:authorities="com.fulin.xinxiang.com.mob.MobProvider" android:multiprocess="true"/>
     <activity xmlns:tools="http://schemas.android.com/tools" android:windowSoftInputMode="stateHidden|adjustResize" android:name="com.mob.tools.MobUIShell" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar" tools:node="merge"/>
+    <service android:name="com.mob.guard.MobGuardService" android:exported="true">
+      <intent-filter>
+        <action android:name="com.mob.intent.MOB_GUARD_SERVICE"/>
+      </intent-filter>
+    </service>
+    <receiver android:enabled="true" android:name="com.mob.guard.MobGuardBroadCastReceiver" android:exported="true">
+      <intent-filter>
+        <action android:name="com.mlive.id"/>
+      </intent-filter>
+    </receiver>
+    <activity android:name="com.mob.MobTranActivity" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" android:exported="true">
+      <intent-filter>
+        <action android:name="com.mob.open.app"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+      </intent-filter>
+    </activity>
   </application>
   <uses-permission android:name="android.permission.READ_CONTACTS"/>
 </manifest>

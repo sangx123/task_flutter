@@ -4,7 +4,7 @@
             "outputFile": "/Users/sangxiang/task_flutter/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values-v21/values-v21.xml",
             "map": [
                 {
-                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6637ea9cfc8422f99e42185a9e8969d6/res/values-v21/values-v21.xml",
+                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8b2f720242ec41d65620eafb2c90dae8/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,5,8,11",
                         "startColumns": "4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ae936019c54a5414197fd9b051cc9264/res/values-v21/values-v21.xml",
+                    "source": "/Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c821af19ecbef9cade0a2221020826ad/res/values-v21/values-v21.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,13",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4",

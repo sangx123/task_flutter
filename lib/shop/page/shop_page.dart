@@ -188,7 +188,8 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
 //              Container(height: 0.6, width: double.infinity, child: Gaps.line),
                 ClickItem(
                     title: "我发布的任务",
-                    onTap: () => NavigatorUtils.push(context, SettingRouter.accountManagerPage)
+                    onTap: () =>  NavigatorUtils.goWebViewPage(context, "我的任务", "http://192.168.0.127:8081/#/pages/index/index")
+                    //onTap: () =>  NavigatorUtils.goWebViewPage(context, "我的任务", "https://static-e6fd6f31-d6a7-422f-8a80-a0ac3bc56ad4.bspapp.com/#/pages/template/template")
                 ),
                 ClickItem(
                     title: "我领取的任务",
