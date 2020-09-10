@@ -9,51 +9,50 @@ INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
 MERGED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:1:1-56:12
-MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/30fc4b16d9da1dcab8a39a7e0595685e/AndroidManifest.xml:2:1-10:12
 MERGED from [:sqflite] /Users/sangxiang/task_flutter/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-14:12
-MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:shared_preferences_web] /Users/sangxiang/task_flutter/build/shared_preferences_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-36:12
-MERGED from [:shared_preferences_macos] /Users/sangxiang/task_flutter/build/shared_preferences_macos/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:webview_flutter] /Users/sangxiang/task_flutter/build/webview_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] /Users/sangxiang/task_flutter/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
+MERGED from [:connectivity] /Users/sangxiang/task_flutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-10:12
+MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-22:12
-MERGED from [:url_launcher_macos] /Users/sangxiang/task_flutter/build/url_launcher_macos/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
-MERGED from [:url_launcher_web] /Users/sangxiang/task_flutter/build/url_launcher_web/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-7:12
 MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-17:12
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ec2cc416e7a50eee89afa16f0ed3779a/AndroidManifest.xml:2:1-13:12
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2e1546e82ea355ce0ad69e722cb4040f/AndroidManifest.xml:2:1-13:12
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5177453ed302b13208e893059e7a5a40/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.fragment:fragment:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c52ed015cf9f8da8ab94c6f8fe801ecb/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6c802034330e0bf9c39bb140aa4cd44b/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e70b10aa075354a6f59f8677f4d6ae59/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b61d9a59fcfc99911bb2f4b7b55fe5ab/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ac1ef9ee7dff4cdbfe9cb6d0e53c0e97/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/55b28c3df66717e6c9805c00b22bf28e/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a37f284ae6a8efb9771659894f35691c/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/657e27c87e88936c25a8e519946dc9ed/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/cdb900937b2a0b58d3eacbdb18741a18/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/281dc2d0047e2051fcd9d524c5cb2044/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/03d88ee658927e1f2de18cd00180e8a1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e06abfc3ca5a459a3aa2fdfcbe330355/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8b2f720242ec41d65620eafb2c90dae8/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c821af19ecbef9cade0a2221020826ad/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2f9c535e26eb52e84769acbb294c25d1/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b51d54c72659607c4732a5187459e6fc/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/27e44f71b7fb4324ec7ecafa0707b121/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f5b173205dd023a7b9eb1e14b06f2752/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/00c57c7aab34c1de8724ba951f9c50e4/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3788a3a123cf1e9945b2a08655e2cb7e/AndroidManifest.xml:17:1-25:12
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c5cae95a2e8c5f2f0df765c023afb3b3/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d0bd30732346317da9fb4f7c1dc9b348/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/54f84f76be544e7cdc2c647353267fbd/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f260a9e749aa7fad2bba0177b91aae88/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/350541368fbbb7b15515a2ddd664ebae/AndroidManifest.xml:17:1-22:12
-MERGED from [cn.smssdk:SMSSDK:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/1df2299d0860ff39afa53a3707ce34ec/AndroidManifest.xml:2:1-11:12
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7f4ce25bbfc4a48301faa1d272d14332/AndroidManifest.xml:2:1-16:12
-MERGED from [com.mob:MobGuard:1.0.8] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6d15dc39720c00f4adc7f25e09b116d1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6e8af094b623025ae5067b0110349c83/AndroidManifest.xml:2:1-10:12
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/380d9653a49dcab6b07d3c87b784a2a9/AndroidManifest.xml:2:1-13:12
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2620595746b17c4308976cd634cf52f/AndroidManifest.xml:2:1-13:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/41df80b80a9d1e1451c5af43bae3e75e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7549a491b1c05142a048f4bc3352c808/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0af5b487a88dd7aa2661759b1a0c65d6/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a2a57c4055f8d5b12570863fb45310b1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7540d0d03a73284bd82d92c2744de128/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c6e5fffd7fbb10160e7537a6b78cf12f/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9872483626baa50125ada618ec7edb39/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/915e093b26cbdd5b521dffb4ab63c9d6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5a9e5674044d1d251672303196e5cfaa/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e4859dad1052934eaa73a788fe530166/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/42ee3dd830de6456f6d6e037e5fced48/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/40c1c6d3c63ac7e5c6a0afcba2f07ff7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/008a126d6278c87abd1cc18bb32d06a0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f32ee7f180c891a7592e1a9276407de2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/dc67848f0f246209f33033146b943616/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d059c3b44c944b5845120a5fed98d93d/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/27e519f9e7d48f0f33f0cb80b26d08be/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3db43c3db0da47bca25f4048d298c7c1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/647ae56d3573eab1a6de40e039e7c554/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8123fa8cb2801247b7a16cf0d25edafa/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/908dfe54a16e27df7b7cb03b8ada467a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4f2352b516da98427527da0114196cdd/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/142dbf8160ba74ed259d7b984c5a489e/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/afd22e9f015929370fab6e0399dd9a21/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/822d9480e2279a84a5904d4b667a60ee/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/13b4693e7e2bec6ddaeaeee634645ae9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/42797ea6293e7973c5688db672f8ad8c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4a904cabe73f2c5edaacce78b7e6a226/AndroidManifest.xml:17:1-22:12
+MERGED from [cn.smssdk:SMSSDK:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/cfe8c9fe74440fc689a69541f9eabd95/AndroidManifest.xml:2:1-11:12
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9008d758ad49e719f9992872a5e76d3b/AndroidManifest.xml:2:1-16:12
+MERGED from [com.mob:MobGuard:1.0.8] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/16be19d08782ee1914e799121a19d872/AndroidManifest.xml:2:1-9:12
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml:1:1-7:12
@@ -98,22 +97,22 @@ MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/int
 MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:10:5-20:19
 MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-15:19
 MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:13:5-15:19
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ec2cc416e7a50eee89afa16f0ed3779a/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ec2cc416e7a50eee89afa16f0ed3779a/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2e1546e82ea355ce0ad69e722cb4040f/AndroidManifest.xml:11:5-20
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2e1546e82ea355ce0ad69e722cb4040f/AndroidManifest.xml:11:5-20
-MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c821af19ecbef9cade0a2221020826ad/AndroidManifest.xml:22:5-89
-MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c821af19ecbef9cade0a2221020826ad/AndroidManifest.xml:22:5-89
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3788a3a123cf1e9945b2a08655e2cb7e/AndroidManifest.xml:22:5-23:19
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3788a3a123cf1e9945b2a08655e2cb7e/AndroidManifest.xml:22:5-23:19
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7f4ce25bbfc4a48301faa1d272d14332/AndroidManifest.xml:13:5-14:19
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7f4ce25bbfc4a48301faa1d272d14332/AndroidManifest.xml:13:5-14:19
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/380d9653a49dcab6b07d3c87b784a2a9/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/380d9653a49dcab6b07d3c87b784a2a9/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2620595746b17c4308976cd634cf52f/AndroidManifest.xml:11:5-20
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2620595746b17c4308976cd634cf52f/AndroidManifest.xml:11:5-20
+MERGED from [androidx.core:core:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d059c3b44c944b5845120a5fed98d93d/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d059c3b44c944b5845120a5fed98d93d/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4f2352b516da98427527da0114196cdd/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4f2352b516da98427527da0114196cdd/AndroidManifest.xml:24:5-25:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9008d758ad49e719f9992872a5e76d3b/AndroidManifest.xml:13:5-14:19
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9008d758ad49e719f9992872a5e76d3b/AndroidManifest.xml:13:5-14:19
 	android:appComponentFactory
-		ADDED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c821af19ecbef9cade0a2221020826ad/AndroidManifest.xml:22:18-86
+		ADDED from [androidx.core:core:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d059c3b44c944b5845120a5fed98d93d/AndroidManifest.xml:24:18-86
 	android:label
 		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:15:9-27
 	android:allowBackup
-		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7f4ce25bbfc4a48301faa1d272d14332/AndroidManifest.xml:13:18-44
+		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9008d758ad49e719f9992872a5e76d3b/AndroidManifest.xml:13:18-44
 	android:icon
 		ADDED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml:16:9-43
 	android:networkSecurityConfig
@@ -165,100 +164,98 @@ uses-sdk
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
-MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/30fc4b16d9da1dcab8a39a7e0595685e/AndroidManifest.xml:6:5-8:41
-MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/30fc4b16d9da1dcab8a39a7e0595685e/AndroidManifest.xml:6:5-8:41
 MERGED from [:sqflite] /Users/sangxiang/task_flutter/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:sqflite] /Users/sangxiang/task_flutter/build/sqflite/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:mobsms] /Users/sangxiang/task_flutter/build/mobsms/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:url_launcher] /Users/sangxiang/task_flutter/build/url_launcher/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences_web] /Users/sangxiang/task_flutter/build/shared_preferences_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences_web] /Users/sangxiang/task_flutter/build/shared_preferences_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences_macos] /Users/sangxiang/task_flutter/build/shared_preferences_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:shared_preferences_macos] /Users/sangxiang/task_flutter/build/shared_preferences_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter] /Users/sangxiang/task_flutter/build/webview_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:webview_flutter] /Users/sangxiang/task_flutter/build/webview_flutter/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /Users/sangxiang/task_flutter/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] /Users/sangxiang/task_flutter/build/path_provider/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:connectivity] /Users/sangxiang/task_flutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:connectivity] /Users/sangxiang/task_flutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
+MERGED from [:shared_preferences] /Users/sangxiang/task_flutter/build/shared_preferences/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:image_picker] /Users/sangxiang/task_flutter/build/image_picker/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_macos] /Users/sangxiang/task_flutter/build/url_launcher_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_macos] /Users/sangxiang/task_flutter/build/url_launcher_macos/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_web] /Users/sangxiang/task_flutter/build/url_launcher_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
-MERGED from [:url_launcher_web] /Users/sangxiang/task_flutter/build/url_launcher_web/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-44
 MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ec2cc416e7a50eee89afa16f0ed3779a/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ec2cc416e7a50eee89afa16f0ed3779a/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2e1546e82ea355ce0ad69e722cb4040f/AndroidManifest.xml:7:5-9:41
-MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2e1546e82ea355ce0ad69e722cb4040f/AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5177453ed302b13208e893059e7a5a40/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5177453ed302b13208e893059e7a5a40/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c52ed015cf9f8da8ab94c6f8fe801ecb/AndroidManifest.xml:20:5-44
-MERGED from [androidx.fragment:fragment:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c52ed015cf9f8da8ab94c6f8fe801ecb/AndroidManifest.xml:20:5-44
-MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6c802034330e0bf9c39bb140aa4cd44b/AndroidManifest.xml:20:5-44
-MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6c802034330e0bf9c39bb140aa4cd44b/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e70b10aa075354a6f59f8677f4d6ae59/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e70b10aa075354a6f59f8677f4d6ae59/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b61d9a59fcfc99911bb2f4b7b55fe5ab/AndroidManifest.xml:20:5-44
-MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b61d9a59fcfc99911bb2f4b7b55fe5ab/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ac1ef9ee7dff4cdbfe9cb6d0e53c0e97/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/ac1ef9ee7dff4cdbfe9cb6d0e53c0e97/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/55b28c3df66717e6c9805c00b22bf28e/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/55b28c3df66717e6c9805c00b22bf28e/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a37f284ae6a8efb9771659894f35691c/AndroidManifest.xml:20:5-44
-MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a37f284ae6a8efb9771659894f35691c/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/657e27c87e88936c25a8e519946dc9ed/AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/657e27c87e88936c25a8e519946dc9ed/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/cdb900937b2a0b58d3eacbdb18741a18/AndroidManifest.xml:20:5-44
-MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/cdb900937b2a0b58d3eacbdb18741a18/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/281dc2d0047e2051fcd9d524c5cb2044/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/281dc2d0047e2051fcd9d524c5cb2044/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/03d88ee658927e1f2de18cd00180e8a1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/03d88ee658927e1f2de18cd00180e8a1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e06abfc3ca5a459a3aa2fdfcbe330355/AndroidManifest.xml:20:5-44
-MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e06abfc3ca5a459a3aa2fdfcbe330355/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8b2f720242ec41d65620eafb2c90dae8/AndroidManifest.xml:20:5-44
-MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8b2f720242ec41d65620eafb2c90dae8/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c821af19ecbef9cade0a2221020826ad/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.0.2] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c821af19ecbef9cade0a2221020826ad/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2f9c535e26eb52e84769acbb294c25d1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/2f9c535e26eb52e84769acbb294c25d1/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b51d54c72659607c4732a5187459e6fc/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/b51d54c72659607c4732a5187459e6fc/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/27e44f71b7fb4324ec7ecafa0707b121/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/27e44f71b7fb4324ec7ecafa0707b121/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f5b173205dd023a7b9eb1e14b06f2752/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f5b173205dd023a7b9eb1e14b06f2752/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/00c57c7aab34c1de8724ba951f9c50e4/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/00c57c7aab34c1de8724ba951f9c50e4/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3788a3a123cf1e9945b2a08655e2cb7e/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3788a3a123cf1e9945b2a08655e2cb7e/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c5cae95a2e8c5f2f0df765c023afb3b3/AndroidManifest.xml:20:5-44
-MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c5cae95a2e8c5f2f0df765c023afb3b3/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d0bd30732346317da9fb4f7c1dc9b348/AndroidManifest.xml:20:5-44
-MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d0bd30732346317da9fb4f7c1dc9b348/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/54f84f76be544e7cdc2c647353267fbd/AndroidManifest.xml:20:5-44
-MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/54f84f76be544e7cdc2c647353267fbd/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f260a9e749aa7fad2bba0177b91aae88/AndroidManifest.xml:20:5-44
-MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f260a9e749aa7fad2bba0177b91aae88/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/350541368fbbb7b15515a2ddd664ebae/AndroidManifest.xml:20:5-44
-MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/350541368fbbb7b15515a2ddd664ebae/AndroidManifest.xml:20:5-44
-MERGED from [cn.smssdk:SMSSDK:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/1df2299d0860ff39afa53a3707ce34ec/AndroidManifest.xml:7:5-9:41
-MERGED from [cn.smssdk:SMSSDK:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/1df2299d0860ff39afa53a3707ce34ec/AndroidManifest.xml:7:5-9:41
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7f4ce25bbfc4a48301faa1d272d14332/AndroidManifest.xml:8:5-11:45
-MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7f4ce25bbfc4a48301faa1d272d14332/AndroidManifest.xml:8:5-11:45
-MERGED from [com.mob:MobGuard:1.0.8] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6d15dc39720c00f4adc7f25e09b116d1/AndroidManifest.xml:5:5-7:41
-MERGED from [com.mob:MobGuard:1.0.8] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6d15dc39720c00f4adc7f25e09b116d1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6e8af094b623025ae5067b0110349c83/AndroidManifest.xml:6:5-8:41
+MERGED from [com.elvishew:xlog:1.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/6e8af094b623025ae5067b0110349c83/AndroidManifest.xml:6:5-8:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/380d9653a49dcab6b07d3c87b784a2a9/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:zxing:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/380d9653a49dcab6b07d3c87b784a2a9/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2620595746b17c4308976cd634cf52f/AndroidManifest.xml:7:5-9:41
+MERGED from [me.dm7.barcodescanner:core:1.9.13] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d2620595746b17c4308976cd634cf52f/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/41df80b80a9d1e1451c5af43bae3e75e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/41df80b80a9d1e1451c5af43bae3e75e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7549a491b1c05142a048f4bc3352c808/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7549a491b1c05142a048f4bc3352c808/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0af5b487a88dd7aa2661759b1a0c65d6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.webkit:webkit:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/0af5b487a88dd7aa2661759b1a0c65d6/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a2a57c4055f8d5b12570863fb45310b1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/a2a57c4055f8d5b12570863fb45310b1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7540d0d03a73284bd82d92c2744de128/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7540d0d03a73284bd82d92c2744de128/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c6e5fffd7fbb10160e7537a6b78cf12f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/c6e5fffd7fbb10160e7537a6b78cf12f/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9872483626baa50125ada618ec7edb39/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9872483626baa50125ada618ec7edb39/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/915e093b26cbdd5b521dffb4ab63c9d6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/915e093b26cbdd5b521dffb4ab63c9d6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5a9e5674044d1d251672303196e5cfaa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/5a9e5674044d1d251672303196e5cfaa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e4859dad1052934eaa73a788fe530166/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/e4859dad1052934eaa73a788fe530166/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/42ee3dd830de6456f6d6e037e5fced48/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/42ee3dd830de6456f6d6e037e5fced48/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/40c1c6d3c63ac7e5c6a0afcba2f07ff7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/40c1c6d3c63ac7e5c6a0afcba2f07ff7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/008a126d6278c87abd1cc18bb32d06a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/008a126d6278c87abd1cc18bb32d06a0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f32ee7f180c891a7592e1a9276407de2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/f32ee7f180c891a7592e1a9276407de2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/dc67848f0f246209f33033146b943616/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/dc67848f0f246209f33033146b943616/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d059c3b44c944b5845120a5fed98d93d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/d059c3b44c944b5845120a5fed98d93d/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/27e519f9e7d48f0f33f0cb80b26d08be/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/27e519f9e7d48f0f33f0cb80b26d08be/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3db43c3db0da47bca25f4048d298c7c1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/3db43c3db0da47bca25f4048d298c7c1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/647ae56d3573eab1a6de40e039e7c554/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/647ae56d3573eab1a6de40e039e7c554/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8123fa8cb2801247b7a16cf0d25edafa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/8123fa8cb2801247b7a16cf0d25edafa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/908dfe54a16e27df7b7cb03b8ada467a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/908dfe54a16e27df7b7cb03b8ada467a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4f2352b516da98427527da0114196cdd/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4f2352b516da98427527da0114196cdd/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/142dbf8160ba74ed259d7b984c5a489e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/142dbf8160ba74ed259d7b984c5a489e/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/afd22e9f015929370fab6e0399dd9a21/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/afd22e9f015929370fab6e0399dd9a21/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/822d9480e2279a84a5904d4b667a60ee/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/822d9480e2279a84a5904d4b667a60ee/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/13b4693e7e2bec6ddaeaeee634645ae9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/13b4693e7e2bec6ddaeaeee634645ae9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/42797ea6293e7973c5688db672f8ad8c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/42797ea6293e7973c5688db672f8ad8c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4a904cabe73f2c5edaacce78b7e6a226/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/4a904cabe73f2c5edaacce78b7e6a226/AndroidManifest.xml:20:5-44
+MERGED from [cn.smssdk:SMSSDK:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/cfe8c9fe74440fc689a69541f9eabd95/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:SMSSDK:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/cfe8c9fe74440fc689a69541f9eabd95/AndroidManifest.xml:7:5-9:41
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9008d758ad49e719f9992872a5e76d3b/AndroidManifest.xml:8:5-11:45
+MERGED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9008d758ad49e719f9992872a5e76d3b/AndroidManifest.xml:8:5-11:45
+MERGED from [com.mob:MobGuard:1.0.8] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/16be19d08782ee1914e799121a19d872/AndroidManifest.xml:5:5-7:41
+MERGED from [com.mob:MobGuard:1.0.8] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/16be19d08782ee1914e799121a19d872/AndroidManifest.xml:5:5-7:41
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml
 INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml
 	tools:overrideLibrary
-		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/7f4ce25bbfc4a48301faa1d272d14332/AndroidManifest.xml:11:9-42
+		ADDED from [cn.smssdk:ShortMessageSDKGUI:3.6.1] /Users/sangxiang/.gradle/caches/transforms-2/files-2.1/9008d758ad49e719f9992872a5e76d3b/AndroidManifest.xml:11:9-42
 	android:targetSdkVersion
 		INJECTED from /Users/sangxiang/task_flutter/android/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/sangxiang/task_flutter/android/app/src/debug/AndroidManifest.xml
@@ -283,10 +280,14 @@ ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_ama
 		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:10:22-76
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:12:5-79
+MERGED from [:connectivity] /Users/sangxiang/task_flutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
+MERGED from [:connectivity] /Users/sangxiang/task_flutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-79
 	android:name
 		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:12:22-76
 uses-permission#android.permission.ACCESS_WIFI_STATE
 ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:14:5-76
+MERGED from [:connectivity] /Users/sangxiang/task_flutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-76
+MERGED from [:connectivity] /Users/sangxiang/task_flutter/build/connectivity/intermediates/library_manifest/debug/AndroidManifest.xml:8:5-76
 	android:name
 		ADDED from [:flutter_2d_amap] /Users/sangxiang/task_flutter/build/flutter_2d_amap/intermediates/library_manifest/debug/AndroidManifest.xml:14:22-73
 uses-permission#android.permission.CHANGE_WIFI_STATE
@@ -345,7 +346,7 @@ uses-permission#android.permission.CAMERA
 ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:11:5-65
 	android:name
 		ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:11:22-62
-activity#com.apptreesoftware.barcodescan.BarcodeScannerActivity
-ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:14:9-91
+activity#de.mintware.barcode_scan.BarcodeScannerActivity
+ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:14:9-84
 	android:name
-		ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:14:19-88
+		ADDED from [:barcode_scan] /Users/sangxiang/task_flutter/build/barcode_scan/intermediates/library_manifest/debug/AndroidManifest.xml:14:19-81

@@ -7,7 +7,7 @@ import 'package:flutter_deer/common/common.dart';
 class Log{
 
   static init() {
-    LogUtil.debuggable = !Constant.inProduction;
+    LogUtil.setDebugMode(!Constant.inProduction) ;
   }
 
   static d(String msg, {tag: 'X-LOG'}) {

@@ -76,7 +76,7 @@ class _LoginPageState extends State<LoginPage> {
         onError: (code,msg){
             Toast.show(msg);
         },
-        params: {"mobile": _nameController.text,"password":FlutterStars.EnDecodeUtil.encodeMd5(_passwordController.text)},
+        params: {"mobile": _nameController.text,"password":FlutterStars.EncryptUtil.encodeMd5(_passwordController.text)},
     );
   }
   

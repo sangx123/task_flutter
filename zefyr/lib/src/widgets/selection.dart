@@ -592,18 +592,18 @@ class _SelectionToolbarState extends State<_SelectionToolbar> {
       block.localToGlobal(block.size.bottomRight(Offset.zero)),
     );
 
-    final toolbar = controls.buildToolbar(
-        context,
-        editingRegion,
-        block.preferredLineHeight,
-        midpoint,
-        endpoints,
-        widget.selectionOverlay);
+//    final toolbar = controls.buildToolbar(
+//        context,
+//        editingRegion,
+//        block.preferredLineHeight,
+//        midpoint,
+//        endpoints,
+//        widget.selectionOverlay);
     return CompositedTransformFollower(
       link: block.layerLink,
       showWhenUnlinked: false,
       offset: -editingRegion.topLeft,
-      child: toolbar,
+      //child: toolbar,
     );
   }
 }

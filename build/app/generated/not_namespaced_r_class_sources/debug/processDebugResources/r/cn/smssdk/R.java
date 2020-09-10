@@ -70,16 +70,16 @@ public final class R {
     public static final class id {
         private id() {}
 
-        public static final int smssdk_authorize_dialog_accept_tv = 0x7f06004d;
-        public static final int smssdk_authorize_dialog_logo_iv = 0x7f06004e;
-        public static final int smssdk_authorize_dialog_msg = 0x7f06004f;
-        public static final int smssdk_authorize_dialog_reject_tv = 0x7f060050;
-        public static final int smssdk_authorize_dialog_title_tv = 0x7f060051;
+        public static final int smssdk_authorize_dialog_accept_tv = 0x7f06006f;
+        public static final int smssdk_authorize_dialog_logo_iv = 0x7f060070;
+        public static final int smssdk_authorize_dialog_msg = 0x7f060071;
+        public static final int smssdk_authorize_dialog_reject_tv = 0x7f060072;
+        public static final int smssdk_authorize_dialog_title_tv = 0x7f060073;
     }
     public static final class layout {
         private layout() {}
 
-        public static final int smssdk_authorize_dialog = 0x7f08000f;
+        public static final int smssdk_authorize_dialog = 0x7f080010;
     }
     public static final class string {
         private string() {}

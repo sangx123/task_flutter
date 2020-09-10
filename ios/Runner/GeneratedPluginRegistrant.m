@@ -4,6 +4,12 @@
 
 #import "GeneratedPluginRegistrant.h"
 
+#if __has_include(<flutter_2d_amap/Flutter2dAmapPlugin.h>)
+#import <flutter_2d_amap/Flutter2dAmapPlugin.h>
+#else
+@import flutter_2d_amap;
+#endif
+
 #if __has_include(<barcode_scan/BarcodeScanPlugin.h>)
 #import <barcode_scan/BarcodeScanPlugin.h>
 #else
@@ -14,12 +20,6 @@
 #import <connectivity/FLTConnectivityPlugin.h>
 #else
 @import connectivity;
-#endif
-
-#if __has_include(<flutter_2d_amap/Flutter2dAmapPlugin.h>)
-#import <flutter_2d_amap/Flutter2dAmapPlugin.h>
-#else
-@import flutter_2d_amap;
 #endif
 
 #if __has_include(<image_picker/FLTImagePickerPlugin.h>)
@@ -67,9 +67,9 @@
 @implementation GeneratedPluginRegistrant
 
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
+  [Flutter2dAmapPlugin registerWithRegistrar:[registry registrarForPlugin:@"Flutter2dAmapPlugin"]];
   [BarcodeScanPlugin registerWithRegistrar:[registry registrarForPlugin:@"BarcodeScanPlugin"]];
   [FLTConnectivityPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTConnectivityPlugin"]];
-  [Flutter2dAmapPlugin registerWithRegistrar:[registry registrarForPlugin:@"Flutter2dAmapPlugin"]];
   [FLTImagePickerPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTImagePickerPlugin"]];
   [MobsmsPlugin registerWithRegistrar:[registry registrarForPlugin:@"MobsmsPlugin"]];
   [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];

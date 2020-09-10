@@ -97,7 +97,7 @@
                 android:resource="@xml/flutter_image_picker_file_paths" />
         </provider>
 
-        <activity android:name="com.apptreesoftware.barcodescan.BarcodeScannerActivity" />
+        <activity android:name="de.mintware.barcode_scan.BarcodeScannerActivity" />
     </application>
 
 </manifest>

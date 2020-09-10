@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:fluro/fluro.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Router;
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_deer/provider/theme_provider.dart';

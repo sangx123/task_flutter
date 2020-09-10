@@ -84,7 +84,7 @@ class _RegisterPageState extends State<RegisterPage> {
       onError: (code,msg){
         Toast.show(msg);
       },
-      params: {"name":_nameController.text,"mobile": _nameController.text,"password":FlutterStars.EnDecodeUtil.encodeMd5(_passwordController.text)},
+      params: {"name":_nameController.text,"mobile": _nameController.text,"password":FlutterStars.EncryptUtil.encodeMd5(_passwordController.text)},
     );
   }
 

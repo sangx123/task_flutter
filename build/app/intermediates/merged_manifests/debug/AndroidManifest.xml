@@ -31,7 +31,7 @@
     <provider android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider" android:grantUriPermissions="true" android:exported="false" android:authorities="com.fulin.xinxiang.flutter.image_provider">
       <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/flutter_image_picker_file_paths"/>
     </provider>
-    <activity android:name="com.apptreesoftware.barcodescan.BarcodeScannerActivity"/>
+    <activity android:name="de.mintware.barcode_scan.BarcodeScannerActivity"/>
     <provider android:name="com.mob.MobProvider" android:exported="false" android:authorities="com.fulin.xinxiang.com.mob.MobProvider" android:multiprocess="true"/>
     <activity xmlns:tools="http://schemas.android.com/tools" android:windowSoftInputMode="stateHidden|adjustResize" android:name="com.mob.tools.MobUIShell" android:configChanges="keyboardHidden|orientation|screenSize" android:theme="@android:style/Theme.Translucent.NoTitleBar" tools:node="merge"/>
     <service android:name="com.mob.guard.MobGuardService" android:exported="true">

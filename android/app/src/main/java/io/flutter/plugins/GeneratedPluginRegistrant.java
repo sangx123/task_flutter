@@ -1,9 +1,9 @@
 package io.flutter.plugins;
 
 import io.flutter.plugin.common.PluginRegistry;
+import com.weilu.flutter.flutter_2d_amap.Flutter2dAmapPlugin;
 import de.mintware.barcode_scan.BarcodeScanPlugin;
 import io.flutter.plugins.connectivity.ConnectivityPlugin;
-import com.weilu.flutter.flutter_2d_amap.Flutter2dAmapPlugin;
 import io.flutter.plugins.imagepicker.ImagePickerPlugin;
 import cn.smssdk.flutter.MobsmsPlugin;
 import io.flutter.plugins.pathprovider.PathProviderPlugin;
@@ -20,9 +20,9 @@ public final class GeneratedPluginRegistrant {
     if (alreadyRegisteredWith(registry)) {
       return;
     }
+    Flutter2dAmapPlugin.registerWith(registry.registrarFor("com.weilu.flutter.flutter_2d_amap.Flutter2dAmapPlugin"));
     BarcodeScanPlugin.registerWith(registry.registrarFor("de.mintware.barcode_scan.BarcodeScanPlugin"));
     ConnectivityPlugin.registerWith(registry.registrarFor("io.flutter.plugins.connectivity.ConnectivityPlugin"));
-    Flutter2dAmapPlugin.registerWith(registry.registrarFor("com.weilu.flutter.flutter_2d_amap.Flutter2dAmapPlugin"));
     ImagePickerPlugin.registerWith(registry.registrarFor("io.flutter.plugins.imagepicker.ImagePickerPlugin"));
     MobsmsPlugin.registerWith(registry.registrarFor("cn.smssdk.flutter.MobsmsPlugin"));
     PathProviderPlugin.registerWith(registry.registrarFor("io.flutter.plugins.pathprovider.PathProviderPlugin"));

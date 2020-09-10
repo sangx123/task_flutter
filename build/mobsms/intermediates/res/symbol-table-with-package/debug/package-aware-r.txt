@@ -26,7 +26,6 @@ array smssdk_country_group_x
 array smssdk_country_group_y
 array smssdk_country_group_z
 attr alpha
-attr coordinatorLayoutStyle
 attr font
 attr fontProviderAuthority
 attr fontProviderCerts
@@ -37,14 +36,6 @@ attr fontProviderQuery
 attr fontStyle
 attr fontVariationSettings
 attr fontWeight
-attr keylines
-attr layout_anchor
-attr layout_anchorGravity
-attr layout_behavior
-attr layout_dodgeInsetEdges
-attr layout_insetEdge
-attr layout_keyline
-attr statusBarBackground
 attr ttcIndex
 color notification_action_color_filter
 color notification_icon_bg_color
@@ -152,6 +143,39 @@ drawable smssdk_phone
 drawable smssdk_popup_dialog_bg
 drawable smssdk_search
 drawable smssdk_search_icon
+id accessibility_action_clickable_span
+id accessibility_custom_action_0
+id accessibility_custom_action_1
+id accessibility_custom_action_10
+id accessibility_custom_action_11
+id accessibility_custom_action_12
+id accessibility_custom_action_13
+id accessibility_custom_action_14
+id accessibility_custom_action_15
+id accessibility_custom_action_16
+id accessibility_custom_action_17
+id accessibility_custom_action_18
+id accessibility_custom_action_19
+id accessibility_custom_action_2
+id accessibility_custom_action_20
+id accessibility_custom_action_21
+id accessibility_custom_action_22
+id accessibility_custom_action_23
+id accessibility_custom_action_24
+id accessibility_custom_action_25
+id accessibility_custom_action_26
+id accessibility_custom_action_27
+id accessibility_custom_action_28
+id accessibility_custom_action_29
+id accessibility_custom_action_3
+id accessibility_custom_action_30
+id accessibility_custom_action_31
+id accessibility_custom_action_4
+id accessibility_custom_action_5
+id accessibility_custom_action_6
+id accessibility_custom_action_7
+id accessibility_custom_action_8
+id accessibility_custom_action_9
 id action_container
 id action_divider
 id action_image
@@ -159,7 +183,6 @@ id action_text
 id actions
 id async
 id blocking
-id bottom
 id bt_submit_profile
 id btn_add
 id btn_dialog_cancel
@@ -179,7 +202,7 @@ id common_dialog_message_tv
 id common_dialog_title_tv
 id common_dialog_top_rl
 id common_dialog_vertical_line
-id end
+id dialog_button
 id et_nickname
 id et_put_identify
 id et_write_phone
@@ -195,7 +218,6 @@ id iv_avator_item
 id iv_clear
 id iv_contact
 id iv_contact_icon
-id left
 id line1
 id line3
 id llSearch
@@ -206,12 +228,10 @@ id ll_phone_container
 id ll_profile
 id ll_scroll
 id ll_voice
-id none
 id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id right
 id right_icon
 id right_side
 id rl_country
@@ -221,7 +241,11 @@ id smssdk_authorize_dialog_logo_iv
 id smssdk_authorize_dialog_msg
 id smssdk_authorize_dialog_reject_tv
 id smssdk_authorize_dialog_title_tv
-id start
+id tag_accessibility_actions
+id tag_accessibility_clickable_spans
+id tag_accessibility_heading
+id tag_accessibility_pane_title
+id tag_screen_reader_focusable
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -229,7 +253,6 @@ id text
 id text2
 id time
 id title
-id top
 id tv_avatar
 id tv_contact
 id tv_contact_name
@@ -255,6 +278,7 @@ id tv_unreceive_identify
 id tv_voice
 id vw_divider2
 integer status_bar_notification_info_maxnum
+layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
 layout notification_template_custom_big
@@ -505,12 +529,9 @@ style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
-style Widget_Support_CoordinatorLayout
 style aaaa
 style smssdk_DialogStyle
 styleable ColorStateListItem alpha android_alpha android_color
-styleable CoordinatorLayout keylines statusBarBackground
-styleable CoordinatorLayout_Layout android_layout_gravity layout_anchor layout_anchorGravity layout_behavior layout_dodgeInsetEdges layout_insetEdge layout_keyline
 styleable FontFamily fontProviderAuthority fontProviderCerts fontProviderFetchStrategy fontProviderFetchTimeout fontProviderPackage fontProviderQuery
 styleable FontFamilyFont android_font android_fontStyle android_fontVariationSettings android_fontWeight android_ttcIndex font fontStyle fontVariationSettings fontWeight ttcIndex
 styleable GradientColor android_centerColor android_centerX android_centerY android_endColor android_endX android_endY android_gradientRadius android_startColor android_startX android_startY android_tileMode android_type

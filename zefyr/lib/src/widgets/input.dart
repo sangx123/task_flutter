@@ -168,4 +168,27 @@ class InputConnectionController implements TextInputClient {
   void updateFloatingCursor(RawFloatingCursorPoint point) {
     // TODO: implement updateFloatingCursor
   }
+
+  @override
+  void connectionClosed() {
+    // TODO: implement connectionClosed
+  }
+
+  @override
+  // TODO: implement currentAutofillScope
+  AutofillScope get currentAutofillScope => throw UnimplementedError();
+
+  @override
+  // TODO: implement currentTextEditingValue
+  TextEditingValue get currentTextEditingValue => throw UnimplementedError();
+
+  @override
+  void performPrivateCommand(String action, Map<String, dynamic> data) {
+    // TODO: implement performPrivateCommand
+  }
+
+  @override
+  void showAutocorrectionPromptRect(int start, int end) {
+    // TODO: implement showAutocorrectionPromptRect
+  }
 }

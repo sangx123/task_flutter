@@ -1,6 +1,5 @@
 
 import 'package:fluro/fluro.dart';
-import 'package:flutter/material.dart';
 import 'package:flutter_deer/account/account_router.dart';
 import 'package:flutter_deer/goods/goods_router.dart';
 import 'package:flutter_deer/routers/404.dart';
@@ -15,7 +14,7 @@ import 'package:flutter_deer/shop/shop_router.dart';
 import 'package:flutter_deer/statistics/statistics_router.dart';
 import 'package:flutter_deer/store/store_router.dart';
 import 'package:flutter_deer/task/task_router.dart';
-
+import 'package:flutter/material.dart' hide Router;
 class Routes {
 
   static String home = "/home";
