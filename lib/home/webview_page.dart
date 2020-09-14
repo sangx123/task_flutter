@@ -62,17 +62,8 @@ class _WebViewPageState extends State<WebViewPage> {
         future: _controller.future,
         builder: (context, snapshot) {
           return WillPopScope(
-            onWillPop: () async {
-              if (snapshot.hasData){
-                bool canGoBack = await snapshot.data.canGoBack();
-                if (canGoBack){
-                  // 网页可以返回时，优先返回上一页
-                  snapshot.data.goBack();
-                  return Future.value(false);
-                }
-                return Future.value(true);
-              }
-              return Future.value(true);
+            onWillPop: (){
+              return _goBack(context);
             },
           child: ChangeNotifierProvider<WebNotifier>(
           create: (_) => _notifier,
@@ -169,21 +160,27 @@ class _WebViewPageState extends State<WebViewPage> {
 //      _webViewController.reload();
     });
   }
-
+  //此处是设置js回调flutter
   Set<JavascriptChannel> _loadJavascriptChannel(BuildContext context) {
     final Set<JavascriptChannel> channels = Set<JavascriptChannel>();
-    JavascriptChannel toastChannel = JavascriptChannel(
-        name: 'Toaster',
+    JavascriptChannel appChannel = JavascriptChannel(
+        name: 'App',
         onMessageReceived: (JavascriptMessage message) {
-          Scaffold.of(context).showSnackBar(
-            SnackBar(content: Text(message.message)),
-          );
+//          Scaffold.of(context).showSnackBar(
+//            SnackBar(content: Text(message.message)),
+//          );
+            if(message.message=="backApp"){
+              FocusScope.of(context).unfocus();
+              Navigator.maybePop(context);
+            }
+
         });
-    channels.add(toastChannel);
+    channels.add(appChannel);
     return channels;
   }
 
   Future<bool> _goBack(BuildContext context) async {
+    print('_goBack');
     if (_webViewController != null && await _webViewController.canGoBack()) {
       _webViewController.goBack();
       return false;

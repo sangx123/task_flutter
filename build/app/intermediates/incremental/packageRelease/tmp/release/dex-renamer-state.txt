@@ -1,4 +1,0 @@
-#Thu Dec 26 18:10:57 CST 2019
-base.0=/Users/sangxiang/task_flutter/build/app/intermediates/transforms/r8/release/0
-path.0=classes.dex
-renamed.0=classes.dex
