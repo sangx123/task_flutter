@@ -25,6 +25,8 @@ class WebViewPage extends StatefulWidget {
   static const String TITLE = 'title';
   static const String URL = 'url';
   static const String HTML = 'html';
+  //这个字符串表示返回到首页
+  static const String BACK_APP="backApp";
   @override
   _WebViewPageState createState() => _WebViewPageState(title: title, url: url, needBack: needBack);
 }
@@ -169,7 +171,7 @@ class _WebViewPageState extends State<WebViewPage> {
 //          Scaffold.of(context).showSnackBar(
 //            SnackBar(content: Text(message.message)),
 //          );
-            if(message.message=="backApp"){
+            if(message.message==WebViewPage.BACK_APP){
               FocusScope.of(context).unfocus();
               Navigator.maybePop(context);
             }
