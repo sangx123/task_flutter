@@ -186,7 +186,9 @@ class _HomeState extends State<Home> {
               focusElevation: 0,
 
               onPressed: (){
+
                 NavigatorUtils.push(context, TaskRouter.taskPublishPage);
+                //NavigatorUtils.goWebViewPage(context, "发布任务", "http://192.168.0.127:8081/#/pages/index/richtext");
               },
               child: Icon(Icons.add,size: 25,color: Colors.white,),
               //backgroundColor: Color.fromRGBO(253, 219, 69, 1.0),

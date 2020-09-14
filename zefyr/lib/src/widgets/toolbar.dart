@@ -248,6 +248,9 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
     );
   }
 
+  /**
+   * 构建底部按钮
+   */
   List<Widget> _buildButtons(BuildContext context) {
     final buttons = <Widget>[
       //buildButton(context, ZefyrToolbarAction.bold),
@@ -257,11 +260,33 @@ class ZefyrToolbarState extends State<ZefyrToolbar>
       //buildButton(context, ZefyrToolbarAction.bulletList),
       //buildButton(context, ZefyrToolbarAction.numberList),
       //buildButton(context, ZefyrToolbarAction.quote),
-      buildButton(context, ZefyrToolbarAction.code),
+      //buildButton(context, ZefyrToolbarAction.code),
       //buildButton(context, ZefyrToolbarAction.horizontalRule),
-      if (editor.imageDelegate != null) ImageButton(),
+      //if (editor.imageDelegate != null) ImageButton(),
+      buildButton(context, ZefyrToolbarAction.cameraImage,
+          onPressed: _pickFromCamera),
+      buildButton(context, ZefyrToolbarAction.galleryImage,
+          onPressed: _pickFromGallery)
     ];
     return buttons;
+  }
+
+  void _pickFromCamera() async {
+    //final editor = ZefyrToolbar.of(context).editor;
+    final image =
+    await editor.imageDelegate.pickImage(editor.imageDelegate.cameraSource);
+    if (image != null) {
+      editor.formatSelection(NotusAttribute.embed.image(image));
+    }
+  }
+
+  void _pickFromGallery() async {
+    //final editor = ZefyrToolbar.of(context).editor;
+    final image = await editor.imageDelegate
+        .pickImage(editor.imageDelegate.gallerySource);
+    if (image != null) {
+      editor.formatSelection(NotusAttribute.embed.image(image));
+    }
   }
 }
 
