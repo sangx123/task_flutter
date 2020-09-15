@@ -1,9 +1,11 @@
 
 
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:dio/dio.dart';
 import 'package:flustars/flustars.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/util/log_utils.dart';
 import 'package:sprintf/sprintf.dart';
@@ -15,8 +17,9 @@ class AuthInterceptor extends Interceptor{
   @override
   onRequest(RequestOptions options) {
     String accessToken = SpUtil.getString(Constant.accessToken);
+    Log.e("AuthInterceptor:"+accessToken);
     if (accessToken.isNotEmpty){
-      options.headers["Authorization"] = "Bearer $accessToken";
+        options.headers["userToken"] = accessToken;
     }
    
     return super.onRequest(options);
@@ -149,7 +152,7 @@ class AdapterInterceptor extends Interceptor{
 
   Response adapterData(Response response){
     String result = response.data == null ? "" : response.data.toString();
-    //result = sprintf(successFormat, [content]);
+    Log.e(result);
 //    /// 成功时，直接格式化返回
 //    if (response.statusCode.toString() == ExceptionHandle.success || response.statusCode.toString()== ExceptionHandle.success_not_content){
 //      if (content == null || content.isEmpty){

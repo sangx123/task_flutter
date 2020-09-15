@@ -13,8 +13,9 @@ class UserEntity {
 		name = json['name'];
 		id = json['id'];
 		blog = json['blog'];
-	}
+		userToken=json['userToken'];
 
+	}
 	Map<String, dynamic> toJson() {
 		final Map<String, dynamic> data = new Map<String, dynamic>();
 		data['avatar_url'] = this.avatarUrl;

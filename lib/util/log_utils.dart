@@ -10,19 +10,19 @@ class Log{
     LogUtil.setDebugMode(!Constant.inProduction) ;
   }
 
-  static d(String msg, {tag: 'X-LOG'}) {
+  static d(String msg, {tag: 'sanxgiang'}) {
     if (!Constant.inProduction) {
       LogUtil.v(msg, tag: tag);
     }
   }
 
-  static e(String msg, {tag: 'X-LOG'}) {
+  static e(String msg, {tag: 'sanxgiang'}) {
     if (!Constant.inProduction) {
       LogUtil.e(msg, tag: tag);
     }
   }
 
-  static json(String msg, {tag: 'X-LOG'}) {
+  static json(String msg, {tag: 'sanxgiang'}) {
     if (!Constant.inProduction) {
       var data = convert.json.decode(msg);
       if (data is Map) {

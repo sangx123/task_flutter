@@ -6,6 +6,7 @@ import 'dart:io';
 
 import 'package:flustars/flustars.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_deer/widgets/load_image.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:zefyr/zefyr.dart';
 
@@ -27,8 +28,12 @@ class CustomImageDelegate implements ZefyrImageDelegate<ImageSource> {
 
   @override
   Widget buildImage(BuildContext context, String key) {
+    print("sangxiang buildImage");
     // We use custom "asset" scheme to distinguish asset images from other files.
-    if (key.startsWith('asset://')) {
+    if (key.startsWith('http')){
+      print("sangxiang key="+key);
+      return LoadImage(key, width:  ScreenUtil.getScreenW(context)-16*2,height: (ScreenUtil.getScreenW(context)-16*2)*0.8,fit: BoxFit.fitWidth);
+    }else if (key.startsWith('asset://')) {
       final asset = AssetImage(key.replaceFirst('asset://', ''));
       return Image(image: asset,fit: BoxFit.fitWidth,width: ScreenUtil.getScreenW(context)-16*2 ,);
     } else {
