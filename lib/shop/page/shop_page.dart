@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_deer/account/account_router.dart';
 import 'package:flutter_deer/mvp/base_page_state.dart';
+import 'package:flutter_deer/order/order_router.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/setting/setting_router.dart';
@@ -188,12 +189,14 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
 //              Container(height: 0.6, width: double.infinity, child: Gaps.line),
                 ClickItem(
                     title: "我发布的任务",
-                    onTap: () =>  NavigatorUtils.goWebViewPage(context, "我的任务", "http://192.168.0.127:8081/#/pages/index/index")
+                    //onTap: () =>  NavigatorUtils.goWebViewPage(context, "我的任务", "http://192.168.0.127:8081/#/pages/index/index")
+                    onTap: () =>  NavigatorUtils.push(context,OrderRouter.orderPage)
+
                     //onTap: () =>  NavigatorUtils.goWebViewPage(context, "我的任务", "https://static-e6fd6f31-d6a7-422f-8a80-a0ac3bc56ad4.bspapp.com/#/pages/template/template")
                 ),
                 ClickItem(
                     title: "我领取的任务",
-                    onTap: () => NavigatorUtils.push(context, SettingRouter.accountManagerPage)
+                    onTap: () =>  NavigatorUtils.push(context,OrderRouter.orderPage)
                 ),
                 ClickItem(
                     title: "意见反馈",

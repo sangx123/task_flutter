@@ -1,14 +1,22 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';
+import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_deer/common/KeyValueItem.dart';
+import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/net/net.dart';
+import 'package:flutter_deer/res/gaps.dart';
+import 'package:flutter_deer/res/styles.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/util/zefyr_images.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
+import 'package:flutter_deer/widgets/text_field.dart';
+import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:zefyr/zefyr.dart';
 import 'package:quill_delta/quill_delta.dart';
 /**
@@ -30,11 +38,13 @@ class _PublishTaskState extends State<PublishTaskPage> {
   @override
   void initState() {
     super.initState();
-    _loadDocument().then((document) {
-      setState(() {
-        _controller = ZefyrController(document);
-      });
-    });
+
+    //requestBook();
+//    _loadDocument().then((document) {
+//      setState(() {
+//        _controller = ZefyrController(document);
+//      });
+//    });
     _sub = _controller.document.changes.listen((change) {
       print('${change.source}: ${change.change}');
     });
@@ -45,36 +55,24 @@ class _PublishTaskState extends State<PublishTaskPage> {
     _sub.cancel();
     super.dispose();
   }
-
+  TextEditingController _nameController = TextEditingController();
+  final FocusNode _nodeText1 = FocusNode();
   @override
   Widget build(BuildContext context) {
-    final theme = ZefyrThemeData(
-      cursorColor: Colors.blue,
-      toolbarTheme: ZefyrToolbarTheme.fallback(context).copyWith(
-        color: Colors.grey.shade800,
-        toggleColor: Colors.grey.shade900,
-        iconColor: Colors.white,
-        disabledIconColor: Colors.grey.shade500,
-      ),
-    );
+
     return Scaffold(
       resizeToAvoidBottomPadding: true,
       appBar:  MyAppBar(
-        centerTitle: "发布任务",
-        actionName: "发布",
+        centerTitle: "编辑任务内容",
+        actionName: "完成",
         onPressed:()=> _saveDocument(context),
       ),
-      body: ZefyrScaffold(
-        child: ZefyrTheme(
-          data: theme,
-          child: ZefyrEditor(
-            controller: _controller,
-            focusNode: _focusNode,
-            mode: _editing ? ZefyrMode.edit : ZefyrMode.select,
-            imageDelegate: CustomImageDelegate(),
-          ),
-        ),
-      ),
+      body: _buildBody()
+//      defaultTargetPlatform == TargetPlatform.iOS ? FormKeyboardActions(
+//        child: _buildBody(),
+//      ) : SingleChildScrollView(
+//        child: _buildBody(),
+//      )
     );
   }
 
@@ -94,47 +92,42 @@ class _PublishTaskState extends State<PublishTaskPage> {
   /// Loads the document asynchronously from a file if it exists, otherwise
   /// returns default document.
   Future<NotusDocument> _loadDocument() async {
-    final file = File(Directory.systemTemp.path + "/quick_start.json");
-    if (await file.exists()) {
-      final contents = await file
-          .readAsString()
-          .then((data) => Future.delayed(Duration(seconds: 1), () => data));
-      return NotusDocument.fromJson(jsonDecode(contents));
-    }
-    final Delta delta = Delta();
-    return NotusDocument.fromDelta(delta);
-//    final doc =
-//        r'[{"insert":"Zefyr"},{"insert":"\n","attributes":{"heading":1}},{"insert":"Soft and gentle rich text editing for Flutter applications.","attributes":{"i":true}},{"insert":"\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/static/logo.png"}}},{"insert":"\n"},{"insert":"Photo by Hiroyuki Takeda.","attributes":{"i":true}},{"insert":"\nZefyr is currently in "},{"insert":"early preview","attributes":{"b":true}},{"insert":". If you have a feature request or found a bug, please file it at the "},{"insert":"issue tracker","attributes":{"a":"https://github.com/memspace/zefyr/issues"}},{"insert":'
-//        r'".\nDocumentation"},{"insert":"\n","attributes":{"heading":3}},{"insert":"Quick Start","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/quick_start.md"}},{"insert":"\n","attributes":{"block":"ul"}},{"insert":"Data Format and Document Model","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/data_and_document.md"}},{"insert":"\n","attributes":{"block":"ul"}},{"insert":"Style Attributes","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/attr'
-//        r'ibutes.md"}},{"insert":"\n","attributes":{"block":"ul"}},{"insert":"Heuristic Rules","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/heuristics.md"}},{"insert":"\n","attributes":{"block":"ul"}},{"insert":"FAQ","attributes":{"a":"https://github.com/memspace/zefyr/blob/master/doc/faq.md"}},{"insert":"\n","attributes":{"block":"ul"}},{"insert":"Clean and modern look"},{"insert":"\n","attributes":{"heading":2}},{"insert":"Zefyr’s rich text editor is built with simplicity and fle'
-//        r'xibility in mind. It provides clean interface for distraction-free editing. Think Medium.com-like experience.\nMarkdown inspired semantics"},{"insert":"\n","attributes":{"heading":2}},{"insert":"Ever needed to have a heading line inside of a quote block, like this:\nI’m a Markdown heading"},{"insert":"\n","attributes":{"block":"quote","heading":3}},{"insert":"And I’m a regular paragraph"},{"insert":"\n","attributes":{"block":"quote"}},{"insert":"Code blocks"},{"insert":"\n","attributes":{"headin'
-//        r'g":2}},{"insert":"Of course:\nimport ‘package:flutter/material.dart’;"},{"insert":"\n","attributes":{"block":"code"}},{"insert":"import ‘package:zefyr/zefyr.dart’;"},{"insert":"\n\n","attributes":{"block":"code"}},{"insert":"void main() {"},{"insert":"\n","attributes":{"block":"code"}},{"insert":" runApp(MyZefyrApp());"},{"insert":"\n","attributes":{"block":"code"}},{"insert":"}"},{"insert":"\n","attributes":{"block":"code"}},{"insert":"\n\n\n"}]';
-//
-//
-//    Delta detail= Delta.fromJson(json.decode(doc) as List);
-//    return NotusDocument.fromDelta(detail);
+//    final file = File(Directory.systemTemp.path + "/quick_start.json");
+//    if (await file.exists()) {
+//      final contents = await file
+//          .readAsString()
+//          .then((data) => Future.delayed(Duration(seconds: 1), () => data));
+//      if(contents.isNotEmpty)
+//      return NotusDocument.fromJson(jsonDecode(contents));
+//    }
+//    final Delta delta = Delta();
+//    return NotusDocument.fromDelta(delta);
+    final doc =r'[{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242804.jpg"}}},{"insert":"\n9666\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242880.jpg"}}},{"insert":"\n0000\n"}]';
+    Delta detail= Delta.fromJson(json.decode(doc) as List);
+    return NotusDocument.fromDelta(detail);
   }
 
   void _saveDocument(BuildContext context) async{
-    List<Future<MultipartFile>> imageList = new List<Future<MultipartFile>>();
 
     _editing = false;
     final contents = jsonEncode(_controller.document);
 
     Delta list= Delta.fromJson(json.decode(contents) as List);
-
+    List<KeyValueItem> imageList=new List<KeyValueItem>();
     for(var item in list.toList()){
         if(item.attributes!=null&&item.attributes.containsKey("embed")){
           if(item.attributes["embed"]["type"]=="image"){
-            var path= item.attributes["embed"]["source"];
+            var path= item.attributes["embed"]["source"].toString();
             var name=path.toString().substring(path.toString().lastIndexOf("/")+1);
-            print(path);
-            print(name);
+            var model=KeyValueItem();
+            model.key=name;
+            model.value=path;
+            imageList.add(model);
             //MultipartFile multipartFile =  await MultipartFile.fromFile(path, filename:name);
           }
         }
     }
-    _createTask(contents);
+    _createTask(imageList,contents);
     print(Directory.systemTemp.path);
     // For this example we save our document to a temporary file.
     final file = File(Directory.systemTemp.path + "/quick_start.json");
@@ -147,21 +140,131 @@ class _PublishTaskState extends State<PublishTaskPage> {
     });
   }
 
-  Future<void> _createTask(String contents) async {
+  Future<void> _createTask(List<KeyValueItem> imageList,String contents)  async {
+//    _readFileByte(Directory.systemTemp.path + "/quick_start.json").then((bytesData) async {
+//
+//
+//
+//    });
+    //do your task here
+
+    List<MultipartFile> multipartImageList = new List<MultipartFile>();
+      for(KeyValueItem item in imageList){
+        MultipartFile multipartFile = MultipartFile.fromBytes(
+          await _readFileByte(item.value),                    //图片路径
+          filename: item.key,            //图片名称
+        );
+        print("读取"+item.key+"完毕");
+        multipartImageList.add(multipartFile);
+      }
+    print("读取MultipartFile完毕");
+    FormData formData = FormData.fromMap({
+      "imageList": multipartImageList,
+      "content" : contents,
+    });
+
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<String>(
       Method.post, HttpApi.createTask,
       onSuccess: (data){
-//        FlutterStars.SpUtil.putString(Constant.phone, _nameController.text);
-//        FlutterStars.SpUtil.putString(Constant.password, _passwordController.text);
-//        FlutterStars.SpUtil.putBool(Constant.isLogin, true);
-//        FlutterStars.SpUtil.putString(Constant.accessToken, data.userToken);
-//        NavigatorUtils.push(context, StoreRouter.auditPage);
+        Toast.show('任务创建成功！');
       },
       onError: (code,msg){
         Toast.show(msg);
       },
-      params: {"content": contents},
+      params: formData,
     );
+
+
+
+  }
+
+  Future<Uint8List> _readFileByte(String filePath) async {
+    Uri myUri = Uri.parse(filePath);
+    File audioFile = new File.fromUri(myUri);
+    Uint8List bytes;
+    await audioFile.readAsBytes().then((value) {
+      bytes = Uint8List.fromList(value);
+      print('reading of bytes is completed');
+    }).catchError((onError) {
+      print('Exception Error while reading audio from path:' +
+          onError.toString());
+    });
+    return bytes;
+  }
+
+  _buildBody() {
+    final theme = ZefyrThemeData(
+      cursorColor: Colors.blue,
+      toolbarTheme: ZefyrToolbarTheme.fallback(context).copyWith(
+        color: Colors.grey.shade800,
+        toggleColor: Colors.grey.shade900,
+        iconColor: Colors.white,
+        disabledIconColor: Colors.grey.shade500,
+      ),
+    );
+
+     return ZefyrScaffold(
+                    child: ZefyrTheme(
+                      data: theme,
+                      child: ZefyrEditor(
+                        controller: _controller,
+                        focusNode: _focusNode,
+                        mode: _editing ? ZefyrMode.edit : ZefyrMode.select,
+                        imageDelegate: CustomImageDelegate(),
+                      ),
+                    ),
+                  );
+//    return
+//
+//        Column(
+//            mainAxisSize:MainAxisSize.max,
+//        children: <Widget>[
+//          MyTextField(
+//            key: const Key('phone'),
+//            focusNode: _nodeText1,
+//            controller: _nameController,
+//            maxLength: 11,
+//            keyboardType: TextInputType.phone,
+//            hintText: "请输入标题",
+//          ),
+//          Expanded(
+//            flex: 1,
+//             child: Container(
+//                  color: Colors.red,
+//                  height: 300,
+//                ),)
+////          Expanded(
+////
+////                child: Container(
+////                  color: Colors.red,
+////
+////                ),
+//////                child:ZefyrScaffold(
+//////                    child: ZefyrTheme(
+//////                      data: theme,
+//////                      child: ZefyrEditor(
+//////                        controller: _controller,
+//////                        focusNode: _focusNode,
+//////                        mode: _editing ? ZefyrMode.edit : ZefyrMode.select,
+//////                        imageDelegate: CustomImageDelegate(),
+//////                      ),
+//////                    ),
+//////                  )
+////              ),
+//        ]);
+
+  }
+
+  Future<void> requestBook() async {
+    BaseOptions options = new BaseOptions(
+      baseUrl: "http://mhyy.shuzhoukj.com",
+      connectTimeout: 10000,
+      receiveTimeout: 10000,
+    );
+    Response response;
+    Dio dio = new Dio(options);
+    response = await dio.post("/Act/Apply",data: {"LoginOpenId": "o9W0Mt8obdv6rChRSPUmAOSO16dE", "Name": "桑享", "CellPhone": "15821758991","WxActId": "2009173210400023"});
+    Toast.show(response.data.toString());
   }
 }

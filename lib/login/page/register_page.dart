@@ -93,6 +93,7 @@ class _RegisterPageState extends State<RegisterPage> {
     return Scaffold(
         appBar: const MyAppBar(
           title: "注册",
+          hasLine: false,
         ),
         body: defaultTargetPlatform == TargetPlatform.iOS ? FormKeyboardActions(
           child: _buildBody(),

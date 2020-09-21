@@ -66,6 +66,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
     return Scaffold(
         appBar: const MyAppBar(
           title: "忘记密码",
+          hasLine: false,
         ),
         body: defaultTargetPlatform == TargetPlatform.iOS ? FormKeyboardActions(
           child: _buildBody(),

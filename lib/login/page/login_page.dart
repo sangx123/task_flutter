@@ -90,11 +90,14 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: MyAppBar(
         isBack: false,
+        hasLine: false,
         actionName: '验证码登录',
         onPressed: (){
           NavigatorUtils.push(context, LoginRouter.smsLoginPage);
         },
       ),
+      //在flutter中iOS平台输入框，有兼容性问题，所以要特殊处理
+      // 因Android平台输入法兼容问题，所以只配置IOS平台
       body: defaultTargetPlatform == TargetPlatform.iOS ? FormKeyboardActions(
         child: _buildBody(),
       ) : SingleChildScrollView(
