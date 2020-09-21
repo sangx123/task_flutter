@@ -7,6 +7,7 @@ import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/shop/page/shop_page.dart';
 import 'package:flutter_deer/statistics/page/statistics_page.dart';
+import 'package:flutter_deer/task/page/task_home.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -38,7 +39,8 @@ class _HomeState extends State<Home> {
   
   void initData(){
     _pageList = [
-      OrderPage(),
+      //OrderPage(),
+      TaskHomePage(),
       GoodsPage(),
       Text(""),
       StatisticsPage(),
@@ -187,7 +189,7 @@ class _HomeState extends State<Home> {
 
               onPressed: (){
 
-                NavigatorUtils.push(context, TaskRouter.taskPublishPage);
+                NavigatorUtils.push(context, TaskRouter.taskPublishEndPage);
                 //NavigatorUtils.goWebViewPage(context, "发布任务", "http://192.168.0.127:8081/#/pages/index/richtext");
               },
               child: Icon(Icons.add,size: 25,color: Colors.white,),

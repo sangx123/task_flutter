@@ -12,6 +12,7 @@ import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/net/net.dart';
 import 'package:flutter_deer/res/gaps.dart';
 import 'package:flutter_deer/res/styles.dart';
+import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/util/zefyr_images.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
@@ -111,33 +112,19 @@ class _PublishTaskState extends State<PublishTaskPage> {
 
     _editing = false;
     final contents = jsonEncode(_controller.document);
+    NavigatorUtils.goBackWithParams(context,contents);
+    return ;
 
-    Delta list= Delta.fromJson(json.decode(contents) as List);
-    List<KeyValueItem> imageList=new List<KeyValueItem>();
-    for(var item in list.toList()){
-        if(item.attributes!=null&&item.attributes.containsKey("embed")){
-          if(item.attributes["embed"]["type"]=="image"){
-            var path= item.attributes["embed"]["source"].toString();
-            var name=path.toString().substring(path.toString().lastIndexOf("/")+1);
-            var model=KeyValueItem();
-            model.key=name;
-            model.value=path;
-            imageList.add(model);
-            //MultipartFile multipartFile =  await MultipartFile.fromFile(path, filename:name);
-          }
-        }
-    }
-    _createTask(imageList,contents);
-    print(Directory.systemTemp.path);
-    // For this example we save our document to a temporary file.
-    final file = File(Directory.systemTemp.path + "/quick_start.json");
-    // And show a snack bar on success.
-    file.writeAsString(contents).then((_) {
-      //Scaffold.of(context).showSnackBar(SnackBar(content: Text("Saved.")));
-    });
-    setState(() {
-      //刷新界面
-    });
+//    print(Directory.systemTemp.path);
+//    // For this example we save our document to a temporary file.
+//    final file = File(Directory.systemTemp.path + "/quick_start.json");
+//    // And show a snack bar on success.
+//    file.writeAsString(contents).then((_) {
+//      //Scaffold.of(context).showSnackBar(SnackBar(content: Text("Saved.")));
+//    });
+//    setState(() {
+//      //刷新界面
+//    });
   }
 
   Future<void> _createTask(List<KeyValueItem> imageList,String contents)  async {

@@ -22,7 +22,7 @@ class OrderPage extends StatefulWidget {
 }
 
 class _OrderPageState extends State<OrderPage> with AutomaticKeepAliveClientMixin<OrderPage>, SingleTickerProviderStateMixin{
-
+  //保持页面状态
   @override
   bool get wantKeepAlive => true;
   
