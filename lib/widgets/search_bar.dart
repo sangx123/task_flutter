@@ -51,8 +51,8 @@ class _SearchBarState extends State<SearchBar> {
             child: Row(
               children: <Widget>[
                 SizedBox(
-                  width: 48.0,
-                  height: 48.0,
+                  width: 40.0,
+                  height: 40.0,
                   child: InkWell(
                     onTap: (){
                       FocusScope.of(context).unfocus();

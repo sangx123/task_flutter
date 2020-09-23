@@ -1,29 +1,17 @@
-
-import 'package:dio/dio.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
-import 'package:flutter_deer/order/widgets/order_item_tag.dart';
-import 'package:flutter_deer/order/widgets/order_list.dart';
-import 'package:flutter_deer/util/theme_utils.dart';
-import 'package:flutter_deer/util/toast.dart';
-import 'package:flutter_deer/widgets/my_refresh_list.dart';
-import 'package:flutter_deer/widgets/search_bar.dart';
-import 'package:flutter_deer/widgets/state_layout.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
-import 'package:provider/provider.dart';
-class TaskHomePage extends StatefulWidget{
+
+class Widget_RefreshIndicator_Page extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
-    return new TaskHomeStatePage();
+    return Widget_RefreshIndicator_State();
   }
 
 }
 
-class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClientMixin<TaskHomePage>, SingleTickerProviderStateMixin{
-
-  @override
-  bool get wantKeepAlive => true;
+class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> {
   var list = [];
   int page = 0;
   bool isLoading = false;//是否正在请求新数据
@@ -31,7 +19,7 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
   bool offState = false;//是否显示进入页面时的圆形进度条
 
   ScrollController scrollController = ScrollController();
-  bool isDark = false;
+
   @override
   void initState() {
     super.initState();
@@ -48,31 +36,23 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
     getListData();
   }
 
-
   @override
   Widget build(BuildContext context) {
-
-    isDark = ThemeUtils.isDark(context);
-    return Scaffold(
-          appBar: SearchBar(
-            hintText: "请输入商品名称查询",
-            onPressed: (text){
-              Toast.show("搜索内容：$text");
-            },
-          ),
+    return MaterialApp(
+      home: Scaffold(
           body: Stack(
             children: <Widget>[
-//              SafeArea(
-//                child: SizedBox(
-//                  height: 105,
-//                  width: double.infinity,
-//                  child: isDark ? null : const DecoratedBox(
-//                      decoration: BoxDecoration(
-//                          gradient: LinearGradient(colors: const [Color(0xFF5793FA), Color(0xFF4647FA)])
-//                      )
-//                  ),
-//                ),
-//              ),
+              SafeArea(
+                child: SizedBox(
+                  height: 105,
+                  width: double.infinity,
+                  child: const DecoratedBox(
+                      decoration: BoxDecoration(
+                          gradient: LinearGradient(colors: const [Color(0xFF5793FA), Color(0xFF4647FA)])
+                      )
+                  ),
+                ),
+              ),
               RefreshIndicator(
                 child: ListView.builder(
                   controller: scrollController,
@@ -89,7 +69,8 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
               ),
             ],
           )
-      );
+      ),
+    );
   }
 
   @override
@@ -104,49 +85,45 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
    */
   Widget choiceItemWidget(BuildContext context, int position) {
     if(position==0){
-        return buildBanners();
+      return buildHeader();
     } else if (position < list.length) {
 //      return HomeListItem(position, list[position], (position) {
 //        debugPrint("点击了第$position条");
 //      });
-      return OrderItem(key: Key('order_item_$position'), index: position, tabIndex: 0,);
+        return OrderItem(key: Key('order_item_$position'), index: position, tabIndex: 0,);
     } else if (showMore) {
       return showMoreLoadingWidget();
     }else{
       return null;
     }
   }
-  buildBanners()   {
-    List<BannerItem> list=new List<BannerItem>();
-    BannerItem item=BannerItem(id: "49984", pic: "https://i0.hdslb.com/bfs/live/6250fac43e38f5732a99c406ed2c8af59bb4ef45.jpg", link: "https://www.bilibili.com/blackboard/dynamic/3886", title: "第五人格画家重磅登场", position:"1" );
-    list.add(item);
-    list.add(item);
+  Widget buildHeader(){
+    List<Image> imgs = [
+      //建立了一个图片数组
+      Image.network(
+        "https://images.unsplash.com/photo-1477346611705-65d1883cee1e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        fit: BoxFit.cover,
+      ),
+      Image.network(
+        "https://images.unsplash.com/photo-1498550744921-75f79806b8a7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+        fit: BoxFit.cover,
+      ),
+      Image.network(
+        "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+        fit: BoxFit.cover,
+      ),
+    ];
     return Container(
-      height: 100,
-      margin: EdgeInsets.all(10),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(5),
-        child: Swiper(
-          autoplay: true,
-          pagination: SwiperPagination(
-            alignment: Alignment.bottomRight,
-            builder: DotSwiperPaginationBuilder(
-              size: 7,
-              activeSize: 7,
-              color: Colors.white,
-              activeColor: Theme.of(context).primaryColor,
-            ),
-          ),
-          itemCount: list.length,
-          itemBuilder: (context, i) {
-            return Container(
-              child: Image.network(
-                list[i].pic,
-                fit: BoxFit.fitWidth,
-              ),
-            );
-          },
-        ),
+      height: 200,
+      child: Swiper(
+        itemBuilder: (BuildContext context, int index) {
+          //条目构建函数传入了index,根据index索引到特定图片
+          return imgs[index];
+        },
+        itemCount: imgs.length,
+        autoplay: true,
+        pagination: new SwiperPagination(), //这些都是控件默认写好的,直接用
+        control: new SwiperControl( iconNext: null,iconPrevious: null),
       ),
     );
   }
@@ -288,6 +265,9 @@ class HomeListItem extends StatelessWidget {
     //InkWell点击的时候有水波纹效果
     return InkWell(onTap: () => listener(position), child: widget);
   }
+
+
+
 }
 
 
@@ -295,30 +275,3 @@ class ItemInfo {
   String title;
   ItemInfo(this.title);
 }
-
-class BannerItem{
-  String pic;
-  String id;
-  String position;
-  String title;
-  String link;
-  BannerItem({this.id,this.link,this.pic,this.position,this.title});
-  BannerItem.fromJson(Map<String ,dynamic> jsondata){
-    pic=jsondata["pic"];
-    id=jsondata["id"];
-    position=jsondata["position"];
-    title=jsondata["title"];
-    link=jsondata["link"];
-  }
-}
-class Banners{
-  List<BannerItem> list;
-  Banners();
-  Banners.fromJson(Map<String,dynamic> jd){
-    list=List<BannerItem>();
-    for(Map<String,dynamic> item in jd["banner"]){
-      list.add(BannerItem.fromJson(item));
-    }
-  }
-}
-

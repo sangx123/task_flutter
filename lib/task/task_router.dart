@@ -1,6 +1,7 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter_deer/routers/router_init.dart';
+import 'package:flutter_deer/task/page/issuse_message_page.dart';
 import 'package:flutter_deer/task/page/task_detail.dart';
 import 'package:flutter_deer/task/page/task_home.dart';
 import 'package:flutter_deer/task/page/task_publish.dart';
@@ -16,6 +17,9 @@ class TaskRouter implements IRouterProvider{
   static String taskPublishEndPage = "/task/taskPublishEnd";
   static String taskDetailPage = "/task/taskDetail";
   static String myCustomForm = "/store/MyCustomForm";
+  static String taskIssuesMessagePage = "/task/IssuesMessagePage";
+
+
   @override
   void initRouter(Router router) {
     router.define(taskPublishPage, handler: Handler(handlerFunc: (_, params) => PublishTaskPage()));
@@ -26,6 +30,7 @@ class TaskRouter implements IRouterProvider{
 
 
     router.define(taskHomePage,handler: Handler(handlerFunc: (_,params) =>  TaskHomePage()));
+    router.define(taskIssuesMessagePage,handler: Handler(handlerFunc: (_,params) =>  IssuesMessagePage()));
 
   }
   
