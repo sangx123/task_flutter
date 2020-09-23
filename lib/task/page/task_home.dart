@@ -6,6 +6,7 @@ import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
 import 'package:flutter_deer/order/widgets/order_item_tag.dart';
 import 'package:flutter_deer/order/widgets/order_list.dart';
+import 'package:flutter_deer/res/colors.dart';
 import 'package:flutter_deer/shop/page/shop_page.dart';
 import 'package:flutter_deer/statistics/page/statistics_page.dart';
 import 'package:flutter_deer/task/page/task_home_tab_recommand.dart';
@@ -28,16 +29,16 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
   @override
   bool get wantKeepAlive =>true;
   final List<String> tabs = [
-    "直播",
+    "全部",
     "推荐",
-    "热门",
-    "追番"
+    "程序员",
+    "其他"
   ];
   final List<Widget> tabViews = [
     TaskHomeReCommandPage(),
-    GoodsPage(),
+    TaskHomeReCommandPage(),
     StatisticsPage(),
-    ShopPage(),
+    StatisticsPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -47,7 +48,7 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
       child: Scaffold(
         appBar: TabBar(
           indicatorSize: TabBarIndicatorSize.label,
-          labelColor: Colors.pinkAccent,
+          labelColor: Colours.app_main,
           labelStyle: TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.bold
@@ -57,7 +58,7 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
             //fontWeight: FontWeight.bold
           ),
           unselectedLabelColor: Colors.grey,
-          indicatorColor: Colors.pinkAccent,
+          indicatorColor: Colours.app_main,
           isScrollable: true, //设置为可以滚动
           tabs: tabs.map((String title) {
             return new Container(

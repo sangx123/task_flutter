@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
 
   var _pageList;
   
-  var _appBarTitles = ['订单', '商品', "发布",'统计', '店铺'];
+  var _appBarTitles = ['首页', '商品', "发布",'统计', '店铺'];
   final _pageController = PageController();
 
   HomeProvider provider = HomeProvider();
@@ -214,7 +214,7 @@ class _HomeState extends State<Home> {
   void _onPageChanged(int index) {
     provider.value = index;
     setState(() {
-      
+
     });
   }
 
