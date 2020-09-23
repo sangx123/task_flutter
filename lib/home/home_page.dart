@@ -12,6 +12,7 @@ import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
+import 'package:flutter_deer/widgets/search_bar.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
@@ -126,7 +127,6 @@ class _HomeState extends State<Home> {
   }
 
   DateTime  _lastTime;
-  
   Future<bool> _isExit(){
     if (_lastTime == null || DateTime.now().difference(_lastTime) > Duration(milliseconds: 2500)) {
       _lastTime = DateTime.now();
@@ -136,7 +136,13 @@ class _HomeState extends State<Home> {
     Toast.cancelToast();
     return Future.value(true);
   }
-  
+  final _widgetOptionsAppBar = [SearchBar(
+    hintText: "请输入商品名称查询",
+    onPressed: (text){
+    Toast.show("搜索内容：$text");
+    },
+    ),
+  ];
   @override
   Widget build(BuildContext context) {
     bool isDark = ThemeUtils.isDark(context);
@@ -145,6 +151,7 @@ class _HomeState extends State<Home> {
       child: WillPopScope(//WillPopScope双击返回应用
         onWillPop: _isExit,
         child: Scaffold(
+          appBar: provider.value==0?_widgetOptionsAppBar.elementAt(provider.value):null,
           bottomNavigationBar: Consumer<HomeProvider>(
             builder: (_, provider, __){
               return BottomNavigationBar(
@@ -206,6 +213,9 @@ class _HomeState extends State<Home> {
 
   void _onPageChanged(int index) {
     provider.value = index;
+    setState(() {
+      
+    });
   }
 
 }
