@@ -37,14 +37,14 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
   final List<Widget> tabViews = [
     TaskHomeReCommandPage(),
     TaskHomeReCommandPage(),
-    StatisticsPage(),
-    StatisticsPage(),
+    TaskHomeReCommandPage(),
+    TaskHomeReCommandPage(),
   ];
   @override
   Widget build(BuildContext context) {
     return new DefaultTabController(
       length: tabs.length,
-      initialIndex: 1, //默认选中
+      initialIndex: 0, //默认选中
       child: Scaffold(
         appBar: TabBar(
           indicatorSize: TabBarIndicatorSize.label,
@@ -54,8 +54,8 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
               fontWeight: FontWeight.bold
           ),
           unselectedLabelStyle: TextStyle(
-            fontSize: 17,
-            //fontWeight: FontWeight.bold
+          fontSize: 17,
+          //fontWeight: FontWeight.bold
           ),
           unselectedLabelColor: Colors.grey,
           indicatorColor: Colours.app_main,

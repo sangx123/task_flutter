@@ -5,6 +5,7 @@ import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
 import 'package:flutter_deer/order/widgets/order_item_tag.dart';
 import 'package:flutter_deer/order/widgets/order_list.dart';
+import 'package:flutter_deer/task/page/task_recommand_item.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/widgets/my_refresh_list.dart';
@@ -23,8 +24,6 @@ class TaskHomeReCommandPage extends StatefulWidget{
 class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with AutomaticKeepAliveClientMixin<TaskHomeReCommandPage>, SingleTickerProviderStateMixin{
   @override
   bool get wantKeepAlive => true;
-
-
   var list = [];
   int page = 0;
   bool isLoading = false;//是否正在请求新数据
@@ -55,7 +54,9 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
 
     isDark = ThemeUtils.isDark(context);
     return Scaffold(
+           backgroundColor: Color(0xFFF1F1F1),
           body: Stack(
+
             children: <Widget>[
 //              SafeArea(
 //                child: SizedBox(
@@ -68,14 +69,17 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
 //                  ),
 //                ),
 //              ),
-              RefreshIndicator(
+              Padding(
+                padding: EdgeInsets.only(left: 10,right: 10),
+
+              child:  RefreshIndicator(
                 child: ListView.builder(
                   controller: scrollController,
                   itemCount: list.length + 1,//列表长度+底部加载中提示
                   itemBuilder: choiceItemWidget,
                 ),
                 onRefresh: _onRefresh,
-              ),
+              ),),
               Offstage(
                 offstage: offState,
                 child: Center(
@@ -104,7 +108,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
 //      return HomeListItem(position, list[position], (position) {
 //        debugPrint("点击了第$position条");
 //      });
-      return OrderItem(key: Key('order_item_$position'), index: position, tabIndex: 0,);
+      return TaskRecommandItemPage(key: Key('order_item_$position'), index: position, tabIndex: 0,);
     } else if (showMore) {
       return showMoreLoadingWidget();
     }else{
@@ -118,7 +122,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
     list.add(item);
     return Container(
       height: 100,
-      margin: EdgeInsets.all(10),
+      margin: EdgeInsets.only(top: 10,bottom: 3),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(5),
         child: Swiper(
