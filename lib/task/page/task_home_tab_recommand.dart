@@ -28,7 +28,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
   @override
   bool get wantKeepAlive => true;
   var list = [];
-  int page = 0;
+  int page = 1;
   bool isLoading = false;//是否正在请求新数据
   bool showMore = false;//是否显示底部加载中提示
   bool offState = false;//是否显示进入页面时的圆形进度条
@@ -49,7 +49,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
       }
     });
     //listview根据list的个数显示数据，所以添加header的话要增加1条数据，来显示项数
-    list.add("header");
+    list.add(0);
     getListData();
   }
 
@@ -75,7 +75,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
 //                ),
 //              ),
               Padding(
-                padding: EdgeInsets.only(left: 10,right: 10),
+                padding: EdgeInsets.only(left: 10,right: 10,bottom: 10),
 
               child:  RefreshIndicator(
                 child: ListView.builder(
@@ -189,12 +189,6 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<RecommandResultEntity>(
       Method.post, HttpApi.getMyPublishTaskList,isList: true,
-      onSuccess: (data){
-        setState(() {
-          isLoading = false;
-          offState = true;
-        });
-      },
         onSuccessList: (data){
           setState(() {
             isLoading = false;
@@ -223,19 +217,32 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
     }
     setState(() {
       isLoading = true;
-      page++;
     });
     print('上拉刷新开始,page = $page');
-    await Future.delayed(Duration(seconds: 3), () {
-      setState(() {
-        isLoading = false;
-        showMore = false;
-        list.addAll(List.generate(3, (i) {
-          return ItemInfo("上拉添加ListView的一行数据$i");
-        }));
-        print('上拉刷新结束,page = $page');
-      });
-    });
+    await DioUtils.instance.requestNetwork<RecommandResultEntity>(
+        Method.post, HttpApi.getMyPublishTaskList,isList: true,
+        onSuccessList: (data){
+          setState(() {
+            isLoading = false;
+            showMore = false;
+            list.addAll(data);
+            print(list.length+1);
+            page++;
+          });
+        },
+        onError: (code,msg){
+          setState(() {
+            isLoading = false;
+            showMore = false;
+            Toast.show(msg);
+          });
+        },
+        params: {
+          "pageSize": 5,
+          "pageNumber": page+1,
+          "state": 0
+        }
+    );
   }
 
   /**
@@ -247,23 +254,40 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
     }
     setState(() {
       isLoading = true;
-      page = 0;
+      page = 1;
     });
-
-    print('下拉刷新开始,page = $page');
-
-    await Future.delayed(Duration(seconds: 3), () {
-      setState(() {
-        isLoading = false;
-
-        List tempList = List.generate(3, (i) {
-          return ItemInfo("下拉添加ListView的一行数据$i");
-        });
-        tempList.addAll(list);
-        list = tempList;
-        print('下拉刷新结束,page = $page');
-      });
-    });
+    list.clear();
+    list.add(0);
+    //NavigatorUtils.push(context, StoreRouter.auditPage);
+    await DioUtils.instance.requestNetwork<RecommandResultEntity>(
+        Method.post, HttpApi.getMyPublishTaskList,isList: true,
+        onSuccess: (data){
+          setState(() {
+            isLoading = false;
+            offState = true;
+          });
+        },
+        onSuccessList: (data){
+          setState(() {
+            isLoading = false;
+            offState = true;
+            list.addAll(data);
+            print(list.length+1);
+          });
+        },
+        onError: (code,msg){
+          setState(() {
+            isLoading = false;
+            offState = true;
+            Toast.show(msg);
+          });
+        },
+        params: {
+          "pageSize": 5,
+          "pageNumber": 1,
+          "state": 0
+        }
+    );
   }
 }
 

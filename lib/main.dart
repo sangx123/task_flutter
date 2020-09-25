@@ -85,7 +85,6 @@ class MyApp extends StatelessWidget {
     //return PublishTaskPage();
     //return ScrollToIndexDemoPage2();
     return SplashPage();
-
     //return Widget_RefreshIndicator_Page();
   }
 }
