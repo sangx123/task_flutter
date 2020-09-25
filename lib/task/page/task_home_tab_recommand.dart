@@ -80,10 +80,12 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
               child:  RefreshIndicator(
                 child: ListView.builder(
                   controller: scrollController,
-                  itemCount: list.length + 2,//列表长度+底部加载中提示
+                  itemCount: list.length + 1,//列表长度+底部加载中提示
                   itemBuilder: choiceItemWidget,
+                  physics: new AlwaysScrollableScrollPhysics(),
                 ),
                 onRefresh: _onRefresh,
+
               ),),
               Offstage(
                 offstage: offState,
