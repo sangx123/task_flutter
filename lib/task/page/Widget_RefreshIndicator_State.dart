@@ -56,7 +56,7 @@ class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> 
               RefreshIndicator(
                 child: ListView.builder(
                   controller: scrollController,
-                  itemCount: list.length + 1,//列表长度+底部加载中提示
+                  itemCount: list.length +1,//列表长度+底部加载中提示+header的长度
                   itemBuilder: choiceItemWidget,
                 ),
                 onRefresh: _onRefresh,
@@ -84,13 +84,16 @@ class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> 
    * 加载哪个子组件
    */
   Widget choiceItemWidget(BuildContext context, int position) {
+    print("choiceItemWidget position=="+position.toString()+",list.length="+list.length.toString());
     if(position==0){
-      return buildHeader();
+        return buildHeader();
     } else if (position < list.length) {
 //      return HomeListItem(position, list[position], (position) {
 //        debugPrint("点击了第$position条");
 //      });
-        return OrderItem(key: Key('order_item_$position'), index: position, tabIndex: 0,);
+      print("build_OrderItem");
+
+      return OrderItem(key: Key('order_item_$position'), index: position, tabIndex: 0,);
     } else if (showMore) {
       return showMoreLoadingWidget();
     }else{
@@ -114,7 +117,7 @@ class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> 
       ),
     ];
     return Container(
-      height: 200,
+      height: 100,
       child: Swiper(
         itemBuilder: (BuildContext context, int index) {
           //条目构建函数传入了index,根据index索引到特定图片
@@ -147,6 +150,7 @@ class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> 
    * 模拟进入页面获取数据
    */
   void getListData() async {
+    print("getListData");
     if (isLoading) {
       return;
     }
@@ -157,9 +161,12 @@ class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> 
       setState(() {
         isLoading = false;
         offState = true;
-        list = List.generate(20, (i) {
+        list.add(ItemInfo("ListView的一行数据header"));
+        list.addAll(List.generate(3, (i) {
           return ItemInfo("ListView的一行数据$i");
-        });
+        }));
+
+        print("list.length="+list.length.toString());
       });
     });
   }
@@ -180,6 +187,7 @@ class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> 
       setState(() {
         isLoading = false;
         showMore = false;
+
         list.addAll(List.generate(3, (i) {
           return ItemInfo("上拉添加ListView的一行数据$i");
         }));
@@ -205,7 +213,7 @@ class Widget_RefreshIndicator_State extends State<Widget_RefreshIndicator_Page> 
     await Future.delayed(Duration(seconds: 3), () {
       setState(() {
         isLoading = false;
-
+        list.add(ItemInfo("上拉添加ListView的一行数据header"));
         List tempList = List.generate(3, (i) {
           return ItemInfo("下拉添加ListView的一行数据$i");
         });

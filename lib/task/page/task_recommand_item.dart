@@ -32,7 +32,7 @@ class TaskRecommandItemPage extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(16.0),
           child: InkWell(
-            onTap: () => NavigatorUtils.push(context, TaskRouter.taskDetailPage),
+            //onTap: () => NavigatorUtils.push(context, TaskRouter.taskDetailPage),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[

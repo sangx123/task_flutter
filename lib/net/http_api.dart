@@ -9,5 +9,8 @@ class HttpApi {
   static const String register = "api/index/register"; //注册
 
   //创建任务
-  static const String createTask = "api/task/createTask"; //注册
+  static const String createTask = "api/task/createTask";
+
+  //获取任务
+  static const String getMyPublishTaskList = "api/task/getMyPublishTaskList";
 }

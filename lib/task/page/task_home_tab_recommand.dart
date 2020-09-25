@@ -1,10 +1,13 @@
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_deer/net/dio_utils.dart';
+import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
 import 'package:flutter_deer/order/widgets/order_item_tag.dart';
 import 'package:flutter_deer/order/widgets/order_list.dart';
+import 'package:flutter_deer/task/page/recommand_result_entity.dart';
 import 'package:flutter_deer/task/page/task_recommand_item.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -75,7 +78,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
               child:  RefreshIndicator(
                 child: ListView.builder(
                   controller: scrollController,
-                  itemCount: list.length + 1,//列表长度+底部加载中提示
+                  itemCount: list.length + 2,//列表长度+底部加载中提示
                   itemBuilder: choiceItemWidget,
                 ),
                 onRefresh: _onRefresh,
@@ -102,12 +105,16 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
    * 加载哪个子组件
    */
   Widget choiceItemWidget(BuildContext context, int position) {
+    print("choiceItemWidget position=="+position.toString()+",list.length="+list.length.toString());
     if(position==0){
+
         return buildBanners();
     } else if (position < list.length) {
+         print("build_TaskRecommandItemPage");
 //      return HomeListItem(position, list[position], (position) {
 //        debugPrint("点击了第$position条");
 //      });
+
       return TaskRecommandItemPage(key: Key('order_item_$position'), index: position, tabIndex: 0,);
     } else if (showMore) {
       return showMoreLoadingWidget();
@@ -117,7 +124,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
   }
   buildBanners()   {
     List<BannerItem> list=new List<BannerItem>();
-    BannerItem item=BannerItem(id: "49984", pic: "https://i0.hdslb.com/bfs/live/6250fac43e38f5732a99c406ed2c8af59bb4ef45.jpg", link: "https://www.bilibili.com/blackboard/dynamic/3886", title: "第五人格画家重磅登场", position:"1" );
+    BannerItem item=BannerItem(id: "49984", pic: "https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3375017683,2174997570&fm=26&gp=0.jpg", link: "https://www.bilibili.com/blackboard/dynamic/3886", title: "第五人格画家重磅登场", position:"1" );
     list.add(item);
     list.add(item);
     return Container(
@@ -175,15 +182,32 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
     setState(() {
       isLoading = true;
     });
-    await Future.delayed(Duration(seconds: 3), () {
-      setState(() {
-        isLoading = false;
-        offState = true;
-        list = List.generate(20, (i) {
-          return ItemInfo("ListView的一行数据$i");
+    //NavigatorUtils.push(context, StoreRouter.auditPage);
+    await DioUtils.instance.requestNetwork<RecommandResultEntity>(
+      Method.post, HttpApi.getMyPublishTaskList,isList: true,
+      onSuccess: (data){
+        setState(() {
+          isLoading = false;
+          offState = true;
         });
-      });
-    });
+      },
+        onSuccessList: (data){
+          setState(() {
+            isLoading = false;
+            offState = true;
+            list.addAll(data);
+            print(list.length+1);
+          });
+        },
+      onError: (code,msg){
+        setState(() {
+          isLoading = false;
+          offState = true;
+          Toast.show(msg);
+        });
+      },
+      params: {}
+    );
   }
 
   /**
