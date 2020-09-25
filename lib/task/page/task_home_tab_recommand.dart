@@ -48,6 +48,8 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
         getMoreData();
       }
     });
+    //listview根据list的个数显示数据，所以添加header的话要增加1条数据，来显示项数
+    list.add("header");
     getListData();
   }
 
@@ -115,7 +117,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage> with Autom
 //        debugPrint("点击了第$position条");
 //      });
 
-      return TaskRecommandItemPage(key: Key('order_item_$position'), index: position, tabIndex: 0,);
+      return TaskRecommandItemPage(key: Key('order_item_$position'), index: position, tabIndex: 0,model: list[position]);
     } else if (showMore) {
       return showMoreLoadingWidget();
     }else{

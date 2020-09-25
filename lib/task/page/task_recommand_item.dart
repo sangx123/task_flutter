@@ -4,6 +4,7 @@ import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/order/widgets/pay_type_dialog.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/task/page/recommand_result_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -17,11 +18,12 @@ class TaskRecommandItemPage extends StatelessWidget {
     Key key,
     @required this.tabIndex,
     @required this.index,
+    @required this.model,
   }) : super(key: key);
 
   final int tabIndex;
   final int index;
-  
+  final RecommandResultEntity model;
   @override
   Widget build(BuildContext context) {
     final TextStyle textTextStyle = Theme.of(context).textTheme.body1.copyWith(fontSize: Dimens.font_sp12);
@@ -32,17 +34,17 @@ class TaskRecommandItemPage extends StatelessWidget {
         child: Container(
           padding: const EdgeInsets.all(16.0),
           child: InkWell(
-            //onTap: () => NavigatorUtils.push(context, TaskRouter.taskDetailPage),
+            onTap: () => NavigatorUtils.push(context, '${TaskRouter.taskDetailPage}?content=${Uri.encodeComponent(model.content)}'),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 Row(
                   children: <Widget>[
                     Expanded(
-                      child: Text("15000000000（郭李）",),
+                      child: Text(model.username,),
                     ),
                     Text(
-                      "货到付款",
+                      model.workerPrice.toString(),
                       style: TextStyle(
                           fontSize: Dimens.font_sp12,
                           color: Theme.of(context).errorColor
@@ -52,7 +54,7 @@ class TaskRecommandItemPage extends StatelessWidget {
                 ),
                 Gaps.vGap8,
                 Text(
-                  "西安市雁塔区 鱼化寨街道唐兴路唐兴数码3楼318",
+                  model.title,
                   style: Theme.of(context).textTheme.subtitle,
                 ),
                 Gaps.vGap12,
@@ -70,7 +72,7 @@ class TaskRecommandItemPage extends StatelessWidget {
                       ),
                     ),
                     Text(
-                      "2018.02.05 10:00",
+                      model.createTime,
                       style: TextStyles.textSize12,
                     ),
                   ],

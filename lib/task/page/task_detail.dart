@@ -23,6 +23,10 @@ import 'package:quill_delta/quill_delta.dart';
  * 发布任务的界面
  */
 class TaskDetailPage extends StatefulWidget {
+
+  const TaskDetailPage({Key key, this.content}) : super(key: key);
+
+  final String content;
   @override
   _TaskDetailPage createState() => _TaskDetailPage();
 }
@@ -169,8 +173,8 @@ class _TaskDetailPage extends State<TaskDetailPage> {
 //    }
 //    final Delta delta = Delta();
 //    return NotusDocument.fromDelta(delta);
-    final doc = r'[{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242804.jpg"}}},{"insert":"\n9666\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242880.jpg"}}},{"insert":"\n0000\n"}]';
-    Delta detail = Delta.fromJson(json.decode(doc) as List);
+    //final doc = r'[{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242804.jpg"}}},{"insert":"\n9666\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242880.jpg"}}},{"insert":"\n0000\n"}]';
+    Delta detail = Delta.fromJson(json.decode(widget.content) as List);
     return NotusDocument.fromDelta(detail);
   }
 }
