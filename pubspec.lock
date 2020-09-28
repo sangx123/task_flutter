@@ -747,6 +747,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "0.3.12-nullsafety.2"
+  tobias:
+    dependency: "direct main"
+    description:
+      name: tobias
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "1.7.1+1"
   transformer_page_view:
     dependency: transitive
     description:

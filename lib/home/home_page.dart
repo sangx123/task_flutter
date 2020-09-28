@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
 
   var _pageList;
   
-  var _appBarTitles = ['首页', '商品', "发布",'统计', '店铺'];
+  var _appBarTitles = ['首页', '商品', "发布",'统计', '我的'];
   final _pageController = PageController();
 
   HomeProvider provider = HomeProvider();

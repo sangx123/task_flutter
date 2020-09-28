@@ -35,6 +35,7 @@ import 'package:flutter_deer/widgets/text_field.dart';
 import 'package:flutter_deer/widgets/text_field_item.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
+import 'package:tobias/tobias.dart';
 import 'package:zefyr/zefyr.dart';
 import 'package:quill_delta/quill_delta.dart';
 /**
@@ -297,7 +298,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       Method.post, HttpApi.createTask,
       onSuccess: (data){
         Toast.show('任务创建成功！');
-        NavigatorUtils.goBack(context);
+        //NavigatorUtils.goBack(context);
+        callAlipay(data);
       },
       onError: (code,msg){
         Toast.show(msg);
@@ -321,5 +323,22 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
           onError.toString());
     });
     return bytes;
+  }
+
+  callAlipay(String _payInfo) async {
+    Map payResult;
+    try {
+      print("The pay info is : " + _payInfo);
+      payResult = await aliPay(_payInfo);
+      print("--->$payResult");
+    } on Exception catch (e) {
+      payResult = {};
+    }
+
+    if (!mounted) return;
+
+    setState(() {
+      //_payResult = payResult;
+    });
   }
 }

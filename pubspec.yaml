@@ -73,6 +73,11 @@ dependencies:
   #rich text
   zefyr:
     path: zefyr
+
+  #支付宝flutter组件
+  #https://pub.flutter-io.cn/packages/tobias:
+  #ios需要配置
+  tobias: ^1.7.1+1
   #zefyr: ^0.8.0
 dev_dependencies:
   # Widget测试
