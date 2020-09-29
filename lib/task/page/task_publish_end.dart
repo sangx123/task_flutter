@@ -180,8 +180,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 ////                    ),
 //                    Gaps.vGap16,
                     ClickItem(
-                      title: "商品类型：",
-                      content: _goodsSortName ?? "选择商品类型",
+                      title: "任务类型：",
+                      content: _goodsSortName ?? "选择任务类型",
                       onTap: () => _showBottomSheet(),
                     ),
                     ClickItem(

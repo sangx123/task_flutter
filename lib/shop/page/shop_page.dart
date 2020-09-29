@@ -94,7 +94,7 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                               child: CircleAvatar(
                                   radius: 28.0,
                                   backgroundColor: Colors.transparent,
-                                  backgroundImage: ImageUtils.getImageProvider(provider.user?.avatarUrl, holderImg: 'shop/tx')
+                                  backgroundImage: ImageUtils.getImageProvider("https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2415100391,2445796972&fm=26&gp=0.jpg", holderImg: 'shop/tx')
                               )
                           ),
 //                        Positioned(
@@ -190,13 +190,13 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                 ClickItem(
                     title: "我发布的任务",
                     //onTap: () =>  NavigatorUtils.goWebViewPage(context, "我的任务", "http://192.168.0.127:8081/#/pages/index/index")
-                    onTap: () =>  NavigatorUtils.push(context,OrderRouter.orderPage)
+                    onTap: () =>  NavigatorUtils.push(context,ShopRouter.myFabuTaskManagerHome)
 
                     //onTap: () =>  NavigatorUtils.goWebViewPage(context, "我的任务", "https://static-e6fd6f31-d6a7-422f-8a80-a0ac3bc56ad4.bspapp.com/#/pages/template/template")
                 ),
                 ClickItem(
                     title: "我领取的任务",
-                    onTap: () =>  NavigatorUtils.push(context,OrderRouter.orderPage)
+                    onTap: () =>  NavigatorUtils.push(context,ShopRouter.myJieshouTaskManagerHome)
                 ),
                 ClickItem(
                     title: "意见反馈",

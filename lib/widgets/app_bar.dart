@@ -61,7 +61,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
                           title.isEmpty ? centerTitle : title,
                           style: TextStyle(
                             fontWeight: FontWeight.bold ,
-                            fontSize: Dimens.font_sp18,
+                            fontSize: 16.5,
                             color: _overlayStyle == SystemUiOverlayStyle.light ?  Colours.dark_text : Colours.text,
                           )
                       ),
