@@ -1,4 +1,4 @@
-import 'package:flutter_deer/task/page/recommand_result_entity.dart';
+import 'package:flutter_deer/task/models/recommand_result_entity.dart';
 
 recommandResultEntityFromJson(RecommandResultEntity data, Map<String, dynamic> json) {
 	if (json['id'] != null) {

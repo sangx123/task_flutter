@@ -22,7 +22,7 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:provider/provider.dart';
 import 'package:tobias/tobias.dart';
 
-import 'custom_tab_bar.dart';
+import '../widgets/custom_tab_bar.dart';
 
 class TaskPayPage extends StatefulWidget {
   @override

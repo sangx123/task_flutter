@@ -18,7 +18,7 @@ import 'package:flutter_deer/widgets/state_layout.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:provider/provider.dart';
 
-import 'custom_tab_bar.dart';
+import '../widgets/custom_tab_bar.dart';
 class TaskHomePage extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {

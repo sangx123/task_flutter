@@ -1,14 +1,14 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter_deer/routers/router_init.dart';
-import 'package:flutter_deer/task/page/issuse_message_page.dart';
+import 'package:flutter_deer/task/test/issuse_message_page.dart';
 import 'package:flutter_deer/task/page/task_detail.dart';
 import 'package:flutter_deer/task/page/task_home.dart';
 import 'package:flutter_deer/task/page/task_pay.dart';
 import 'package:flutter_deer/task/page/task_publish.dart';
 import 'package:flutter_deer/task/page/task_publish_end.dart';
 
-import 'page/test_forcus.dart';
+import 'test/test_forcus.dart';
 
 
 class TaskRouter implements IRouterProvider{

@@ -4,7 +4,7 @@ import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/order/widgets/pay_type_dialog.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
-import 'package:flutter_deer/task/page/recommand_result_entity.dart';
+import 'package:flutter_deer/task/models/recommand_result_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';

@@ -7,7 +7,7 @@ import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
 import 'package:flutter_deer/order/widgets/order_item_tag.dart';
 import 'package:flutter_deer/order/widgets/order_list.dart';
-import 'package:flutter_deer/task/page/recommand_result_entity.dart';
+import 'package:flutter_deer/task/models/recommand_result_entity.dart';
 import 'package:flutter_deer/task/page/task_recommand_item.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
