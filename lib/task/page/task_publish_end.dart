@@ -85,6 +85,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
     }
   }
 
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -190,7 +192,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                     TextFieldItem(
                       title: "任务说明：",
                       hintText: "选填",
-                    ),
+                    )
                   ],
                 ),
               ),
@@ -298,8 +300,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       Method.post, HttpApi.createTask,
       onSuccess: (data){
         Toast.show('任务创建成功！');
-        //NavigatorUtils.goBack(context);
-        callAlipay(data);
+        NavigatorUtils.push(context, TaskRouter.taskPayPage);
       },
       onError: (code,msg){
         Toast.show(msg);
@@ -325,20 +326,5 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
     return bytes;
   }
 
-  callAlipay(String _payInfo) async {
-    Map payResult;
-    try {
-      print("The pay info is : " + _payInfo);
-      payResult = await aliPay(_payInfo);
-      print("--->$payResult");
-    } on Exception catch (e) {
-      payResult = {};
-    }
 
-    if (!mounted) return;
-
-    setState(() {
-      //_payResult = payResult;
-    });
-  }
 }

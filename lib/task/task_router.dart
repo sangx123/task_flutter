@@ -4,6 +4,7 @@ import 'package:flutter_deer/routers/router_init.dart';
 import 'package:flutter_deer/task/page/issuse_message_page.dart';
 import 'package:flutter_deer/task/page/task_detail.dart';
 import 'package:flutter_deer/task/page/task_home.dart';
+import 'package:flutter_deer/task/page/task_pay.dart';
 import 'package:flutter_deer/task/page/task_publish.dart';
 import 'package:flutter_deer/task/page/task_publish_end.dart';
 
@@ -18,6 +19,7 @@ class TaskRouter implements IRouterProvider{
   static String taskDetailPage = "/task/taskDetail";
   static String myCustomForm = "/store/MyCustomForm";
   static String taskIssuesMessagePage = "/task/IssuesMessagePage";
+  static String taskPayPage = "/task/taskPayPage";
 
 
   @override
@@ -34,6 +36,8 @@ class TaskRouter implements IRouterProvider{
 
     router.define(taskHomePage,handler: Handler(handlerFunc: (_,params) =>  TaskHomePage()));
     router.define(taskIssuesMessagePage,handler: Handler(handlerFunc: (_,params) =>  IssuesMessagePage()));
+
+    router.define(taskPayPage,handler: Handler(handlerFunc: (_,params) =>  TaskPayPage()));
 
   }
   
