@@ -30,24 +30,36 @@ class TaskHomePage extends StatefulWidget{
 class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClientMixin<TaskHomePage>, SingleTickerProviderStateMixin {
   @override
   bool get wantKeepAlive =>true;
-  int tabIndex=0;
+  int tabIndex=1;
   final List<String> tabs = [
     "全部",
     "推荐",
+    "游戏",
+    "恋爱",
+    "学习",
     "程序员",
-    "其他"
+    "炒股",
+    "法律",
+    "住房",
+    "生活"
   ];
   final List<Widget> tabViews = [
     TaskHomeReCommandPage(),
     TaskHomeReCommandPage(),
     TaskHomeReCommandPage(),
     TaskHomeReCommandPage(),
+    TaskHomeReCommandPage(),
+    TaskHomeReCommandPage(),
+    TaskHomeReCommandPage(),
+    TaskHomeReCommandPage(),
+    TaskHomeReCommandPage(),
+    TaskHomeReCommandPage()
   ];
   @override
   Widget build(BuildContext context) {
     return new DefaultTabController(
       length: tabs.length,
-      initialIndex: 0, //默认选中
+      initialIndex: 1, //默认选中
       child: Scaffold(
         appBar:
                 TabBar(
