@@ -25,6 +25,10 @@ import 'package:tobias/tobias.dart';
 import '../widgets/custom_tab_bar.dart';
 
 class TaskPayPage extends StatefulWidget {
+  const TaskPayPage({Key key, this.pay,this.price}) : super(key: key);
+
+  final String pay;
+  final String price;
   @override
   State<StatefulWidget> createState() {
     return new TaskPayStatePage();
@@ -56,7 +60,7 @@ class TaskPayStatePage extends State<TaskPayPage> {
                     ),
                     Gaps.vGap10,
                     Center(
-                      child: Text("需支付"),
+                      child: Text("您需要支付"),
                     ),
                     Gaps.vGap10,
                     Row(
@@ -65,7 +69,7 @@ class TaskPayStatePage extends State<TaskPayPage> {
                         Text("￥",
                             style: TextStyle(
                                 fontSize: 21, fontWeight: FontWeight.bold)),
-                        Text("6666",
+                        Text(widget.price,
                             style: TextStyle(
                                 fontSize: 36, fontWeight: FontWeight.bold)),
                       ],
@@ -153,6 +157,7 @@ class TaskPayStatePage extends State<TaskPayPage> {
                 onPressed: () {
                   //_createTask();
                   //NavigatorUtils.goBack(context);
+                  callAlipay(widget.pay);
                 },
                 text: "立即支付",
               ),
@@ -166,7 +171,12 @@ class TaskPayStatePage extends State<TaskPayPage> {
     try {
       print("The pay info is : " + _payInfo);
       payResult = await aliPay(_payInfo);
-      print("--->$payResult");
+      if(payResult["resultStatus"]=="9000"){
+        Toast.show("支付成功");
+      }else{
+        Toast.show("支付失败");
+      }
+
     } on Exception catch (e) {
       payResult = {};
     }

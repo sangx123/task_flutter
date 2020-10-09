@@ -36,9 +36,11 @@ class TaskRouter implements IRouterProvider{
 
     router.define(taskHomePage,handler: Handler(handlerFunc: (_,params) =>  TaskHomePage()));
     router.define(taskIssuesMessagePage,handler: Handler(handlerFunc: (_,params) =>  IssuesMessagePage()));
-
-    router.define(taskPayPage,handler: Handler(handlerFunc: (_,params) =>  TaskPayPage()));
-
+    router.define(taskPayPage, handler: Handler(handlerFunc: (_, params){
+      String pay = params['pay'].first;
+      String price = params['price'].first;
+      return TaskPayPage(pay: pay,price: price);
+    }));
   }
   
 }

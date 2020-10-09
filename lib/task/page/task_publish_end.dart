@@ -294,13 +294,12 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       "jiangLi": _moneyController.text,
       "peopleNum":_peopleNumController.text
     });
-
+    var price=double.parse(_moneyController.text)*double.parse(_peopleNumController.text);
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<String>(
       Method.post, HttpApi.createTask,
       onSuccess: (data){
-        Toast.show('任务创建成功！');
-        NavigatorUtils.push(context, TaskRouter.taskPayPage);
+        NavigatorUtils.push(context, '${TaskRouter.taskPayPage}?pay=${Uri.encodeComponent(data)}&price=$price');
       },
       onError: (code,msg){
         Toast.show(msg);
