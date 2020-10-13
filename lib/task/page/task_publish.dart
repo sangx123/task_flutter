@@ -24,6 +24,10 @@ import 'package:quill_delta/quill_delta.dart';
  * 发布任务的界面
  */
 class PublishTaskPage extends StatefulWidget {
+
+  const PublishTaskPage({Key key, this.content}) : super(key: key);
+
+  final String content;
   @override
   _PublishTaskState createState() => _PublishTaskState();
 }
@@ -46,9 +50,17 @@ class _PublishTaskState extends State<PublishTaskPage> {
 //        _controller = ZefyrController(document);
 //      });
 //    });
-    _sub = _controller.document.changes.listen((change) {
-      print('${change.source}: ${change.change}');
-    });
+      if(widget.content.isNotEmpty) {
+        _loadDocument().then((document) {
+          setState(() {
+            _controller = ZefyrController(document);
+          });
+        });
+      }
+      _sub = _controller.document.changes.listen((change) {
+        print('${change.source}: ${change.change}');
+      });
+
   }
 
   @override
@@ -90,23 +102,23 @@ class _PublishTaskState extends State<PublishTaskPage> {
   }
 
 
-  /// Loads the document asynchronously from a file if it exists, otherwise
-  /// returns default document.
-  Future<NotusDocument> _loadDocument() async {
-//    final file = File(Directory.systemTemp.path + "/quick_start.json");
-//    if (await file.exists()) {
-//      final contents = await file
-//          .readAsString()
-//          .then((data) => Future.delayed(Duration(seconds: 1), () => data));
-//      if(contents.isNotEmpty)
-//      return NotusDocument.fromJson(jsonDecode(contents));
-//    }
-//    final Delta delta = Delta();
-//    return NotusDocument.fromDelta(delta);
-    final doc =r'[{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242804.jpg"}}},{"insert":"\n9666\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242880.jpg"}}},{"insert":"\n0000\n"}]';
-    Delta detail= Delta.fromJson(json.decode(doc) as List);
-    return NotusDocument.fromDelta(detail);
-  }
+//  /// Loads the document asynchronously from a file if it exists, otherwise
+//  /// returns default document.
+//  Future<NotusDocument> _loadDocument() async {
+////    final file = File(Directory.systemTemp.path + "/quick_start.json");
+////    if (await file.exists()) {
+////      final contents = await file
+////          .readAsString()
+////          .then((data) => Future.delayed(Duration(seconds: 1), () => data));
+////      if(contents.isNotEmpty)
+////      return NotusDocument.fromJson(jsonDecode(contents));
+////    }
+////    final Delta delta = Delta();
+////    return NotusDocument.fromDelta(delta);
+//    final doc =r'[{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242804.jpg"}}},{"insert":"\n9666\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242880.jpg"}}},{"insert":"\n0000\n"}]';
+//    Delta detail= Delta.fromJson(json.decode(doc) as List);
+//    return NotusDocument.fromDelta(detail);
+//  }
 
   void _saveDocument(BuildContext context) async{
 
@@ -253,5 +265,23 @@ class _PublishTaskState extends State<PublishTaskPage> {
     Dio dio = new Dio(options);
     response = await dio.post("/Act/Apply",data: {"LoginOpenId": "o9W0Mt8obdv6rChRSPUmAOSO16dE", "Name": "桑享", "CellPhone": "15821758991","WxActId": "2009173210400023"});
     Toast.show(response.data.toString());
+  }
+
+  /// Loads the document asynchronously from a file if it exists, otherwise
+  /// returns default document.
+  Future<NotusDocument> _loadDocument() async {
+//    final file = File(Directory.systemTemp.path + "/quick_start.json");
+//    if (await file.exists()) {
+//      final contents = await file
+//          .readAsString()
+//          .then((data) => Future.delayed(Duration(seconds: 1), () => data));
+//      if(contents.isNotEmpty)
+//      return NotusDocument.fromJson(jsonDecode(contents));
+//    }
+//    final Delta delta = Delta();
+//    return NotusDocument.fromDelta(delta);
+    //final doc = r'[{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242804.jpg"}}},{"insert":"\n9666\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242880.jpg"}}},{"insert":"\n0000\n"}]';
+    Delta detail = Delta.fromJson(json.decode(widget.content) as List);
+    return NotusDocument.fromDelta(detail);
   }
 }

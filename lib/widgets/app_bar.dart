@@ -93,15 +93,30 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
                 child: Theme(
                   data: Theme.of(context).copyWith(
                       buttonTheme: ButtonThemeData(
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        minWidth: 60.0,
+                        //padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                        //minWidth: 60.0,
                       )
                   ),
                   child: actionName.isEmpty ? Container() :
+                  //圆角按钮
                   FlatButton(
-                    child: Text(actionName, key: const Key('actionName')),
+                      child: Container(
+                      decoration: BoxDecoration(
+                      // 设置圆角
+                      borderRadius: BorderRadius.circular(6),
+                        // 设置渐变色
+                        gradient: LinearGradient(colors: <Color>[
+                          Colours.app_main,Colours.app_main
+                        ])
+                    ),
+                    child: Text("确定", style: TextStyle( color: Colours.material_bg),),
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.fromLTRB(16, 5, 16, 5),
+                  ),
+
+                    //Text(actionName, key: const Key('actionName')),
                     textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
-                    highlightColor: Colors.transparent,
+                    //highlightColor: Colors.transparent,
                     onPressed: onPressed,
                   ),
                 ),

@@ -13,4 +13,7 @@ class HttpApi {
 
   //获取任务
   static const String getMyPublishTaskList = "api/task/getMyPublishTaskList";
+
+  //获取任务分类
+  static const String getTaskMainType = "api/task/getTaskMainType";
 }

@@ -19,6 +19,7 @@ import 'package:flutter_deer/res/styles.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/shop/shop_router.dart';
 import 'package:flutter_deer/store/store_router.dart';
+import 'package:flutter_deer/task/page/task_main_type_model_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/log_utils.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
@@ -45,11 +46,13 @@ class PublishTaskEndPage extends StatefulWidget {
 
   bool isAdd=true;
   bool isScan=false;
+
   @override
   _PublishTaskEndState createState() => _PublishTaskEndState();
 }
 
 class _PublishTaskEndState extends State<PublishTaskEndPage> {
+  TaskMainTypeModelEntity typeModel;
   String contents="";//任务内容
   File _imageFile;
   String _goodsSortName;
@@ -112,8 +115,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                     ),
                     ClickItem(
                       title: "内容(*)：",
-                      content: "填写需要完成的内容",
-                      onTap: () => NavigatorUtils.pushResult(context, TaskRouter.taskPublishPage, (result){
+                      content:  getContent(),
+                      onTap: () => NavigatorUtils.pushResult(context, '${TaskRouter.taskPublishPage}?content=${Uri.encodeComponent(contents)}', (result){
                         setState(() {
                           contents=result;
                         });
@@ -181,7 +184,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 //                    Gaps.vGap16,
                     ClickItem(
                       title: "任务类型：",
-                      content: _goodsSortName ?? "选择任务类型",
+                      content:  getTaskType(),
                       onTap: () => _showBottomSheet(),
                     ),
                     ClickItem(
@@ -214,20 +217,27 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   }
 
   _showBottomSheet(){
-    showModalBottomSheet(
-      context: context,
-      /// 使用true则高度不受16分之9的最高限制
-      isScrollControlled: true,
-      builder: (BuildContext context) {
-        return GoodsSortDialog(
-          onSelected: (_, name){
-            setState(() {
-              _goodsSortName = name;
-            });
-          },
-        );
-      },
-    );
+    //暂时设置为1级分类
+    NavigatorUtils.pushResult(context, TaskRouter.taskTypeChosePage, (result){
+      setState(() {
+        typeModel=result;
+        print("接收到返回值"+typeModel.name);
+      });
+    });
+//    showModalBottomSheet(
+//      context: context,
+//      /// 使用true则高度不受16分之9的最高限制
+//      isScrollControlled: true,
+//      builder: (BuildContext context) {
+//        return GoodsSortDialog(
+//          onSelected: (_, name){
+//            setState(() {
+//              _goodsSortName = name;
+//            });
+//          },
+//        );
+//      },
+//    );
   }
 
 
@@ -260,6 +270,10 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       return;
     }
 
+    if(typeModel==null){
+      Toast.show("请选择任务类型");
+      return;
+    }
 
     Delta list= Delta.fromJson(json.decode(contents) as List);
     List<KeyValueItem> imageList=new List<KeyValueItem>();
@@ -323,6 +337,23 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
           onError.toString());
     });
     return bytes;
+  }
+
+  String getTaskType() {
+     if(typeModel==null){
+       return "请选择任务类型";
+     }else{
+       return typeModel.name;
+     }
+
+  }
+
+  String getContent() {
+    if(contents.isEmpty) {
+      return "填写需要完成的内容";
+    }else{
+      return "已编辑";
+    }
   }
 
 

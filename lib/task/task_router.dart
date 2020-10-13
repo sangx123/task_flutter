@@ -1,6 +1,7 @@
 
 import 'package:fluro/fluro.dart';
 import 'package:flutter_deer/routers/router_init.dart';
+import 'package:flutter_deer/task/page/task_type_chose_page.dart';
 import 'package:flutter_deer/task/test/issuse_message_page.dart';
 import 'package:flutter_deer/task/page/task_detail.dart';
 import 'package:flutter_deer/task/page/task_home.dart';
@@ -21,10 +22,15 @@ class TaskRouter implements IRouterProvider{
   static String taskIssuesMessagePage = "/task/IssuesMessagePage";
   static String taskPayPage = "/task/taskPayPage";
 
+  static String taskTypeChosePage = "/task/taskTypeChosePage";
+
 
   @override
   void initRouter(Router router) {
-    router.define(taskPublishPage, handler: Handler(handlerFunc: (_, params) => PublishTaskPage()));
+    router.define(taskPublishPage, handler: Handler(handlerFunc: (_, params){
+        String content = params['content'].first;
+        return PublishTaskPage(content: content);
+    }));
     router.define(taskDetailPage, handler: Handler(handlerFunc: (_, params){
         String content = params['content'].first;
         return TaskDetailPage(content: content);
@@ -41,6 +47,8 @@ class TaskRouter implements IRouterProvider{
       String price = params['price'].first;
       return TaskPayPage(pay: pay,price: price);
     }));
+
+    router.define(taskTypeChosePage,handler: Handler(handlerFunc: (_,params) =>  TaskTypeChosePage()));
   }
   
 }
