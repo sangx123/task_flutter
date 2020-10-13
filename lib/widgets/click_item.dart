@@ -9,7 +9,7 @@ class ClickItem extends StatelessWidget {
     this.onTap,
     @required this.title,
     this.content: "",
-    this.textAlign: TextAlign.start,
+    this.textAlign: TextAlign.right,
     this.maxLines: 1
   }): super(key: key);
 
@@ -45,13 +45,14 @@ class ClickItem extends StatelessWidget {
             ),
             const Spacer(),
             Expanded(
-              flex: 4,
+              flex: 100,
               child: Padding(
                 padding: const EdgeInsets.only(right: 8.0, left: 16.0),
                 child: Text(
                   content,
                   maxLines: maxLines,
-                  textAlign: maxLines == 1 ? TextAlign.right : textAlign,
+                  //textAlign: maxLines == 1 ? TextAlign.right : textAlign,
+                    textAlign:  textAlign,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.subtitle.copyWith(fontSize: Dimens.font_sp14)
                 ),

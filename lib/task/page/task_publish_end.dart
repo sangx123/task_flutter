@@ -13,6 +13,7 @@ import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/goods/goods_router.dart';
 import 'package:flutter_deer/goods/widgets/goods_sort_dialog.dart';
 import 'package:flutter_deer/net/net.dart';
+import 'package:flutter_deer/res/colors.dart';
 import 'package:flutter_deer/res/dimens.dart';
 import 'package:flutter_deer/res/gaps.dart';
 import 'package:flutter_deer/res/styles.dart';
@@ -60,8 +61,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   TextEditingController _titleController = TextEditingController();
   TextEditingController _moneyController = TextEditingController();
   TextEditingController _peopleNumController = TextEditingController();
-  final FocusNode _nodeText1 = FocusNode();
-  final FocusNode _nodeText2 = FocusNode();
+  String  totalMoney="";
   void _getImage() async{
     try {
       _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery, maxWidth: 800);
@@ -74,6 +74,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   @override
   void initState() {
     super.initState();
+    _moneyController.addListener(moneyChange);
+    _peopleNumController.addListener(moneyChange);
     WidgetsBinding.instance.addPostFrameCallback((_){
       if (widget.isScan){
         _scan();
@@ -114,6 +116,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                       controller: _titleController,
                     ),
                     ClickItem(
+                      textAlign: TextAlign.start,
                       title: "内容(*)：",
                       content:  getContent(),
                       onTap: () => NavigatorUtils.pushResult(context, '${TaskRouter.taskPublishPage}?content=${Uri.encodeComponent(contents)}', (result){
@@ -183,11 +186,13 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 ////                    ),
 //                    Gaps.vGap16,
                     ClickItem(
+                      textAlign: TextAlign.start,
                       title: "任务类型：",
                       content:  getTaskType(),
                       onTap: () => _showBottomSheet(),
                     ),
                     ClickItem(
+                      textAlign: TextAlign.start,
                       title: "商品规格：",
                       content: "对规格进行编辑",
                       onTap: () => NavigatorUtils.push(context, GoodsRouter.goodsSizePage),
@@ -200,16 +205,49 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 8.0),
-              child: MyButton(
-                onPressed: (){
-                  _createTask();
-                  //NavigatorUtils.goBack(context);
-                },
-                text: "提交",
-              ),
-            )
+//            Padding(
+//              padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 8.0),
+//              child: MyButton(
+//                onPressed: (){
+//                  _createTask();
+//                  //NavigatorUtils.goBack(context);
+//                },
+//                text: "提交",
+//              ),
+//            )
+              Gaps.line,
+              Row(children: [
+                Expanded(child: Container())
+                ,
+                Text("合计:"),
+                Gaps.hGap5,
+                Text("￥",style: TextStyle( color: Colours.red)),
+                Text(totalMoney,style: TextStyle( color: Colours.red)),
+                Gaps.hGap10,
+                //圆角按钮
+                FlatButton(
+                  child: Container(
+                    decoration: BoxDecoration(
+                      // 设置圆角
+                        borderRadius: BorderRadius.circular(6),
+                        // 设置渐变色
+                        gradient: LinearGradient(colors: <Color>[
+                          Colours.app_main,Colours.app_main
+                        ])
+                    ),
+                    child: Text("提交订单", style: TextStyle( color: Colours.material_bg),),
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
+                  ),
+
+                  //Text(actionName, key: const Key('actionName')),
+                  //textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
+                  //highlightColor: Colors.transparent,
+                  onPressed: ()=>_createTask(),
+                ),
+              ],
+
+              )
           ],
         ),
       ),
@@ -357,4 +395,25 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   }
 
 
+
+
+  void moneyChange() {
+    if(_moneyController.text.isEmpty){
+
+      totalMoney= "";
+      setState(() {});
+
+      return ;
+    }
+
+    if(_peopleNumController.text.isEmpty){
+
+      totalMoney= "";
+      setState(() {});
+      return;
+    }
+    var price=double.parse(_moneyController.text)*double.parse(_peopleNumController.text);
+    totalMoney=price.toString();
+    setState(() {});
+  }
 }
