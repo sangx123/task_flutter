@@ -35,18 +35,19 @@ import 'package:flutter_deer/widgets/selected_image.dart';
 import 'package:flutter_deer/widgets/store_select_text_item.dart';
 import 'package:flutter_deer/widgets/text_field.dart';
 import 'package:flutter_deer/widgets/text_field_item.dart';
+import 'package:flutter_screenutil/screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:tobias/tobias.dart';
 import 'package:zefyr/zefyr.dart';
 import 'package:quill_delta/quill_delta.dart';
+
 /**
  * 发布任务的界面
  */
 class PublishTaskEndPage extends StatefulWidget {
-
-  bool isAdd=true;
-  bool isScan=false;
+  bool isAdd = true;
+  bool isScan = false;
 
   @override
   _PublishTaskEndState createState() => _PublishTaskEndState();
@@ -54,17 +55,20 @@ class PublishTaskEndPage extends StatefulWidget {
 
 class _PublishTaskEndState extends State<PublishTaskEndPage> {
   TaskMainTypeModelEntity typeModel;
-  String contents="";//任务内容
+  String contents = ""; //任务内容
   File _imageFile;
   String _goodsSortName;
   final TextEditingController _codeController = TextEditingController();
   TextEditingController _titleController = TextEditingController();
   TextEditingController _moneyController = TextEditingController();
-  TextEditingController _peopleNumController = TextEditingController();
-  String  totalMoney="";
-  void _getImage() async{
+  //TextEditingController _peopleNumController = TextEditingController();
+  String totalMoney = "";
+  int count = 1;
+
+  void _getImage() async {
     try {
-      _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery, maxWidth: 800);
+      _imageFile = await ImagePicker.pickImage(
+          source: ImageSource.gallery, maxWidth: 800);
       setState(() {});
     } catch (e) {
       Toast.show("没有权限，无法打开相册！");
@@ -74,10 +78,10 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   @override
   void initState() {
     super.initState();
-    _moneyController.addListener(moneyChange);
-    _peopleNumController.addListener(moneyChange);
-    WidgetsBinding.instance.addPostFrameCallback((_){
-      if (widget.isScan){
+    _moneyController.addListener(moneyChangeListener);
+    //_peopleNumController.addListener(moneyChange);
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (widget.isScan) {
         _scan();
       }
     });
@@ -85,12 +89,10 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 
   void _scan() async {
     String code = await Utils.scan();
-    if (code != null){
+    if (code != null) {
       _codeController.text = code;
     }
   }
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -118,10 +120,12 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                     ClickItem(
                       textAlign: TextAlign.start,
                       title: "内容(*)：",
-                      content:  getContent(),
-                      onTap: () => NavigatorUtils.pushResult(context, '${TaskRouter.taskPublishPage}?content=${Uri.encodeComponent(contents)}', (result){
+                      content: getContent(),
+                      onTap: () => NavigatorUtils.pushResult(context,
+                          '${TaskRouter.taskPublishPage}?content=${Uri.encodeComponent(contents)}',
+                          (result) {
                         setState(() {
-                          contents=result;
+                          contents = result;
                         });
                       }),
                     ),
@@ -130,12 +134,28 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                       hintText: "填写奖励/每人",
                       controller: _moneyController,
                     ),
-                    TextFieldItem(
-                      title: "人数(*)：",
-                      keyboardType: TextInputType.numberWithOptions(decimal: true),
-                      hintText: "填写所需的人数",
-                      controller: _peopleNumController,
+//                    TextFieldItem(
+//                      title: "人数(*)：",
+//                      keyboardType: TextInputType.numberWithOptions(decimal: true),
+//                      hintText: "填写所需的人数",
+//                      controller: _peopleNumController,
+//                    ),
+
+                    Row(
+                      children: <Widget>[
+                        Gaps.hGap16,
+                        Text("人数(*)："),
+                        _reduceBtn(context),
+                        _countArea(),
+                        _addBtn(context)
+                      ],
                     ),
+
+                  Container(
+                  margin:  const EdgeInsets.only(left: 16.0),
+                  child: Gaps.line,
+                  )
+                    ,
 //自由定义item项
 //                    Stack(
 //                      alignment: Alignment.centerRight,
@@ -188,14 +208,15 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                     ClickItem(
                       textAlign: TextAlign.start,
                       title: "任务类型：",
-                      content:  getTaskType(),
+                      content: getTaskType(),
                       onTap: () => _showBottomSheet(),
                     ),
                     ClickItem(
                       textAlign: TextAlign.start,
                       title: "商品规格：",
                       content: "对规格进行编辑",
-                      onTap: () => NavigatorUtils.push(context, GoodsRouter.goodsSizePage),
+                      onTap: () => NavigatorUtils.push(
+                          context, GoodsRouter.goodsSizePage),
                     ),
                     TextFieldItem(
                       title: "任务说明：",
@@ -215,27 +236,30 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 //                text: "提交",
 //              ),
 //            )
-              Gaps.line,
-              Row(children: [
-                Expanded(child: Container())
-                ,
+            Gaps.line,
+            Row(
+              children: [
+                Expanded(child: Container()),
                 Text("合计:"),
                 Gaps.hGap5,
-                Text("￥",style: TextStyle( color: Colours.red)),
-                Text(totalMoney,style: TextStyle( color: Colours.red)),
+                Text("￥", style: TextStyle(color: Colours.red)),
+                Text(totalMoney, style: TextStyle(color: Colours.red)),
                 Gaps.hGap10,
                 //圆角按钮
                 FlatButton(
                   child: Container(
                     decoration: BoxDecoration(
-                      // 设置圆角
+                        // 设置圆角
                         borderRadius: BorderRadius.circular(6),
                         // 设置渐变色
                         gradient: LinearGradient(colors: <Color>[
-                          Colours.app_main,Colours.app_main
-                        ])
+                          Colours.app_main,
+                          Colours.app_main
+                        ])),
+                    child: Text(
+                      "提交订单",
+                      style: TextStyle(color: Colours.material_bg),
                     ),
-                    child: Text("提交订单", style: TextStyle( color: Colours.material_bg),),
                     alignment: Alignment.center,
                     padding: EdgeInsets.fromLTRB(20, 10, 20, 10),
                   ),
@@ -243,23 +267,22 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                   //Text(actionName, key: const Key('actionName')),
                   //textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
                   //highlightColor: Colors.transparent,
-                  onPressed: ()=>_createTask(),
+                  onPressed: () => _createTask(),
                 ),
               ],
-
-              )
+            )
           ],
         ),
       ),
     );
   }
 
-  _showBottomSheet(){
+  _showBottomSheet() {
     //暂时设置为1级分类
-    NavigatorUtils.pushResult(context, TaskRouter.taskTypeChosePage, (result){
+    NavigatorUtils.pushResult(context, TaskRouter.taskTypeChosePage, (result) {
       setState(() {
-        typeModel=result;
-        print("接收到返回值"+typeModel.name);
+        typeModel = result;
+        print("接收到返回值" + typeModel.name);
       });
     });
 //    showModalBottomSheet(
@@ -278,9 +301,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 //    );
   }
 
-
-
-  Future<void> _createTask()  async {
+  Future<void> _createTask() async {
 //    _readFileByte(Directory.systemTemp.path + "/quick_start.json").then((bytesData) async {
 //
 //
@@ -288,41 +309,42 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 //    });
     //do your task here
 
-    if(_titleController.text.isEmpty){
+    if (_titleController.text.isEmpty) {
       Toast.show("请填写标题");
       return;
     }
 
-    if(contents.isEmpty){
+    if (contents.isEmpty) {
       Toast.show("请填写内容");
       return;
     }
 
-    if(_moneyController.text.isEmpty){
+    if (_moneyController.text.isEmpty) {
       Toast.show("请填写奖励金额");
       return;
     }
 
-    if(_peopleNumController.text.isEmpty){
-      Toast.show("请填写人数");
-      return;
-    }
+//    if (_peopleNumController.text.isEmpty) {
+//      Toast.show("请填写人数");
+//      return;
+//    }
 
-    if(typeModel==null){
+    if (typeModel == null) {
       Toast.show("请选择任务类型");
       return;
     }
 
-    Delta list= Delta.fromJson(json.decode(contents) as List);
-    List<KeyValueItem> imageList=new List<KeyValueItem>();
-    for(var item in list.toList()){
-      if(item.attributes!=null&&item.attributes.containsKey("embed")){
-        if(item.attributes["embed"]["type"]=="image"){
-          var path= item.attributes["embed"]["source"].toString();
-          var name=path.toString().substring(path.toString().lastIndexOf("/")+1);
-          var model=KeyValueItem();
-          model.key=name;
-          model.value=path;
+    Delta list = Delta.fromJson(json.decode(contents) as List);
+    List<KeyValueItem> imageList = new List<KeyValueItem>();
+    for (var item in list.toList()) {
+      if (item.attributes != null && item.attributes.containsKey("embed")) {
+        if (item.attributes["embed"]["type"] == "image") {
+          var path = item.attributes["embed"]["source"].toString();
+          var name =
+              path.toString().substring(path.toString().lastIndexOf("/") + 1);
+          var model = KeyValueItem();
+          model.key = name;
+          model.value = path;
           imageList.add(model);
           //MultipartFile multipartFile =  await MultipartFile.fromFile(path, filename:name);
         }
@@ -330,37 +352,37 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
     }
 
     List<MultipartFile> multipartImageList = new List<MultipartFile>();
-    for(KeyValueItem item in imageList){
+    for (KeyValueItem item in imageList) {
       MultipartFile multipartFile = MultipartFile.fromBytes(
-        await _readFileByte(item.value),                    //图片路径
-        filename: item.key,            //图片名称
+        await _readFileByte(item.value), //图片路径
+        filename: item.key, //图片名称
       );
-      print("读取"+item.key+"完毕");
+      print("读取" + item.key + "完毕");
       multipartImageList.add(multipartFile);
     }
     print("读取MultipartFile完毕");
     FormData formData = FormData.fromMap({
-      "title" : _titleController.text,
-      "content" : contents,
+      "title": _titleController.text,
+      "content": contents,
       "imageList": multipartImageList,
       "jiangLi": _moneyController.text,
-      "peopleNum":_peopleNumController.text
+      "peopleNum": count.toString()
     });
-    var price=double.parse(_moneyController.text)*double.parse(_peopleNumController.text);
+    var price = double.parse(_moneyController.text) *
+        count;
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<String>(
-      Method.post, HttpApi.createTask,
-      onSuccess: (data){
-        NavigatorUtils.push(context, '${TaskRouter.taskPayPage}?pay=${Uri.encodeComponent(data)}&price=$price');
+      Method.post,
+      HttpApi.createTask,
+      onSuccess: (data) {
+        NavigatorUtils.push(context,
+            '${TaskRouter.taskPayPage}?pay=${Uri.encodeComponent(data)}&price=$price');
       },
-      onError: (code,msg){
+      onError: (code, msg) {
         Toast.show(msg);
       },
       params: formData,
     );
-
-
-
   }
 
   Future<Uint8List> _readFileByte(String filePath) async {
@@ -378,42 +400,98 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   }
 
   String getTaskType() {
-     if(typeModel==null){
-       return "请选择任务类型";
-     }else{
-       return typeModel.name;
-     }
-
+    if (typeModel == null) {
+      return "请选择任务类型";
+    } else {
+      return typeModel.name;
+    }
   }
 
   String getContent() {
-    if(contents.isEmpty) {
+    if (contents.isEmpty) {
       return "填写需要完成的内容";
-    }else{
+    } else {
       return "已编辑";
     }
   }
-
-
-
-
-  void moneyChange() {
-    if(_moneyController.text.isEmpty){
-
-      totalMoney= "";
+  void moneyChangeListener() {
+    moneyChange(count);
+  }
+  void moneyChange(int count) {
+    if (_moneyController.text.isEmpty) {
+      totalMoney = "";
       setState(() {});
 
-      return ;
-    }
-
-    if(_peopleNumController.text.isEmpty){
-
-      totalMoney= "";
-      setState(() {});
       return;
     }
-    var price=double.parse(_moneyController.text)*double.parse(_peopleNumController.text);
-    totalMoney=price.toString();
+
+    var price = double.parse(_moneyController.text) *
+        count;
+    totalMoney = price.toString();
     setState(() {});
+  }
+
+  //减少按钮
+  Widget _reduceBtn(context) {
+    return FlatButton(
+      child: Container(
+        decoration: BoxDecoration(
+            // 设置圆角
+            borderRadius: BorderRadius.circular(6),
+            // 设置渐变色
+            gradient: LinearGradient(
+                colors: <Color>[Colours.app_main, Colours.app_main])),
+        child: Text(
+          "-",
+          style: TextStyle(color: Colours.bg_gray),
+        ),
+        alignment: Alignment.center,
+        padding: EdgeInsets.fromLTRB(16, 5, 16, 5),
+      ),
+
+      //Text(actionName, key: const Key('actionName')),
+      //textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
+      //highlightColor: Colors.transparent,
+      onPressed: () => {
+        moneyChange(--count)
+      },
+    );
+  }
+
+  //加号
+  Widget _addBtn(context) {
+    return //圆角按钮
+        FlatButton(
+      child: Container(
+        decoration: BoxDecoration(
+            // 设置圆角
+            borderRadius: BorderRadius.circular(6),
+            // 设置渐变色
+            gradient: LinearGradient(
+                colors: <Color>[Colours.app_main, Colours.app_main])),
+        child: Text(
+          "+",
+          style: TextStyle(color: Colours.bg_gray),
+        ),
+        alignment: Alignment.center,
+        padding: EdgeInsets.fromLTRB(16, 5, 16, 5),
+      ),
+
+      //Text(actionName, key: const Key('actionName')),
+      //textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
+      //highlightColor: Colors.transparent,
+      onPressed: () => {
+        moneyChange(++count)
+      },
+    );
+  }
+
+  //中间数量显示区域
+  Widget _countArea() {
+    return Container(
+      alignment: Alignment.center, //上下左右居中
+      color: Colors.white, //北京颜色 设置为白色
+      child: Text(count.toString()), //先默认设置为1 因为后续是动态的获取数字
+    );
   }
 }
