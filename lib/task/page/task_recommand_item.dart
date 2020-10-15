@@ -4,7 +4,7 @@ import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/order/widgets/pay_type_dialog.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
-import 'package:flutter_deer/task/models/recommand_result_entity.dart';
+import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -23,7 +23,7 @@ class TaskRecommandItemPage extends StatelessWidget {
 
   final int tabIndex;
   final int index;
-  final RecommandResultEntity model;
+  final RecommandResultNewEntity model;
   @override
   Widget build(BuildContext context) {
     final TextStyle textTextStyle = Theme.of(context).textTheme.body1.copyWith(fontSize: Dimens.font_sp12);
@@ -41,7 +41,7 @@ class TaskRecommandItemPage extends StatelessWidget {
                 Row(
                   children: <Widget>[
                     Expanded(
-                      child: Text(model.username,),
+                      child: Text(model.createTime,),
                     ),
                     Text(
                       model.workerPrice.toString(),

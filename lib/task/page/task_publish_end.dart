@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_2d_amap/flutter_2d_amap.dart';
+import 'package:flutter_datetime_picker/flutter_datetime_picker.dart';
 import 'package:flutter_deer/common/KeyValueItem.dart';
 import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/goods/goods_router.dart';
@@ -20,7 +21,7 @@ import 'package:flutter_deer/res/styles.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/shop/shop_router.dart';
 import 'package:flutter_deer/store/store_router.dart';
-import 'package:flutter_deer/task/page/task_main_type_model_entity.dart';
+import 'package:flutter_deer/task/models/task_main_type_model_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/log_utils.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
@@ -61,10 +62,13 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   final TextEditingController _codeController = TextEditingController();
   TextEditingController _titleController = TextEditingController();
   TextEditingController _moneyController = TextEditingController();
+  TextEditingController _limitController = TextEditingController();
   //TextEditingController _peopleNumController = TextEditingController();
   String totalMoney = "";
   int count = 1;
-
+  DateTime apply_end_time;
+  DateTime work_end_time;
+  String limit;
   void _getImage() async {
     try {
       _imageFile = await ImagePicker.pickImage(
@@ -151,11 +155,10 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                       ],
                     ),
 
-                  Container(
-                  margin:  const EdgeInsets.only(left: 16.0),
-                  child: Gaps.line,
-                  )
-                    ,
+                    Container(
+                      margin: const EdgeInsets.only(left: 16.0),
+                      child: Gaps.line,
+                    ),
 //自由定义item项
 //                    Stack(
 //                      alignment: Alignment.centerRight,
@@ -212,15 +215,56 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                       onTap: () => _showBottomSheet(),
                     ),
                     ClickItem(
-                      textAlign: TextAlign.start,
-                      title: "商品规格：",
-                      content: "对规格进行编辑",
-                      onTap: () => NavigatorUtils.push(
-                          context, GoodsRouter.goodsSizePage),
+                        textAlign: TextAlign.start,
+                        title: "申请截止时间：",
+                        content: apply_end_time==null?"请选择任务申请截止时间":apply_end_time.toString().substring(0,apply_end_time.toString().length-4),
+                        onTap: () => {
+                              DatePicker.showDateTimePicker(context,
+                                  showTitleActions: true,
+                                  minTime: DateTime.now(),
+                                  onChanged: (date) {
+                                //print('change $date');
+
+                              }, onConfirm: (date) {
+                                  setState(() {
+                                    apply_end_time=date;
+                                  });
+
+                              },
+                                  currentTime: DateTime.now(),
+                                  locale: LocaleType.zh)
+                            }
                     ),
+                    ClickItem(
+                        textAlign: TextAlign.start,
+                        title: "提交截止时间：",
+                        content: work_end_time==null?"请选择任务提交截止时间":work_end_time.toString().substring(0,work_end_time.toString().length-4),
+                        onTap: () => {
+                          DatePicker.showDateTimePicker(context,
+                              showTitleActions: true,
+                              minTime: DateTime.now(),
+                              onChanged: (date) {
+                                //print('change $date');
+
+                              }, onConfirm: (date) {
+                                setState(() {
+                                  work_end_time=date;
+                                });
+
+                              },
+                              currentTime: DateTime.now(),
+                              locale: LocaleType.zh)
+                        }
+                    ),
+
                     TextFieldItem(
-                      title: "任务说明：",
-                      hintText: "选填",
+                      title: "任务限制(选填)：",
+                      hintText: "任务限制",
+                      controller: _limitController,
+                    ),
+                    ClickItem(
+                      textAlign: TextAlign.start,
+                      title: "默认所有任务最长审核时长不超过2（天）",
                     )
                   ],
                 ),
@@ -334,6 +378,16 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       return;
     }
 
+    if(apply_end_time==null){
+      Toast.show("请选择任务申请截止时间");
+      return;
+    }
+
+    if(work_end_time==null){
+      Toast.show("请选择提交任务截止时间");
+      return;
+    }
+
     Delta list = Delta.fromJson(json.decode(contents) as List);
     List<KeyValueItem> imageList = new List<KeyValueItem>();
     for (var item in list.toList()) {
@@ -366,10 +420,13 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       "content": contents,
       "imageList": multipartImageList,
       "jiangLi": _moneyController.text,
-      "peopleNum": count.toString()
+      "peopleNum": count.toString(),
+      "type":typeModel.id,
+      "apply_end_time":apply_end_time.toString().substring(0,apply_end_time.toString().length-4),
+      "work_end_time":work_end_time.toString().substring(0,work_end_time.toString().length-4),
+      "limit":_limitController.text
     });
-    var price = double.parse(_moneyController.text) *
-        count;
+    var price = double.parse(_moneyController.text) * count;
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<String>(
       Method.post,
@@ -414,9 +471,11 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       return "已编辑";
     }
   }
+
   void moneyChangeListener() {
     moneyChange(count);
   }
+
   void moneyChange(int count) {
     if (_moneyController.text.isEmpty) {
       totalMoney = "";
@@ -425,8 +484,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       return;
     }
 
-    var price = double.parse(_moneyController.text) *
-        count;
+    var price = double.parse(_moneyController.text) * count;
     totalMoney = price.toString();
     setState(() {});
   }
@@ -452,9 +510,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       //Text(actionName, key: const Key('actionName')),
       //textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
       //highlightColor: Colors.transparent,
-      onPressed: () => {
-        moneyChange(--count)
-      },
+      onPressed: () => {moneyChange(--count)},
     );
   }
 
@@ -480,9 +536,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       //Text(actionName, key: const Key('actionName')),
       //textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
       //highlightColor: Colors.transparent,
-      onPressed: () => {
-        moneyChange(++count)
-      },
+      onPressed: () => {moneyChange(++count)},
     );
   }
 

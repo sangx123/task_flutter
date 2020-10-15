@@ -6,7 +6,7 @@ import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
 import 'package:flutter_deer/order/widgets/order_item_tag.dart';
 import 'package:flutter_deer/order/widgets/order_list.dart';
-import 'package:flutter_deer/task/models/recommand_result_entity.dart';
+import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
 import 'package:flutter_deer/task/page/task_recommand_item.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -86,7 +86,7 @@ class _MyJieshouTaskQuanbuPageState extends State<MyJieshouTaskQuanbuPage>
 
   Future<void> _loadMore() async {
     print('上拉刷新开始,page = $_page');
-    await DioUtils.instance.requestNetwork<RecommandResultEntity>(
+    await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
         Method.post, HttpApi.getMyPublishTaskList, isList: true,
         onSuccessList: (data) {
       setState(() {
@@ -108,7 +108,7 @@ class _MyJieshouTaskQuanbuPageState extends State<MyJieshouTaskQuanbuPage>
   ///下拉刷新
   Future<void> _onRefresh() async {
     //NavigatorUtils.push(context, StoreRouter.auditPage);
-    await DioUtils.instance.requestNetwork<RecommandResultEntity>(
+    await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
         Method.post, HttpApi.getMyPublishTaskList, isList: true, onSuccessList: (data) {
       setState(() {
         _page = 1;

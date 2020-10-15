@@ -10,7 +10,7 @@ import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/provider/theme_provider.dart';
 import 'package:flutter_deer/res/colors.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
-import 'package:flutter_deer/task/page/task_main_type_model_entity.dart';
+import 'package:flutter_deer/task/models/task_main_type_model_entity.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
 import 'package:provider/provider.dart';
