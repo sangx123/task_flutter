@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 import 'package:notus/notus.dart';
 
+import '../zefyrUtil.dart';
 import 'code.dart';
 import 'common.dart';
 import 'image.dart';
@@ -36,6 +37,7 @@ class ZefyrViewState extends State<ZefyrView> {
   @override
   void initState() {
     super.initState();
+
     _scope = ZefyrScope.view(imageDelegate: widget.imageDelegate);
   }
 
@@ -63,6 +65,7 @@ class ZefyrViewState extends State<ZefyrView> {
 
   @override
   Widget build(BuildContext context) {
+    ZefyrUtil.maxWidth=MediaQuery.of(context).size.width;
     return ZefyrTheme(
       data: _themeData,
       child: ZefyrScopeAccess(

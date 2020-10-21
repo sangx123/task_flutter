@@ -16,4 +16,7 @@ class HttpApi {
 
   //获取任务分类
   static const String getTaskMainType = "api/task/getTaskMainType";
+
+  //获取任务详情
+  static const String getTaskById = "api/task/getTaskById";
 }

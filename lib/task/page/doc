@@ -1,0 +1,15 @@
+用户任务id，
+用户id，user_id
+商户任务id，business_task_id
+用户任务状态，user_task_status
+用户申请任务时间，user_apply_task_time
+商户通过用户申请时间，business_agree_apply_time
+用户提交任务时间，    user_first_submit_task_time
+用户提交任务内容，    user_first_submit_task_content
+商户审核任务时间      business_audit_first_time
+商户审核结果内容（不同意一定要给原因）business_audit_first_result
+用户提交申诉时间      user_second_submit_task_time
+用户提交申诉内容      user_second_submit_task_content
+商户处理申诉时间      business_audit_second_time
+商户处理申诉结果内容   business_audit_second_result
+用户是否选择退出任务   user_quit_task

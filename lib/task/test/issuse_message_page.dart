@@ -121,7 +121,7 @@ class _IssuesMessagePageState extends State<IssuesMessagePage> {
     return ZefyrTheme(
       data: theme,
       child: ZefyrField(
-        height: 400.0,
+        height: 800.0,
         decoration: InputDecoration(labelText: 'Description'),
         controller: _zefyrController,
         focusNode: _focusNode,

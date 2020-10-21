@@ -32,8 +32,8 @@ class TaskRouter implements IRouterProvider{
         return PublishTaskPage(content: content);
     }));
     router.define(taskDetailPage, handler: Handler(handlerFunc: (_, params){
-        String content = params['content'].first;
-        return TaskDetailPage(content: content);
+        String taskId = params['taskId'].first;
+        return TaskDetailPage(taskId: taskId);
     }));
     //router.define(auditResultPage, handler: Handler(handlerFunc: (_, params) => StoreAuditResultPage()));
     router.define(myCustomForm, handler: Handler(handlerFunc: (_, params) => MyCustomForm()));
