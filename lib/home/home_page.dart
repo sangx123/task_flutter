@@ -24,7 +24,7 @@ class _HomeState extends State<Home> {
 
   var _pageList;
   
-  var _appBarTitles = ['首页', '商品', "发布",'统计', '我的'];
+  var _appBarTitles = ['首页', "发布", '我的'];
   final _pageController = PageController();
 
   HomeProvider provider = HomeProvider();
@@ -42,9 +42,9 @@ class _HomeState extends State<Home> {
     _pageList = [
       //OrderPage(),
       TaskHomePage(),
-      GoodsPage(),
+      //GoodsPage(),
       Text(""),
-      StatisticsPage(),
+      //StatisticsPage(),
       ShopPage(),
     ];
   }
@@ -56,24 +56,24 @@ class _HomeState extends State<Home> {
           const LoadAssetImage("home/icon_order", width: 25.0, color: Colours.unselected_item_color,),
           const LoadAssetImage("home/icon_order", width: 25.0, color: Colours.app_main,),
         ],
-        [
-          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.unselected_item_color,),
-          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.app_main,),
-        ],
-        [
-          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.unselected_item_color,),
-          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.app_main,),
-        ],
+//        [
+//          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.unselected_item_color,),
+//          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.app_main,),
+//        ],
         [
           const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.unselected_item_color,),
           const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.app_main,),
         ],
+//        [
+//          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.unselected_item_color,),
+//          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.app_main,),
+//        ],
         [
           const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.unselected_item_color,),
           const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.app_main,),
         ]
       ];
-      _list = List.generate(5, (i){
+      _list = List.generate(3, (i){
         return BottomNavigationBarItem(
             icon: _tabImages[i][0],
             activeIcon: _tabImages[i][1],
@@ -94,25 +94,25 @@ class _HomeState extends State<Home> {
           const LoadAssetImage("home/icon_order", width: 25.0),
           const LoadAssetImage("home/icon_order", width: 25.0, color: Colours.dark_app_main,),
         ],
-        [
-          const LoadAssetImage("home/icon_commodity", width: 25.0),
-          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.dark_app_main,),
-        ],
-        [
-          const LoadAssetImage("home/icon_statistics", width: 25.0),
-          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.dark_app_main,),
-        ],
+//        [
+//          const LoadAssetImage("home/icon_commodity", width: 25.0),
+//          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.dark_app_main,),
+//        ],
         [
           const LoadAssetImage("home/icon_statistics", width: 25.0),
           const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.dark_app_main,),
         ],
+//        [
+//          const LoadAssetImage("home/icon_statistics", width: 25.0),
+//          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.dark_app_main,),
+//        ],
         [
           const LoadAssetImage("home/icon_shop", width: 25.0),
           const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.dark_app_main,),
         ]
       ];
 
-      _listDark = List.generate(5, (i){
+      _listDark = List.generate(3, (i){
         return BottomNavigationBarItem(
             icon: _tabImagesDark[i][0],
             activeIcon: _tabImagesDark[i][1],
@@ -166,7 +166,7 @@ class _HomeState extends State<Home> {
                 selectedItemColor: Theme.of(context).primaryColor,
                 unselectedItemColor: isDark ? Colours.dark_unselected_item_color : Colours.unselected_item_color,
                 onTap: (index) =>{
-                   if(index!=2)
+                   if(index!=1)
                   _pageController.jumpToPage(index)
                 },
               );
