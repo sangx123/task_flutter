@@ -11,6 +11,9 @@ class HttpApi {
   //创建任务
   static const String createTask = "api/task/createTask";
 
+  //获取首页任务列表
+  static const String getHomeBusinessTaskList = "api/task/getHomeBusinessTaskList";
+
   //获取任务
   static const String getMyPublishTaskList = "api/task/getMyPublishTaskList";
 
@@ -19,4 +22,7 @@ class HttpApi {
 
   //获取任务详情
   static const String getTaskById = "api/task/getTaskById";
+
+  //申请任务
+  static const String applyTask = "api/task/applyTask";
 }

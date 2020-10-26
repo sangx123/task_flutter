@@ -131,7 +131,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
   Future<void> _loadMore() async {
     print('上拉刷新开始,page = $_page');
     await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getMyPublishTaskList, isList: true,
+        Method.post, HttpApi.getHomeBusinessTaskList, isList: true,
         onSuccessList: (data) {
       setState(() {
         if(data.isNotEmpty) {
@@ -146,14 +146,14 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 5, "pageNumber": _page + 1, "status": 0});
+    }, params: {"pageSize": 5, "pageNumber": _page + 1, "status": 3,"type":2});
   }
 
   ///下拉刷新
   Future<void> _onRefresh() async {
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getMyPublishTaskList, isList: true, onSuccessList: (data) {
+        Method.post, HttpApi.getHomeBusinessTaskList, isList: true, onSuccessList: (data) {
       setState(() {
         _page = 1;
         _list.clear();
@@ -167,7 +167,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": 1, "status": 0});
+    }, params: {"pageSize": 10, "pageNumber": 1, "status": 3,"type":2});
   }
 }
 

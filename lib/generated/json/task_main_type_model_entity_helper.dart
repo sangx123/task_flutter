@@ -7,7 +7,9 @@ taskMainTypeModelEntityFromJson(TaskMainTypeModelEntity data, Map<String, dynami
 	if (json['name'] != null) {
 		data.name = json['name']?.toString();
 	}
-	data.selected=false;
+	if (json['selected'] != null) {
+		data.selected=false;
+	}
 	return data;
 }
 
@@ -15,6 +17,6 @@ Map<String, dynamic> taskMainTypeModelEntityToJson(TaskMainTypeModelEntity entit
 	final Map<String, dynamic> data = new Map<String, dynamic>();
 	data['id'] = entity.id;
 	data['name'] = entity.name;
-	data['selected=false'] = entity.selected=false;
+	data['selected'] = entity.selected=false;
 	return data;
 }

@@ -1,6 +1,7 @@
 import 'package:flutter_deer/generated/json/base/json_convert_content.dart';
 import 'package:flutter_deer/order/models/search_entity.dart';
 import 'package:flutter_deer/shop/models/user_entity.dart';
+import 'package:flutter_deer/task/models/home_task_list_entity.dart';
 import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
 import 'package:flutter_deer/task/models/task_main_type_model_entity.dart';
 
@@ -19,7 +20,9 @@ class EntityFactory {
       return  new RecommandResultNewEntity().fromJson(json) as T;
     } else if (T.toString() == "TaskMainTypeModelEntity") {
       return  new TaskMainTypeModelEntity().fromJson(json) as T;
-    }else {
+    }else if(T.toString() == "HomeTaskListEntity"){
+      return  new HomeTaskListEntity().fromJson(json) as T;
+    } else {
       return null;
     }
   }

@@ -87,7 +87,7 @@ class _MyJieshouTaskQuanbuPageState extends State<MyJieshouTaskQuanbuPage>
   Future<void> _loadMore() async {
     print('上拉刷新开始,page = $_page');
     await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getMyPublishTaskList, isList: true,
+        Method.post, HttpApi.getHomeBusinessTaskList, isList: true,
         onSuccessList: (data) {
       setState(() {
         if(data.isNotEmpty) {
@@ -109,7 +109,7 @@ class _MyJieshouTaskQuanbuPageState extends State<MyJieshouTaskQuanbuPage>
   Future<void> _onRefresh() async {
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getMyPublishTaskList, isList: true, onSuccessList: (data) {
+        Method.post, HttpApi.getHomeBusinessTaskList, isList: true, onSuccessList: (data) {
       setState(() {
         _page = 1;
         _list.clear();

@@ -12,6 +12,7 @@ import 'package:flutter_deer/net/net.dart';
 import 'package:flutter_deer/res/colors.dart';
 import 'package:flutter_deer/res/dimens.dart';
 import 'package:flutter_deer/res/gaps.dart';
+import 'package:flutter_deer/task/models/home_task_list_entity.dart';
 import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -40,7 +41,7 @@ class _TaskDetailPage extends State<TaskDetailPage> {
   bool _editing = false;
   StreamSubscription<NotusChange> _sub;
   var doc = NotusDocument();
-  RecommandResultNewEntity taskModel;
+  HomeTaskListEntity taskModel;
 
   @override
   void initState() {
@@ -130,96 +131,139 @@ class _TaskDetailPage extends State<TaskDetailPage> {
                       )
                     ],
                   ),
-                  Gaps.vGap10,
+                  Gaps.vGap5,
                   Row(
                     children: [
                       Gaps.hGap16,
                       Text(
                         (taskModel == null) ? "用户id: " : "用户id: "+(taskModel.userid+10086).toString(),
                         style: TextStyle(
-                            fontSize: 12),
+                            fontSize: 14),
                       ),
                       Gaps.hGap16,
-                      Text(
-                        (taskModel == null) ? "发布事件: " :  "发布事件: "+ taskModel.createTime,
-                        style: TextStyle(
-                            fontSize: 12),
-                      )
+
                     ],
                   ),
+                  Gaps.vGap5,
                   Row(
                     children: [
                       Gaps.hGap16,
                       Text(
-                        (taskModel == null) ? "剩余人数: " : "剩余人数: "+taskModel.createTime,
+                        (taskModel == null) ? "任务发布时间: " :  "任务发布时间: "+ taskModel.createTime,
                         style: TextStyle(
-                            fontSize: 12),
+                            fontSize: 14),
                       ),
                       Gaps.hGap16,
+
+                    ],
+                  ),
+
+                  Gaps.vGap5,
+                  Row(
+                    children: [
+                      Gaps.hGap16,
                       Text(
-                        (taskModel == null) ? "" :  "发布事件: "+ taskModel.createTime,
+                        (taskModel == null) ? "剩余可申请人数: " : "剩余可申请人数: "+getPeoPleNum()+"人",
                         style: TextStyle(
-                            fontSize: 12),
+                            fontSize: 14),
+                      ),
+                      Gaps.hGap16,
+
+                    ],
+                  ),
+
+                  Gaps.vGap5,
+                  Row(
+                    children: [
+                      Gaps.hGap16,
+                      Text(
+                        (taskModel == null) ? "任务奖励: " : "任务奖励: "+taskModel.workerPrice.toString()+"元",
+                        style: TextStyle(
+                            fontSize: 14),
+                      ),
+                      Gaps.hGap16,
+
+                    ],
+                  ),
+                  Gaps.vGap5,
+                  Row(
+                    children: [
+                      Gaps.hGap16,
+                      Text(
+                        (taskModel == null) ? "任务申请截止时间" :  "任务申请截止时间: "+ taskModel.applyEndTime,
+                        style: TextStyle(
+                            fontSize: 14),
+                      ),
+                      Gaps.hGap16,
+
+                    ],
+                  ),
+                  Gaps.vGap5,
+                  Row(
+                    children: [
+                      Gaps.hGap16,
+                      Text(
+                        (taskModel == null) ? "任务提交截止时间" :  "任务提交截止时间: "+ taskModel.workEndTime,
+                        style: TextStyle(
+                            fontSize: 14),
+                      ),
+                      Gaps.hGap16,
+
+                    ],
+                  ),
+                  Gaps.vGap30,
+                  Row(
+                    children: [
+                      Gaps.hGap16,
+                      Text(
+                      "任务内容如下:",
+                        style: TextStyle(
+                            fontSize: 16, fontWeight: FontWeight.bold),
                       )
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(16.0),
+                    padding: const EdgeInsets.only(left:16,top:10, right:16,bottom: 70),
                     child: ZefyrView(
                       document: doc,
                       imageDelegate: CustomImageDelegate(),
                     ),
                   ),
-                  Material(
-                    color: ThemeUtils.getBackgroundColor(context),
-                    child: SafeArea(
-                      child: Container(
-                        height: 60.0,
-                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                        child: Theme(
-                          data: Theme.of(context).copyWith(
-                              buttonTheme: ButtonThemeData(
-                            height: 44.0,
-                          )),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-//                    Expanded(
-//                    flex: 1,
-//                    child: FlatButton(
-//                    color: isDark ? Colours.dark_material_bg : const Color(0xFFE1EAFA),
-//                    textColor: isDark ? Colours.dark_text : Colours.app_main,
-//                    child: const Text(
-//                    "拒单",
-//                    style: TextStyle(
-//                    fontSize: Dimens.font_sp18
+//                  Material(
+//                    color: ThemeUtils.getBackgroundColor(context),
+//                    child: SafeArea(
+//                      child: Container(
+//                        height: 60.0,
+//                        padding: const EdgeInsets.symmetric(horizontal: 16.0),
+//                        child: Theme(
+//                          data: Theme.of(context).copyWith(
+//                              buttonTheme: ButtonThemeData(
+//                            height: 44.0,
+//                          )),
+//                          child: Row(
+//                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//                            children: <Widget>[
+//                              Expanded(
+//                                flex: 1,
+//                                child: FlatButton(
+//                                  color: blue,
+//                                  textColor: isDark
+//                                      ? Colours.dark_button_text
+//                                      : Colors.white,
+//                                  child: const Text(
+//                                    "申请任务",
+//                                    style:
+//                                        TextStyle(fontSize: Dimens.font_sp18),
+//                                  ),
+//                                  onPressed:  applyTask,
+//                                ),
+//                              )
+//                            ],
+//                          ),
+//                        ),
+//                      ),
 //                    ),
-//                    ),
-//                    onPressed: (){},
-//                    ),
-//                    ),
-//                    Gaps.hGap16,
-                              Expanded(
-                                flex: 1,
-                                child: FlatButton(
-                                  color: blue,
-                                  textColor: isDark
-                                      ? Colours.dark_button_text
-                                      : Colors.white,
-                                  child: const Text(
-                                    "申请任务",
-                                    style:
-                                        TextStyle(fontSize: Dimens.font_sp18),
-                                  ),
-                                  onPressed: () {},
-                                ),
-                              )
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  )
+//                  )
                 ],
               ),
               Positioned(
@@ -230,12 +274,12 @@ class _TaskDetailPage extends State<TaskDetailPage> {
                   color: ThemeUtils.getBackgroundColor(context),
                   child: SafeArea(
                     child: Container(
-                      height: 0.0,
-                      padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                      height: 50.0,
+                      padding: const EdgeInsets.symmetric(horizontal: 0.0),
                       child: Theme(
                         data: Theme.of(context).copyWith(
                             buttonTheme: ButtonThemeData(
-                          height: 44.0,
+                          height: 50.0,
                         )),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -266,7 +310,7 @@ class _TaskDetailPage extends State<TaskDetailPage> {
                                   "申请任务",
                                   style: TextStyle(fontSize: Dimens.font_sp18),
                                 ),
-                                onPressed: () {},
+                                onPressed:  applyTask,
                               ),
                             )
                           ],
@@ -279,10 +323,10 @@ class _TaskDetailPage extends State<TaskDetailPage> {
             ])));
   }
 
-  //获取任务详情,并展示
+  ///获取任务详情,并展示
   Future<void> _getServiceData() async {
     //NavigatorUtils.push(context, StoreRouter.auditPage);
-    await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
+    await DioUtils.instance.requestNetwork<HomeTaskListEntity>(
         Method.post, HttpApi.getTaskById, onSuccess: (data) {
       Delta detail = Delta.fromJson(json.decode(data.content) as List);
       setState(() {
@@ -294,5 +338,39 @@ class _TaskDetailPage extends State<TaskDetailPage> {
         Toast.show(msg);
       });
     }, params: {"id": int.parse(widget.taskId)});
+  }
+
+  /// 点击申请任务
+  Future<void> applyTask() async {
+    await DioUtils.instance.requestNetwork<String>(
+      Method.post,
+      HttpApi.applyTask,
+      onSuccess: (data) {
+        Toast.show("申请成功");
+      },
+      onError: (code, msg) {
+        Toast.show(msg);
+      },
+      params: {"taskid":int.parse(widget.taskId)},
+    );
+  }
+  ///显示剩余申请人数
+  String getPeoPleNum() {
+    if(taskModel==null){
+      return "";
+    }else{
+      if(taskModel.userTaskList.isEmpty){
+        return taskModel.needpeoplenum.toString();
+      }else{
+        int applyedNum=0;
+        for(int i=0;i<taskModel.userTaskList.length;i++){
+            if(taskModel.userTaskList[i].userTaskStatus>0){
+              applyedNum++;
+            }
+        }
+        return (taskModel.needpeoplenum-applyedNum).toString();
+      }
+    }
+
   }
 }
