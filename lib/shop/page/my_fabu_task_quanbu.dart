@@ -41,7 +41,7 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
 
   ScrollController scrollController = ScrollController();
   bool isDark = false;
-
+  bool showEmpty;
 
   int _page = 1;
   int _maxPage=2;
@@ -69,11 +69,15 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
                     hasMore: _page < _maxPage,
                     itemBuilder: (_, index) {
                         print("build_TaskRecommandItemPage");
-                        return TaskRecommandItemPage(
-                            key: Key('order_item_$index'),
-                            index: index,
-                            tabIndex: 0,
-                            model: _list[index]);
+                        if(showEmpty){
+                            return Container();
+                        }else{
+                          return TaskRecommandItemPage(
+                              key: Key('order_item_$index'),
+                              index: index,
+                              tabIndex: 0,
+                              model: _list[index]);
+                        }
                     })),
         );
   }
@@ -100,7 +104,6 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
           _page++;
           _maxPage = _page + 1;
         }else{
-          _list=null;
           _maxPage = _page ;
         }
       });
@@ -117,12 +120,22 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
     await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
         Method.post, HttpApi.getMyPublishTaskList, isList: true, onSuccessList: (data) {
       setState(() {
-        _page = 1;
-        _list.clear();
-        _list.addAll(data);
-        if(_list.length<10){
-          _maxPage = _page ;
+
+
+        if(data.isNotEmpty) {
+          showEmpty=false;
+          _page = 1;
+          _list.clear();
+          _list.addAll(data);
+          if(_list.length<10){
+            _maxPage = _page ;
+          }
+        }else{
+          _maxPage=1;
+          showEmpty=true;
+          _list.add(0);
         }
+
       });
     }, onError: (code, msg) {
       setState(() {

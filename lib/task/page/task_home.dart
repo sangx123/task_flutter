@@ -2,6 +2,8 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart' hide TabBar,TabBarIndicatorSize,Tab,TabBarView;
 import 'package:flutter_deer/goods/page/goods_page.dart';
+import 'package:flutter_deer/net/dio_utils.dart';
+import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
 import 'package:flutter_deer/order/widgets/order_item_tag.dart';
@@ -9,6 +11,7 @@ import 'package:flutter_deer/order/widgets/order_list.dart';
 import 'package:flutter_deer/res/colors.dart';
 import 'package:flutter_deer/shop/page/shop_page.dart';
 import 'package:flutter_deer/statistics/page/statistics_page.dart';
+import 'package:flutter_deer/task/models/task_main_type_model_entity.dart';
 import 'package:flutter_deer/task/page/task_home_tab_recommand.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -32,34 +35,22 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
   bool get wantKeepAlive =>true;
   int tabIndex=1;
   final List<String> tabs = [
-    "全部",
-    "推荐",
-    "游戏",
-    "恋爱",
-    "学习",
-    "程序员",
-    "炒股",
-    "法律",
-    "住房",
-    "生活"
   ];
   final List<Widget> tabViews = [
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage(),
-    TaskHomeReCommandPage()
   ];
+
+  @override
+  void initState() {
+    super.initState();
+    _getMainType();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return new DefaultTabController(
       length: tabs.length,
-      initialIndex: 1, //默认选中
+      initialIndex: 0, //默认选中
       child: Scaffold(
         appBar:
                 TabBar(
@@ -90,6 +81,30 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
         ),
       ),
     );
+  }
+
+  //此处通过网络请求获取tab并展示对应的tab栏
+
+  ///下拉刷新
+  Future<void> _getMainType() async {
+    await DioUtils.instance.requestNetwork<TaskMainTypeModelEntity>(
+        Method.post, HttpApi.getTaskMainType, isList: true, onSuccessList: (data) {
+      setState(() {
+        initData(data);
+      });
+    }, onError: (code, msg) {
+      setState(() {
+        Toast.show(msg);
+      });
+    }, params: {});
+  }
+
+  void initData(List<TaskMainTypeModelEntity> data) {
+      for(int i=0;i<data.length;i++){
+        tabs.add(data[i].name);
+        tabViews.add(TaskHomeReCommandPage(type: data[i].id));
+      }
+
   }
 
 }

@@ -17,6 +17,10 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:provider/provider.dart';
 
 class TaskHomeReCommandPage extends StatefulWidget {
+
+  const TaskHomeReCommandPage({Key key, this.type}) : super(key: key);
+
+  final int type;
   @override
   State<StatefulWidget> createState() {
     return new TaskHomeReCommandStatePage();
@@ -146,7 +150,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": _page + 1, "status": 3,"type":2});
+    }, params: {"pageSize": 10, "pageNumber": _page + 1, "status": 3,"type":widget.type});
   }
 
   ///下拉刷新
@@ -167,7 +171,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": 1, "status": 3,"type":2});
+    }, params: {"pageSize": 10, "pageNumber": 1, "status": 3,"type":widget.type});
   }
 }
 
