@@ -146,7 +146,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 5, "pageNumber": _page + 1, "status": 3,"type":2});
+    }, params: {"pageSize": 10, "pageNumber": _page + 1, "status": 3,"type":2});
   }
 
   ///下拉刷新

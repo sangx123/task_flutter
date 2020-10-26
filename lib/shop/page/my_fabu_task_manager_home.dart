@@ -5,6 +5,7 @@ import 'package:flutter_deer/home/provider/home_provider.dart';
 import 'package:flutter_deer/order/page/order_page.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/shop/page/my_fabu_task_quanbu.dart';
 import 'package:flutter_deer/shop/page/shop_page.dart';
 import 'package:flutter_deer/statistics/page/statistics_page.dart';
 import 'package:flutter_deer/task/page/task_home.dart';
@@ -36,7 +37,7 @@ class _MyFabuTaskManagerHomeState extends State<MyFabuTaskManagerHome> {
     return
       Scaffold(
           appBar: const MyAppBar(
-            centerTitle: "我发布的任务",
+            centerTitle: "我发布的任务列表",
             hasLine: false,
           ),
           body: MyFabuTaskManagerHomeTab()

@@ -29,22 +29,18 @@ class _MyFabuTaskManagerHomeTabState extends State<MyFabuTaskManagerHomeTab> wit
 
   int tabIndex=1;
   final List<String> tabs = [
-    "全部",
-    "待通过",
     "进行中",
-    "已完成",
+    "已完成"
   ];
   final List<Widget> tabViews = [
-    MyFabuTaskQuanbuPage(),
-    MyFabuTaskQuanbuPage(),
-    MyFabuTaskQuanbuPage(),
-    MyFabuTaskQuanbuPage()
+    MyFabuTaskQuanbuPage(status: 3),
+    MyFabuTaskQuanbuPage(status: 4)
   ];
   @override
   Widget build(BuildContext context) {
     return new DefaultTabController(
       length: tabs.length,
-      initialIndex: 1, //默认选中
+      initialIndex: 0, //默认选中
       child: Scaffold(
         appBar:
         TabBar(

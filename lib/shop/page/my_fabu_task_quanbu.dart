@@ -17,6 +17,11 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:provider/provider.dart';
 
 class MyFabuTaskQuanbuPage extends StatefulWidget {
+  //3是未完成，4是已完成
+  const MyFabuTaskQuanbuPage({Key key, this.status}) : super(key: key);
+
+  final int status;
+
   @override
   State<StatefulWidget> createState() {
     return _MyFabuTaskQuanbuPageState();
@@ -87,7 +92,7 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
   Future<void> _loadMore() async {
     print('上拉刷新开始,page = $_page');
     await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getHomeBusinessTaskList, isList: true,
+        Method.post, HttpApi.getMyPublishTaskList, isList: true,
         onSuccessList: (data) {
       setState(() {
         if(data.isNotEmpty) {
@@ -95,6 +100,7 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
           _page++;
           _maxPage = _page + 1;
         }else{
+          _list=null;
           _maxPage = _page ;
         }
       });
@@ -102,24 +108,27 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 5, "pageNumber": _page + 1, "status": 0});
+    }, params: {"pageSize": 10, "pageNumber": _page + 1, "status": widget.status});
   }
 
   ///下拉刷新
   Future<void> _onRefresh() async {
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getHomeBusinessTaskList, isList: true, onSuccessList: (data) {
+        Method.post, HttpApi.getMyPublishTaskList, isList: true, onSuccessList: (data) {
       setState(() {
         _page = 1;
         _list.clear();
         _list.addAll(data);
+        if(_list.length<10){
+          _maxPage = _page ;
+        }
       });
     }, onError: (code, msg) {
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": 1, "state": 0});
+    }, params: {"pageSize": 10, "pageNumber": 1, "status": widget.status});
   }
 }
 
