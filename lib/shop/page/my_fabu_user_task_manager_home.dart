@@ -18,16 +18,18 @@ import 'package:flutter_deer/widgets/search_bar.dart';
 import 'package:provider/provider.dart';
 
 import 'my_fabu_task_manager_home_tab.dart';
+import 'my_fabu_user_task_manager_home_tab.dart';
+///我发布任务管理界面
+class MyFabuUserTaskManagerHome extends StatefulWidget {
 
-/***
- * 我发布任务管理首页
- */
-class MyFabuTaskManagerHome extends StatefulWidget {
+  const MyFabuUserTaskManagerHome({Key key,this.taskId}) : super(key: key);
+
+  final int taskId;
   @override
-  _MyFabuTaskManagerHomeState createState() => _MyFabuTaskManagerHomeState();
+  _MyFabuUserTaskManagerHomeState createState() => _MyFabuUserTaskManagerHomeState();
 }
 
-class _MyFabuTaskManagerHomeState extends State<MyFabuTaskManagerHome> {
+class _MyFabuUserTaskManagerHomeState extends State<MyFabuUserTaskManagerHome> {
 
   @override
   void initState() {
@@ -40,10 +42,10 @@ class _MyFabuTaskManagerHomeState extends State<MyFabuTaskManagerHome> {
     return
       Scaffold(
           appBar: const MyAppBar(
-            centerTitle: "我发布的任务列表",
+            centerTitle: "任务管理",
             hasLine: false,
           ),
-          body: MyFabuTaskManagerHomeTab()
+          body: MyFabuUserTaskManagerHomeTab(taskId: widget.taskId)
         );
 
   }

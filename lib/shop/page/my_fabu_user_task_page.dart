@@ -6,6 +6,7 @@ import 'package:flutter_deer/order/provider/order_page_provider.dart';
 import 'package:flutter_deer/order/widgets/order_item.dart';
 import 'package:flutter_deer/order/widgets/order_item_tag.dart';
 import 'package:flutter_deer/order/widgets/order_list.dart';
+import 'package:flutter_deer/task/models/home_task_list_entity.dart';
 import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
 import 'package:flutter_deer/task/page/task_recommand_item.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
@@ -17,24 +18,25 @@ import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:provider/provider.dart';
 
 import 'my_fabu_task_item.dart';
+import 'my_fabu_user_task_item.dart';
 
 
 ///我发布任务管理首页---已进行的任务列表，已结束的任务列表
-class MyFabuTaskQuanbuPage extends StatefulWidget {
+class MyFabuUserTaskPage extends StatefulWidget {
   //3是未完成，4是已完成
-  const MyFabuTaskQuanbuPage({Key key, this.status}) : super(key: key);
+  const MyFabuUserTaskPage({Key key, this.status,this.taskId}) : super(key: key);
 
   final int status;
-
+  final int taskId;
   @override
   State<StatefulWidget> createState() {
-    return _MyFabuTaskQuanbuPageState();
+    return _MyFabuUserTaskPageState();
   }
 }
 
-class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
+class _MyFabuUserTaskPageState extends State<MyFabuUserTaskPage>
     with
-        AutomaticKeepAliveClientMixin<MyFabuTaskQuanbuPage>,
+        AutomaticKeepAliveClientMixin<MyFabuUserTaskPage>,
         SingleTickerProviderStateMixin {
   @override
   bool get wantKeepAlive => true;
@@ -70,13 +72,13 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
                     stateType: _stateType,
                     onRefresh: _onRefresh,
                     loadMore: _loadMore,
-                    hasMore: _page < _maxPage,
+                    hasMore: false,
                     itemBuilder: (_, index) {
                         print("build_TaskRecommandItemPage");
                         if(showEmpty){
                             return Container();
                         }else{
-                          return MyFabuTaskItemPage(
+                          return MyFabuUserTaskItemPage(
                               key: Key('order_item_$index'),
                               index: index,
                               tabIndex: 0,
@@ -99,8 +101,8 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
 
   Future<void> _loadMore() async {
     print('上拉刷新开始,page = $_page');
-    await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getMyPublishTaskList, isList: true,
+    await DioUtils.instance.requestNetwork<HomeTaskListUserTaskList>(
+        Method.post, HttpApi.getMyPublishUserTask, isList: true,
         onSuccessList: (data) {
       setState(() {
         if(data.isNotEmpty) {
@@ -115,14 +117,14 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": _page + 1, "status": widget.status});
+    }, params: {"pageSize": 10, "pageNumber": _page + 1, "status": widget.status,"taskId": widget.taskId});
   }
 
   ///下拉刷新
   Future<void> _onRefresh() async {
     //NavigatorUtils.push(context, StoreRouter.auditPage);
-    await DioUtils.instance.requestNetwork<RecommandResultNewEntity>(
-        Method.post, HttpApi.getMyPublishTaskList, isList: true, onSuccessList: (data) {
+    await DioUtils.instance.requestNetwork<HomeTaskListUserTaskList>(
+        Method.post, HttpApi.getMyPublishUserTask, isList: true, onSuccessList: (data) {
       setState(() {
 
 
@@ -145,7 +147,7 @@ class _MyFabuTaskQuanbuPageState extends State<MyFabuTaskQuanbuPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": 1, "status": widget.status});
+    }, params: {"pageSize": 10, "pageNumber": 1, "status": widget.status,"taskId": widget.taskId});
   }
 }
 

@@ -37,8 +37,8 @@ class DioUtils {
         return true;
       },
       //baseUrl: "https://api.github.com/",
-      baseUrl: "http://39.105.172.56:8081/",
-      //baseUrl: "http://192.168.0.121:8081/",
+      //baseUrl: "http://39.105.172.56:8081/",
+      baseUrl: "http://192.168.0.121:8081/",
 //      contentType: ContentType('application', 'x-www-form-urlencoded', charset: 'utf-8'),
     );
     _dio = Dio(options);

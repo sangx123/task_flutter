@@ -3,6 +3,7 @@ import 'package:fluro/fluro.dart';
 import 'package:flutter_deer/routers/router_init.dart';
 import 'package:flutter_deer/shop/page/feedback.dart';
 import 'package:flutter_deer/shop/page/my_fabu_task_manager_home.dart';
+import 'package:flutter_deer/shop/page/my_fabu_user_task_manager_home.dart';
 import 'package:flutter_deer/shop/page/my_jieshou_task_manager_home.dart';
 
 import 'page/freight_config_page.dart';
@@ -21,6 +22,8 @@ class ShopRouter implements IRouterProvider{
   static String feedbackPage = "/shop/feedback";
   static String myFabuTaskManagerHome = "/shop/myFabuTaskManagerHome";
   static String myJieshouTaskManagerHome = "/shop/myJieshouTaskManagerHome";
+  static String myFabuUserTaskManagerHome = "/shop/myFabuUserTaskManagerHome";
+
 
   @override
   void initRouter(Router router) {
@@ -32,5 +35,9 @@ class ShopRouter implements IRouterProvider{
     router.define(feedbackPage, handler: Handler(handlerFunc: (_, params) => FeedBackPage()));
     router.define(myFabuTaskManagerHome, handler: Handler(handlerFunc: (_, params) => MyFabuTaskManagerHome()));
     router.define(myJieshouTaskManagerHome, handler: Handler(handlerFunc: (_, params) => MyJieshouTaskManagerHome()));
+    router.define(myFabuUserTaskManagerHome, handler:  Handler(handlerFunc: (_, params){
+      String taskId = params['taskId'].first;
+      return MyFabuUserTaskManagerHome(taskId: int.parse(taskId));
+    }));
   }
 }

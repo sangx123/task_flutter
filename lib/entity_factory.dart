@@ -22,8 +22,12 @@ class EntityFactory {
       return  new TaskMainTypeModelEntity().fromJson(json) as T;
     }else if(T.toString() == "HomeTaskListEntity"){
       return  new HomeTaskListEntity().fromJson(json) as T;
-    } else {
+    } else if(T.toString() == "HomeTaskListUserTaskList"){
+      return  new HomeTaskListUserTaskList().fromJson(json) as T;
+    }else {
       return null;
     }
   }
 }
+
+
