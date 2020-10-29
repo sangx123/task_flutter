@@ -24,7 +24,8 @@ class MyTextField extends StatefulWidget {
     this.isInputPwd: false,
     this.getVCode,
     this.config,
-    this.keyName
+    this.keyName,
+    this.hasZH:false
   }): super(key: key);
 
   final TextEditingController controller;
@@ -38,7 +39,7 @@ class MyTextField extends StatefulWidget {
   final KeyboardActionsConfig config;
   /// 用于集成测试寻找widget
   final String keyName;
-  
+  final bool hasZH;//是否可以包含中文;
   @override
   _MyTextFieldState createState() => _MyTextFieldState();
 }
@@ -101,7 +102,8 @@ class _MyTextFieldState extends State<MyTextField> {
     return Stack(
       alignment: Alignment.centerRight,
       children: <Widget>[
-        TextField(
+
+        widget.hasZH?TextField(
           focusNode: widget.focusNode,
           maxLength: widget.maxLength,
           obscureText: widget.isInputPwd ? !_isShowPwd : false,
@@ -110,7 +112,33 @@ class _MyTextFieldState extends State<MyTextField> {
           textInputAction: TextInputAction.done,
           keyboardType: widget.keyboardType,
           // 数字、手机号限制格式为0到9(白名单)， 密码限制不包含汉字（黑名单）
-          inputFormatters: (widget.keyboardType == TextInputType.number || widget.keyboardType == TextInputType.phone) ? 
+          decoration: InputDecoration(
+              contentPadding: const EdgeInsets.symmetric(vertical: 16.0),
+              hintText: widget.hintText,
+              counterText: "",
+              focusedBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: themeData.primaryColor,
+                      width: 0.8
+                  )
+              ),
+              enabledBorder: UnderlineInputBorder(
+                  borderSide: BorderSide(
+                      color: Theme.of(context).dividerTheme.color,
+                      width: 0.8
+                  )
+              )
+          ),
+        ):TextField(
+          focusNode: widget.focusNode,
+          maxLength: widget.maxLength,
+          obscureText: widget.isInputPwd ? !_isShowPwd : false,
+          autofocus: widget.autoFocus,
+          controller: widget.controller,
+          textInputAction: TextInputAction.done,
+          keyboardType: widget.keyboardType,
+          // 数字、手机号限制格式为0到9(白名单)， 密码限制不包含汉字（黑名单）
+          inputFormatters: (widget.keyboardType == TextInputType.number || widget.keyboardType == TextInputType.phone) ?
           [WhitelistingTextInputFormatter(RegExp("[0-9]"))] : [BlacklistingTextInputFormatter(RegExp("[\u4e00-\u9fa5]"))],
           decoration: InputDecoration(
               contentPadding: const EdgeInsets.symmetric(vertical: 16.0),

@@ -47,7 +47,7 @@ class MyFabuUserTaskItemPage extends StatelessWidget {
                       child: Text(model.userApplyTaskTime,),
                     ),
                     Text(
-                      model.userTaskStatus.toString(),
+                      getTaskStatus(model.userTaskStatus.toString()),
                       style: TextStyle(
                           fontSize: Dimens.font_sp12,
                           color: Theme.of(context).errorColor
@@ -56,10 +56,15 @@ class MyFabuUserTaskItemPage extends StatelessWidget {
                   ],
                 ),
                 Gaps.vGap8,
-                Text(
-                  model.id.toString(),
-                  style: Theme.of(context).textTheme.subtitle,
+            Row(
+              children: <Widget>[
+                Expanded(
+                  child: Text(
+                    model.id.toString(),
+                    style: Theme.of(context).textTheme.subtitle,
+                  ),
                 ),
+                ]),
                 Gaps.vGap12,
                 Row(
                   children: <Widget>[
@@ -86,5 +91,23 @@ class MyFabuUserTaskItemPage extends StatelessWidget {
         ),
       )
     );
+  }
+
+  String getTaskStatus(String status) {
+    String result="";
+    switch(status){
+      case "0":result="申请中";break;
+      case "1":result="用户待提交";break;
+      case "2":result="用户待提交超时";break;
+      case "3":result="用户已提交待审核";break;
+      case "4":result="商户审核超时";break;
+      case "5":result="商户审核成功";break;
+      case "6":result="商户审核失败";break;
+      case "7":result="用户申诉中";break;
+      case "8":result="商户申诉审核超时";break;
+      case "9":result="商户申诉审核成功";break;
+      case "10":result="商户申诉审核失败";break;
+    }
+    return result;
   }
 }

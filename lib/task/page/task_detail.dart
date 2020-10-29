@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
+import 'package:flustars/flustars.dart' hide MyAppBar;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_deer/common/KeyValueItem.dart';
@@ -270,7 +271,7 @@ class _TaskDetailPage extends State<TaskDetailPage> {
                 bottom: 0.0,
                 left: 0.0,
                 right: 0.0,
-                child: Material(
+                child: isShowButtom()?Material(
                   color: ThemeUtils.getBackgroundColor(context),
                   child: SafeArea(
                     child: Container(
@@ -318,7 +319,7 @@ class _TaskDetailPage extends State<TaskDetailPage> {
                       ),
                     ),
                   ),
-                ),
+                ): Container(),
               )
             ])));
   }
@@ -372,5 +373,14 @@ class _TaskDetailPage extends State<TaskDetailPage> {
       }
     }
 
+  }
+
+  bool isShowButtom() {
+    if(taskModel==null)return false;//如果没取到数据不显示
+    if(taskModel.userid.toString()== SpUtil.getString(Constant.userId)){
+      return false;
+    }else{
+      return true;
+    }
   }
 }

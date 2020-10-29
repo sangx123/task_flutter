@@ -4,4 +4,5 @@ class LoginEntity with JsonConvert<LoginEntity> {
 	String userToken;
 	int state;
 	double money;
+	String id;
 }

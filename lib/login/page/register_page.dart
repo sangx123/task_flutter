@@ -28,9 +28,11 @@ class _RegisterPageState extends State<RegisterPage> {
   TextEditingController _nameController = TextEditingController();
   TextEditingController _vCodeController = TextEditingController();
   TextEditingController _passwordController = TextEditingController();
+  TextEditingController _nickNameController = TextEditingController();
   final FocusNode _nodeText1 = FocusNode();
   final FocusNode _nodeText2 = FocusNode();
   final FocusNode _nodeText3 = FocusNode();
+  final FocusNode _nodeText4 = FocusNode();
   bool _isClick = false;
   
   @override
@@ -40,12 +42,14 @@ class _RegisterPageState extends State<RegisterPage> {
     _nameController.addListener(_verify);
     _vCodeController.addListener(_verify);
     _passwordController.addListener(_verify);
+    _nickNameController.addListener(_verify);
   }
 
   void _verify(){
     String name = _nameController.text;
     String vCode = _vCodeController.text;
     String password = _passwordController.text;
+    String nickName=_nickNameController.text;
     bool isClick = true;
     if (name.isEmpty || name.length < 11) {
       isClick = false;
@@ -55,6 +59,9 @@ class _RegisterPageState extends State<RegisterPage> {
     }
     if (password.isEmpty || password.length < 6) {
       isClick = false;
+    }
+    if(nickName.trim().isEmpty){
+      isClick=false;
     }
     if (isClick != _isClick){
       setState(() {
@@ -84,7 +91,7 @@ class _RegisterPageState extends State<RegisterPage> {
       onError: (code,msg){
         Toast.show(msg);
       },
-      params: {"name":_nameController.text,"mobile": _nameController.text,"password":FlutterStars.EncryptUtil.encodeMd5(_passwordController.text)},
+      params: {"name":_nickNameController.text.trim(),"mobile": _nameController.text,"password":FlutterStars.EncryptUtil.encodeMd5(_passwordController.text)},
     );
   }
 
@@ -115,9 +122,19 @@ class _RegisterPageState extends State<RegisterPage> {
           ),
           Gaps.vGap16,
           MyTextField(
+            key: const Key('nickname'),
+            focusNode: _nodeText4,
+            config: Utils.getKeyboardActionsConfig(context, [_nodeText1, _nodeText2, _nodeText3, _nodeText4]),
+            controller: _nickNameController,
+            maxLength: 10,
+            hasZH: true,
+            hintText: "请输入昵称",
+          ),
+          Gaps.vGap8,
+          MyTextField(
             key: const Key('phone'),
             focusNode: _nodeText1,
-            config: Utils.getKeyboardActionsConfig(context, [_nodeText1, _nodeText2, _nodeText3]),
+            config: Utils.getKeyboardActionsConfig(context, [_nodeText1, _nodeText2, _nodeText3,_nodeText4]),
             controller: _nameController,
             maxLength: 11,
             keyboardType: TextInputType.phone,

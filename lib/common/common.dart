@@ -19,6 +19,9 @@ class Constant {
   static const String isLogin = 'isLogin';
   //保存手机号
   static const String phone = 'phone';
+
+  //保存登录用户的userId
+  static const String userId = 'userId';
   //保存密码
   static const String password = 'password';
   static const String accessToken = 'accessToken';

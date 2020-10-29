@@ -76,6 +76,7 @@ class _LoginPageState extends State<LoginPage> {
           FlutterStars.SpUtil.putString(Constant.password, _passwordController.text);
           FlutterStars.SpUtil.putBool(Constant.isLogin, true);
           FlutterStars.SpUtil.putString(Constant.accessToken, data.userToken);
+          FlutterStars.SpUtil.putString(Constant.userId, data.id);
           NavigatorUtils.push(context, StoreRouter.auditPage);
         },
         onError: (code,msg){

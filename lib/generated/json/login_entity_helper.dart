@@ -10,6 +10,10 @@ loginEntityFromJson(LoginEntity data, Map<String, dynamic> json) {
 	if (json['money'] != null) {
 		data.money = json['money']?.toDouble();
 	}
+
+	if (json['id'] != null) {
+		data.id = json['id']?.toString();
+	}
 	return data;
 }
 
@@ -18,5 +22,6 @@ Map<String, dynamic> loginEntityToJson(LoginEntity entity) {
 	data['userToken'] = entity.userToken;
 	data['state'] = entity.state;
 	data['money'] = entity.money;
+	data['id'] = entity.id;
 	return data;
 }
