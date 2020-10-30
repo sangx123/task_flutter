@@ -8,8 +8,10 @@ import 'package:flutter_deer/order/widgets/order_item_tag.dart';
 import 'package:flutter_deer/order/widgets/order_list.dart';
 import 'package:flutter_deer/res/colors.dart';
 import 'package:flutter_deer/res/gaps.dart';
+import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/shop/page/shop_page.dart';
 import 'package:flutter_deer/statistics/page/statistics_page.dart';
+import 'package:flutter_deer/store/store_router.dart';
 import 'package:flutter_deer/task/page/task_home_tab_recommand.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -173,6 +175,7 @@ class TaskPayStatePage extends State<TaskPayPage> {
       payResult = await aliPay(_payInfo);
       if(payResult["resultStatus"]=="9000"){
         Toast.show("支付成功");
+        NavigatorUtils.push(context, StoreRouter.auditResultPage);
       }else{
         Toast.show("支付失败");
       }

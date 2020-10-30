@@ -10,6 +10,7 @@ import 'package:flutter_deer/shop/models/user_entity.dart';
 import 'package:flutter_deer/shop/presenter/shop_presenter.dart';
 import 'package:flutter_deer/shop/provider/user_provider.dart';
 import 'package:flutter_deer/shop/shop_router.dart';
+import 'package:flutter_deer/store/store_router.dart';
 import 'package:flutter_deer/task/test/test_forcus.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/image_utils.dart';
@@ -81,7 +82,10 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                   builder: (_, provider, __) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                      child: Stack(
+                      child:
+                      InkWell(
+                        onTap:()=> NavigatorUtils.push(context, StoreRouter.auditPage),
+                      child:Stack(
                         children: <Widget>[
                           const SizedBox(width: double.infinity, height: 56.0),
                           Text(
@@ -110,6 +114,7 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
 //
 //                        ),
                         ],
+                      ),
                       ),
                     );
                   },

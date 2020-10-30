@@ -11,6 +11,7 @@ import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/net/login_entity.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/routers/routers.dart';
 import 'package:flutter_deer/shop/models/user_entity.dart';
 import 'package:flutter_deer/store/store_router.dart';
 import 'package:flutter_deer/util/log_utils.dart';
@@ -77,7 +78,8 @@ class _LoginPageState extends State<LoginPage> {
           FlutterStars.SpUtil.putBool(Constant.isLogin, true);
           FlutterStars.SpUtil.putString(Constant.accessToken, data.userToken);
           FlutterStars.SpUtil.putString(Constant.userId, data.id);
-          NavigatorUtils.push(context, StoreRouter.auditPage);
+          //NavigatorUtils.push(context, StoreRouter.auditPage);
+          NavigatorUtils.push(context, Routes.home, clearStack: true);
         },
         onError: (code,msg){
             Toast.show(msg);
