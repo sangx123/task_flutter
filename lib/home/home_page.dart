@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_deer/goods/page/goods_page.dart';
 import 'package:flutter_deer/home/provider/home_provider.dart';
+import 'package:flutter_deer/order/order_router.dart';
 import 'package:flutter_deer/order/page/order_page.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
@@ -13,6 +14,7 @@ import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
 import 'package:flutter_deer/widgets/search_bar.dart';
+import 'package:flutter_deer/widgets/search_bar_new.dart';
 import 'package:provider/provider.dart';
 
 class Home extends StatefulWidget {
@@ -21,9 +23,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-
   var _pageList;
-  
+
   var _appBarTitles = ['首页', "发布", '我的'];
   final _pageController = PageController();
 
@@ -37,8 +38,8 @@ class _HomeState extends State<Home> {
     super.initState();
     initData();
   }
-  
-  void initData(){
+
+  void initData() {
     _pageList = [
       //OrderPage(),
       TaskHomePage(),
@@ -49,50 +50,80 @@ class _HomeState extends State<Home> {
     ];
   }
 
-  List<BottomNavigationBarItem> _buildBottomNavigationBarItem(){
-    if (_list == null){
+  List<BottomNavigationBarItem> _buildBottomNavigationBarItem() {
+    if (_list == null) {
       var _tabImages = [
         [
-          const LoadAssetImage("home/icon_order", width: 25.0, color: Colours.unselected_item_color,),
-          const LoadAssetImage("home/icon_order", width: 25.0, color: Colours.app_main,),
+          const LoadAssetImage(
+            "home/icon_order",
+            width: 25.0,
+            color: Colours.unselected_item_color,
+          ),
+          const LoadAssetImage(
+            "home/icon_order",
+            width: 25.0,
+            color: Colours.app_main,
+          ),
         ],
 //        [
 //          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.unselected_item_color,),
 //          const LoadAssetImage("home/icon_commodity", width: 25.0, color: Colours.app_main,),
 //        ],
         [
-          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.unselected_item_color,),
-          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.app_main,),
+          const LoadAssetImage(
+            "home/icon_statistics",
+            width: 25.0,
+            color: Colours.unselected_item_color,
+          ),
+          const LoadAssetImage(
+            "home/icon_statistics",
+            width: 25.0,
+            color: Colours.app_main,
+          ),
         ],
 //        [
 //          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.unselected_item_color,),
 //          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.app_main,),
 //        ],
         [
-          const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.unselected_item_color,),
-          const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.app_main,),
+          const LoadAssetImage(
+            "home/icon_shop",
+            width: 25.0,
+            color: Colours.unselected_item_color,
+          ),
+          const LoadAssetImage(
+            "home/icon_shop",
+            width: 25.0,
+            color: Colours.app_main,
+          ),
         ]
       ];
-      _list = List.generate(3, (i){
+      _list = List.generate(3, (i) {
         return BottomNavigationBarItem(
             icon: _tabImages[i][0],
             activeIcon: _tabImages[i][1],
             title: Padding(
               padding: const EdgeInsets.only(top: 1.5),
-              child: Text(_appBarTitles[i], key: Key(_appBarTitles[i]),),
-            )
-        );
+              child: Text(
+                _appBarTitles[i],
+                key: Key(_appBarTitles[i]),
+              ),
+            ));
       });
     }
     return _list;
   }
 
-  List<BottomNavigationBarItem> _buildDarkBottomNavigationBarItem(){
-    if (_listDark == null){
+  List<BottomNavigationBarItem> _buildDarkBottomNavigationBarItem() {
+    if (_listDark == null) {
       var _tabImagesDark = [
         [
           const LoadAssetImage("home/icon_order", width: 25.0),
-          const LoadAssetImage("home/icon_order", width: 25.0, color: Colours.dark_app_main,),
+          const LoadAssetImage(
+            "home/icon_order",
+            width: 25.0,
+            color: Colours.dark_app_main,
+          ),
         ],
 //        [
 //          const LoadAssetImage("home/icon_commodity", width: 25.0),
@@ -100,7 +131,11 @@ class _HomeState extends State<Home> {
 //        ],
         [
           const LoadAssetImage("home/icon_statistics", width: 25.0),
-          const LoadAssetImage("home/icon_statistics", width: 25.0, color: Colours.dark_app_main,),
+          const LoadAssetImage(
+            "home/icon_statistics",
+            width: 25.0,
+            color: Colours.dark_app_main,
+          ),
         ],
 //        [
 //          const LoadAssetImage("home/icon_statistics", width: 25.0),
@@ -108,55 +143,73 @@ class _HomeState extends State<Home> {
 //        ],
         [
           const LoadAssetImage("home/icon_shop", width: 25.0),
-          const LoadAssetImage("home/icon_shop", width: 25.0, color: Colours.dark_app_main,),
+          const LoadAssetImage(
+            "home/icon_shop",
+            width: 25.0,
+            color: Colours.dark_app_main,
+          ),
         ]
       ];
 
-      _listDark = List.generate(3, (i){
+      _listDark = List.generate(3, (i) {
         return BottomNavigationBarItem(
             icon: _tabImagesDark[i][0],
             activeIcon: _tabImagesDark[i][1],
             title: Padding(
               padding: const EdgeInsets.only(top: 1.5),
-              child: Text(_appBarTitles[i], key: Key(_appBarTitles[i]),),
-            )
-        );
+              child: Text(
+                _appBarTitles[i],
+                key: Key(_appBarTitles[i]),
+              ),
+            ));
       });
     }
     return _listDark;
   }
 
-  DateTime  _lastTime;
-  Future<bool> _isExit(){
-    if (_lastTime == null || DateTime.now().difference(_lastTime) > Duration(milliseconds: 2500)) {
+  DateTime _lastTime;
+
+  Future<bool> _isExit() {
+    if (_lastTime == null ||
+        DateTime.now().difference(_lastTime) > Duration(milliseconds: 2500)) {
       _lastTime = DateTime.now();
       Toast.show("再次点击退出应用");
       return Future.value(false);
-    } 
+    }
     Toast.cancelToast();
     return Future.value(true);
   }
-  final _widgetOptionsAppBar = [SearchBar(
-    hintText: "请输入商品名称查询",
-    onPressed: (text){
-    Toast.show("搜索内容：$text");
-    },
-    ),
-  ];
+
+
+
   @override
   Widget build(BuildContext context) {
     bool isDark = ThemeUtils.isDark(context);
+    final _widgetOptionsAppBar = [
+
+      SearchBarNew(
+        hintText: "请输入任务名称查询",
+        onPressed: () {
+          NavigatorUtils.push(context, OrderRouter.orderSearchPage);
+        },
+      ),
+    ];
     return ChangeNotifierProvider<HomeProvider>(
       create: (_) => provider,
-      child: WillPopScope(//WillPopScope双击返回应用
+      child: WillPopScope(
+        //WillPopScope双击返回应用
         onWillPop: _isExit,
         child: Scaffold(
-          appBar: provider.value==0?_widgetOptionsAppBar.elementAt(provider.value):null,
+          appBar: provider.value == 0
+              ? _widgetOptionsAppBar.elementAt(provider.value)
+              : null,
           bottomNavigationBar: Consumer<HomeProvider>(
-            builder: (_, provider, __){
+            builder: (_, provider, __) {
               return BottomNavigationBar(
                 backgroundColor: ThemeUtils.getBackgroundColor(context),
-                items: isDark ? _buildDarkBottomNavigationBarItem() : _buildBottomNavigationBarItem(),
+                items: isDark
+                    ? _buildDarkBottomNavigationBarItem()
+                    : _buildBottomNavigationBarItem(),
                 type: BottomNavigationBarType.fixed,
                 currentIndex: provider.value,
                 elevation: 5.0,
@@ -164,11 +217,11 @@ class _HomeState extends State<Home> {
                 selectedFontSize: Dimens.font_sp10,
                 unselectedFontSize: Dimens.font_sp10,
                 selectedItemColor: Theme.of(context).primaryColor,
-                unselectedItemColor: isDark ? Colours.dark_unselected_item_color : Colours.unselected_item_color,
-                onTap: (index) =>{
-                   if(index!=1)
-                  _pageController.jumpToPage(index)
-                },
+                unselectedItemColor: isDark
+                    ? Colours.dark_unselected_item_color
+                    : Colours.unselected_item_color,
+                onTap: (index) =>
+                    {if (index != 1) _pageController.jumpToPage(index)},
               );
             },
           ),
@@ -186,26 +239,26 @@ class _HomeState extends State<Home> {
             padding: EdgeInsets.fromLTRB(5, 5, 5, 5),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(55),
-                color: Color.fromRGBO(246, 246, 246, 1.0)
-            ),
-
+                color: Color.fromRGBO(246, 246, 246, 1.0)),
             child: FloatingActionButton(
-
               elevation: 0,
               focusElevation: 0,
 
-              onPressed: (){
-
+              onPressed: () {
                 NavigatorUtils.push(context, TaskRouter.taskPublishEndPage);
                 //NavigatorUtils.goWebViewPage(context, "发布任务", "http://192.168.0.127:8081/#/pages/index/richtext");
               },
-              child: Icon(Icons.add,size: 25,color: Colors.white,),
+              child: Icon(
+                Icons.add,
+                size: 25,
+                color: Colors.white,
+              ),
               //backgroundColor: Color.fromRGBO(253, 219, 69, 1.0),
-                backgroundColor: Color.fromRGBO(70, 136, 250, 1.0),
+              backgroundColor: Color.fromRGBO(70, 136, 250, 1.0),
             ),
-
           ),
-          floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+          floatingActionButtonLocation:
+              FloatingActionButtonLocation.centerDocked,
         ),
       ),
     );
@@ -213,9 +266,6 @@ class _HomeState extends State<Home> {
 
   void _onPageChanged(int index) {
     provider.value = index;
-    setState(() {
-
-    });
+    setState(() {});
   }
-
 }
