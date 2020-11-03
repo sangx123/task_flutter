@@ -4,6 +4,7 @@ import 'package:flutter_deer/mvp/base_page_presenter.dart';
 import 'package:flutter_deer/net/net.dart';
 import 'package:flutter_deer/shop/models/user_entity.dart';
 import 'package:flutter_deer/shop/page/shop_page.dart';
+import 'package:flutter_deer/util/toast.dart';
 
 
 class ShopPagePresenter extends BasePagePresenter<ShopPageState> {
@@ -11,10 +12,11 @@ class ShopPagePresenter extends BasePagePresenter<ShopPageState> {
   @override
   void initState() {
     WidgetsBinding.instance.addPostFrameCallback((_){
+      //此处应该只请求一次
       /// 接口请求例子
       /// get请求参数queryParameters  post请求参数params
-//      asyncRequestNetwork<UserEntity>(Method.get,
-//        url: HttpApi.users,
+//      DioUtils.instance.requestNetwork<UserEntity>(Method.get,
+//        url: HttpApi.getUserInfo,
 //        onSuccess: (data){
 //          data.name="心享";
 //          view.setUser(data);
@@ -22,11 +24,27 @@ class ShopPagePresenter extends BasePagePresenter<ShopPageState> {
 //          // view.provider.setUser(data);
 //        },
 //      );
-      UserEntity data=new UserEntity();
-      data.name="心享";
-      data.avatarUrl="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=943737565,604373982&fm=111&gp=0.jpg";
-      view.setUser(data);
+
+        getUserInfo();
+//      UserEntity data=new UserEntity();
+//      data.name="心享";
+//      data.avatarUrl="https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=943737565,604373982&fm=111&gp=0.jpg";
+//      view.setUser(data);
     });
+  }
+
+
+  Future<void> getUserInfo() async {
+    await DioUtils.instance.requestNetwork<UserEntity>(
+      Method.get,
+      HttpApi.getUserInfo,
+      onSuccess: (data) {
+        view.provider.setUser(data);
+      },
+      onError: (code, msg) {
+        Toast.show(msg);
+      },
+    );
   }
  
 }

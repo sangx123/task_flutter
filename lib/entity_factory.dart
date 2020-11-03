@@ -10,23 +10,30 @@ import 'net/login_entity.dart';
 class EntityFactory {
   //entity的转换工厂
   static T generateOBJ<T>(json) {
-    if (1 == 0) {
-      return null;
-    } else if (T.toString() == "SearchEntity") {
-      return SearchEntity.fromJson(json) as T;
-    } else if (T.toString() == "LoginEntity") {
-      return new LoginEntity().fromJson(json) as T;
-    } else if (T.toString() == "RecommandResultNewEntity") {
-      return  new RecommandResultNewEntity().fromJson(json) as T;
-    } else if (T.toString() == "TaskMainTypeModelEntity") {
-      return  new TaskMainTypeModelEntity().fromJson(json) as T;
-    }else if(T.toString() == "HomeTaskListEntity"){
-      return  new HomeTaskListEntity().fromJson(json) as T;
-    } else if(T.toString() == "HomeTaskListUserTaskList"){
-      return  new HomeTaskListUserTaskList().fromJson(json) as T;
-    }else {
-      return null;
+    switch (T.toString()) {
+      case "SearchEntity":
+        return SearchEntity.fromJson(json) as T;
+        break;
+      case "LoginEntity":
+        return new LoginEntity().fromJson(json) as T;
+        break;
+      case "RecommandResultNewEntity":
+        return new RecommandResultNewEntity().fromJson(json) as T;
+        break;
+      case "TaskMainTypeModelEntity":
+        return new TaskMainTypeModelEntity().fromJson(json) as T;
+        break;
+      case "HomeTaskListEntity":
+        return new HomeTaskListEntity().fromJson(json) as T;
+        break;
+      case "HomeTaskListUserTaskList":
+        return new HomeTaskListUserTaskList().fromJson(json) as T;
+        break;
+      case "UserEntity":
+        return UserEntity.fromJson(json) as T;
+        break;
     }
+    return null;
   }
 }
 

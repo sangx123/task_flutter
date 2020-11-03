@@ -17,6 +17,7 @@ import 'package:oktoast/oktoast.dart';
 import 'package:flutter_deer/home/splash_page.dart';
 import 'package:provider/provider.dart';
 
+import 'goods/page/goods_page.dart';
 import 'task/test/ListBodyDemo.dart';
 import 'task/test/ScrollToIndexDemoPage2.dart';
 import 'task/page/task_publish.dart';
@@ -88,7 +89,7 @@ class MyApp extends StatelessWidget {
     //return PublishTaskPage();
     //return ScrollToIndexDemoPage2();
     return SplashPage();
-
+    //return GoodsPage();
     //return TaskDetailPage();
     //return TaskPayPage();
     //return Widget_RefreshIndicator_Page();

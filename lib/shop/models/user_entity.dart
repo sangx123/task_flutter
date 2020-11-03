@@ -1,27 +1,30 @@
 class UserEntity {
-	String avatarUrl;
-	String name;
-	int id;
-	String blog;
-	String userToken;
-	String userId;
 
-	UserEntity({this.avatarUrl, this.name, this.id, this.blog});
+	int id;
+	String mobile;
+	double money;
+	String name;
+	String userToken;
+	String avatar;
+
 
 	UserEntity.fromJson(Map<String, dynamic> json) {
-		avatarUrl = json['avatar_url'];
-		name = json['name'];
-		id = json['id'];
-		blog = json['blog'];
-		userToken=json['userToken'];
 
+		id = json['id'];
+		mobile=json['mobile'];
+		money=json['money'];
+		name = json['name'];
+		userToken=json['userToken'];
+		avatar = json['avatar'];
 	}
 	Map<String, dynamic> toJson() {
 		final Map<String, dynamic> data = new Map<String, dynamic>();
-		data['avatar_url'] = this.avatarUrl;
-		data['name'] = this.name;
 		data['id'] = this.id;
-		data['blog'] = this.blog;
+		data['mobile'] = this.mobile;
+		data['money'] = this.money;
+		data['name'] = this.name;
+		data['userToken'] = this.userToken;
+		data['avatar'] = this.avatar;
 		return data;
 	}
 }

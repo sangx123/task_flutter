@@ -18,7 +18,7 @@ class _StoreAuditResultPageState extends State<StoreAuditResultPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MyAppBar(
-        title: "审核结果",
+        title: "支付结果",
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -32,17 +32,17 @@ class _StoreAuditResultPageState extends State<StoreAuditResultPage> {
             ),
             Gaps.vGap12,
             Text(
-              "恭喜，店铺资料审核成功",
+              "订单支付成功",
               style: TextStyles.textSize16,
             ),
             Gaps.vGap8,
             Text(
-              "2019-02-21 15:20:10",
+              "订单进入审核中",
               style: Theme.of(context).textTheme.subtitle,
             ),
             Gaps.vGap8,
             Text(
-              "预计完成时间：02月28日",
+              "",
               style: Theme.of(context).textTheme.subtitle,
             ),
             Gaps.vGap12,
@@ -51,7 +51,7 @@ class _StoreAuditResultPageState extends State<StoreAuditResultPage> {
               onPressed: (){
                 NavigatorUtils.push(context, Routes.home, clearStack: true);
               },
-              text: "进入",
+              text: "进入首页",
             )
           ],
         ),

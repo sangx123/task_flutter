@@ -101,7 +101,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
     list.add(item);
     return Container(
       height: 100,
-      margin: EdgeInsets.only(top: 10, bottom: 3),
+      margin: EdgeInsets.only(top: 10, bottom: 10),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(5),
         child: Swiper(

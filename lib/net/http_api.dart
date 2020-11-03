@@ -5,8 +5,13 @@ class HttpApi {
   static const String upload = 'uuc/upload-inco';
 
   //登陆注册
-  static const String login = 'api/index/login'; //登录
-  static const String register = "api/index/register"; //注册
+  static const String login = 'api/index/login';
+
+  //用户注册
+  static const String register = "api/index/register";
+
+  //获取用户信息
+  static const String getUserInfo= "api/user/getUserInfo";
 
   //创建任务
   static const String createTask = "api/task/createTask";
