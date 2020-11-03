@@ -56,7 +56,7 @@ class MyApp extends StatelessWidget {
         child: Consumer<ThemeProvider>(
           builder: (_, provider, __) {
             return MaterialApp (
-              title: 'Flutter Deer',
+              title: '心享',
               //showPerformanceOverlay: true, //显示性能标签
               //debugShowCheckedModeBanner: false,
               //checkerboardRasterCacheImages: true,

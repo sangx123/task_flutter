@@ -51,7 +51,7 @@ class _StoreAuditResultPageState extends State<StoreAuditResultPage> {
               onPressed: (){
                 NavigatorUtils.push(context, Routes.home, clearStack: true);
               },
-              text: "进入首页",
+              text: "返回首页",
             )
           ],
         ),

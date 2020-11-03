@@ -59,7 +59,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
     return Scaffold(
         backgroundColor: Color(0xFFF1F1F1),
         body: Padding(
-                padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                padding: EdgeInsets.only(left: 10, right: 10, bottom: 10,top: 1),
                 child: DeerListView(
                     itemCount: _list.length,
                     stateType: _stateType,
@@ -67,16 +67,16 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
                     loadMore: _loadMore,
                     hasMore: _page < _maxPage,
                     itemBuilder: (_, index) {
-                      if (index == 0) {
-                        return buildBanners();
-                      } else{
+//                      if (index == 0) {
+//                        return buildBanners();
+//                      } else{
                         print("build_TaskRecommandItemPage");
                         return TaskRecommandItemPage(
                             key: Key('order_item_$index'),
                             index: index,
                             tabIndex: 0,
                             model: _list[index]);
-                      }
+                     // }
                     })),
         );
   }
@@ -161,7 +161,7 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
       setState(() {
         _page = 1;
         _list.clear();
-        _list.add(0);
+        //_list.add(0);
         _list.addAll(data);
         if(_list.length<10){
           _maxPage = _page ;
