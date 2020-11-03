@@ -29,6 +29,12 @@ class Gaps {
     width: double.infinity,
     child: const DecoratedBox(decoration: BoxDecoration(color: Colours.line)),
   );
+
+  static Widget line1 = const SizedBox(
+    height: 1,
+    width: double.infinity,
+    child: const DecoratedBox(decoration: BoxDecoration(color: Colours.line)),
+  );
   static Widget lineMax = const SizedBox(
     height: double.infinity,
     width: double.infinity,

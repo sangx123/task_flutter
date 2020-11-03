@@ -28,62 +28,73 @@ class MyFabuTaskItemPage extends StatelessWidget {
   final RecommandResultNewEntity model;
   @override
   Widget build(BuildContext context) {
-    final TextStyle textTextStyle = Theme.of(context).textTheme.body1.copyWith(fontSize: Dimens.font_sp12);
+    Color _backgroundColor;
+    Color _shadowColor;
     bool isDark = ThemeUtils.isDark(context);
+    _backgroundColor = isDark ? Colours.dark_bg_gray_ : Colors.white;
+    _shadowColor = isDark ? Colors.transparent : const Color(0xFFF1F1F1);
     return Container(
-      margin: const EdgeInsets.only(top: 8.0),
-      child: MyCard(
-        child: Container(
-          padding: const EdgeInsets.all(16.0),
-          child: InkWell(
-            onTap: () => NavigatorUtils.push(context, '${ShopRouter.myFabuUserTaskManagerHome}?taskId=${model.id}'),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: Text(model.createTime,),
-                    ),
-                    Text(
-                      model.workerPrice.toString(),
-                      style: TextStyle(
-                          fontSize: Dimens.font_sp12,
-                          color: Theme.of(context).errorColor
+        margin: const EdgeInsets.only(top: 8.0),
+        child: MyCard(
+          child: Container(
+            padding: const EdgeInsets.all(16.0),
+            child: InkWell(
+              onTap: () => NavigatorUtils.push(context, '${ShopRouter.myFabuUserTaskManagerHome}?taskId=${model.id}'),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: <Widget>[
+                  Row(
+                    children: [
+                      Expanded(
+                        child: Text(
+                          model.title,
+                          style: TextStyle(
+                              fontSize: Dimens.font_sp15,
+                              fontWeight: FontWeight.bold),
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                Gaps.vGap8,
-                Text(
-                  model.title,
-                  style: Theme.of(context).textTheme.subtitle,
-                ),
-                Gaps.vGap12,
-                Row(
-                  children: <Widget>[
-                    Expanded(
-                      child: RichText(
-                          text: TextSpan(
-                            style: textTextStyle,
-                            children: <TextSpan>[
-                              TextSpan(text: '发布日期'),
-                              //TextSpan(text: '  共3件商品', style: Theme.of(context).textTheme.subtitle.copyWith(fontSize: Dimens.font_sp10)),
-                            ],
-                          )
+                      Row(
+                        children: <Widget>[
+                          Text(
+                            Utils.formatPrice(model.workerPrice.toString()),
+                            style: TextStyle(
+                                fontSize: Dimens.font_sp15,
+                                fontWeight: FontWeight.bold,
+                                color: Theme.of(context).errorColor),
+                          ),
+                          Text("",
+                              style: TextStyle(fontSize: Dimens.font_sp12)),
+                        ],
                       ),
-                    ),
-                    Text(
-                      model.createTime,
-                      style: TextStyles.textSize12,
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                  Gaps.vGap10,
+//                  Row(
+//                    children: <Widget>[
+//                      Text("报名截止时间:    ",
+//                          style: TextStyle(fontSize: Dimens.font_sp12)),
+//                      Text(model.applyEndTime,
+//                          style: TextStyle(
+//                            fontSize: Dimens.font_sp14,
+//                          )),
+//                    ],
+//                  ),
+//                  Gaps.vGap10,
+                  Row(
+                    children: <Widget>[
+                      Text("发布时间:    ",
+                          style: TextStyle(fontSize: Dimens.font_sp12,fontWeight: FontWeight.bold)),
+                      Text(model.createTime,
+                          style: TextStyle(
+                            fontSize: Dimens.font_sp14,
+                            fontWeight: FontWeight.bold
+                          )),
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-      )
-    );
+        ));
   }
 }

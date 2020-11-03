@@ -1,5 +1,6 @@
 
 import 'package:barcode_scan/barcode_scan.dart';
+import 'package:common_utils/common_utils.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
@@ -17,6 +18,11 @@ class Utils {
     } else {
       Toast.show('拨号失败！');
     }
+  }
+
+
+  static String formatPrice(String price, {MoneyFormat format = MoneyFormat.END_INTEGER}){
+    return MoneyUtil.changeYWithUnit(NumUtil.getDoubleByValueStr(price), MoneyUnit.YUAN, format: format);
   }
 
   /// 调起二维码扫描页

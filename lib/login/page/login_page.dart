@@ -44,7 +44,8 @@ class _LoginPageState extends State<LoginPage> {
     //监听输入改变  
     _nameController.addListener(_verify);
     _passwordController.addListener(_verify);
-    _nameController.text = FlutterStars.SpUtil.getString(Constant.phone);
+    _nameController.text = "18626869811";
+    //_nameController.text = FlutterStars.SpUtil.getString(Constant.phone);
     _passwordController.text=FlutterStars.SpUtil.getString(Constant.password);
   }
 

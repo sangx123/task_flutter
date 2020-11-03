@@ -17,6 +17,7 @@ import 'package:flutter_deer/task/models/home_task_list_entity.dart';
 import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
+import 'package:flutter_deer/util/utils.dart';
 import 'package:flutter_deer/util/zefyr_images.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
 import 'package:zefyr/zefyr.dart';
@@ -112,7 +113,7 @@ class _TaskDetailPage extends State<TaskDetailPage> {
     return Scaffold(
         resizeToAvoidBottomPadding: true,
         appBar: MyAppBar(
-          centerTitle: "任务详情",
+          centerTitle: "",
           actionName: "",
           onPressed: () => {},
         ),
@@ -125,99 +126,172 @@ class _TaskDetailPage extends State<TaskDetailPage> {
                   Row(
                     children: [
                       Gaps.hGap16,
-                      Text(
-                        (taskModel == null) ? "" :taskModel.title,
+                      Expanded(child: Text(
+                        (taskModel == null) ? "" :""+taskModel.title,
                         style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      )
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      )),
+
+                      Gaps.hGap16,
                     ],
                   ),
+                  Gaps.vGap10,
+//                  Padding(
+//                    padding: EdgeInsets.only(left: 16),
+//                    child: Gaps.line1,
+//                  ),
+                  Gaps.vGap10,
+//                  Row(
+//                    children: [
+//                      Gaps.hGap16,
+//                      Text(
+//                        (taskModel == null) ? " " : " "+Utils.formatPrice(taskModel.workerPrice.toString()),
+//                        style: TextStyle(
+//                            fontSize: 18,
+//                            fontWeight: FontWeight.bold,
+//                            color: Colors.red
+//                        ),
+//                      ),
+//                      Gaps.hGap16,
+//
+//                    ],
+//                  ),
+//
+//                  Gaps.vGap5,
+
+
+
+//                  Gaps.vGap10,
+//                  Row(
+//                    children: [
+//                      Gaps.hGap16,
+//                      Text(
+//                        (taskModel == null) ? "任务申请截止时间" :  "任务申请截止时间: "+ taskModel.applyEndTime,
+//                        style: TextStyle(
+//                            fontSize: 14),
+//                      ),
+//                      Gaps.hGap16,
+//
+//                    ],
+//                  ),
+                  Gaps.vGap10,
+
+                  Row(
+                    children: [
+                      Gaps.hGap16,
+                      Text(
+                        (taskModel == null) ? " " : " "+Utils.formatPrice(taskModel.workerPrice.toString()),
+                        style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.red
+                        ),
+                      ),
+                      Expanded(child:Container()),
+                      Text(
+                        (taskModel == null) ? "可申请人数: " : "可申请人数: ",
+                        style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                      getPeoPleNum(),
+                      style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.bold,
+                      )),
+                      Text(
+                          "（人）",
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                          )),
+                    ],
+                  ),
+                  Gaps.vGap10,
+                  Gaps.line10,
+                  Gaps.vGap5,
+
+                  Row(
+                    children: [
+                      Gaps.hGap16,
+                      Expanded(child: Column(children: [
+                        Text(
+                          "报名截止时间",
+                          style: TextStyle(
+                              fontSize: 14),
+                        ),
+                        Gaps.vGap10,
+                        Text(
+                          (taskModel == null) ? "" :  taskModel.applyEndTime,
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                      ),),
+                      Gaps.vLine,
+                      Expanded(child: Column(children: [
+                        Text(
+                          "任务提交截止时间",
+                          style: TextStyle(
+                              fontSize: 14),
+                        ),
+                        Gaps.vGap10,
+                        Text(
+                          (taskModel == null) ? "" : taskModel.workEndTime,
+                          style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                      ),),
+
+//                      Text(
+//                        (taskModel == null) ? "任务提交截止时间" :  "任务提交截止时间: "+ taskModel.workEndTime,
+//                        style: TextStyle(
+//                            fontSize: 14),
+//                      ),
+                      Gaps.hGap16,
+
+                    ],
+                  ),
+                  Gaps.vGap5,
+//                  Gaps.line10,
+//                  Gaps.vGap5,
+//                  Row(
+//                    children: [
+//                      Gaps.hGap16,
+//                      Text(
+//                        (taskModel == null) ? "用户id: " : "用户id: "+(taskModel.userid+10086).toString(),
+//                        style: TextStyle(
+//                            fontSize: 14),
+//                      ),
+//                      Gaps.hGap16,
+//
+//                    ],
+//                  ),
+//                  Gaps.vGap5,
+//                  Row(
+//                    children: [
+//                      Gaps.hGap16,
+//                      Text(
+//                        (taskModel == null) ? "任务发布时间: " :  "任务发布时间: "+ taskModel.createTime,
+//                        style: TextStyle(
+//                            fontSize: 14),
+//                      ),
+//                      Gaps.hGap16,
+//
+//                    ],
+//                  ),
+                  Gaps.vGap5,
+                  Gaps.line10,
                   Gaps.vGap5,
                   Row(
                     children: [
                       Gaps.hGap16,
                       Text(
-                        (taskModel == null) ? "用户id: " : "用户id: "+(taskModel.userid+10086).toString(),
-                        style: TextStyle(
-                            fontSize: 14),
-                      ),
-                      Gaps.hGap16,
-
-                    ],
-                  ),
-                  Gaps.vGap5,
-                  Row(
-                    children: [
-                      Gaps.hGap16,
-                      Text(
-                        (taskModel == null) ? "任务发布时间: " :  "任务发布时间: "+ taskModel.createTime,
-                        style: TextStyle(
-                            fontSize: 14),
-                      ),
-                      Gaps.hGap16,
-
-                    ],
-                  ),
-
-                  Gaps.vGap5,
-                  Row(
-                    children: [
-                      Gaps.hGap16,
-                      Text(
-                        (taskModel == null) ? "剩余可申请人数: " : "剩余可申请人数: "+getPeoPleNum()+"人",
-                        style: TextStyle(
-                            fontSize: 14),
-                      ),
-                      Gaps.hGap16,
-
-                    ],
-                  ),
-
-                  Gaps.vGap5,
-                  Row(
-                    children: [
-                      Gaps.hGap16,
-                      Text(
-                        (taskModel == null) ? "任务奖励: " : "任务奖励: "+taskModel.workerPrice.toString()+"元",
-                        style: TextStyle(
-                            fontSize: 14),
-                      ),
-                      Gaps.hGap16,
-
-                    ],
-                  ),
-                  Gaps.vGap5,
-                  Row(
-                    children: [
-                      Gaps.hGap16,
-                      Text(
-                        (taskModel == null) ? "任务申请截止时间" :  "任务申请截止时间: "+ taskModel.applyEndTime,
-                        style: TextStyle(
-                            fontSize: 14),
-                      ),
-                      Gaps.hGap16,
-
-                    ],
-                  ),
-                  Gaps.vGap5,
-                  Row(
-                    children: [
-                      Gaps.hGap16,
-                      Text(
-                        (taskModel == null) ? "任务提交截止时间" :  "任务提交截止时间: "+ taskModel.workEndTime,
-                        style: TextStyle(
-                            fontSize: 14),
-                      ),
-                      Gaps.hGap16,
-
-                    ],
-                  ),
-                  Gaps.vGap30,
-                  Row(
-                    children: [
-                      Gaps.hGap16,
-                      Text(
-                      "任务内容如下:",
+                      "任务详情:",
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       )

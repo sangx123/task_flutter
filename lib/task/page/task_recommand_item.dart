@@ -55,7 +55,7 @@ class TaskRecommandItemPage extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text(
-                            model.workerPrice.toString() + " 元",
+                            Utils.formatPrice(model.workerPrice.toString()),
                             style: TextStyle(
                                 fontSize: Dimens.font_sp15,
                                 fontWeight: FontWeight.bold,
@@ -72,7 +72,7 @@ class TaskRecommandItemPage extends StatelessWidget {
                     children: <Widget>[
                       Text("报名截止时间:    ",
                           style: TextStyle(fontSize: Dimens.font_sp12)),
-                      Text(model.createTime,
+                      Text(model.applyEndTime,
                           style: TextStyle(
                             fontSize: Dimens.font_sp14,
                           )),
