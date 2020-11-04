@@ -66,7 +66,7 @@ class _MyFabuUserTaskPageState extends State<MyFabuUserTaskPage>
     return Scaffold(
         backgroundColor: Color(0xFFF1F1F1),
         body: Padding(
-                padding: EdgeInsets.only(left: 10, right: 10, bottom: 10),
+                padding: EdgeInsets.only(left: 0, right: 0, bottom: 10,top: 10),
                 child: DeerListView(
                     itemCount: _list.length,
                     stateType: _stateType,
