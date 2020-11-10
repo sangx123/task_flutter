@@ -13,6 +13,7 @@ import 'package:flutter_deer/util/utils.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
 import 'package:flutter_deer/widgets/my_card.dart';
 
+import '../../config.dart';
 import '../shop_router.dart';
 
 class MyFabuUserTaskItemPage extends StatelessWidget {
@@ -48,16 +49,13 @@ class MyFabuUserTaskItemPage extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
-              onTap: () => NavigatorUtils.push(context, OrderRouter.orderInfoPage),
+              onTap: ()=> Config.goNext(context,model),
 
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Row(
                     children: <Widget>[
-                      const ClipOval(
-                        child: LoadImage('order/icon_avatar', width: 44.0, height: 44.0),
-                      ),
                       Gaps.hGap8,
                       Expanded(
                         // 合并Text的语义
@@ -65,16 +63,18 @@ class MyFabuUserTaskItemPage extends StatelessWidget {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: <Widget>[
-                              const Text('郭李'),
+                              Text((model==null)?"":model.name ,style: TextStyle(
+                              fontSize: Dimens.font_sp16,
+                              fontWeight: FontWeight.bold),),
                               Gaps.vGap8,
-                              const Text('15000000000'),
+                              Text((model==null)?"":Config.getTaskStatusTime(model)),
                             ],
                           ),
                         ),
                       ),
                       //Gaps.hGap16,
                       Text(
-                        getTaskStatus(model.userTaskStatus.toString()),
+                        (model==null)?"":Config.getTaskStatus(model.userTaskStatus.toString()),
                         style: TextStyle(
                             fontSize: Dimens.font_sp16,
                             fontWeight: FontWeight.bold,
@@ -130,45 +130,5 @@ class MyFabuUserTaskItemPage extends StatelessWidget {
             ),
           ),
         );
-  }
-
-  String getTaskStatus(String status) {
-    String result = "";
-    switch (status) {
-      case "0":
-        result = "申请中";
-        break;
-      case "1":
-        result = "用户待提交";
-        break;
-      case "2":
-        result = "用户待提交超时";
-        break;
-      case "3":
-        result = "用户已提交待审核";
-        break;
-      case "4":
-        result = "商户审核超时";
-        break;
-      case "5":
-        result = "商户审核成功";
-        break;
-      case "6":
-        result = "商户审核失败";
-        break;
-      case "7":
-        result = "用户申诉中";
-        break;
-      case "8":
-        result = "商户申诉审核超时";
-        break;
-      case "9":
-        result = "商户申诉审核成功";
-        break;
-      case "10":
-        result = "商户申诉审核失败";
-        break;
-    }
-    return result;
   }
 }

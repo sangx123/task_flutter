@@ -36,5 +36,10 @@ class HttpApi {
   static const String applyTask = "api/task/applyTask";
 
 
+  //获取根据usertaskId获取用户任务详情
+  static const String getUserTaskById = "api/task/getUserTaskById";
+
+  //商家是否同意申请
+  static const String isBusinessAllowUserTask = "api/task/isBusinessAllowUserTask";
 
 }

@@ -25,6 +25,7 @@ class HomeTaskListUserTaskList with JsonConvert<HomeTaskListUserTaskList> {
 	int userId;
 	int businessTaskId;
 	int userTaskStatus;
+
 	dynamic userApplyTaskTime;
 	dynamic businessAgreeApplyTime;
 	dynamic userFirstSubmitTaskTime;
@@ -37,4 +38,5 @@ class HomeTaskListUserTaskList with JsonConvert<HomeTaskListUserTaskList> {
 	dynamic businessAuditSecondResult;
 	dynamic userQuitTask;
 	dynamic task;
+	dynamic name;
 }

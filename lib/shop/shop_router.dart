@@ -5,6 +5,7 @@ import 'package:flutter_deer/shop/page/feedback.dart';
 import 'package:flutter_deer/shop/page/my_fabu_task_manager_home.dart';
 import 'package:flutter_deer/shop/page/my_fabu_user_task_manager_home.dart';
 import 'package:flutter_deer/shop/page/my_jieshou_task_manager_home.dart';
+import 'package:flutter_deer/shop/page/user_apply_info_page.dart';
 
 import 'page/freight_config_page.dart';
 import 'page/message_page.dart';
@@ -23,6 +24,8 @@ class ShopRouter implements IRouterProvider{
   static String myFabuTaskManagerHome = "/shop/myFabuTaskManagerHome";
   static String myJieshouTaskManagerHome = "/shop/myJieshouTaskManagerHome";
   static String myFabuUserTaskManagerHome = "/shop/myFabuUserTaskManagerHome";
+  ///用户申请详情页-展示用户的一些基本信息，以及同意,忽略按钮
+  static String userApplyInfoPage = "/shop/userApplyInfoPage";
 
 
   @override
@@ -38,6 +41,11 @@ class ShopRouter implements IRouterProvider{
     router.define(myFabuUserTaskManagerHome, handler:  Handler(handlerFunc: (_, params){
       String taskId = params['taskId'].first;
       return MyFabuUserTaskManagerHome(taskId: int.parse(taskId));
+    }));
+
+    router.define(userApplyInfoPage, handler:  Handler(handlerFunc: (_, params){
+      String userTaskId=params['userTaskId'].first;
+      return UserApplyInfoPage(userTaskId:userTaskId);
     }));
   }
 }

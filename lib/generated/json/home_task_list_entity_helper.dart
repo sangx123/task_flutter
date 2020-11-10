@@ -131,6 +131,9 @@ homeTaskListUserTaskListFromJson(HomeTaskListUserTaskList data, Map<String, dyna
 	if (json['task'] != null) {
 		data.task = json['task'];
 	}
+	if (json['name'] != null) {
+		data.name = json['name'];
+	}
 	return data;
 }
 
@@ -152,5 +155,6 @@ Map<String, dynamic> homeTaskListUserTaskListToJson(HomeTaskListUserTaskList ent
 	data['businessAuditSecondResult'] = entity.businessAuditSecondResult;
 	data['userQuitTask'] = entity.userQuitTask;
 	data['task'] = entity.task;
+	data['name'] = entity.name;
 	return data;
 }
