@@ -31,9 +31,9 @@ class _MyJieshouTaskManagerHomeTabState extends State<MyJieshouTaskManagerHomeTa
   int tabIndex=1;
   final List<String> tabs = [
     "全部",
-    "待通过",
-    "进行中",
-    "已完成",
+    "待提交",
+    "审核中",
+    "待申诉"
   ];
   final List<Widget> tabViews = [
     MyJieshouTaskQuanbuPage(),

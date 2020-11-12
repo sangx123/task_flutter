@@ -152,7 +152,7 @@ class AdapterInterceptor extends Interceptor{
 
   Response adapterData(Response response){
     String result = response.data == null ? "" : response.data.toString();
-    Log.e(result);
+    //Log.e(result);
 //    /// 成功时，直接格式化返回
 //    if (response.statusCode.toString() == ExceptionHandle.success || response.statusCode.toString()== ExceptionHandle.success_not_content){
 //      if (content == null || content.isEmpty){

@@ -42,4 +42,9 @@ class HttpApi {
   //商家是否同意申请
   static const String isBusinessAllowUserTask = "api/task/isBusinessAllowUserTask";
 
+
+  //获取我接收的任务列表
+  static const String getMyJieshouTaskList = "api/task/getMyJieshouTaskList";
+
+
 }

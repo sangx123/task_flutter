@@ -1,5 +1,6 @@
 import 'package:flutter_deer/generated/json/base/json_convert_content.dart';
 import 'package:flutter_deer/order/models/search_entity.dart';
+import 'package:flutter_deer/shop/models/my_jie_shou_entity.dart';
 import 'package:flutter_deer/shop/models/user_entity.dart';
 import 'package:flutter_deer/task/models/home_task_list_entity.dart';
 import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
@@ -31,6 +32,12 @@ class EntityFactory {
         break;
       case "UserEntity":
         return UserEntity.fromJson(json) as T;
+        break;
+      case "MyJieShouEntity":
+        return new MyJieShouEntity().fromJson(json) as T;
+        break;
+      case "HomeTaskListEntity":
+        return new MyJieShouTask().fromJson(json) as T;
         break;
     }
     return null;

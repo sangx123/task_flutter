@@ -17,6 +17,7 @@ import 'package:flutter_deer/widgets/search_bar.dart';
 import 'package:provider/provider.dart';
 
 import 'my_fabu_task_manager_home_tab.dart';
+import 'my_jieshou_task_manager_home_tab.dart';
 
 class MyJieshouTaskManagerHome extends StatefulWidget {
   @override
@@ -39,7 +40,7 @@ class _MyJieshouTaskManagerHomeState extends State<MyJieshouTaskManagerHome> {
             centerTitle: "我领取的任务",
             hasLine: false,
           ),
-          body: MyFabuTaskManagerHomeTab()
+          body: MyJieshouTaskManagerHomeTab()
         );
 
   }

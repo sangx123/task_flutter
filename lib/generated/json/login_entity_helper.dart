@@ -10,7 +10,6 @@ loginEntityFromJson(LoginEntity data, Map<String, dynamic> json) {
 	if (json['money'] != null) {
 		data.money = json['money']?.toDouble();
 	}
-
 	if (json['id'] != null) {
 		data.id = json['id']?.toString();
 	}
