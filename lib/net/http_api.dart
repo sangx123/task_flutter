@@ -44,7 +44,7 @@ class HttpApi {
 
 
   //获取我接收的任务列表
-  static const String getMyJieshouTaskList = "api/task/getMyJieshouTaskList";
+  static const String getMyJieShouTaskQuanBuList = "api/task/getMyJieShouTaskQuanBuList";
 
 
 }
