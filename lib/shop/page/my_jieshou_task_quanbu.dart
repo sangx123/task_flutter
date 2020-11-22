@@ -20,6 +20,11 @@ import 'package:provider/provider.dart';
 import 'my_jieshou_home_item.dart';
 
 class MyJieshouTaskQuanbuPage extends StatefulWidget {
+
+  //3是未完成，4是已完成
+  const MyJieshouTaskQuanbuPage({Key key, this.type}) : super(key: key);
+
+  final int type;
   @override
   State<StatefulWidget> createState() {
     return new _MyJieshouTaskQuanbuPageState();
@@ -109,7 +114,7 @@ class _MyJieshouTaskQuanbuPageState extends State<MyJieshouTaskQuanbuPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": _page + 1, "state": 0});
+    }, params: {"type": widget.type});
   }
 
   ///下拉刷新
@@ -136,7 +141,7 @@ class _MyJieshouTaskQuanbuPageState extends State<MyJieshouTaskQuanbuPage>
       setState(() {
         Toast.show(msg);
       });
-    }, params: {"pageSize": 10, "pageNumber": 1, "state": 0});
+    }, params: {"type": widget.type});
   }
 }
 

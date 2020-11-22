@@ -13,6 +13,8 @@ import 'package:flutter_deer/util/utils.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
 import 'package:flutter_deer/widgets/my_card.dart';
 
+import '../../config.dart';
+
 class MyJieShouHomeItemPage extends StatelessWidget {
   const MyJieShouHomeItemPage({
     Key key,
@@ -55,7 +57,7 @@ class MyJieShouHomeItemPage extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text(
-                            Utils.formatPrice(model.task.workerPrice.toString()),
+                            Config.getTaskStatus(model.task.status.toString()),
                             style: TextStyle(
                                 fontSize: Dimens.font_sp15,
                                 fontWeight: FontWeight.bold,
@@ -66,6 +68,14 @@ class MyJieShouHomeItemPage extends StatelessWidget {
                         ],
                       ),
                     ],
+                  ),
+                  Gaps.vGap10,
+                  Text(
+                    Utils.formatPrice(model.task.workerPrice.toString()),
+                    style: TextStyle(
+                        fontSize: Dimens.font_sp15,
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).errorColor),
                   ),
                   Gaps.vGap10,
                   Row(

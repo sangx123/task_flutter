@@ -33,13 +33,15 @@ class _MyJieshouTaskManagerHomeTabState extends State<MyJieshouTaskManagerHomeTa
     "全部",
     "待提交",
     "审核中",
-    "待申诉"
+    "通过",
+    "未通过",
   ];
   final List<Widget> tabViews = [
-    MyJieshouTaskQuanbuPage(),
-    MyJieshouTaskQuanbuPage(),
-    MyJieshouTaskQuanbuPage(),
-    MyJieshouTaskQuanbuPage()
+    MyJieshouTaskQuanbuPage(type: 0),
+    MyJieshouTaskQuanbuPage(type: 1),
+    MyJieshouTaskQuanbuPage(type: 2),
+    MyJieshouTaskQuanbuPage(type: 3),
+    MyJieshouTaskQuanbuPage(type: 4)
   ];
   @override
   Widget build(BuildContext context) {

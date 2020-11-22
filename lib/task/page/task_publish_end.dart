@@ -25,6 +25,7 @@ import 'package:flutter_deer/task/models/task_main_type_model_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/log_utils.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
+import 'package:flutter_deer/util/throttle_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/util/utils.dart';
 import 'package:flutter_deer/util/zefyr_images.dart';
@@ -311,7 +312,12 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                   //Text(actionName, key: const Key('actionName')),
                   //textColor: _overlayStyle == SystemUiOverlayStyle.light ? Colours.dark_text : Colours.text,
                   //highlightColor: Colors.transparent,
-                  onPressed: () => _createTask(),
+                  //flutter防抖技术
+                  onPressed:
+                 // ()=> _createTask(),
+                  ThrottleClick.throttleClick(() async {
+                    _createTask();
+                  }),
                 ),
               ],
             )
@@ -352,6 +358,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 //
 //    });
     //do your task here
+    print("_createTask()");
 
     if (_titleController.text.isEmpty) {
       Toast.show("请填写标题");
