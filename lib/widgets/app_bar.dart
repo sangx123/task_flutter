@@ -109,7 +109,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget{
                           Colours.app_main,Colours.app_main
                         ])
                     ),
-                    child: Text("确定", style: TextStyle( color: Colours.material_bg),),
+                    child: Text(actionName, style: TextStyle( color: Colours.material_bg),),
                     alignment: Alignment.center,
                     padding: EdgeInsets.fromLTRB(16, 5, 16, 5),
                   ),

@@ -96,11 +96,12 @@ class Config{
 
     switch (model.userTaskStatus.toString()) {
       case "0":
-      //跳转到任务申请通过界面
+       //跳转到任务申请通过界面（business角色）
         NavigatorUtils.push(context, '${ShopRouter.userApplyInfoPage}?userTaskId=${model.id}');
         break;
       case "1":
-
+      //跳转到用户待提交界面（user角色）
+        NavigatorUtils.push(context, '${ShopRouter.myJieShouTiJiaoPage}?userTaskId=${model.id}');
         break;
       case "2":
 

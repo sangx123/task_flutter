@@ -9,6 +9,7 @@ import 'package:flutter_deer/shop/page/user_apply_info_page.dart';
 
 import 'page/freight_config_page.dart';
 import 'page/message_page.dart';
+import 'page/my_jieshou_tijiao.dart';
 import 'page/select_address_page.dart';
 import 'page/shop_page.dart';
 import 'page/shop_setting_page.dart';
@@ -26,6 +27,8 @@ class ShopRouter implements IRouterProvider{
   static String myFabuUserTaskManagerHome = "/shop/myFabuUserTaskManagerHome";
   ///用户申请详情页-展示用户的一些基本信息，以及同意,忽略按钮
   static String userApplyInfoPage = "/shop/userApplyInfoPage";
+  static String myJieShouTiJiaoPage = "/shop/myJieShouTiJiaoPage";
+
 
 
   @override
@@ -46,6 +49,14 @@ class ShopRouter implements IRouterProvider{
     router.define(userApplyInfoPage, handler:  Handler(handlerFunc: (_, params){
       String userTaskId=params['userTaskId'].first;
       return UserApplyInfoPage(userTaskId:userTaskId);
+    }));
+
+    router.define(myJieShouTiJiaoPage, handler:  Handler(handlerFunc: (_, params){
+      String contents="";
+      String userTaskId=params['userTaskId'].first;
+      if(params['contents']!=null)
+        contents=params['contents'].first;
+      return MyJieShouTiJiaoPage(userTaskId:userTaskId,content: contents);
     }));
   }
 }

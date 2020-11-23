@@ -1,0 +1,41 @@
+
+   1，post请求的例子
+   /// 点击申请任务
+  Future<void> applyTask() async {
+    await DioUtils.instance.requestNetwork<String>(
+      Method.post,
+      HttpApi.applyTask,
+      onSuccess: (data) {
+        Toast.show("申请成功");
+      },
+      onError: (code, msg) {
+        Toast.show(msg);
+      },
+      params: {"taskid":int.parse(widget.taskId)},
+    );
+  }
+
+  2，get请求的例子
+   await DioUtils.instance.requestNetwork<UserEntity>(
+        Method.get,
+        HttpApi.getUserInfo,
+        onSuccess: (data) {
+          view.provider.setUser(data);
+        },
+        onError: (code, msg) {
+          Toast.show(msg);
+        },
+      );
+
+  3,原始dio的demo
+   Future<void> requestBook() async {
+      BaseOptions options = new BaseOptions(
+        baseUrl: "http://mhyy.shuzhoukj.com",
+        connectTimeout: 10000,
+        receiveTimeout: 10000,
+      );
+      Response response;
+      Dio dio = new Dio(options);
+      response = await dio.post("/Act/Apply",data: {"LoginOpenId": "o9W0Mt8obdv6rChRSPUmAOSO16dE", "Name": "桑享", "CellPhone": "15821758991","WxActId": "2009173210400023"});
+      Toast.show(response.data.toString());
+    }

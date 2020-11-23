@@ -4,6 +4,7 @@ import 'package:flutter_deer/order/widgets/pay_type_dialog.dart';
 import 'package:flutter_deer/res/resources.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/shop/models/my_jie_shou_entity.dart';
+import 'package:flutter_deer/task/models/home_task_list_entity.dart';
 import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
 import 'package:flutter_deer/util/image_utils.dart';
@@ -40,7 +41,7 @@ class MyJieShouHomeItemPage extends StatelessWidget {
           child: Container(
             padding: const EdgeInsets.all(16.0),
             child: InkWell(
-              onTap: () => {},
+              onTap: () =>_toNext(context),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
@@ -94,4 +95,28 @@ class MyJieShouHomeItemPage extends StatelessWidget {
           ),
         ));
   }
+
+
+  void _toNext(BuildContext context) {
+    var model=HomeTaskListUserTaskList();
+    model.id=this.model.id;
+    model.userId=this.model.userId;
+    model.businessTaskId=this.model.businessTaskId;
+    model.userTaskStatus=this.model.userTaskStatus;
+    model.userApplyTaskTime=this.model.userApplyTaskTime;
+    model.businessAgreeApplyTime=this.model.businessAgreeApplyTime;
+    model.userFirstSubmitTaskTime=this.model.userFirstSubmitTaskTime;
+    model.userFirstSubmitTaskContent=this.model.userFirstSubmitTaskContent;
+    model.businessAuditFirstTime=this.model.businessAuditFirstTime;
+    model.businessAuditFirstResult=this.model.businessAuditFirstResult;
+    model.userSecondSubmitTaskTime=this.model.userSecondSubmitTaskTime;
+    model.userSecondSubmitTaskContent=this.model.userSecondSubmitTaskContent;
+    model.businessAuditSecondTime=this.model.businessAuditSecondTime;
+    model.businessAuditSecondResult=this.model.businessAuditSecondResult;
+    model.userQuitTask=this.model.userQuitTask;
+    model.name=this.model.name;
+    Config.goNext(context,model);
+  }
 }
+
+
