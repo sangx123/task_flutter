@@ -44,6 +44,7 @@ class _UserApplyInfoPageState extends State<UserApplyInfoPage> {
     _shadowColor = isDark ? Colors.transparent : const Color(0xFFF1F1F1);
     return Scaffold(
       appBar: MyAppBar(
+        title: "任务详情",
         onPressed: () {
           NavigatorUtils.push(context, OrderRouter.orderTrackPage);
         },

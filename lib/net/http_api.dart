@@ -49,4 +49,8 @@ class HttpApi {
   //用户提交任务
 
   static const String userTaskFirstSubmit="api/task/userTaskFirstSubmit";
+
+  //商户审核用户提交的任务
+  static const String businessAuditFirstSubmit="api/task/businessAuditFirstSubmit";
+
 }

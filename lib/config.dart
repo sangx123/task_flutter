@@ -104,10 +104,11 @@ class Config{
         NavigatorUtils.push(context, '${ShopRouter.myJieShouTiJiaoPage}?userTaskId=${model.id}');
         break;
       case "2":
-
+        //用户待提交超时
         break;
       case "3":
-
+        //商户审核界面
+        NavigatorUtils.push(context, '${ShopRouter.businessFirstAduitPage}?userTaskId=${model.id}');
         break;
       case "4":
 
