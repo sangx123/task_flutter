@@ -6,6 +6,8 @@ import 'package:flutter_deer/shop/page/my_fabu_task_manager_home.dart';
 import 'package:flutter_deer/shop/page/my_fabu_user_task_manager_home.dart';
 import 'package:flutter_deer/shop/page/my_jieshou_task_manager_home.dart';
 import 'package:flutter_deer/shop/page/user_apply_info_page.dart';
+import 'package:flutter_deer/shop/page/user_first_audit_fail_page.dart';
+import 'package:flutter_deer/shop/page/user_first_audit_fail_submit_page.dart';
 
 import 'page/business_first_audit_fail_reason.dart';
 import 'page/business_first_audit_page.dart';
@@ -32,6 +34,10 @@ class ShopRouter implements IRouterProvider{
   static String myJieShouTiJiaoPage = "/shop/myJieShouTiJiaoPage";
   static String businessFirstAduitPage = "/shop/businessFirstAduitPage";
   static String businessFirstAuditFailReasonPage = "/shop/businessFirstAuditFailReasonPage";
+
+  static String userFirstAuditFailPage = "/shop/userFirstAuditFailPage";
+  static String userFirstAuditFailSubmitPage = "/shop/userFirstAuditFailSubmitPage";
+
 
   @override
   void initRouter(Router router) {
@@ -76,6 +82,22 @@ class ShopRouter implements IRouterProvider{
       return BusinessFirstAuditFailReasonPage(userTaskId:userTaskId);
     }));
 
+
+    router.define(userFirstAuditFailPage, handler:  Handler(handlerFunc: (_, params){
+      String userTaskId="";
+      if(params['userTaskId']!=null)
+        userTaskId=params['userTaskId'].first;
+      return UserFirstAuditFailPage(userTaskId:userTaskId);
+    }));
+
+
+
+    router.define(userFirstAuditFailSubmitPage, handler:  Handler(handlerFunc: (_, params){
+      String userTaskId="";
+      if(params['userTaskId']!=null)
+        userTaskId=params['userTaskId'].first;
+      return UserFirstAuditFailSubmitPage(userTaskId:userTaskId);
+    }));
 
   }
 }

@@ -58,7 +58,7 @@ class MyJieShouHomeItemPage extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text(
-                            Config.getTaskStatus(model.task.status.toString()),
+                            Config.getTaskStatus(model.userTaskStatus.toString()),
                             style: TextStyle(
                                 fontSize: Dimens.font_sp15,
                                 fontWeight: FontWeight.bold,

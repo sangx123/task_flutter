@@ -114,10 +114,11 @@ class Config{
 
         break;
       case "5":
-
+        //审核成功不需要跳转
         break;
       case "6":
-
+        //用户查看申诉失败界面
+        NavigatorUtils.push(context, '${ShopRouter.userFirstAuditFailPage}?userTaskId=${model.id}');
         break;
       case "7":
 
