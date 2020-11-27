@@ -23,6 +23,7 @@ import 'package:flutter_deer/shop/shop_router.dart';
 import 'package:flutter_deer/store/store_router.dart';
 import 'package:flutter_deer/task/models/task_main_type_model_entity.dart';
 import 'package:flutter_deer/task/task_router.dart';
+import 'package:flutter_deer/util/file_utils.dart';
 import 'package:flutter_deer/util/log_utils.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/throttle_utils.dart';
@@ -64,7 +65,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   TextEditingController _titleController = TextEditingController();
   TextEditingController _moneyController = TextEditingController();
   TextEditingController _limitController = TextEditingController();
-  //TextEditingController _peopleNumController = TextEditingController();
+  TextEditingController _peopleNumController = TextEditingController();
   String totalMoney = "";
   int count = 1;
   DateTime apply_end_time;
@@ -84,7 +85,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   void initState() {
     super.initState();
     _moneyController.addListener(moneyChangeListener);
-    //_peopleNumController.addListener(moneyChange);
+    _peopleNumController.addListener(moneyChangeListener);
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (widget.isScan) {
         _scan();
@@ -117,14 +118,17 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
+
                     TextFieldItem(
-                      title: "名称(*)：",
-                      hintText: "填写名称",
+                      title: "名称：",
+                      hintText: "请填写任务名称",
                       controller: _titleController,
                     ),
+
                     ClickItem(
                       textAlign: TextAlign.start,
-                      title: "内容(*)：",
+                      title: "内容：",
+                      contentHint: "未填写",
                       content: getContent(),
                       onTap: () => NavigatorUtils.pushResult(context,
                           '${TaskRouter.taskPublishPage}?content=${Uri.encodeComponent(contents)}',
@@ -134,27 +138,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                         });
                       }),
                     ),
-                    TextFieldItem(
-                      title: "奖励(*)：",
-                      hintText: "填写奖励/每人",
-                      controller: _moneyController,
-                    ),
-//                    TextFieldItem(
-//                      title: "人数(*)：",
-//                      keyboardType: TextInputType.numberWithOptions(decimal: true),
-//                      hintText: "填写所需的人数",
-//                      controller: _peopleNumController,
-//                    ),
 
-                    Row(
-                      children: <Widget>[
-                        Gaps.hGap16,
-                        Text("人数(*)："),
-                        _reduceBtn(context),
-                        _countArea(),
-                        _addBtn(context)
-                      ],
-                    ),
 
                     Container(
                       margin: const EdgeInsets.only(left: 16.0),
@@ -212,13 +196,15 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                     ClickItem(
                       textAlign: TextAlign.start,
                       title: "任务类型：",
+                      contentHint: "请选择任务类型",
                       content: getTaskType(),
                       onTap: () => _showBottomSheet(),
                     ),
                     ClickItem(
                         textAlign: TextAlign.start,
                         title: "申请截止时间：",
-                        content: apply_end_time==null?"请选择任务申请截止时间":apply_end_time.toString().substring(0,apply_end_time.toString().length-4),
+                        contentHint: "请选择任务申请截止时间",
+                        content: apply_end_time==null?"":apply_end_time.toString().substring(0,apply_end_time.toString().length-4),
                         onTap: () => {
                               DatePicker.showDateTimePicker(context,
                                   showTitleActions: true,
@@ -239,7 +225,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                     ClickItem(
                         textAlign: TextAlign.start,
                         title: "提交截止时间：",
-                        content: work_end_time==null?"请选择任务提交截止时间":work_end_time.toString().substring(0,work_end_time.toString().length-4),
+                        contentHint: "请选择任务提交截止时间",
+                        content: work_end_time==null?"":work_end_time.toString().substring(0,work_end_time.toString().length-4),
                         onTap: () => {
                           DatePicker.showDateTimePicker(context,
                               showTitleActions: true,
@@ -258,15 +245,45 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                         }
                     ),
 
+//                    TextFieldItem(
+//                      title: "任务限制(选填)：",
+//                      hintText: "任务限制",
+//                      controller: _limitController,
+//                    ),
+
+                              TextFieldItem(
+                                title: "奖励：",
+                                hintText: "填写奖励/每人",
+                                controller: _moneyController,
+                              ),
+//                    TextFieldItem(
+//                      title: "人数(*)：",
+//                      keyboardType: TextInputType.numberWithOptions(decimal: true),
+//                      hintText: "填写所需的人数",
+//                      controller: _peopleNumController,
+//                    ),
                     TextFieldItem(
-                      title: "任务限制(选填)：",
-                      hintText: "任务限制",
-                      controller: _limitController,
+                      title: "人数：",
+                      hintText: "填写总人数",
+                      controller: _peopleNumController,
                     ),
-                    ClickItem(
-                      textAlign: TextAlign.start,
-                      title: "默认所有任务最长审核时长不超过2（天）",
-                    )
+//                    Row(
+//                      children: <Widget>[
+//                        Gaps.hGap16,
+//                        Text("人数："),
+//                        _reduceBtn(context),
+//                        _countArea(),
+//                        _addBtn(context)
+//                      ],
+//                    ),
+                    Container(
+                      margin: const EdgeInsets.only(left: 16.0),
+                      child: Gaps.line,
+                    ),
+//                    ClickItem(
+//                      textAlign: TextAlign.start,
+//                      title: "默认所有任务最长审核时长不超过2（天）",
+//                    )
                   ],
                 ),
               ),
@@ -315,7 +332,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
                   //flutter防抖技术
                   onPressed:
                  // ()=> _createTask(),
-                  ThrottleClick.throttleClick(() async {
+                  ThrottleClick.debounce(() async {
                     _createTask();
                   }),
                 ),
@@ -375,10 +392,10 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       return;
     }
 
-//    if (_peopleNumController.text.isEmpty) {
-//      Toast.show("请填写人数");
-//      return;
-//    }
+    if (_peopleNumController.text.isEmpty) {
+      Toast.show("请填写人数");
+      return;
+    }
 
     if (typeModel == null) {
       Toast.show("请选择任务类型");
@@ -415,7 +432,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
     List<MultipartFile> multipartImageList = new List<MultipartFile>();
     for (KeyValueItem item in imageList) {
       MultipartFile multipartFile = MultipartFile.fromBytes(
-        await _readFileByte(item.value), //图片路径
+        await MFileUtils.readFileByte(item.value), //图片路径
         filename: item.key, //图片名称
       );
       print("读取" + item.key + "完毕");
@@ -427,11 +444,11 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       "content": contents,
       "imageList": multipartImageList,
       "jiangLi": _moneyController.text,
-      "peopleNum": count.toString(),
+      "peopleNum": _peopleNumController.text,
       "type":typeModel.id,
       "apply_end_time":apply_end_time.toString().substring(0,apply_end_time.toString().length-4),
       "work_end_time":work_end_time.toString().substring(0,work_end_time.toString().length-4),
-      "limit":_limitController.text
+      "limit":""
     });
     var price = double.parse(_moneyController.text) * count;
     //NavigatorUtils.push(context, StoreRouter.auditPage);
@@ -449,23 +466,23 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
     );
   }
 
-  Future<Uint8List> _readFileByte(String filePath) async {
-    Uri myUri = Uri.parse(filePath);
-    File audioFile = new File.fromUri(myUri);
-    Uint8List bytes;
-    await audioFile.readAsBytes().then((value) {
-      bytes = Uint8List.fromList(value);
-      print('reading of bytes is completed');
-    }).catchError((onError) {
-      print('Exception Error while reading audio from path:' +
-          onError.toString());
-    });
-    return bytes;
-  }
+//  Future<Uint8List> _readFileByte(String filePath) async {
+//    Uri myUri = Uri.parse(filePath);
+//    File audioFile = new File.fromUri(myUri);
+//    Uint8List bytes;
+//    await audioFile.readAsBytes().then((value) {
+//      bytes = Uint8List.fromList(value);
+//      print('reading of bytes is completed');
+//    }).catchError((onError) {
+//      print('Exception Error while reading audio from path:' +
+//          onError.toString());
+//    });
+//    return bytes;
+//  }
 
   String getTaskType() {
     if (typeModel == null) {
-      return "请选择任务类型";
+      return "";
     } else {
       return typeModel.name;
     }
@@ -473,7 +490,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 
   String getContent() {
     if (contents.isEmpty) {
-      return "填写需要完成的内容";
+        return "";
     } else {
       return "已编辑";
     }
@@ -484,6 +501,11 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   }
 
   void moneyChange(int count) {
+    if(_peopleNumController.text.isEmpty){
+      totalMoney = "";
+      setState(() {});
+      return;
+    }
     if (_moneyController.text.isEmpty) {
       totalMoney = "";
       setState(() {});
@@ -491,7 +513,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       return;
     }
 
-    var price = double.parse(_moneyController.text) * count;
+    var price = double.parse(_moneyController.text) *  double.parse(_peopleNumController.text);
     totalMoney = price.toString();
     setState(() {});
   }

@@ -56,5 +56,6 @@ class HttpApi {
   //用户申诉任务
   static const String userTaskSecondSubmit="api/task/userTaskSecondSubmit";
 
-
+  //商户第二次审核用户提交的任务
+  static const String businessAuditSecondSubmit="api/task/businessAuditSecondSubmit";
 }

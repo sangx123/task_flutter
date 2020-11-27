@@ -121,7 +121,8 @@ class Config{
         NavigatorUtils.push(context, '${ShopRouter.userFirstAuditFailPage}?userTaskId=${model.id}');
         break;
       case "7":
-
+        //商户点击跳转到审核界面
+        NavigatorUtils.push(context, '${ShopRouter.businessSecondAduitPage}?userTaskId=${model.id}');
         break;
       case "8":
 

@@ -21,20 +21,21 @@ import 'package:flutter_deer/widgets/text_field.dart';
 import 'package:keyboard_actions/keyboard_actions.dart';
 import 'package:zefyr/zefyr.dart';
 import 'package:quill_delta/quill_delta.dart';
-/**
- * 我接受的任务提交的任务的证据
- */
-class MyJieShouTiJiaoPage extends StatefulWidget {
 
-  const MyJieShouTiJiaoPage({Key key, this.userTaskId,this.content}) : super(key: key);
+import '../shop_router.dart';
+/**
+ * 审核失败填写失败原因
+ */
+class BusinessSecondAuditFailReasonPage extends StatefulWidget {
+
+  const BusinessSecondAuditFailReasonPage({Key key, this.userTaskId}) : super(key: key);
 
   final String userTaskId;
-  final String content;
   @override
-  _MyJieShouTiJiaoPageState createState() => _MyJieShouTiJiaoPageState();
+  _BusinessSecondAuditFailReasonPageState createState() => _BusinessSecondAuditFailReasonPageState();
 }
 
-class _MyJieShouTiJiaoPageState extends State<MyJieShouTiJiaoPage> {
+class _BusinessSecondAuditFailReasonPageState extends State<BusinessSecondAuditFailReasonPage> {
   ZefyrController _controller =
   ZefyrController(NotusDocument());
   FocusNode _focusNode = FocusNode();
@@ -45,20 +46,6 @@ class _MyJieShouTiJiaoPageState extends State<MyJieShouTiJiaoPage> {
   @override
   void initState() {
     super.initState();
-
-    //requestBook();
-//    _loadDocument().then((document) {
-//      setState(() {
-//        _controller = ZefyrController(document);
-//      });
-//    });
-      if(widget.content!=null&&widget.content.isNotEmpty) {
-        _loadDocument().then((document) {
-          setState(() {
-            _controller = ZefyrController(document);
-          });
-        });
-      }
       _sub = _controller.document.changes.listen((change) {
         print('${change.source}: ${change.change}');
       });
@@ -78,7 +65,7 @@ class _MyJieShouTiJiaoPageState extends State<MyJieShouTiJiaoPage> {
     return Scaffold(
       resizeToAvoidBottomPadding: true,
       appBar:  MyAppBar(
-        centerTitle: "提交任务",
+        centerTitle: "填写不通过原因",
         actionName: "提交",
         onPressed:()=> _saveDocument(context),
       ),
@@ -122,10 +109,9 @@ class _MyJieShouTiJiaoPageState extends State<MyJieShouTiJiaoPage> {
 //    return NotusDocument.fromDelta(detail);
 //  }
 
-  Future<void> _saveDocument(BuildContext context) async{
-
+  void _saveDocument(BuildContext context) async{
+    _editing = false;
     final contents = jsonEncode(_controller.document);
-
     Delta list = Delta.fromJson(json.decode(contents) as List);
     List<KeyValueItem> imageList = new List<KeyValueItem>();
     for (var item in list.toList()) {
@@ -155,33 +141,51 @@ class _MyJieShouTiJiaoPageState extends State<MyJieShouTiJiaoPage> {
     print("读取MultipartFile完毕");
     FormData formData = FormData.fromMap({
       "id": widget.userTaskId,
-      "content": contents,
-      "imageList": multipartImageList
+      "imageList": multipartImageList,
+      "agree":false,
+      "content":contents
     });
 
     //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<String>(
       Method.post,
-      HttpApi.userTaskFirstSubmit,
+      HttpApi.businessAuditSecondSubmit,
       onSuccess: (data) {
         Toast.show(data);
+        NavigatorUtils.goBack(context);
       },
       onError: (code, msg) {
         Toast.show(msg);
       },
       params: formData,
     );
+
+
 //    await DioUtils.instance.requestNetwork<String>(
 //      Method.post,
-//      HttpApi.userTaskFirstSubmit,
+//      HttpApi.businessAuditFirstSubmit,
 //      onSuccess: (data) {
 //        Toast.show(data);
+//        NavigatorUtils.goBack(context);
 //      },
 //      onError: (code, msg) {
 //        Toast.show(msg);
 //      },
-//      params: {"id":int.parse(widget.userTaskId),"content":contents},
+//      params: {"id":int.parse(widget.userTaskId),"agree":false,"reason":contents},
 //    );
+
+    return ;
+
+//    print(Directory.systemTemp.path);
+//    // For this example we save our document to a temporary file.
+//    final file = File(Directory.systemTemp.path + "/quick_start.json");
+//    // And show a snack bar on success.
+//    file.writeAsString(contents).then((_) {
+//      //Scaffold.of(context).showSnackBar(SnackBar(content: Text("Saved.")));
+//    });
+//    setState(() {
+//      //刷新界面
+//    });
   }
 
 
@@ -246,24 +250,5 @@ class _MyJieShouTiJiaoPageState extends State<MyJieShouTiJiaoPage> {
 ////              ),
 //        ]);
 
-  }
-
-
-  /// Loads the document asynchronously from a file if it exists, otherwise
-  /// returns default document.
-  Future<NotusDocument> _loadDocument() async {
-//    final file = File(Directory.systemTemp.path + "/quick_start.json");
-//    if (await file.exists()) {
-//      final contents = await file
-//          .readAsString()
-//          .then((data) => Future.delayed(Duration(seconds: 1), () => data));
-//      if(contents.isNotEmpty)
-//      return NotusDocument.fromJson(jsonDecode(contents));
-//    }
-//    final Delta delta = Delta();
-//    return NotusDocument.fromDelta(delta);
-    //final doc = r'[{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242804.jpg"}}},{"insert":"\n9666\n"},{"insert":"​","attributes":{"embed":{"type":"image","source":"http://192.168.0.127/20200917153242880.jpg"}}},{"insert":"\n0000\n"}]';
-    Delta detail = Delta.fromJson(json.decode(widget.content) as List);
-    return NotusDocument.fromDelta(detail);
   }
 }

@@ -11,6 +11,8 @@ import 'package:flutter_deer/shop/page/user_first_audit_fail_submit_page.dart';
 
 import 'page/business_first_audit_fail_reason.dart';
 import 'page/business_first_audit_page.dart';
+import 'page/business_second_audit_fail_reason.dart';
+import 'page/business_second_audit_page.dart';
 import 'page/freight_config_page.dart';
 import 'page/message_page.dart';
 import 'page/my_jieshou_tijiao.dart';
@@ -32,11 +34,17 @@ class ShopRouter implements IRouterProvider{
   ///用户申请详情页-展示用户的一些基本信息，以及同意,忽略按钮
   static String userApplyInfoPage = "/shop/userApplyInfoPage";
   static String myJieShouTiJiaoPage = "/shop/myJieShouTiJiaoPage";
+
+
   static String businessFirstAduitPage = "/shop/businessFirstAduitPage";
   static String businessFirstAuditFailReasonPage = "/shop/businessFirstAuditFailReasonPage";
 
   static String userFirstAuditFailPage = "/shop/userFirstAuditFailPage";
   static String userFirstAuditFailSubmitPage = "/shop/userFirstAuditFailSubmitPage";
+
+
+  static String businessSecondAduitPage = "/shop/businessSecondAduitPage";
+  static String businessSecondAuditFailReasonPage = "/shop/businessSecondAuditFailReasonPage";
 
 
   @override
@@ -97,6 +105,23 @@ class ShopRouter implements IRouterProvider{
       if(params['userTaskId']!=null)
         userTaskId=params['userTaskId'].first;
       return UserFirstAuditFailSubmitPage(userTaskId:userTaskId);
+    }));
+
+
+    router.define(businessSecondAduitPage, handler:  Handler(handlerFunc: (_, params){
+      String userTaskId="";
+      if(params['userTaskId']!=null)
+        userTaskId=params['userTaskId'].first;
+      return BusinessSecondAduitPage(userTaskId:userTaskId);
+    }));
+
+
+
+    router.define(businessSecondAuditFailReasonPage, handler:  Handler(handlerFunc: (_, params){
+      String userTaskId="";
+      if(params['userTaskId']!=null)
+        userTaskId=params['userTaskId'].first;
+      return BusinessSecondAuditFailReasonPage(userTaskId:userTaskId);
     }));
 
   }

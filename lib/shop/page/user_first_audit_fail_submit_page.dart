@@ -13,6 +13,7 @@ import 'package:flutter_deer/net/net.dart';
 import 'package:flutter_deer/res/gaps.dart';
 import 'package:flutter_deer/res/styles.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/util/file_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/util/zefyr_images.dart';
 import 'package:flutter_deer/widgets/app_bar.dart';
@@ -112,6 +113,40 @@ class _UserFirstAuditFailSubmitPageState extends State<UserFirstAuditFailSubmitP
     _editing = false;
     final contents = jsonEncode(_controller.document);
 
+    Delta list = Delta.fromJson(json.decode(contents) as List);
+    List<KeyValueItem> imageList = new List<KeyValueItem>();
+    for (var item in list.toList()) {
+      if (item.attributes != null && item.attributes.containsKey("embed")) {
+        if (item.attributes["embed"]["type"] == "image") {
+          var path = item.attributes["embed"]["source"].toString();
+          var name =
+          path.toString().substring(path.toString().lastIndexOf("/") + 1);
+          var model = KeyValueItem();
+          model.key = name;
+          model.value = path;
+          imageList.add(model);
+          //MultipartFile multipartFile =  await MultipartFile.fromFile(path, filename:name);
+        }
+      }
+    }
+
+    List<MultipartFile> multipartImageList = new List<MultipartFile>();
+    for (KeyValueItem item in imageList) {
+      MultipartFile multipartFile = MultipartFile.fromBytes(
+        await MFileUtils.readFileByte(item.value), //图片路径
+        filename: item.key, //图片名称
+      );
+      print("读取" + item.key + "完毕");
+      multipartImageList.add(multipartFile);
+    }
+    print("读取MultipartFile完毕");
+    FormData formData = FormData.fromMap({
+      "id": widget.userTaskId,
+      "content": contents,
+      "imageList": multipartImageList
+    });
+
+    //NavigatorUtils.push(context, StoreRouter.auditPage);
     await DioUtils.instance.requestNetwork<String>(
       Method.post,
       HttpApi.userTaskSecondSubmit,
@@ -122,9 +157,8 @@ class _UserFirstAuditFailSubmitPageState extends State<UserFirstAuditFailSubmitP
       onError: (code, msg) {
         Toast.show(msg);
       },
-      params: {"id":int.parse(widget.userTaskId),"content":contents},
+      params: formData,
     );
-    return ;
 
 //    print(Directory.systemTemp.path);
 //    // For this example we save our document to a temporary file.

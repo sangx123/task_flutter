@@ -47,7 +47,7 @@ class MyFabuTaskItemPage extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Text(
-                          model.title,
+                          (model==null)?"":model.title,
                           style: TextStyle(
                               fontSize: Dimens.font_sp15,
                               fontWeight: FontWeight.bold),
@@ -56,7 +56,7 @@ class MyFabuTaskItemPage extends StatelessWidget {
                       Row(
                         children: <Widget>[
                           Text(
-                            Utils.formatPrice(model.workerPrice.toString()),
+                            (model==null)?"":Utils.formatPrice(model.workerPrice.toString()),
                             style: TextStyle(
                                 fontSize: Dimens.font_sp15,
                                 fontWeight: FontWeight.bold,
@@ -84,7 +84,7 @@ class MyFabuTaskItemPage extends StatelessWidget {
                     children: <Widget>[
                       Text("发布时间:    ",
                           style: TextStyle(fontSize: Dimens.font_sp12,fontWeight: FontWeight.bold)),
-                      Text(model.createTime,
+                      Text( (model==null)?"":model.createTime,
                           style: TextStyle(
                             fontSize: Dimens.font_sp14,
                             fontWeight: FontWeight.bold

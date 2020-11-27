@@ -10,7 +10,8 @@ class ClickItem extends StatelessWidget {
     @required this.title,
     this.content: "",
     this.textAlign: TextAlign.right,
-    this.maxLines: 1
+    this.maxLines: 1,
+    this.contentHint:""
   }): super(key: key);
 
   final GestureTapCallback onTap;
@@ -18,6 +19,7 @@ class ClickItem extends StatelessWidget {
   final String content;
   final TextAlign textAlign;
   final int maxLines;
+  final String contentHint;
 
   @override
   Widget build(BuildContext context) {
@@ -48,13 +50,22 @@ class ClickItem extends StatelessWidget {
               flex: 100,
               child: Padding(
                 padding: const EdgeInsets.only(right: 8.0, left: 16.0),
-                child: Text(
-                  content,
+                child: content==""?Text(
+                  contentHint,
                   maxLines: maxLines,
-                  //textAlign: maxLines == 1 ? TextAlign.right : textAlign,
-                    textAlign:  textAlign,
+                  textAlign: maxLines == 1 ? TextAlign.right : textAlign,
+                    //textAlign:  textAlign,
                   overflow: TextOverflow.ellipsis,
                   style: Theme.of(context).textTheme.subtitle.copyWith(fontSize: Dimens.font_sp14)
+                ):Text(
+                    content,
+                    maxLines: maxLines,
+                    textAlign: maxLines == 1 ? TextAlign.right : textAlign,
+//                    textAlign:  textAlign,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        fontSize: Dimens.font_sp14
+                    )
                 ),
               ),
             ),
