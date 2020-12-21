@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:flutter_deer/goods/page/goods_page.dart';
 import 'package:flutter_deer/home/provider/home_provider.dart';
+import 'package:flutter_deer/net/net.dart';
 import 'package:flutter_deer/order/order_router.dart';
 import 'package:flutter_deer/order/page/order_page.dart';
 import 'package:flutter_deer/res/resources.dart';
@@ -48,6 +49,9 @@ class _HomeState extends State<Home> {
       //StatisticsPage(),
       ShopPage(),
     ];
+
+    //同步数据
+    asynMyTask();
   }
 
   List<BottomNavigationBarItem> _buildBottomNavigationBarItem() {
@@ -268,4 +272,20 @@ class _HomeState extends State<Home> {
     provider.value = index;
     setState(() {});
   }
+
+  Future<void> asynMyTask() async {
+    await DioUtils.instance.requestNetwork<String>(
+      Method.post,
+      HttpApi.asnyUserTaskTimeOut,
+      onSuccess: (data) {
+        Toast.show("数据同步完成");
+      },
+      onError: (code, msg) {
+        Toast.show(msg);
+      },
+      params: {},
+    );
+  }
+
 }
+

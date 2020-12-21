@@ -73,11 +73,13 @@ class _SplashPageState extends State<SplashPage> {
   @override
   Widget build(BuildContext context) {
     return Material(
-      child: _status == 0 ? Image.asset(
-        ImageUtils.getImgPath("start_page", format: "jpg"),
-        width: double.infinity,
+      child: _status == 0 ? Center(child:
+      Image.asset(
+        ImageUtils.getImgPath("start_page"),
+        width:100,
         fit: BoxFit.fill,
-        height: double.infinity,
+        height: 100,
+      ),
       ) : Swiper(
         key: const Key('swiper'),
         itemCount: _guideList.length,

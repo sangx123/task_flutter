@@ -58,4 +58,8 @@ class HttpApi {
 
   //商户第二次审核用户提交的任务
   static const String businessAuditSecondSubmit="api/task/businessAuditSecondSubmit";
+
+
+  //同步用户自己的任务，同步商户自己的任务，超时状态的一些操作
+  static const String asnyUserTaskTimeOut="api/asnytask/asnyUserTaskTimeOut";
 }

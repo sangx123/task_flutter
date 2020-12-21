@@ -71,6 +71,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   DateTime apply_end_time;
   DateTime work_end_time;
   String limit;
+  String uuid="";
   void _getImage() async {
     try {
       _imageFile = await ImagePicker.pickImage(
@@ -91,6 +92,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
         _scan();
       }
     });
+    uuid=DateTime.now().toString();
+    print(uuid);
   }
 
   void _scan() async {
@@ -448,7 +451,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
       "type":typeModel.id,
       "apply_end_time":apply_end_time.toString().substring(0,apply_end_time.toString().length-4),
       "work_end_time":work_end_time.toString().substring(0,work_end_time.toString().length-4),
-      "limit":""
+      "limit":"",
+      "mUUID":uuid
     });
     var price = double.parse(_moneyController.text) * count;
     //NavigatorUtils.push(context, StoreRouter.auditPage);
