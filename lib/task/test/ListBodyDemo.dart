@@ -65,7 +65,7 @@ class _ListBodyPageState extends State<ListBodyPage>{
     layers.add(body);
 
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      //resizeToAvoidBottomPadding: true,
       appBar: const MyAppBar(
         centerTitle: "测试",
       ),

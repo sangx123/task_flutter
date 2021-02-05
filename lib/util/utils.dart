@@ -63,7 +63,7 @@ Future<T> showTransparentDialog<T>({
   WidgetBuilder builder,
 }) {
 
-  final ThemeData theme = Theme.of(context, shadowThemeOnly: true);
+  final ThemeData theme = Theme.of(context);
   return showGeneralDialog(
     context: context,
     pageBuilder: (BuildContext buildContext, Animation<double> animation, Animation<double> secondaryAnimation) {
@@ -102,7 +102,7 @@ Future<T> showElasticDialog<T>({
   WidgetBuilder builder,
 }) {
 
-  final ThemeData theme = Theme.of(context, shadowThemeOnly: true);
+  final ThemeData theme = Theme.of(context);
   return showGeneralDialog(
     context: context,
     pageBuilder: (BuildContext buildContext, Animation<double> animation, Animation<double> secondaryAnimation) {

@@ -76,7 +76,7 @@ class _MyJieShouTiJiaoPageState extends State<MyJieShouTiJiaoPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      //resizeToAvoidBottomPadding: true,
       appBar:  MyAppBar(
         centerTitle: "提交任务",
         actionName: "提交",

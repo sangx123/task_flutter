@@ -74,7 +74,7 @@ class _PublishTaskState extends State<PublishTaskPage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      //resizeToAvoidBottomPadding: true,
       appBar:  MyAppBar(
         centerTitle: "编辑任务内容",
         actionName: "完成",

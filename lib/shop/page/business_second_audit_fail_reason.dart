@@ -63,7 +63,7 @@ class _BusinessSecondAuditFailReasonPageState extends State<BusinessSecondAuditF
   Widget build(BuildContext context) {
 
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      //resizeToAvoidBottomPadding: true,
       appBar:  MyAppBar(
         centerTitle: "填写不通过原因",
         actionName: "提交",

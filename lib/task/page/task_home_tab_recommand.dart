@@ -163,9 +163,13 @@ class TaskHomeReCommandStatePage extends State<TaskHomeReCommandPage>
         _list.clear();
         //_list.add(0);
         _list.addAll(data);
-        if(_list.length<10){
-          _maxPage = _page ;
+        if (_list.length < 10) {
+          _maxPage = _page;
         }
+        if(_list.length==0){
+          _stateType=StateType.empty;
+        }
+
       });
     }, onError: (code, msg) {
       setState(() {

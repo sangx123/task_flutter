@@ -114,7 +114,7 @@ class _BusinessFirstAduitPage extends State<BusinessFirstAduitPage> {
       ),
     );
     return Scaffold(
-        resizeToAvoidBottomPadding: true,
+        //resizeToAvoidBottomPadding: true,
         appBar: MyAppBar(
           centerTitle: "审核任务",
           actionName: "",

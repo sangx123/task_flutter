@@ -111,7 +111,7 @@ class _TaskDetailPage extends State<TaskDetailPage> {
       ),
     );
     return Scaffold(
-        resizeToAvoidBottomPadding: true,
+        //resizeToAvoidBottomPadding: true,
         appBar: MyAppBar(
           centerTitle: "",
           actionName: "",

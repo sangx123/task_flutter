@@ -39,7 +39,7 @@ class _StateLayoutState extends State<StateLayout> {
         break;
       case StateType.network:
         _img = "zwwl";
-        _hintText = "无网络连接";
+        _hintText = "网络不给力，点击屏幕重试";
         break;
       case StateType.message:
         _img = "zwxx";
@@ -67,7 +67,7 @@ class _StateLayoutState extends State<StateLayout> {
           widget.type == StateType.loading ? const CupertinoActivityIndicator(radius: 16.0) :
           (widget.type == StateType.empty ? Gaps.empty : 
           Opacity(
-            opacity: ThemeUtils.isDark(context) ? 0.5 : 1,
+            opacity: ThemeUtils.isDark(context) ? 0.5 : 1,//0.0 到 1.0，0.0表示完全透明，1.0表示完全不透明
             child: Container(
               height: 120.0,
               width: 120.0,

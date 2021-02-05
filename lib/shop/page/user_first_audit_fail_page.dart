@@ -114,7 +114,7 @@ class _UserFirstAuditFailPageState extends State<UserFirstAuditFailPage> {
       ),
     );
     return Scaffold(
-        resizeToAvoidBottomPadding: true,
+        //resizeToAvoidBottomPadding: true,
         appBar: MyAppBar(
           centerTitle: "审核失败-详情",
           actionName: "",

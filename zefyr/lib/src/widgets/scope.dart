@@ -59,7 +59,7 @@ class ZefyrScope extends ChangeNotifier {
 
   static ZefyrScope of(BuildContext context) {
     final ZefyrScopeAccess widget =
-        context.inheritFromWidgetOfExactType(ZefyrScopeAccess);
+        context.dependOnInheritedWidgetOfExactType(aspect:ZefyrScopeAccess);
     return widget.scope;
   }
 

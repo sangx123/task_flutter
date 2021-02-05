@@ -114,7 +114,7 @@ class _BusinessSecondAduitPageState extends State<BusinessSecondAduitPage> {
       ),
     );
     return Scaffold(
-        resizeToAvoidBottomPadding: true,
+        //resizeToAvoidBottomPadding: true,
         appBar: MyAppBar(
           centerTitle: "审核用户申诉任务",
           actionName: "",

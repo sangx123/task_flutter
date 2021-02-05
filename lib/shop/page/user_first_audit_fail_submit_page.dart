@@ -63,7 +63,7 @@ class _UserFirstAuditFailSubmitPageState extends State<UserFirstAuditFailSubmitP
   Widget build(BuildContext context) {
 
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      //resizeToAvoidBottomPadding: true,
       appBar:  MyAppBar(
         centerTitle: "请重新提交任务",
         actionName: "提交",

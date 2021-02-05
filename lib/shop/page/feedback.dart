@@ -49,7 +49,7 @@ class _FeedBackState extends State<FeedBackPage> {
         ? [FlatButton(onPressed: _stopEditing, child: Text('DONE'))]
         : [FlatButton(onPressed: _startEditing, child: Text('EDIT'))];
     return Scaffold(
-      resizeToAvoidBottomPadding: true,
+      //resizeToAvoidBottomPadding: true,
       appBar: const MyAppBar(
         centerTitle: "意见反馈",
       ),
