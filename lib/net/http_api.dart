@@ -62,4 +62,8 @@ class HttpApi {
 
   //同步用户自己的任务，同步商户自己的任务，超时状态的一些操作
   static const String asnyUserTaskTimeOut="api/asnytask/asnyUserTaskTimeOut";
+
+
+  //获取用户的数据
+  static const String getHomeSearchResultBusinessTaskList="api/task/getHomeSearchResultBusinessTaskList";
 }

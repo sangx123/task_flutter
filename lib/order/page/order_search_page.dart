@@ -5,6 +5,8 @@ import 'package:flutter_deer/mvp/base_page_state.dart';
 import 'package:flutter_deer/order/models/search_entity.dart';
 import 'package:flutter_deer/order/presenter/order_search_presenter.dart';
 import 'package:flutter_deer/provider/base_list_provider.dart';
+import 'package:flutter_deer/task/models/recommand_result_new_entity.dart';
+import 'package:flutter_deer/task/page/task_recommand_item.dart';
 import 'package:flutter_deer/widgets/my_refresh_list.dart';
 import 'package:flutter_deer/widgets/search_bar.dart';
 import 'package:flutter_deer/widgets/state_layout.dart';
@@ -19,7 +21,7 @@ class OrderSearchPage extends StatefulWidget {
 
 class OrderSearchPageState extends BasePageState<OrderSearchPage, OrderSearchPresenter> {
 
-  BaseListProvider<SearchItem> provider = BaseListProvider<SearchItem>();
+  BaseListProvider<RecommandResultNewEntity> provider = BaseListProvider<RecommandResultNewEntity>();
   
   String _keyword;
   int _page = 1;
@@ -33,7 +35,7 @@ class OrderSearchPageState extends BasePageState<OrderSearchPage, OrderSearchPre
   
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider<BaseListProvider<SearchItem>>(
+    return ChangeNotifierProvider<BaseListProvider<RecommandResultNewEntity>>(
       create: (_) => provider,
       child: Scaffold(
         appBar: SearchBar(
@@ -50,22 +52,22 @@ class OrderSearchPageState extends BasePageState<OrderSearchPage, OrderSearchPre
             presenter.search(_keyword, _page, true);
           },
         ),
-        body: Consumer<BaseListProvider<SearchItem>>(
+        body: Consumer<BaseListProvider<RecommandResultNewEntity>>(
           builder: (_, provider, __) {
             return DeerListView(
+              padding: const EdgeInsets.only(left: 15.0, right: 15.0, top: 10.0,bottom: 10.0),
               key: Key('order_search_list'),
               itemCount: provider.list.length,
               stateType: provider.stateType,
               onRefresh: _onRefresh,
               loadMore: _loadMore,
-              itemExtent: 50.0,
               hasMore: provider.hasMore,
               itemBuilder: (_, index){
-                return Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                  alignment: Alignment.centerLeft,
-                  child: Text(provider.list[index].name),
-                );
+                return TaskRecommandItemPage(
+                    key: Key('order_item_$index'),
+                    index: index,
+                    tabIndex: 0,
+                    model: provider.list[index]);
               },
             );
           }

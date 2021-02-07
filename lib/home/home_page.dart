@@ -278,10 +278,10 @@ class _HomeState extends State<Home> {
       Method.post,
       HttpApi.asnyUserTaskTimeOut,
       onSuccess: (data) {
-        Toast.show("数据同步完成");
+        //Toast.show("数据同步完成");
       },
       onError: (code, msg) {
-        Toast.show(msg);
+        //Toast.show(msg);
       },
       params: {},
     );
