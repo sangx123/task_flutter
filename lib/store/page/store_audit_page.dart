@@ -73,7 +73,7 @@ class _StoreAuditPageState extends State<StoreAuditPage> {
     return Scaffold(
       //resizeToAvoidBottomPadding: false,
       appBar: const MyAppBar(
-        centerTitle: "店铺审核资料",
+        centerTitle: "修改个人资料",
       ),
       body: SafeArea(
         child: Column(
@@ -90,7 +90,8 @@ class _StoreAuditPageState extends State<StoreAuditPage> {
               padding: const EdgeInsets.only(left: 16.0, right: 16.0, bottom: 8.0),
               child: MyButton(
                 onPressed: (){
-                  NavigatorUtils.push(context, StoreRouter.auditResultPage);
+                  //这个地方是save图片
+                  //NavigatorUtils.push(context, StoreRouter.auditResultPage);
                 },
                 text: "提交",
               ),
@@ -110,7 +111,7 @@ class _StoreAuditPageState extends State<StoreAuditPage> {
           Gaps.vGap5,
           const Padding(
             padding: const EdgeInsets.only(left: 16.0),
-            child: const Text("店铺资料", style: TextStyles.textBold18),
+            child: const Text("个人资料", style: TextStyles.textBold18),
           ),
           Gaps.vGap16,
           Center(
@@ -120,16 +121,16 @@ class _StoreAuditPageState extends State<StoreAuditPage> {
             ),
           ),
           Gaps.vGap10,
-          Center(
-            child: Text(
-              "店主手持身份证或营业执照",
-              style: Theme.of(context).textTheme.subtitle.copyWith(fontSize: Dimens.font_sp14),
-            ),
-          ),
-          Gaps.vGap16,
+////          Center(
+////            child: Text(
+////              "我的图像",
+////              style: Theme.of(context).textTheme.subtitle.copyWith(fontSize: Dimens.font_sp14),
+////            ),
+////          ),
+//          Gaps.vGap16,
           TextFieldItem(
               focusNode: _nodeText1,
-              title: "店铺名称",
+              title: "昵称",
               hintText: "填写店铺名称"
           ),
           StoreSelectTextItem(
