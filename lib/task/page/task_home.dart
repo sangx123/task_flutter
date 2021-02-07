@@ -20,7 +20,7 @@ import 'package:flutter_deer/widgets/search_bar.dart';
 import 'package:flutter_deer/widgets/state_layout.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 import 'package:provider/provider.dart';
-
+import 'package:flutter_deer/util/image_utils.dart';
 import '../widgets/custom_tab_bar.dart';
 class TaskHomePage extends StatefulWidget{
   @override
@@ -34,6 +34,8 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
   @override
   bool get wantKeepAlive =>true;
   int tabIndex=1;
+
+  bool showNetError=false;
   final List<String> tabs = [
   ];
   final List<Widget> tabViews = [
@@ -51,34 +53,64 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
     return new DefaultTabController(
       length: tabs.length,
       initialIndex: 0, //默认选中
-      child: Scaffold(
-        appBar:
-                TabBar(
-                    indicatorSize: TabBarIndicatorSize.label,
-                    labelColor: Colours.app_main,
-                    labelStyle: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold
-                    ),
-                    unselectedLabelStyle: TextStyle(
-                    fontSize: 15,
-                    //fontWeight: FontWeight.bold
-                    ),
-                    unselectedLabelColor: Colors.grey,
-                    indicatorColor: Colours.app_main,
-                    isScrollable: true, //设置为可以滚动
-                    tabs: tabs.map((String title) {
-                    return new Container(
-                    height: 35,
-                    child: Tab(
-                    text: title,
-                    ),
-                    );
-                    }).toList(),
-                    ),
+      child: showNetError?InkWell(
+        child: Center(
+          child: StateLayout(type:StateType.network),
+        ),
+        onTap:(){
+          print('CALL');
+          _getMainType();
+        },
+      ):Scaffold(
+        appBar: TabBar(
+          indicatorSize: TabBarIndicatorSize.label,
+          labelColor: Colours.app_main,
+          labelStyle: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold
+          ),
+          unselectedLabelStyle: TextStyle(
+            fontSize: 15,
+            //fontWeight: FontWeight.bold
+          ),
+          unselectedLabelColor: Colors.grey,
+          indicatorColor: Colours.app_main,
+          isScrollable: true, //设置为可以滚动
+          tabs: tabs.map((String title) {
+            return new Container(
+              height: 35,
+              child: Tab(
+                text: title,
+              ),
+            );
+          }).toList(),
+        ),
         body: TabBarView(
           children: tabViews,
         ),
+
+//        Container(
+//          width: double.infinity,
+//          child: Column(
+//            children: <Widget>[
+//              Opacity(
+//                opacity: showNetError?1:0,//0.0 到 1.0，0.0表示完全透明，1.0表示完全不透明
+//                child: Container(
+//                  height: 120.0,
+//                  width: 120.0,
+//                  decoration: BoxDecoration(
+//                    image: DecorationImage(
+//                      image: ImageUtils.getAssetImage("state/zwwl"),
+//                    ),
+//                  ),
+//                ))
+//            ,
+//
+//            ],
+//          ),
+//        ),
+
+
       ),
     );
   }
@@ -90,10 +122,12 @@ class TaskHomeStatePage extends State<TaskHomePage> with AutomaticKeepAliveClien
     await DioUtils.instance.requestNetwork<TaskMainTypeModelEntity>(
         Method.post, HttpApi.getTaskMainType, isList: true, onSuccessList: (data) {
       setState(() {
+        showNetError=false;
         initData(data);
       });
     }, onError: (code, msg) {
       setState(() {
+        showNetError=true;
         Toast.show(msg);
       });
     }, params: {});
