@@ -85,36 +85,62 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                       child:
                       InkWell(
                         onTap:()=> NavigatorUtils.push(context, StoreRouter.auditPage),
-                      child:Stack(
-                        children: <Widget>[
-                          const SizedBox(width: double.infinity, height: 56.0),
-                          Text(
-                            //Provider.of<UserProvider>(context).user.name,
-                            provider.user!=null?provider.user.name : "",
-                            style: TextStyles.textBold24,
-                          ),
-                          Positioned(
-                              right: 0.0,
-                              child: CircleAvatar(
+                      child:
+                          Row(children: [
+                            CircleAvatar(
                                   radius: 28.0,
                                   backgroundColor: Colors.transparent,
                                   backgroundImage: ImageUtils.getImageProvider("https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2415100391,2445796972&fm=26&gp=0.jpg", holderImg: 'shop/tx')
-                              )
-                          ),
-//                        Positioned(
-//                          top: 38.0,
-//                          left: 0.0,
-//                          child: Row(
-//                            children: <Widget>[
-//                              const LoadAssetImage("shop/zybq", width: 40.0, height: 16.0,),
-//                              Gaps.hGap8,
-//                              const Text("店铺账号:15000000000", style: TextStyles.textSize12)
-//                            ],
+                              ),
+                          Gaps.hGap16,
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                //Provider.of<UserProvider>(context).user.name,
+                                provider.user!=null?provider.user.name : "",
+                                style: TextStyles.textBold18,
+                                textAlign:TextAlign.left,
+                              ),
+                              Gaps.vGap4,
+                              Text(
+                                //Provider.of<UserProvider>(context).user.name,
+                                provider.user!=null?provider.user.mobile : ""
+                              ),
+                            ],
+                          )
+
+                          ],)
+//                      Stack(
+//                        children: <Widget>[
+//                          const SizedBox(width: double.infinity, height: 56.0),
+//                          Text(
+//                            //Provider.of<UserProvider>(context).user.name,
+//                            provider.user!=null?provider.user.name : "",
+//                            style: TextStyles.textBold24,
 //                          ),
-//
-//                        ),
-                        ],
-                      ),
+//                          Positioned(
+//                              left: 0.0,
+//                              child: CircleAvatar(
+//                                  radius: 28.0,
+//                                  backgroundColor: Colors.transparent,
+//                                  backgroundImage: ImageUtils.getImageProvider("https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2415100391,2445796972&fm=26&gp=0.jpg", holderImg: 'shop/tx')
+//                              )
+//                          ),
+////                        Positioned(
+////                          top: 38.0,
+////                          left: 0.0,
+////                          child: Row(
+////                            children: <Widget>[
+////                              const LoadAssetImage("shop/zybq", width: 40.0, height: 16.0,),
+////                              Gaps.hGap8,
+////                              const Text("店铺账号:15000000000", style: TextStyles.textSize12)
+////                            ],
+////                          ),
+////
+////                        ),
+//                        ],
+//                      ),
                       ),
                     );
                   },
