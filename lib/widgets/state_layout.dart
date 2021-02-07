@@ -31,7 +31,7 @@ class _StateLayoutState extends State<StateLayout> {
     switch (widget.type){
       case StateType.order:
         _img = "zwdd";
-        _hintText = "暂无订单";
+        _hintText = "暂无数据";
         break;
       case StateType.goods:
         _img = "zwsp";
