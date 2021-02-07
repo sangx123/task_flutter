@@ -4,6 +4,7 @@ import 'dart:io';
 import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
+import 'package:flustars/flustars.dart' hide MyAppBar;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -73,6 +74,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
   DateTime work_end_time;
   String limit;
   String uuid="";
+  String payInfo="";
   void _getImage() async {
     try {
       _imageFile = await ImagePicker.pickImage(
@@ -93,7 +95,7 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
         _scan();
       }
     });
-    uuid=DateTime.now().toString();
+    uuid= SpUtil.getString(Constant.userId)+"_"+DateTime.now().toString();
     print(uuid);
   }
 
@@ -368,7 +370,6 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 //      },
 //    );
   }
-  DateTime  lastPopTime;
   Future<void> _createTask() async {
 //    _readFileByte(Directory.systemTemp.path + "/quick_start.json").then((bytesData) async {
 //
@@ -377,107 +378,104 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
 //    });
 
 
-    if (!mounted) {
-      return;
-    }
-    if(lastPopTime == null || DateTime.now().difference(lastPopTime) > Duration(seconds: 2)){
-      lastPopTime = DateTime.now();
-      //do your task here
-      print("_createTask()");
-
-      if (_titleController.text.isEmpty) {
-        Toast.show("请填写标题");
+      if (!mounted) {
         return;
       }
+        if (_titleController.text.isEmpty) {
+          Toast.show("请填写标题");
+          return;
+        }
 
-      if (contents.isEmpty) {
-        Toast.show("请填写内容");
-        return;
-      }
+        if (contents.isEmpty) {
+          Toast.show("请填写内容");
+          return;
+        }
 
-      if (_moneyController.text.isEmpty) {
-        Toast.show("请填写奖励金额");
-        return;
-      }
+        if (_moneyController.text.isEmpty) {
+          Toast.show("请填写奖励金额");
+          return;
+        }
 
-      if (_peopleNumController.text.isEmpty) {
-        Toast.show("请填写人数");
-        return;
-      }
+        if (_peopleNumController.text.isEmpty) {
+          Toast.show("请填写人数");
+          return;
+        }
 
-      if (typeModel == null) {
-        Toast.show("请选择任务类型");
-        return;
-      }
+        if (typeModel == null) {
+          Toast.show("请选择任务类型");
+          return;
+        }
 
-      if(apply_end_time==null){
-        Toast.show("请选择任务申请截止时间");
-        return;
-      }
+        if (apply_end_time == null) {
+          Toast.show("请选择任务申请截止时间");
+          return;
+        }
 
-      if(work_end_time==null){
-        Toast.show("请选择提交任务截止时间");
-        return;
-      }
+        if (work_end_time == null) {
+          Toast.show("请选择提交任务截止时间");
+          return;
+        }
 
-      Delta list = Delta.fromJson(json.decode(contents) as List);
-      List<KeyValueItem> imageList = new List<KeyValueItem>();
-      for (var item in list.toList()) {
-        if (item.attributes != null && item.attributes.containsKey("embed")) {
-          if (item.attributes["embed"]["type"] == "image") {
-            var path = item.attributes["embed"]["source"].toString();
-            var name =
-            path.toString().substring(path.toString().lastIndexOf("/") + 1);
-            var model = KeyValueItem();
-            model.key = name;
-            model.value = path;
-            imageList.add(model);
-            //MultipartFile multipartFile =  await MultipartFile.fromFile(path, filename:name);
+        Delta list = Delta.fromJson(json.decode(contents) as List);
+        List<KeyValueItem> imageList = new List<KeyValueItem>();
+        for (var item in list.toList()) {
+          if (item.attributes != null && item.attributes.containsKey("embed")) {
+            if (item.attributes["embed"]["type"] == "image") {
+              var path = item.attributes["embed"]["source"].toString();
+              var name =
+              path.toString().substring(path.toString().lastIndexOf("/") + 1);
+              var model = KeyValueItem();
+              model.key = name;
+              model.value = path;
+              imageList.add(model);
+              //MultipartFile multipartFile =  await MultipartFile.fromFile(path, filename:name);
+            }
           }
         }
-      }
 
-      List<MultipartFile> multipartImageList = new List<MultipartFile>();
-      for (KeyValueItem item in imageList) {
-        MultipartFile multipartFile = MultipartFile.fromBytes(
-          await MFileUtils.readFileByte(item.value), //图片路径
-          filename: item.key, //图片名称
+        List<MultipartFile> multipartImageList = new List<MultipartFile>();
+        for (KeyValueItem item in imageList) {
+          MultipartFile multipartFile = MultipartFile.fromBytes(
+            await MFileUtils.readFileByte(item.value), //图片路径
+            filename: item.key, //图片名称
+          );
+          print("读取" + item.key + "完毕");
+          multipartImageList.add(multipartFile);
+        }
+        print("读取MultipartFile完毕");
+        FormData formData = FormData.fromMap({
+          "title": _titleController.text,
+          "content": contents,
+          "imageList": multipartImageList,
+          "jiangLi": _moneyController.text,
+          "peopleNum": _peopleNumController.text,
+          "type": typeModel.id,
+          "apply_end_time": apply_end_time.toString().substring(
+              0, apply_end_time
+              .toString()
+              .length - 4),
+          "work_end_time": work_end_time.toString().substring(0, work_end_time
+              .toString()
+              .length - 4),
+          "limit": "",
+          "mUUID": uuid
+        });
+        var price = double.parse(_moneyController.text) * count;
+        //NavigatorUtils.push(context, StoreRouter.auditPage);
+        await DioUtils.instance.requestNetwork<String>(
+          Method.post,
+          HttpApi.createTask,
+          onSuccess: (data) {
+            payInfo=data;
+            NavigatorUtils.push(context,
+                '${TaskRouter.taskPayPage}?pay=${Uri.encodeComponent(
+                    data)}&price=$price');
+          },
+          onError: (code, msg) {
+            Toast.show(msg);
+          },
+          params: formData,
         );
-        print("读取" + item.key + "完毕");
-        multipartImageList.add(multipartFile);
-      }
-      print("读取MultipartFile完毕");
-      FormData formData = FormData.fromMap({
-        "title": _titleController.text,
-        "content": contents,
-        "imageList": multipartImageList,
-        "jiangLi": _moneyController.text,
-        "peopleNum": _peopleNumController.text,
-        "type":typeModel.id,
-        "apply_end_time":apply_end_time.toString().substring(0,apply_end_time.toString().length-4),
-        "work_end_time":work_end_time.toString().substring(0,work_end_time.toString().length-4),
-        "limit":"",
-        "mUUID":uuid
-      });
-      var price = double.parse(_moneyController.text) * count;
-      //NavigatorUtils.push(context, StoreRouter.auditPage);
-      await DioUtils.instance.requestNetwork<String>(
-        Method.post,
-        HttpApi.createTask,
-        onSuccess: (data) {
-          NavigatorUtils.push(context,
-              '${TaskRouter.taskPayPage}?pay=${Uri.encodeComponent(data)}&price=$price');
-        },
-        onError: (code, msg) {
-          Toast.show(msg);
-        },
-        params: formData,
-      );
-    }else{
-      lastPopTime = DateTime.now();
-      //showToast("请勿重复点击！");
-    }
-
 
   }
 
