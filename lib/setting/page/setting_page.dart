@@ -43,7 +43,7 @@ class _SettingPageState extends State<SettingPage> {
         children: <Widget>[
           Gaps.vGap5,
           ClickItem(
-            title: "账号管理",
+            title: "个人资料",
             onTap: () => NavigatorUtils.push(context, SettingRouter.accountManagerPage)
           ),
           ClickItem(

@@ -67,7 +67,7 @@ class _AccountManagerPageState extends State<AccountManagerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const MyAppBar(
-        centerTitle: "账号管理",
+        centerTitle: "个人资料",
       ),
       body: Column(
         children: <Widget>[
