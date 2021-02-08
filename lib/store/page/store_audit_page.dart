@@ -1,12 +1,17 @@
 
 import 'dart:io';
 
+import 'package:dio/dio.dart';
+import 'package:flustars/flustars.dart' hide MyAppBar;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_2d_amap/flutter_2d_amap.dart';
+import 'package:flutter_deer/net/dio_utils.dart';
+import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
 import 'package:flutter_deer/shop/shop_router.dart';
 import 'package:flutter_deer/store/store_router.dart';
+import 'package:flutter_deer/util/file_utils.dart';
 import 'package:flutter_deer/util/theme_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
 import 'package:flutter_deer/widgets/my_button.dart';
@@ -31,13 +36,14 @@ class _StoreAuditPageState extends State<StoreAuditPage> {
   final FocusNode _nodeText1 = FocusNode();
   final FocusNode _nodeText2 = FocusNode();
   final FocusNode _nodeText3 = FocusNode();
-
+  String photoUrl="";
   String _address = "陕西省 西安市 雁塔区 高新六路201号";
   
   void _getImage() async{
     try {
       _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery, maxWidth: 800, imageQuality: 95);
-      setState(() {});
+
+
     } catch (e) {
       Toast.show("没有权限，无法打开相册！");
     }
@@ -121,17 +127,17 @@ class _StoreAuditPageState extends State<StoreAuditPage> {
             ),
           ),
           Gaps.vGap10,
-////          Center(
-////            child: Text(
-////              "我的图像",
-////              style: Theme.of(context).textTheme.subtitle.copyWith(fontSize: Dimens.font_sp14),
-////            ),
-////          ),
-//          Gaps.vGap16,
+          Center(
+            child: Text(
+              "我的图像",
+              style: Theme.of(context).textTheme.subtitle.copyWith(fontSize: Dimens.font_sp14),
+            ),
+          ),
+          Gaps.vGap16,
           TextFieldItem(
               focusNode: _nodeText1,
               title: "昵称",
-              hintText: "填写店铺名称"
+              hintText: "我的昵称"
           ),
           StoreSelectTextItem(
               title: "主营范围",

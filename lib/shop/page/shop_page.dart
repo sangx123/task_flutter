@@ -84,13 +84,15 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child:
                       InkWell(
-                        onTap:()=> NavigatorUtils.push(context, StoreRouter.auditPage),
+                        //onTap:()=> NavigatorUtils.push(context, StoreRouter.auditPage),
+                          onTap:()=> NavigatorUtils.push(context, SettingRouter.accountManagerPage),
+
                       child:
                           Row(children: [
                             CircleAvatar(
                                   radius: 28.0,
                                   backgroundColor: Colors.transparent,
-                                  backgroundImage: ImageUtils.getImageProvider("https://dss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2415100391,2445796972&fm=26&gp=0.jpg", holderImg: 'shop/tx')
+                                  backgroundImage: ImageUtils.getImageProvider((provider.user==null||provider.user.avatar==null)?"":provider.user.avatar, holderImg: 'shop/tx')
                               ),
                           Gaps.hGap16,
                           Column(
@@ -102,7 +104,7 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                                 style: TextStyles.textBold18,
                                 textAlign:TextAlign.left,
                               ),
-                              Gaps.vGap4,
+                              Gaps.vGap10,
                               Text(
                                 //Provider.of<UserProvider>(context).user.name,
                                 provider.user!=null?provider.user.mobile : ""

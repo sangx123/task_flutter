@@ -424,6 +424,8 @@ class _PublishTaskEndState extends State<PublishTaskEndPage> {
               var path = item.attributes["embed"]["source"].toString();
               var name =
               path.toString().substring(path.toString().lastIndexOf("/") + 1);
+
+              print(path);
               var model = KeyValueItem();
               model.key = name;
               model.value = path;

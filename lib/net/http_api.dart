@@ -66,4 +66,8 @@ class HttpApi {
 
   //获取用户的数据
   static const String getHomeSearchResultBusinessTaskList="api/task/getHomeSearchResultBusinessTaskList";
+
+
+  //创建任务
+  static const String uploadHeadImage = "api/user/uploadHeadImage";
 }
