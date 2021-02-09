@@ -39,7 +39,7 @@ abstract class BasePageState<T extends StatefulWidget, V extends BasePagePresent
     /// 避免重复弹出
     if (mounted && !_isShowDialog){
       _isShowDialog = true;
-      try{
+      try{[]
         showTransparentDialog(
             context: context,
             barrierDismissible: false,

@@ -1,6 +1,8 @@
 
+import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_deer/account/account_router.dart';
+import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/mvp/base_page_state.dart';
 import 'package:flutter_deer/order/order_router.dart';
 import 'package:flutter_deer/res/resources.dart';
@@ -84,8 +86,16 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child:
                       InkWell(
-                        //onTap:()=> NavigatorUtils.push(context, StoreRouter.auditPage),
-                          onTap:()=> NavigatorUtils.push(context, SettingRouter.accountManagerPage),
+                        onTap:()=> NavigatorUtils.push(context, StoreRouter.auditPage),
+//                          onTap:()=> NavigatorUtils.pushResult(context,
+//                              SettingRouter.accountManagerPage,
+//                                  (result) {
+//                                setState(() {
+//                                  if(result.toString().isNotEmpty){
+//                                     provider.user.avatar=SpUtil.getString(Constant.avater);
+//                                  }
+//                                });
+//                              }),
 
                       child:
                           Row(children: [
@@ -292,5 +302,17 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
   @override
   ShopPagePresenter createPresenter() {
     return ShopPagePresenter();
+  }
+
+
+  @override
+  void deactivate() {
+
+    var bool = ModalRoute.of(context).isCurrent;
+
+    if (bool) {
+        presenter.getUserInfo();
+    }
+
   }
 }
