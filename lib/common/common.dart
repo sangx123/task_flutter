@@ -20,7 +20,7 @@ class Constant {
   //保存手机号
   static const String phone = 'phone';
 
-  //保存手机号
+  //保存头像
   static const String avater = 'avater';
 
   //保存登录用户的userId
@@ -29,6 +29,9 @@ class Constant {
   static const String password = 'password';
   static const String accessToken = 'accessToken';
   static const String refreshToken = 'refreshToken';
+
+
+  static const String userInfo='userInfo';
 
   static const String theme = "AppTheme";
 

@@ -1,3 +1,4 @@
+
 class UserEntity {
 
 	int id;
@@ -5,7 +6,7 @@ class UserEntity {
 	double money;
 	String name;
 	String userToken;
-	String avatar;
+  String avatar;
 
 
 	UserEntity.fromJson(Map<String, dynamic> json) {
@@ -15,7 +16,7 @@ class UserEntity {
 		money=json['money'];
 		name = json['name'];
 		userToken=json['userToken'];
-		avatar = json['avatar'];
+		avatar = json['avatar']==null?"": json['avatar'];
 	}
 	Map<String, dynamic> toJson() {
 		final Map<String, dynamic> data = new Map<String, dynamic>();
@@ -27,4 +28,10 @@ class UserEntity {
 		data['avatar'] = this.avatar;
 		return data;
 	}
+
+//	///注意，此LoginInfo需是类名
+//	factory UserEntity.fromJson(Map<String, dynamic> json) =>
+//			_$UserEntityFromJson(json);
+//
+//	Map<String, dynamic> toJson() => _$UserEntityToJson(this);
 }

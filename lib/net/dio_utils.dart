@@ -38,7 +38,7 @@ class DioUtils {
       },
       //baseUrl: "https://api.github.com/",
       //baseUrl: "http://81.70.149.138:8081/",
-      baseUrl: "http://192.168.0.53:8081/",
+      baseUrl: "http://192.168.0.84:8081/",
       //  baseUrl: "http://192.168.0.111:8081/",
 
 //      contentType: ContentType('application', 'x-www-form-urlencoded', charset: 'utf-8'),

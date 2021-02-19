@@ -1,5 +1,7 @@
 
+import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_deer/common/common.dart';
 import 'package:flutter_deer/mvp/base_page_presenter.dart';
 import 'package:flutter_deer/net/net.dart';
 import 'package:flutter_deer/shop/models/user_entity.dart';
@@ -40,6 +42,8 @@ class ShopPagePresenter extends BasePagePresenter<ShopPageState> {
       HttpApi.getUserInfo,
       onSuccess: (data) {
         view.provider.setUser(data);
+        //设置最新的userInfo
+        SpUtil.putObject(Constant.userInfo, data);
       },
       onError: (code, msg) {
         Toast.show(msg);

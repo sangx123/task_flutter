@@ -1,8 +1,13 @@
 
+import 'dart:async';
+
+import 'package:event_bus/event_bus.dart';
 import 'package:flustars/flustars.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_deer/account/account_router.dart';
 import 'package:flutter_deer/common/common.dart';
+import 'package:flutter_deer/event/event_bus_utils.dart';
+import 'package:flutter_deer/event/event_user.dart';
 import 'package:flutter_deer/mvp/base_page_state.dart';
 import 'package:flutter_deer/order/order_router.dart';
 import 'package:flutter_deer/res/resources.dart';
@@ -35,13 +40,26 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
   var menuImageTask=["dps_s","xdd_n"];
   var menuImageTaskTitle=["我发布的任务", "我接收到的任务"];
   UserProvider provider = UserProvider();
-  
   void setUser(UserEntity user){
     provider.setUser(user);
   }
-  
+  StreamSubscription _subscription;
+
+  @override
+  void initState() {
+    super.initState();
+    //初始化eventbus并且监听事件
+    _subscription=EventBusUtils.instance.on<EventUserParam>((EventUserParam event) {
+      onChangeUserInfo();
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
+
+
+
     super.build(context);
     final Color _iconColor = ThemeUtils.getIconColor(context);
     return ChangeNotifierProvider<UserProvider>(
@@ -86,7 +104,7 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child:
                       InkWell(
-                        onTap:()=> NavigatorUtils.push(context, StoreRouter.auditPage),
+                        onTap:()=> NavigatorUtils.push(context, SettingRouter.accountManagerPage),
 //                          onTap:()=> NavigatorUtils.pushResult(context,
 //                              SettingRouter.accountManagerPage,
 //                                  (result) {
@@ -303,16 +321,19 @@ class ShopPageState extends BasePageState<ShopPage, ShopPagePresenter> with Auto
   ShopPagePresenter createPresenter() {
     return ShopPagePresenter();
   }
-
-
+  
+  /// 取消订阅事件
   @override
-  void deactivate() {
+  void dispose() {
+    super.dispose();
+    _subscription.cancel();
+  }
 
-    var bool = ModalRoute.of(context).isCurrent;
-
-    if (bool) {
-        presenter.getUserInfo();
-    }
+  ///用户信息发生变化的时候的操作
+  onChangeUserInfo() {
+     var user= UserEntity.fromJson(SpUtil.getObject(Constant.userInfo));
+     setUser(user);
+     print("收到通知");
 
   }
 }

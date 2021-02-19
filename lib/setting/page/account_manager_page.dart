@@ -2,13 +2,18 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
+import 'package:event_bus/event_bus.dart';
 import 'package:flustars/flustars.dart' hide MyAppBar;
 import 'package:flutter/material.dart';
 import 'package:flutter_deer/common/common.dart';
+import 'package:flutter_deer/event/event_bus_utils.dart';
+import 'package:flutter_deer/event/event_user.dart';
 import 'package:flutter_deer/login/login_router.dart';
 import 'package:flutter_deer/net/dio_utils.dart';
 import 'package:flutter_deer/net/http_api.dart';
 import 'package:flutter_deer/routers/fluro_navigator.dart';
+import 'package:flutter_deer/shop/models/user_entity.dart';
+import 'package:flutter_deer/shop/provider/user_provider.dart';
 import 'package:flutter_deer/util/file_utils.dart';
 import 'package:flutter_deer/util/image_utils.dart';
 import 'package:flutter_deer/util/toast.dart';
@@ -16,6 +21,7 @@ import 'package:flutter_deer/widgets/app_bar.dart';
 import 'package:flutter_deer/widgets/click_item.dart';
 import 'package:flutter_deer/widgets/load_image.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:provider/provider.dart';
 
 
 /// design/8设置/index.html#artboard1
@@ -25,10 +31,23 @@ class AccountManagerPage extends StatefulWidget {
 }
 
 class _AccountManagerPageState extends State<AccountManagerPage> {
+
+
+
+
   File _imageFile;
   String photoUrl="";
+
+  @override
+  void initState() {
+    super.initState();
+    //初始化eventbus并且监听事件
+    var user= UserEntity.fromJson(SpUtil.getObject(Constant.userInfo));
+    photoUrl=user.avatar;
+  }
+
   void _getImage() async{
-    try {
+    //try {
       _imageFile = await ImagePicker.pickImage(source: ImageSource.gallery, maxWidth: 800, imageQuality: 95);
       //上传图像
       print(_imageFile.path);
@@ -50,6 +69,13 @@ class _AccountManagerPageState extends State<AccountManagerPage> {
         onSuccess: (data) {
           photoUrl=data;
           Toast.show("图片上传成功！");
+          //更新UserEntity的数据
+          UserEntity user= UserEntity.fromJson(SpUtil.getObject(Constant.userInfo));
+          user.avatar=photoUrl;
+          SpUtil.putObject(Constant.userInfo,user);
+          //发送修改图像的事件
+          EventBusUtils.instance.emit(EventUserParam(user));
+
           setState(() {});
         },
         onError: (code, msg) {
@@ -57,9 +83,9 @@ class _AccountManagerPageState extends State<AccountManagerPage> {
         },
         params: formData,
       );
-    } catch (e) {
-      Toast.show("没有权限，无法打开相册！");
-    }
+//    } catch (e) {
+//      Toast.show("没有权限，无法打开相册！");
+//    }
   }
 
 
@@ -105,4 +131,12 @@ class _AccountManagerPageState extends State<AccountManagerPage> {
       ),
     );
   }
+//  @override
+//  void deactivate() {
+//    super.deactivate();
+//    /// 必须在deactivate方法中声明 才可以保证事件不会因为bus移除事件而无法推送
+//    bus.on("flush", (arg) {
+//      print("");
+//    });
+//  }
 }
